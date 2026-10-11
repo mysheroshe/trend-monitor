@@ -23,6 +23,12 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          # Always work on the real main branch (never a detached commit), with
+          # full history so the push step can reconcile safely if main moved.
+          ref: main
+          fetch-depth: 0
+          persist-credentials: true
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -54,8 +60,12 @@ jobs:
 
       - name: Commit and push reports and daily data
         run: |
+          set -euo pipefail
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
+          # Re-attach main explicitly: a scheduled run can leave the checkout in
+          # a detached HEAD, and a commit made there would never reach main.
+          git checkout -B main
           git add docs/*.html
           # Stage daily JSON history (new + modified + pruned files) and the
           # markdown analysis. This must NOT be silenced: a `|| true` here hid
@@ -63,10 +73,28 @@ jobs:
           git add -A -- data/daily analysis/daily data/validation
           if git diff --staged --quiet; then
             echo "No changes to commit"
-          else
-            git commit -m "chore: Update daily report, indie analysis and daily data [skip ci]"
-            git push
+            exit 0
           fi
+          git commit -m "chore: Update daily report, indie analysis and daily data [skip ci]"
+          # Explicit refspec (never an implicit branch guess) + one safe
+          # reconciliation attempt if main advanced while we were running.
+          # No force push, ever: if rebasing is not safe we fail loudly instead
+          # of overwriting newer commits.
+          for attempt in 1 2; do
+            if git push origin HEAD:main; then
+              echo "Pushed the report commit to main (attempt ${attempt})"
+              exit 0
+            fi
+            echo "Push rejected - reconciling with origin/main (attempt ${attempt})"
+            git fetch origin main
+            if ! git rebase origin/main; then
+              git rebase --abort || true
+              echo "::error::Could not reconcile with origin/main safely - manual attention required."
+              exit 1
+            fi
+          done
+          echo "::error::Failed to push the report commit to main after retrying."
+          exit 1
 
       - name: Upload report artifact
         uses: actions/upload-artifact@v4
