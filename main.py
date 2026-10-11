@@ -135,7 +135,12 @@ def main():
     # 发送邮件
     if not args.no_email:
         print("正在发送邮件...")
-        if send_email_report(report):
+        sent = False
+        try:
+            sent = send_email_report(report)
+        except Exception as exc:  # 邮件是可选功能，绝不能中断日报流程
+            print(f"⚠️  邮件发送异常，已跳过: {type(exc).__name__}: {exc}")
+        if sent:
             print("✅ 邮件发送成功")
     else:
         print("⏭️  跳过邮件发送")
