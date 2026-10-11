@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indie Opportunities — 2026-10-10</title>
+    <title>Indie Opportunities — 2026-10-11</title>
     <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -129,6 +129,24 @@
         font-size: 11px; padding: 2px 8px;
         border-radius: 999px;
         background: #2d3748; color: #a0aec0;
+    }
+
+    /* ── Wide score table ── */
+    .table-scroll { overflow-x: auto; }
+    .why { font-size: 12px; color: #a0aec0; min-width: 260px; max-width: 420px; }
+    .why ul { margin: 0; padding-left: 16px; }
+    .why li { margin: 2px 0; }
+
+    /* ── Cluster cards + keyword chips ── */
+    .cluster-card { margin-bottom: 12px; }
+    .cluster-card summary { font-weight: 600; }
+    .kw-list {
+        list-style: none; padding-left: 0;
+        display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0 0;
+    }
+    .kw-list li {
+        background: #13171f; border: 1px solid #2d3748;
+        border-radius: 6px; padding: 4px 8px; font-size: 12px; color: #cbd5e0;
     }
 
     /* ── Score bars ── */
@@ -271,7 +289,7 @@
 <body>
     <div class="header">
         <h1>Indie <span>Opportunities</span></h1>
-        <div class="date">October 10, 2026 · 12:03 PDT</div>
+        <div class="date">October 11, 2026 - 05:29 PDT</div>
         <div class="nav-links">
             <a class="nav-link" href="index.html">← View All Products</a>
         </div>
@@ -283,12 +301,20 @@
             <div class="stat-label">Products Analysed</div>
         </div>
         <div class="stat">
-            <div class="stat-num">0</div>
+            <div class="stat-num">5</div>
             <div class="stat-label">Filtered Out</div>
         </div>
         <div class="stat">
-            <div class="stat-num">20</div>
+            <div class="stat-num">15</div>
             <div class="stat-label">Scored</div>
+        </div>
+        <div class="stat">
+            <div class="stat-num">15</div>
+            <div class="stat-label">Clusters</div>
+        </div>
+        <div class="stat">
+            <div class="stat-num">6</div>
+            <div class="stat-label">Semrush Keys</div>
         </div>
         <div class="stat">
             <div class="stat-num">5</div>
@@ -299,252 +325,120 @@
         
     <div class="section">
         <div class="section-header">
+            <div class="section-icon" style="background:#16213e">🏁</div>
+            <span class="section-title">Top Opportunities Today</span>
+            <span class="section-count">top 5</span>
+        </div>
+        <p class="why">0 BUILD · 8 TEST · 6 WATCH · 1 SKIP across 15 clusters.</p><div class="table-scroll">
+<table>
+    <thead><tr><th>#</th><th>Verdict</th><th>Cluster</th><th>Opportunity</th><th>Solo Builder</th><th>Market Gate</th><th>Acquire</th><th>Substitution</th></tr></thead>
+    <tbody><tr><td data-val="1">1</td><td><strong>TEST</strong></td><td>Finder Tools - &quot;Sider: Chat with all AI: GPT-5, Claude, &quot;</td><td data-val="41"><span class="score-low">41</span></td><td data-val="89">89</td><td>UNKNOWN</td><td>PLATFORM_MARKETPLACE</td><td>MEDIUM</td></tr><tr><td data-val="2">2</td><td><strong>TEST</strong></td><td>Text Writer Tools</td><td data-val="39"><span class="score-low">39</span></td><td data-val="89">89</td><td>UNKNOWN</td><td>PLATFORM_MARKETPLACE</td><td>HIGH</td></tr><tr><td data-val="3">3</td><td><strong>TEST</strong></td><td>Video Summarizer Tools</td><td data-val="37"><span class="score-low">37</span></td><td data-val="89">89</td><td>UNKNOWN</td><td>PLATFORM_MARKETPLACE</td><td>HIGH</td></tr><tr><td data-val="4">4</td><td><strong>TEST</strong></td><td>Code Generator Tools</td><td data-val="32"><span class="score-low">32</span></td><td data-val="63">63</td><td>UNKNOWN</td><td>COMMUNITY</td><td>MEDIUM</td></tr><tr><td data-val="5">5</td><td><strong>TEST</strong></td><td>&quot;storytold/artcraft&quot; (unclustered)</td><td data-val="32"><span class="score-low">32</span></td><td data-val="67">67</td><td>UNKNOWN</td><td>COMMUNITY</td><td>MEDIUM</td></tr></tbody>
+</table>
+</div><p class="why">No opportunity met the BUILD bar today — that is the expected default. BUILD requires validated demand, monetization evidence, low substitution risk and low operating cost.</p>
+    </div>
+    <div class="section">
+        <div class="section-header">
+            <div class="section-icon" style="background:#0a1e35">🧭</div>
+            <span class="section-title">Top Opportunity Clusters</span>
+            <span class="section-count">15 clusters</span>
+        </div>
+        <div class="table-scroll">
+<table>
+    <thead><tr>
+        <th class="sortable">#</th>
+        <th class="sortable">Cluster</th>
+        <th class="sortable">Solo Builder</th>
+        <th class="sortable sort-desc">Cluster Evidence ↓</th>
+        <th class="sortable">SEO</th>
+        <th class="sortable">Opportunity</th>
+        <th class="sortable">Market Gate</th>
+        <th class="sortable">Verdict</th>
+        <th class="sortable">Products</th>
+        <th class="sortable">Sources</th>
+        <th class="sortable">Orchard</th>
+    </tr></thead>
+    <tbody><tr><td data-val="1">1</td><td>Finder Tools - &quot;Sider: Chat with all AI: GPT-5, Claude, &quot;</td><td data-val="89">89/100</td><td data-val="78"><span class="score-high">78</span></td><td data-val="0"><span class="score-low">-</span></td><td data-val="41"><span class="score-low">41</span></td><td data-val="UNKNOWN">UNKNOWN</td><td data-val="TEST"><strong>TEST</strong></td><td data-val="1">1</td><td data-val="1">1</td><td data-val="6">6/10</td></tr><tr><td data-val="2">2</td><td>Summarizer Tools - &quot;HARPA AI: Web Automation with ChatGPT, C&quot;</td><td data-val="89">89/100</td><td data-val="78"><span class="score-high">78</span></td><td data-val="0"><span class="score-low">-</span></td><td data-val="38"><span class="score-low">38</span></td><td data-val="UNKNOWN">UNKNOWN</td><td data-val="SKIP"><strong>SKIP</strong></td><td data-val="1">1</td><td data-val="1">1</td><td data-val="6">6/10</td></tr><tr><td data-val="3">3</td><td>Text Writer Tools</td><td data-val="89">89/100</td><td data-val="78"><span class="score-high">78</span></td><td data-val="0"><span class="score-low">-</span></td><td data-val="39"><span class="score-low">39</span></td><td data-val="UNKNOWN">UNKNOWN</td><td data-val="TEST"><strong>TEST</strong></td><td data-val="1">1</td><td data-val="1">1</td><td data-val="6">6/10</td></tr><tr><td data-val="4">4</td><td>Video Summarizer Tools</td><td data-val="89">89/100</td><td data-val="78"><span class="score-high">78</span></td><td data-val="0"><span class="score-low">-</span></td><td data-val="37"><span class="score-low">37</span></td><td data-val="UNKNOWN">UNKNOWN</td><td data-val="TEST"><strong>TEST</strong></td><td data-val="1">1</td><td data-val="1">1</td><td data-val="10">10/10</td></tr><tr><td data-val="5">5</td><td>&quot;MePersona&quot; (unclustered)</td><td data-val="77">77/100</td><td data-val="68"><span class="score-mid">68</span></td><td data-val="0"><span class="score-low">-</span></td><td data-val="30"><span class="score-low">30</span></td><td data-val="UNKNOWN">UNKNOWN</td><td data-val="WATCH"><strong>WATCH</strong></td><td data-val="1">1</td><td data-val="1">1</td><td data-val="6">6/10</td></tr><tr><td data-val="6">6</td><td>&quot;Ghost Core&quot; (unclustered)</td><td data-val="75">75/100</td><td data-val="66"><span class="score-mid">66</span></td><td data-val="0"><span class="score-low">-</span></td><td data-val="32"><span class="score-low">32</span></td><td data-val="UNKNOWN">UNKNOWN</td><td data-val="WATCH"><strong>WATCH</strong></td><td data-val="1">1</td><td data-val="1">1</td><td data-val="6">6/10</td></tr><tr><td data-val="7">7</td><td>Finder Tools - &quot;HireKey&quot;</td><td data-val="73">73/100</td><td data-val="64"><span class="score-mid">64</span></td><td data-val="0"><span class="score-low">-</span></td><td data-val="30"><span class="score-low">30</span></td><td data-val="UNKNOWN">UNKNOWN</td><td data-val="WATCH"><strong>WATCH</strong></td><td data-val="1">1</td><td data-val="1">1</td><td data-val="6">6/10</td></tr><tr><td data-val="8">8</td><td>&quot;Agibot&quot; (unclustered)</td><td data-val="73">73/100</td><td data-val="64"><span class="score-mid">64</span></td><td data-val="0"><span class="score-low">-</span></td><td data-val="30"><span class="score-low">30</span></td><td data-val="UNKNOWN">UNKNOWN</td><td data-val="WATCH"><strong>WATCH</strong></td><td data-val="1">1</td><td data-val="1">1</td><td data-val="6">6/10</td></tr><tr><td data-val="9">9</td><td>SEO Analyzer Tools</td><td data-val="71">71/100</td><td data-val="62"><span class="score-mid">62</span></td><td data-val="0"><span class="score-low">-</span></td><td data-val="33"><span class="score-low">33</span></td><td data-val="UNKNOWN">UNKNOWN</td><td data-val="WATCH"><strong>WATCH</strong></td><td data-val="1">1</td><td data-val="1">1</td><td data-val="6">6/10</td></tr><tr><td data-val="10">10</td><td>&quot;storytold/artcraft&quot; (unclustered)</td><td data-val="67">67/100</td><td data-val="54"><span class="score-mid">54</span></td><td data-val="0"><span class="score-low">-</span></td><td data-val="32"><span class="score-low">32</span></td><td data-val="UNKNOWN">UNKNOWN</td><td data-val="TEST"><strong>TEST</strong></td><td data-val="1">1</td><td data-val="1">1</td><td data-val="6">6/10</td></tr><tr><td data-val="11">11</td><td>&quot;boykopovar/AnyPS5&quot; (unclustered)</td><td data-val="67">67/100</td><td data-val="54"><span class="score-mid">54</span></td><td data-val="0"><span class="score-low">-</span></td><td data-val="32"><span class="score-low">32</span></td><td data-val="UNKNOWN">UNKNOWN</td><td data-val="TEST"><strong>TEST</strong></td><td data-val="1">1</td><td data-val="1">1</td><td data-val="6">6/10</td></tr><tr><td data-val="12">12</td><td>&quot;bilawalsidhu/gods-eye-view&quot; (unclustered)</td><td data-val="67">67/100</td><td data-val="54"><span class="score-mid">54</span></td><td data-val="0"><span class="score-low">-</span></td><td data-val="32"><span class="score-low">32</span></td><td data-val="UNKNOWN">UNKNOWN</td><td data-val="TEST"><strong>TEST</strong></td><td data-val="1">1</td><td data-val="1">1</td><td data-val="6">6/10</td></tr><tr><td data-val="13">13</td><td>&quot;morluto/rea&quot; (unclustered)</td><td data-val="67">67/100</td><td data-val="54"><span class="score-mid">54</span></td><td data-val="0"><span class="score-low">-</span></td><td data-val="32"><span class="score-low">32</span></td><td data-val="UNKNOWN">UNKNOWN</td><td data-val="TEST"><strong>TEST</strong></td><td data-val="1">1</td><td data-val="1">1</td><td data-val="6">6/10</td></tr><tr><td data-val="14">14</td><td>Code Generator Tools</td><td data-val="63">63/100</td><td data-val="50"><span class="score-mid">50</span></td><td data-val="0"><span class="score-low">-</span></td><td data-val="32"><span class="score-low">32</span></td><td data-val="UNKNOWN">UNKNOWN</td><td data-val="TEST"><strong>TEST</strong></td><td data-val="1">1</td><td data-val="1">1</td><td data-val="6">6/10</td></tr><tr><td data-val="15">15</td><td>&quot;Sudden drop in Cloudflare bot traffic af&quot; (unclustered)</td><td data-val="71">71/100</td><td data-val="36"><span class="score-low">36</span></td><td data-val="0"><span class="score-low">-</span></td><td data-val="29"><span class="score-low">29</span></td><td data-val="UNKNOWN">UNKNOWN</td><td data-val="WATCH"><strong>WATCH</strong></td><td data-val="1">1</td><td data-val="1">1</td><td data-val="6">6/10</td></tr></tbody>
+</table>
+</div><details class="cluster-card"><summary>#1 Finder Tools - &quot;Sider: Chat with all AI: GPT-5, Claude, &quot; — 78/100</summary><div class="details-body"><p class="why">{'total': 0, 'positive': 0, 'neutral': 0, 'negative': 0, 'types': {}, 'positive_types': [], 'negative_types': [], 'has_url': False}</p><p class="why"><strong>Why grouped:</strong> function 'search' only - no domain term, so it is kept as its own cluster</p><p class="why"><strong>Cluster score:</strong></p><ul class="why"><li>best member Solo Builder Score 89/100</li><li>source confidence Medium (+1)</li><li>single product from a single source (-12)</li></ul><p class="why"><strong>Solo Builder Score:</strong> 89/100 · <strong>Cluster Evidence Score:</strong> 78/100 · <strong>SEO Opportunity Score:</strong> 0/100 (NOT_CHECKED) · <strong>Market Demand Gate:</strong> UNKNOWN</p><p class="why"><strong>SEO basis:</strong></p><ul class="why"><li>no enriched keywords yet - run scripts/enrich.py</li></ul><p class="why"><strong>Members:</strong></p><ul class="why"><li>Sider: Chat with all AI: GPT-5, Claude, DeepSeek, Gemini, Grok</li></ul><p class="why"><strong>Verdict:</strong> TEST · <strong>Opportunity Score:</strong> 41/100 · <strong>Substitution:</strong> MEDIUM · <strong>Primary acquisition:</strong> PLATFORM_MARKETPLACE (STRONG) · <strong>Monetization:</strong> freemium (LOW) · <strong>Cost risk:</strong> LOW</p><p class="why"><strong>Not BUILD because:</strong></p><ul class="why"><li>BUILD requires: Market Demand Gate = PASS or strong non-SEO demand evidence</li><li>BUILD requires: monetization confidence in ('HIGH', 'MEDIUM') (currently LOW)</li><li>BUILD requires: monetization evidence: a positive COMPETITOR or PAYMENT_SIGNAL note, or HIGH monetization confidence</li><li>BUILD requires: corroboration from 2+ sources or a high-confidence source</li><li>BUILD requires: persistence (seen on 2+ days) or positive validation evidence</li></ul><p class="why"><strong>Next actions:</strong></p><ul class="why"><li>Run 3-5 Semrush lookups for this cluster (US volume, KD, weak-SERP yes/no)</li><li>Check 3 competitor pricing pages to confirm people pay</li><li>Look for payment signals (pricing pages, credits, reviews mentioning purchase)</li><li>Search Reddit/communities for repeated pain around this problem</li><li>Validate willingness to pay and repeat usage before building</li><li>Keep monitoring for 2+ days of repeat appearances</li></ul><p class="why">No keywords enriched yet — run <code>python scripts/enrich.py</code>.</p></div></details><details class="cluster-card"><summary>#2 Summarizer Tools - &quot;HARPA AI: Web Automation with ChatGPT, C&quot; — 78/100</summary><div class="details-body"><p class="why">{'total': 0, 'positive': 0, 'neutral': 0, 'negative': 0, 'types': {}, 'positive_types': [], 'negative_types': [], 'has_url': False}</p><p class="why"><strong>Why grouped:</strong> function 'summarize' only - no domain term, so it is kept as its own cluster</p><p class="why"><strong>Cluster score:</strong></p><ul class="why"><li>best member Solo Builder Score 89/100</li><li>source confidence Medium (+1)</li><li>single product from a single source (-12)</li></ul><p class="why"><strong>Solo Builder Score:</strong> 89/100 · <strong>Cluster Evidence Score:</strong> 78/100 · <strong>SEO Opportunity Score:</strong> 0/100 (NOT_CHECKED) · <strong>Market Demand Gate:</strong> UNKNOWN</p><p class="why"><strong>SEO basis:</strong></p><ul class="why"><li>no enriched keywords yet - run scripts/enrich.py</li></ul><p class="why"><strong>Members:</strong></p><ul class="why"><li>HARPA AI: Web Automation with ChatGPT, Claude, Gemini, Grok</li></ul><p class="why"><strong>Verdict:</strong> SKIP · <strong>Opportunity Score:</strong> 38/100 · <strong>Substitution:</strong> SEVERE · <strong>Primary acquisition:</strong> PLATFORM_MARKETPLACE (STRONG) · <strong>Monetization:</strong> freemium (LOW) · <strong>Cost risk:</strong> LOW</p><p class="why"><strong>Not BUILD because:</strong></p><ul class="why"><li>functionality is a commodity capability of major platforms</li></ul><p class="why">No keywords enriched yet — run <code>python scripts/enrich.py</code>.</p></div></details><details class="cluster-card"><summary>#3 Text Writer Tools — 78/100</summary><div class="details-body"><p class="why">{'total': 0, 'positive': 0, 'neutral': 0, 'negative': 0, 'types': {}, 'positive_types': [], 'negative_types': [], 'has_url': False}</p><p class="why"><strong>Why grouped:</strong> domain 'essay' + function 'writing'</p><p class="why"><strong>Cluster score:</strong></p><ul class="why"><li>best member Solo Builder Score 89/100</li><li>source confidence Medium (+1)</li><li>single product from a single source (-12)</li></ul><p class="why"><strong>Solo Builder Score:</strong> 89/100 · <strong>Cluster Evidence Score:</strong> 78/100 · <strong>SEO Opportunity Score:</strong> 0/100 (NOT_CHECKED) · <strong>Market Demand Gate:</strong> UNKNOWN</p><p class="why"><strong>SEO basis:</strong></p><ul class="why"><li>no enriched keywords yet - run scripts/enrich.py</li></ul><p class="why"><strong>Members:</strong></p><ul class="why"><li>GPTZero: AI Detection &amp; Writing Replay</li></ul><p class="why"><strong>Verdict:</strong> TEST · <strong>Opportunity Score:</strong> 39/100 · <strong>Substitution:</strong> HIGH · <strong>Primary acquisition:</strong> PLATFORM_MARKETPLACE (STRONG) · <strong>Monetization:</strong> freemium (LOW) · <strong>Cost risk:</strong> LOW</p><p class="why"><strong>Not BUILD because:</strong></p><ul class="why"><li>BUILD requires: Market Demand Gate = PASS or strong non-SEO demand evidence</li><li>BUILD requires: substitution risk in ('LOW', 'MEDIUM') (currently HIGH)</li><li>BUILD requires: monetization confidence in ('HIGH', 'MEDIUM') (currently LOW)</li><li>BUILD requires: monetization evidence: a positive COMPETITOR or PAYMENT_SIGNAL note, or HIGH monetization confidence</li><li>BUILD requires: corroboration from 2+ sources or a high-confidence source</li><li>BUILD requires: persistence (seen on 2+ days) or positive validation evidence</li></ul><p class="why"><strong>Next actions:</strong></p><ul class="why"><li>Run 3-5 Semrush lookups for this cluster (US volume, KD, weak-SERP yes/no)</li><li>Check 3 competitor pricing pages to confirm people pay</li><li>Look for payment signals (pricing pages, credits, reviews mentioning purchase)</li><li>Search Reddit/communities for repeated pain around this problem</li><li>Validate willingness to pay and repeat usage before building</li><li>Check whether ChatGPT/Claude/Gemini already handles this task well enough for free</li><li>Keep monitoring for 2+ days of repeat appearances</li></ul><p class="why">No keywords enriched yet — run <code>python scripts/enrich.py</code>.</p></div></details><details class="cluster-card"><summary>#4 Video Summarizer Tools — 78/100</summary><div class="details-body"><p class="why">{'total': 0, 'positive': 0, 'neutral': 0, 'negative': 0, 'types': {}, 'positive_types': [], 'negative_types': [], 'has_url': False}</p><p class="why"><strong>Why grouped:</strong> domain 'video' + function 'summarize'</p><p class="why"><strong>Cluster score:</strong></p><ul class="why"><li>best member Solo Builder Score 89/100</li><li>source confidence Medium (+1)</li><li>single product from a single source (-12)</li></ul><p class="why"><strong>Solo Builder Score:</strong> 89/100 · <strong>Cluster Evidence Score:</strong> 78/100 · <strong>SEO Opportunity Score:</strong> 0/100 (NOT_CHECKED) · <strong>Market Demand Gate:</strong> UNKNOWN</p><p class="why"><strong>SEO basis:</strong></p><ul class="why"><li>no enriched keywords yet - run scripts/enrich.py</li></ul><p class="why"><strong>Members:</strong></p><ul class="why"><li>Monica: All-In-One AI Assist &amp; Smartest AI Agent</li></ul><p class="why"><strong>Verdict:</strong> TEST · <strong>Opportunity Score:</strong> 37/100 · <strong>Substitution:</strong> HIGH · <strong>Primary acquisition:</strong> PLATFORM_MARKETPLACE (STRONG) · <strong>Monetization:</strong> freemium (LOW) · <strong>Cost risk:</strong> HIGH</p><p class="why"><strong>Not BUILD because:</strong></p><ul class="why"><li>BUILD requires: Market Demand Gate = PASS or strong non-SEO demand evidence</li><li>BUILD requires: substitution risk in ('LOW', 'MEDIUM') (currently HIGH)</li><li>BUILD requires: monetization confidence in ('HIGH', 'MEDIUM') (currently LOW)</li><li>BUILD requires: operating-cost risk in ('LOW', 'MEDIUM') (currently HIGH)</li><li>BUILD requires: monetization evidence: a positive COMPETITOR or PAYMENT_SIGNAL note, or HIGH monetization confidence</li><li>BUILD requires: corroboration from 2+ sources or a high-confidence source</li><li>BUILD requires: persistence (seen on 2+ days) or positive validation evidence</li></ul><p class="why"><strong>Next actions:</strong></p><ul class="why"><li>Run 3-5 Semrush lookups for this cluster (US volume, KD, weak-SERP yes/no)</li><li>Check 3 competitor pricing pages to confirm people pay</li><li>Look for payment signals (pricing pages, credits, reviews mentioning purchase)</li><li>Search Reddit/communities for repeated pain around this problem</li><li>Validate willingness to pay and repeat usage before building</li><li>Estimate API/inference cost per use and per paying user</li><li>Check whether ChatGPT/Claude/Gemini already handles this task well enough for free</li><li>Keep monitoring for 2+ days of repeat appearances</li></ul><p class="why">No keywords enriched yet — run <code>python scripts/enrich.py</code>.</p><p class="why"><strong>Keyword candidates:</strong></p><ul class="kw-list"><li><strong>video summarizer</strong> <span class="source-tag">HIGH</span> <span class="source-tag">CORE_TOOL</span></li><li><strong>monica all one summarizer</strong> <span class="source-tag">HIGH</span> <span class="source-tag">CORE_TOOL</span></li><li><strong>free video summarizer</strong> <span class="source-tag">HIGH</span> <span class="source-tag">LONG_TAIL_TOOL</span></li><li><strong>ai video summarizer</strong> <span class="source-tag">HIGH</span> <span class="source-tag">LONG_TAIL_TOOL</span></li><li><strong>online video summarizer</strong> <span class="source-tag">MEDIUM</span> <span class="source-tag">LONG_TAIL_TOOL</span></li><li><strong>video summarizer tool</strong> <span class="source-tag">MEDIUM</span> <span class="source-tag">LONG_TAIL_TOOL</span></li><li><strong>how to summarize video</strong> <span class="source-tag">MEDIUM</span> <span class="source-tag">PROBLEM_QUERY</span></li><li><strong>video summarizer for creators</strong> <span class="source-tag">MEDIUM</span> <span class="source-tag">AUDIENCE_SPECIFIC</span></li></ul></div></details><details class="cluster-card"><summary>#5 &quot;MePersona&quot; (unclustered) — 68/100</summary><div class="details-body"><p class="why">{'total': 0, 'positive': 0, 'neutral': 0, 'negative': 0, 'types': {}, 'positive_types': [], 'negative_types': [], 'has_url': False}</p><p class="why"><strong>Why grouped:</strong> no shared functional/domain signal - kept as a separate cluster</p><p class="why"><strong>Cluster score:</strong></p><ul class="why"><li>best member Solo Builder Score 77/100</li><li>source confidence Medium–High (+3)</li><li>single product from a single source (-12)</li></ul><p class="why"><strong>Solo Builder Score:</strong> 77/100 · <strong>Cluster Evidence Score:</strong> 68/100 · <strong>SEO Opportunity Score:</strong> 0/100 (NOT_CHECKED) · <strong>Market Demand Gate:</strong> UNKNOWN</p><p class="why"><strong>SEO basis:</strong></p><ul class="why"><li>no enriched keywords yet - run scripts/enrich.py</li></ul><p class="why"><strong>Members:</strong></p><ul class="why"><li>MePersona</li></ul><p class="why"><strong>Verdict:</strong> WATCH · <strong>Opportunity Score:</strong> 30/100 · <strong>Substitution:</strong> MEDIUM · <strong>Primary acquisition:</strong> UNKNOWN (WEAK) · <strong>Monetization:</strong> freemium (LOW) · <strong>Cost risk:</strong> LOW</p><p class="why"><strong>Not BUILD because:</strong></p><ul class="why"><li>BUILD requires: Market Demand Gate = PASS or strong non-SEO demand evidence</li><li>BUILD requires: acquisition fit in ('STRONG', 'MEDIUM') (currently WEAK)</li><li>BUILD requires: monetization confidence in ('HIGH', 'MEDIUM') (currently LOW)</li><li>BUILD requires: monetization evidence: a positive COMPETITOR or PAYMENT_SIGNAL note, or HIGH monetization confidence</li><li>BUILD requires: persistence (seen on 2+ days) or positive validation evidence</li></ul><p class="why"><strong>Next actions:</strong></p><ul class="why"><li>Run 3-5 Semrush lookups for this cluster (US volume, KD, weak-SERP yes/no)</li><li>Check 3 competitor pricing pages to confirm people pay</li><li>Look for payment signals (pricing pages, credits, reviews mentioning purchase)</li><li>Search Reddit/communities for repeated pain around this problem</li><li>Validate willingness to pay and repeat usage before building</li><li>Keep monitoring for 2+ days of repeat appearances</li></ul><p class="why">No keywords enriched yet — run <code>python scripts/enrich.py</code>.</p></div></details><details class="cluster-card"><summary>#6 &quot;Ghost Core&quot; (unclustered) — 66/100</summary><div class="details-body"><p class="why">{'total': 0, 'positive': 0, 'neutral': 0, 'negative': 0, 'types': {}, 'positive_types': [], 'negative_types': [], 'has_url': False}</p><p class="why"><strong>Why grouped:</strong> no shared functional/domain signal - kept as a separate cluster</p><p class="why"><strong>Cluster score:</strong></p><ul class="why"><li>best member Solo Builder Score 75/100</li><li>source confidence Medium–High (+3)</li><li>single product from a single source (-12)</li></ul><p class="why"><strong>Solo Builder Score:</strong> 75/100 · <strong>Cluster Evidence Score:</strong> 66/100 · <strong>SEO Opportunity Score:</strong> 0/100 (NOT_CHECKED) · <strong>Market Demand Gate:</strong> UNKNOWN</p><p class="why"><strong>SEO basis:</strong></p><ul class="why"><li>no enriched keywords yet - run scripts/enrich.py</li></ul><p class="why"><strong>Members:</strong></p><ul class="why"><li>Ghost Core</li></ul><p class="why"><strong>Verdict:</strong> WATCH · <strong>Opportunity Score:</strong> 32/100 · <strong>Substitution:</strong> LOW · <strong>Primary acquisition:</strong> UNKNOWN (WEAK) · <strong>Monetization:</strong> freemium (LOW) · <strong>Cost risk:</strong> LOW</p><p class="why"><strong>Not BUILD because:</strong></p><ul class="why"><li>BUILD requires: Market Demand Gate = PASS or strong non-SEO demand evidence</li><li>BUILD requires: acquisition fit in ('STRONG', 'MEDIUM') (currently WEAK)</li><li>BUILD requires: monetization confidence in ('HIGH', 'MEDIUM') (currently LOW)</li><li>BUILD requires: monetization evidence: a positive COMPETITOR or PAYMENT_SIGNAL note, or HIGH monetization confidence</li><li>BUILD requires: persistence (seen on 2+ days) or positive validation evidence</li></ul><p class="why"><strong>Next actions:</strong></p><ul class="why"><li>Run 3-5 Semrush lookups for this cluster (US volume, KD, weak-SERP yes/no)</li><li>Check 3 competitor pricing pages to confirm people pay</li><li>Look for payment signals (pricing pages, credits, reviews mentioning purchase)</li><li>Search Reddit/communities for repeated pain around this problem</li><li>Validate willingness to pay and repeat usage before building</li><li>Keep monitoring for 2+ days of repeat appearances</li></ul><p class="why">No keywords enriched yet — run <code>python scripts/enrich.py</code>.</p></div></details><details class="cluster-card"><summary>#7 Finder Tools - &quot;HireKey&quot; — 64/100</summary><div class="details-body"><p class="why">{'total': 0, 'positive': 0, 'neutral': 0, 'negative': 0, 'types': {}, 'positive_types': [], 'negative_types': [], 'has_url': False}</p><p class="why"><strong>Why grouped:</strong> function 'search' only - no domain term, so it is kept as its own cluster</p><p class="why"><strong>Cluster score:</strong></p><ul class="why"><li>best member Solo Builder Score 73/100</li><li>source confidence Medium–High (+3)</li><li>single product from a single source (-12)</li></ul><p class="why"><strong>Solo Builder Score:</strong> 73/100 · <strong>Cluster Evidence Score:</strong> 64/100 · <strong>SEO Opportunity Score:</strong> 0/100 (NOT_CHECKED) · <strong>Market Demand Gate:</strong> UNKNOWN</p><p class="why"><strong>SEO basis:</strong></p><ul class="why"><li>no enriched keywords yet - run scripts/enrich.py</li></ul><p class="why"><strong>Members:</strong></p><ul class="why"><li>HireKey</li></ul><p class="why"><strong>Verdict:</strong> WATCH · <strong>Opportunity Score:</strong> 30/100 · <strong>Substitution:</strong> MEDIUM · <strong>Primary acquisition:</strong> UNKNOWN (WEAK) · <strong>Monetization:</strong> freemium (LOW) · <strong>Cost risk:</strong> LOW</p><p class="why"><strong>Not BUILD because:</strong></p><ul class="why"><li>BUILD requires: Solo Builder Score &gt;= 75 (currently 73)</li><li>BUILD requires: Market Demand Gate = PASS or strong non-SEO demand evidence</li><li>BUILD requires: acquisition fit in ('STRONG', 'MEDIUM') (currently WEAK)</li><li>BUILD requires: monetization confidence in ('HIGH', 'MEDIUM') (currently LOW)</li><li>BUILD requires: monetization evidence: a positive COMPETITOR or PAYMENT_SIGNAL note, or HIGH monetization confidence</li><li>BUILD requires: persistence (seen on 2+ days) or positive validation evidence</li></ul><p class="why"><strong>Next actions:</strong></p><ul class="why"><li>Run 3-5 Semrush lookups for this cluster (US volume, KD, weak-SERP yes/no)</li><li>Check 3 competitor pricing pages to confirm people pay</li><li>Look for payment signals (pricing pages, credits, reviews mentioning purchase)</li><li>Search Reddit/communities for repeated pain around this problem</li><li>Validate willingness to pay and repeat usage before building</li><li>Keep monitoring for 2+ days of repeat appearances</li></ul><p class="why">No keywords enriched yet — run <code>python scripts/enrich.py</code>.</p></div></details><details class="cluster-card"><summary>#8 &quot;Agibot&quot; (unclustered) — 64/100</summary><div class="details-body"><p class="why">{'total': 0, 'positive': 0, 'neutral': 0, 'negative': 0, 'types': {}, 'positive_types': [], 'negative_types': [], 'has_url': False}</p><p class="why"><strong>Why grouped:</strong> no shared functional/domain signal - kept as a separate cluster</p><p class="why"><strong>Cluster score:</strong></p><ul class="why"><li>best member Solo Builder Score 73/100</li><li>source confidence Medium–High (+3)</li><li>single product from a single source (-12)</li></ul><p class="why"><strong>Solo Builder Score:</strong> 73/100 · <strong>Cluster Evidence Score:</strong> 64/100 · <strong>SEO Opportunity Score:</strong> 0/100 (NOT_CHECKED) · <strong>Market Demand Gate:</strong> UNKNOWN</p><p class="why"><strong>SEO basis:</strong></p><ul class="why"><li>no enriched keywords yet - run scripts/enrich.py</li></ul><p class="why"><strong>Members:</strong></p><ul class="why"><li>Agibot</li></ul><p class="why"><strong>Verdict:</strong> WATCH · <strong>Opportunity Score:</strong> 30/100 · <strong>Substitution:</strong> MEDIUM · <strong>Primary acquisition:</strong> UNKNOWN (WEAK) · <strong>Monetization:</strong> freemium (LOW) · <strong>Cost risk:</strong> LOW</p><p class="why"><strong>Not BUILD because:</strong></p><ul class="why"><li>BUILD requires: Solo Builder Score &gt;= 75 (currently 73)</li><li>BUILD requires: Market Demand Gate = PASS or strong non-SEO demand evidence</li><li>BUILD requires: acquisition fit in ('STRONG', 'MEDIUM') (currently WEAK)</li><li>BUILD requires: monetization confidence in ('HIGH', 'MEDIUM') (currently LOW)</li><li>BUILD requires: monetization evidence: a positive COMPETITOR or PAYMENT_SIGNAL note, or HIGH monetization confidence</li><li>BUILD requires: persistence (seen on 2+ days) or positive validation evidence</li></ul><p class="why"><strong>Next actions:</strong></p><ul class="why"><li>Run 3-5 Semrush lookups for this cluster (US volume, KD, weak-SERP yes/no)</li><li>Check 3 competitor pricing pages to confirm people pay</li><li>Look for payment signals (pricing pages, credits, reviews mentioning purchase)</li><li>Search Reddit/communities for repeated pain around this problem</li><li>Validate willingness to pay and repeat usage before building</li><li>Keep monitoring for 2+ days of repeat appearances</li></ul><p class="why">No keywords enriched yet — run <code>python scripts/enrich.py</code>.</p></div></details><details class="cluster-card"><summary>#9 SEO Analyzer Tools — 62/100</summary><div class="details-body"><p class="why">{'total': 0, 'positive': 0, 'neutral': 0, 'negative': 0, 'types': {}, 'positive_types': [], 'negative_types': [], 'has_url': False}</p><p class="why"><strong>Why grouped:</strong> domain 'seo' + function 'insights'</p><p class="why"><strong>Cluster score:</strong></p><ul class="why"><li>best member Solo Builder Score 71/100</li><li>source confidence Medium–High (+3)</li><li>single product from a single source (-12)</li></ul><p class="why"><strong>Solo Builder Score:</strong> 71/100 · <strong>Cluster Evidence Score:</strong> 62/100 · <strong>SEO Opportunity Score:</strong> 0/100 (NOT_CHECKED) · <strong>Market Demand Gate:</strong> UNKNOWN</p><p class="why"><strong>SEO basis:</strong></p><ul class="why"><li>no enriched keywords yet - run scripts/enrich.py</li></ul><p class="why"><strong>Members:</strong></p><ul class="why"><li>shippedit.me</li></ul><p class="why"><strong>Verdict:</strong> WATCH · <strong>Opportunity Score:</strong> 33/100 · <strong>Substitution:</strong> MEDIUM · <strong>Primary acquisition:</strong> SEO (MEDIUM) · <strong>Monetization:</strong> freemium (LOW) · <strong>Cost risk:</strong> LOW</p><p class="why"><strong>Not BUILD because:</strong></p><ul class="why"><li>BUILD requires: Solo Builder Score &gt;= 75 (currently 71)</li><li>BUILD requires: Market Demand Gate = PASS or strong non-SEO demand evidence</li><li>BUILD requires: SEO keyword validation (SEO is the main acquisition channel)</li><li>BUILD requires: monetization confidence in ('HIGH', 'MEDIUM') (currently LOW)</li><li>BUILD requires: monetization evidence: a positive COMPETITOR or PAYMENT_SIGNAL note, or HIGH monetization confidence</li><li>BUILD requires: persistence (seen on 2+ days) or positive validation evidence</li></ul><p class="why"><strong>Next actions:</strong></p><ul class="why"><li>Run 3-5 Semrush lookups for this cluster (US volume, KD, weak-SERP yes/no)</li><li>Check 3 competitor pricing pages to confirm people pay</li><li>Look for payment signals (pricing pages, credits, reviews mentioning purchase)</li><li>Search Reddit/communities for repeated pain around this problem</li><li>Validate willingness to pay and repeat usage before building</li><li>Keep monitoring for 2+ days of repeat appearances</li></ul><p class="why">No keywords enriched yet — run <code>python scripts/enrich.py</code>.</p><p class="why"><strong>Keyword candidates:</strong></p><ul class="kw-list"><li><strong>seo analyzer</strong> <span class="source-tag">HIGH</span> <span class="source-tag">CORE_TOOL</span></li><li><strong>shippedit me analyzer</strong> <span class="source-tag">HIGH</span> <span class="source-tag">CORE_TOOL</span></li><li><strong>free seo analyzer</strong> <span class="source-tag">HIGH</span> <span class="source-tag">LONG_TAIL_TOOL</span></li><li><strong>online seo analyzer</strong> <span class="source-tag">MEDIUM</span> <span class="source-tag">LONG_TAIL_TOOL</span></li><li><strong>seo analyzer tool</strong> <span class="source-tag">MEDIUM</span> <span class="source-tag">LONG_TAIL_TOOL</span></li><li><strong>how to analyze seo</strong> <span class="source-tag">MEDIUM</span> <span class="source-tag">PROBLEM_QUERY</span></li><li><strong>seo analyzer for marketers</strong> <span class="source-tag">MEDIUM</span> <span class="source-tag">AUDIENCE_SPECIFIC</span></li></ul></div></details><details class="cluster-card"><summary>#10 &quot;storytold/artcraft&quot; (unclustered) — 54/100</summary><div class="details-body"><p class="why">{'total': 0, 'positive': 0, 'neutral': 0, 'negative': 0, 'types': {}, 'positive_types': [], 'negative_types': [], 'has_url': False}</p><p class="why"><strong>Why grouped:</strong> no shared functional/domain signal - kept as a separate cluster</p><p class="why"><strong>Cluster score:</strong></p><ul class="why"><li>best member Solo Builder Score 67/100</li><li>source confidence Low–Medium (-1)</li><li>single product from a single source (-12)</li></ul><p class="why"><strong>Solo Builder Score:</strong> 67/100 · <strong>Cluster Evidence Score:</strong> 54/100 · <strong>SEO Opportunity Score:</strong> 0/100 (NOT_CHECKED) · <strong>Market Demand Gate:</strong> UNKNOWN</p><p class="why"><strong>SEO basis:</strong></p><ul class="why"><li>no enriched keywords yet - run scripts/enrich.py</li></ul><p class="why"><strong>Members:</strong></p><ul class="why"><li>storytold/artcraft</li></ul><p class="why"><strong>Verdict:</strong> TEST · <strong>Opportunity Score:</strong> 32/100 · <strong>Substitution:</strong> MEDIUM · <strong>Primary acquisition:</strong> COMMUNITY (MEDIUM) · <strong>Monetization:</strong> freemium (LOW) · <strong>Cost risk:</strong> LOW</p><p class="why"><strong>Not BUILD because:</strong></p><ul class="why"><li>BUILD requires: Solo Builder Score &gt;= 75 (currently 67)</li><li>BUILD requires: Market Demand Gate = PASS or strong non-SEO demand evidence</li><li>BUILD requires: monetization confidence in ('HIGH', 'MEDIUM') (currently LOW)</li><li>BUILD requires: monetization evidence: a positive COMPETITOR or PAYMENT_SIGNAL note, or HIGH monetization confidence</li><li>BUILD requires: corroboration from 2+ sources or a high-confidence source</li><li>BUILD requires: persistence (seen on 2+ days) or positive validation evidence</li></ul><p class="why"><strong>Next actions:</strong></p><ul class="why"><li>Run 3-5 Semrush lookups for this cluster (US volume, KD, weak-SERP yes/no)</li><li>Check 3 competitor pricing pages to confirm people pay</li><li>Look for payment signals (pricing pages, credits, reviews mentioning purchase)</li><li>Search Reddit/communities for repeated pain around this problem</li><li>Validate willingness to pay and repeat usage before building</li><li>Keep monitoring for 2+ days of repeat appearances</li></ul><p class="why">No keywords enriched yet — run <code>python scripts/enrich.py</code>.</p></div></details>
+    </div>
+    <div class="section">
+        <div class="section-header">
+            <div class="section-icon" style="background:#1a1a0a">🔎</div>
+            <span class="section-title">Semrush Check List</span>
+            <span class="section-count">6 keywords</span>
+        </div>
+        <p class="why">Pre-Semrush candidates only — no volume, KD or SERP data. Manual fields to enter later (Phase 3): US Volume, Global Volume, KD, weak SERP (yes/no).</p><div class="table-scroll">
+<table>
+    <thead><tr><th>Keyword</th><th>Cluster</th><th>Priority</th><th>Type</th><th>Why it is worth checking</th></tr></thead>
+    <tbody><tr><td><strong>video summarizer</strong></td><td>Video Summarizer Tools</td><td><span class="source-tag">HIGH</span></td><td>CORE_TOOL</td><td class="why">direct summarizer intent for this domain; cluster 'Video Summarizer Tools' scores 78/100 from 1 product(s) across 1 source(s); SEO NOT_CHECKED</td></tr><tr><td><strong>monica all one summarizer</strong></td><td>Video Summarizer Tools</td><td><span class="source-tag">HIGH</span></td><td>CORE_TOOL</td><td class="why">matches a product in this cluster; cluster 'Video Summarizer Tools' scores 78/100 from 1 product(s) across 1 source(s); SEO NOT_CHECKED</td></tr><tr><td><strong>video summarizer for creators</strong></td><td>Video Summarizer Tools</td><td><span class="source-tag">MEDIUM</span></td><td>AUDIENCE_SPECIFIC</td><td class="why">targets creators; cluster 'Video Summarizer Tools' scores 78/100 from 1 product(s) across 1 source(s); SEO NOT_CHECKED</td></tr><tr><td><strong>seo analyzer</strong></td><td>SEO Analyzer Tools</td><td><span class="source-tag">HIGH</span></td><td>CORE_TOOL</td><td class="why">direct analyzer intent for this domain; cluster 'SEO Analyzer Tools' scores 62/100 from 1 product(s) across 1 source(s); SEO NOT_CHECKED</td></tr><tr><td><strong>shippedit me analyzer</strong></td><td>SEO Analyzer Tools</td><td><span class="source-tag">HIGH</span></td><td>CORE_TOOL</td><td class="why">matches a product in this cluster; cluster 'SEO Analyzer Tools' scores 62/100 from 1 product(s) across 1 source(s); SEO NOT_CHECKED</td></tr><tr><td><strong>seo analyzer for marketers</strong></td><td>SEO Analyzer Tools</td><td><span class="source-tag">MEDIUM</span></td><td>AUDIENCE_SPECIFIC</td><td class="why">targets marketers; cluster 'SEO Analyzer Tools' scores 62/100 from 1 product(s) across 1 source(s); SEO NOT_CHECKED</td></tr></tbody>
+</table>
+</div>
+    </div><div class="section"><div class="section-header"><span class="section-title">Individual Product Evidence</span></div></div>
+    <div class="section">
+        <div class="section-header">
             <div class="section-icon" style="background:#2d1515">🚫</div>
             <span class="section-title">Filtered Out</span>
-            <span class="section-count">0 removed</span>
+            <span class="section-count">5 removed</span>
         </div>
-        <p style="color:#718096;font-size:13px">No products were filtered out.</p>
+        
+        <details>
+            <summary>5 products removed from consideration</summary>
+            <div class="details-body">
+                <table>
+                    <thead><tr>
+                        <th>Product</th><th>Source</th><th>Reason</th>
+                    </tr></thead>
+                    <tbody><tr>
+                <td>Chat with all AI models (Gemini, Claude, DeepSeek…) &amp; AI Agents | AITOPIA</td>
+                <td><span class="source-tag">chrome_extensions</span></td>
+                <td style="color:#718096;font-size:12px">Two-sided marketplace: 'marketplace'</td>
+            </tr><tr>
+                <td>I paid people to try and follow my README</td>
+                <td><span class="source-tag">hackernews</span></td>
+                <td style="color:#718096;font-size:12px">Hacker News article/news item, not a product</td>
+            </tr><tr>
+                <td>IRCv3</td>
+                <td><span class="source-tag">hackernews</span></td>
+                <td style="color:#718096;font-size:12px">Hacker News article/news item, not a product</td>
+            </tr><tr>
+                <td>LineageOS 24.0</td>
+                <td><span class="source-tag">hackernews</span></td>
+                <td style="color:#718096;font-size:12px">Hacker News article/news item, not a product</td>
+            </tr><tr>
+                <td>Nitter: Update Oct 10th seeking funding and legal help</td>
+                <td><span class="source-tag">hackernews</span></td>
+                <td style="color:#718096;font-size:12px">Hacker News article/news item, not a product</td>
+            </tr></tbody>
+                </table>
+            </div>
+        </details>
     </div>
     <div class="section">
         <div class="section-header">
             <div class="section-icon" style="background:#1a1a0a">⭐</div>
-            <span class="section-title">Quick Score — All Suitable Products</span>
-            <span class="section-count">20 products</span>
+            <span class="section-title">Solo Builder Score — All Suitable Products</span>
+            <span class="section-count">15 products</span>
         </div>
-        
-    <table>
-        <thead><tr>
-            <th class="sortable">#</th>
-            <th class="sortable">Product</th>
-            <th class="sortable">Source</th>
-            <th class="sortable">Tech Difficulty</th>
-            <th class="sortable">User Acquisition</th>
-            <th class="sortable">Revenue Potential</th>
-            <th class="sortable">Indie Friendly</th>
-            <th class="sortable sort-desc">Total ↓</th>
-        </tr></thead>
-        <tbody><tr>
-            <td data-val="1">1</td>
-            <td><a href="https://chromewebstore.google.com/detail/questionai-homework-power/hajphibbdloomfdkeoejchiikjggnaif" target="_blank" rel="noopener" style="color:#60a5fa;text-decoration:none">QuestionAI Homework Powered AI Assistant</a></td>
-            <td><span class="source-tag">chrome_extensions</span></td>
-            <td data-val="1"><div class="score-bar-wrap" title="1/5"><div class="score-bar" style="width:20%"></div><span class="score-num">1</span></div></td>
-            <td data-val="4"><div class="score-bar-wrap" title="4/5"><div class="score-bar" style="width:80%"></div><span class="score-num">4</span></div></td>
-            <td data-val="2"><div class="score-bar-wrap" title="2/5"><div class="score-bar" style="width:40%"></div><span class="score-num">2</span></div></td>
-            <td data-val="5"><div class="score-bar-wrap" title="5/5"><div class="score-bar" style="width:100%"></div><span class="score-num">5</span></div></td>
-            <td data-val="12">
-                <span class="score-mid">12</span>
-            </td>
-        </tr><tr>
-            <td data-val="2">2</td>
-            <td><a href="https://chromewebstore.google.com/detail/monica-all-in-one-ai-assi/ofpnmcalabcbjgholdjcjblkibolbppb" target="_blank" rel="noopener" style="color:#60a5fa;text-decoration:none">Monica: All-In-One AI Assist &amp; Smartest  AI Agent</a></td>
-            <td><span class="source-tag">chrome_extensions</span></td>
-            <td data-val="1"><div class="score-bar-wrap" title="1/5"><div class="score-bar" style="width:20%"></div><span class="score-num">1</span></div></td>
-            <td data-val="4"><div class="score-bar-wrap" title="4/5"><div class="score-bar" style="width:80%"></div><span class="score-num">4</span></div></td>
-            <td data-val="2"><div class="score-bar-wrap" title="2/5"><div class="score-bar" style="width:40%"></div><span class="score-num">2</span></div></td>
-            <td data-val="5"><div class="score-bar-wrap" title="5/5"><div class="score-bar" style="width:100%"></div><span class="score-num">5</span></div></td>
-            <td data-val="12">
-                <span class="score-mid">12</span>
-            </td>
-        </tr><tr>
-            <td data-val="3">3</td>
-            <td><a href="https://chromewebstore.google.com/detail/voila-%E2%80%93-ai-assistant-copi/cakobppopkpmmglabcdcklncbckjpkcl" target="_blank" rel="noopener" style="color:#60a5fa;text-decoration:none">Voila – AI Assistant, Copilot and AI Writer</a></td>
-            <td><span class="source-tag">chrome_extensions</span></td>
-            <td data-val="1"><div class="score-bar-wrap" title="1/5"><div class="score-bar" style="width:20%"></div><span class="score-num">1</span></div></td>
-            <td data-val="4"><div class="score-bar-wrap" title="4/5"><div class="score-bar" style="width:80%"></div><span class="score-num">4</span></div></td>
-            <td data-val="2"><div class="score-bar-wrap" title="2/5"><div class="score-bar" style="width:40%"></div><span class="score-num">2</span></div></td>
-            <td data-val="5"><div class="score-bar-wrap" title="5/5"><div class="score-bar" style="width:100%"></div><span class="score-num">5</span></div></td>
-            <td data-val="12">
-                <span class="score-mid">12</span>
-            </td>
-        </tr><tr>
-            <td data-val="4">4</td>
-            <td><a href="https://chromewebstore.google.com/detail/gee-ai-assistant/kldhacnbicjpbdiebjjflnhgcmheokkl" target="_blank" rel="noopener" style="color:#60a5fa;text-decoration:none">GEE AI Assistant</a></td>
-            <td><span class="source-tag">chrome_extensions</span></td>
-            <td data-val="1"><div class="score-bar-wrap" title="1/5"><div class="score-bar" style="width:20%"></div><span class="score-num">1</span></div></td>
-            <td data-val="4"><div class="score-bar-wrap" title="4/5"><div class="score-bar" style="width:80%"></div><span class="score-num">4</span></div></td>
-            <td data-val="2"><div class="score-bar-wrap" title="2/5"><div class="score-bar" style="width:40%"></div><span class="score-num">2</span></div></td>
-            <td data-val="5"><div class="score-bar-wrap" title="5/5"><div class="score-bar" style="width:100%"></div><span class="score-num">5</span></div></td>
-            <td data-val="12">
-                <span class="score-mid">12</span>
-            </td>
-        </tr><tr>
-            <td data-val="5">5</td>
-            <td><a href="https://chromewebstore.google.com/detail/ai-voice-assistant-%E2%80%93-smar/daamboajoclakkelbnglldlckknjfdjb" target="_blank" rel="noopener" style="color:#60a5fa;text-decoration:none">AI Voice Assistant – Smart Browser Copilot</a></td>
-            <td><span class="source-tag">chrome_extensions</span></td>
-            <td data-val="1"><div class="score-bar-wrap" title="1/5"><div class="score-bar" style="width:20%"></div><span class="score-num">1</span></div></td>
-            <td data-val="4"><div class="score-bar-wrap" title="4/5"><div class="score-bar" style="width:80%"></div><span class="score-num">4</span></div></td>
-            <td data-val="2"><div class="score-bar-wrap" title="2/5"><div class="score-bar" style="width:40%"></div><span class="score-num">2</span></div></td>
-            <td data-val="5"><div class="score-bar-wrap" title="5/5"><div class="score-bar" style="width:100%"></div><span class="score-num">5</span></div></td>
-            <td data-val="12">
-                <span class="score-mid">12</span>
-            </td>
-        </tr><tr>
-            <td data-val="6">6</td>
-            <td><a href="https://github.com/cathrynlavery/diagram-design" target="_blank" rel="noopener" style="color:#60a5fa;text-decoration:none">cathrynlavery/diagram-design</a></td>
-            <td><span class="source-tag">github</span></td>
-            <td data-val="3"><div class="score-bar-wrap" title="3/5"><div class="score-bar" style="width:60%"></div><span class="score-num">3</span></div></td>
-            <td data-val="3"><div class="score-bar-wrap" title="3/5"><div class="score-bar" style="width:60%"></div><span class="score-num">3</span></div></td>
-            <td data-val="2"><div class="score-bar-wrap" title="2/5"><div class="score-bar" style="width:40%"></div><span class="score-num">2</span></div></td>
-            <td data-val="4"><div class="score-bar-wrap" title="4/5"><div class="score-bar" style="width:80%"></div><span class="score-num">4</span></div></td>
-            <td data-val="12">
-                <span class="score-mid">12</span>
-            </td>
-        </tr><tr>
-            <td data-val="7">7</td>
-            <td><a href="https://www.producthunt.com/products/tapnoise" target="_blank" rel="noopener" style="color:#60a5fa;text-decoration:none">TapNoise</a></td>
-            <td><span class="source-tag">product_hunt</span></td>
-            <td data-val="2"><div class="score-bar-wrap" title="2/5"><div class="score-bar" style="width:40%"></div><span class="score-num">2</span></div></td>
-            <td data-val="2"><div class="score-bar-wrap" title="2/5"><div class="score-bar" style="width:40%"></div><span class="score-num">2</span></div></td>
-            <td data-val="2"><div class="score-bar-wrap" title="2/5"><div class="score-bar" style="width:40%"></div><span class="score-num">2</span></div></td>
-            <td data-val="5"><div class="score-bar-wrap" title="5/5"><div class="score-bar" style="width:100%"></div><span class="score-num">5</span></div></td>
-            <td data-val="11">
-                <span class="score-low">11</span>
-            </td>
-        </tr><tr>
-            <td data-val="8">8</td>
-            <td><a href="https://github.com/morluto/rea" target="_blank" rel="noopener" style="color:#60a5fa;text-decoration:none">morluto/rea</a></td>
-            <td><span class="source-tag">github</span></td>
-            <td data-val="2"><div class="score-bar-wrap" title="2/5"><div class="score-bar" style="width:40%"></div><span class="score-num">2</span></div></td>
-            <td data-val="3"><div class="score-bar-wrap" title="3/5"><div class="score-bar" style="width:60%"></div><span class="score-num">3</span></div></td>
-            <td data-val="2"><div class="score-bar-wrap" title="2/5"><div class="score-bar" style="width:40%"></div><span class="score-num">2</span></div></td>
-            <td data-val="4"><div class="score-bar-wrap" title="4/5"><div class="score-bar" style="width:80%"></div><span class="score-num">4</span></div></td>
-            <td data-val="11">
-                <span class="score-low">11</span>
-            </td>
-        </tr><tr>
-            <td data-val="9">9</td>
-            <td><a href="https://github.com/boykopovar/AnyPS5" target="_blank" rel="noopener" style="color:#60a5fa;text-decoration:none">boykopovar/AnyPS5</a></td>
-            <td><span class="source-tag">github</span></td>
-            <td data-val="2"><div class="score-bar-wrap" title="2/5"><div class="score-bar" style="width:40%"></div><span class="score-num">2</span></div></td>
-            <td data-val="3"><div class="score-bar-wrap" title="3/5"><div class="score-bar" style="width:60%"></div><span class="score-num">3</span></div></td>
-            <td data-val="2"><div class="score-bar-wrap" title="2/5"><div class="score-bar" style="width:40%"></div><span class="score-num">2</span></div></td>
-            <td data-val="4"><div class="score-bar-wrap" title="4/5"><div class="score-bar" style="width:80%"></div><span class="score-num">4</span></div></td>
-            <td data-val="11">
-                <span class="score-low">11</span>
-            </td>
-        </tr><tr>
-            <td data-val="10">10</td>
-            <td><a href="https://github.com/storytold/artcraft" target="_blank" rel="noopener" style="color:#60a5fa;text-decoration:none">storytold/artcraft</a></td>
-            <td><span class="source-tag">github</span></td>
-            <td data-val="2"><div class="score-bar-wrap" title="2/5"><div class="score-bar" style="width:40%"></div><span class="score-num">2</span></div></td>
-            <td data-val="3"><div class="score-bar-wrap" title="3/5"><div class="score-bar" style="width:60%"></div><span class="score-num">3</span></div></td>
-            <td data-val="2"><div class="score-bar-wrap" title="2/5"><div class="score-bar" style="width:40%"></div><span class="score-num">2</span></div></td>
-            <td data-val="4"><div class="score-bar-wrap" title="4/5"><div class="score-bar" style="width:80%"></div><span class="score-num">4</span></div></td>
-            <td data-val="11">
-                <span class="score-low">11</span>
-            </td>
-        </tr><tr>
-            <td data-val="11">11</td>
-            <td><a href="https://www.producthunt.com/products/hypervibe-2" target="_blank" rel="noopener" style="color:#60a5fa;text-decoration:none">Hypervibe</a></td>
-            <td><span class="source-tag">product_hunt</span></td>
-            <td data-val="3"><div class="score-bar-wrap" title="3/5"><div class="score-bar" style="width:60%"></div><span class="score-num">3</span></div></td>
-            <td data-val="2"><div class="score-bar-wrap" title="2/5"><div class="score-bar" style="width:40%"></div><span class="score-num">2</span></div></td>
-            <td data-val="2"><div class="score-bar-wrap" title="2/5"><div class="score-bar" style="width:40%"></div><span class="score-num">2</span></div></td>
-            <td data-val="3"><div class="score-bar-wrap" title="3/5"><div class="score-bar" style="width:60%"></div><span class="score-num">3</span></div></td>
-            <td data-val="10">
-                <span class="score-low">10</span>
-            </td>
-        </tr><tr>
-            <td data-val="12">12</td>
-            <td><a href="https://www.producthunt.com/products/lune-research" target="_blank" rel="noopener" style="color:#60a5fa;text-decoration:none">Lune</a></td>
-            <td><span class="source-tag">product_hunt</span></td>
-            <td data-val="3"><div class="score-bar-wrap" title="3/5"><div class="score-bar" style="width:60%"></div><span class="score-num">3</span></div></td>
-            <td data-val="2"><div class="score-bar-wrap" title="2/5"><div class="score-bar" style="width:40%"></div><span class="score-num">2</span></div></td>
-            <td data-val="2"><div class="score-bar-wrap" title="2/5"><div class="score-bar" style="width:40%"></div><span class="score-num">2</span></div></td>
-            <td data-val="3"><div class="score-bar-wrap" title="3/5"><div class="score-bar" style="width:60%"></div><span class="score-num">3</span></div></td>
-            <td data-val="10">
-                <span class="score-low">10</span>
-            </td>
-        </tr><tr>
-            <td data-val="13">13</td>
-            <td><a href="https://github.com/mksglu/context-mode" target="_blank" rel="noopener" style="color:#60a5fa;text-decoration:none">mksglu/context-mode</a></td>
-            <td><span class="source-tag">github</span></td>
-            <td data-val="3"><div class="score-bar-wrap" title="3/5"><div class="score-bar" style="width:60%"></div><span class="score-num">3</span></div></td>
-            <td data-val="3"><div class="score-bar-wrap" title="3/5"><div class="score-bar" style="width:60%"></div><span class="score-num">3</span></div></td>
-            <td data-val="2"><div class="score-bar-wrap" title="2/5"><div class="score-bar" style="width:40%"></div><span class="score-num">2</span></div></td>
-            <td data-val="2"><div class="score-bar-wrap" title="2/5"><div class="score-bar" style="width:40%"></div><span class="score-num">2</span></div></td>
-            <td data-val="10">
-                <span class="score-low">10</span>
-            </td>
-        </tr><tr>
-            <td data-val="14">14</td>
-            <td><a href="https://github.com/rociiu/talorys" target="_blank" rel="noopener" style="color:#60a5fa;text-decoration:none">Talorys – A self-hosted personal AI agent on Cloudflare's free tier</a></td>
-            <td><span class="source-tag">hackernews</span></td>
-            <td data-val="3"><div class="score-bar-wrap" title="3/5"><div class="score-bar" style="width:60%"></div><span class="score-num">3</span></div></td>
-            <td data-val="2"><div class="score-bar-wrap" title="2/5"><div class="score-bar" style="width:40%"></div><span class="score-num">2</span></div></td>
-            <td data-val="2"><div class="score-bar-wrap" title="2/5"><div class="score-bar" style="width:40%"></div><span class="score-num">2</span></div></td>
-            <td data-val="3"><div class="score-bar-wrap" title="3/5"><div class="score-bar" style="width:60%"></div><span class="score-num">3</span></div></td>
-            <td data-val="10">
-                <span class="score-low">10</span>
-            </td>
-        </tr><tr>
-            <td data-val="15">15</td>
-            <td><a href="https://purplesyringa.moe/blog/grieving-the-loss-of-details/" target="_blank" rel="noopener" style="color:#60a5fa;text-decoration:none">Grieving the Loss of Details</a></td>
-            <td><span class="source-tag">hackernews</span></td>
-            <td data-val="3"><div class="score-bar-wrap" title="3/5"><div class="score-bar" style="width:60%"></div><span class="score-num">3</span></div></td>
-            <td data-val="2"><div class="score-bar-wrap" title="2/5"><div class="score-bar" style="width:40%"></div><span class="score-num">2</span></div></td>
-            <td data-val="2"><div class="score-bar-wrap" title="2/5"><div class="score-bar" style="width:40%"></div><span class="score-num">2</span></div></td>
-            <td data-val="3"><div class="score-bar-wrap" title="3/5"><div class="score-bar" style="width:60%"></div><span class="score-num">3</span></div></td>
-            <td data-val="10">
-                <span class="score-low">10</span>
-            </td>
-        </tr><tr>
-            <td data-val="16">16</td>
-            <td><a href="https://www.producthunt.com/products/buda-2" target="_blank" rel="noopener" style="color:#60a5fa;text-decoration:none">API Claws by Buda</a></td>
-            <td><span class="source-tag">product_hunt</span></td>
-            <td data-val="2"><div class="score-bar-wrap" title="2/5"><div class="score-bar" style="width:40%"></div><span class="score-num">2</span></div></td>
-            <td data-val="2"><div class="score-bar-wrap" title="2/5"><div class="score-bar" style="width:40%"></div><span class="score-num">2</span></div></td>
-            <td data-val="2"><div class="score-bar-wrap" title="2/5"><div class="score-bar" style="width:40%"></div><span class="score-num">2</span></div></td>
-            <td data-val="3"><div class="score-bar-wrap" title="3/5"><div class="score-bar" style="width:60%"></div><span class="score-num">3</span></div></td>
-            <td data-val="9">
-                <span class="score-low">9</span>
-            </td>
-        </tr><tr>
-            <td data-val="17">17</td>
-            <td><a href="https://www.producthunt.com/products/gitglow-2" target="_blank" rel="noopener" style="color:#60a5fa;text-decoration:none">GitGlow</a></td>
-            <td><span class="source-tag">product_hunt</span></td>
-            <td data-val="2"><div class="score-bar-wrap" title="2/5"><div class="score-bar" style="width:40%"></div><span class="score-num">2</span></div></td>
-            <td data-val="2"><div class="score-bar-wrap" title="2/5"><div class="score-bar" style="width:40%"></div><span class="score-num">2</span></div></td>
-            <td data-val="2"><div class="score-bar-wrap" title="2/5"><div class="score-bar" style="width:40%"></div><span class="score-num">2</span></div></td>
-            <td data-val="3"><div class="score-bar-wrap" title="3/5"><div class="score-bar" style="width:60%"></div><span class="score-num">3</span></div></td>
-            <td data-val="9">
-                <span class="score-low">9</span>
-            </td>
-        </tr><tr>
-            <td data-val="18">18</td>
-            <td><a href="https://www.thomas-huehn.com/knuth-reward-check" target="_blank" rel="noopener" style="color:#60a5fa;text-decoration:none">Knuth Reward Check</a></td>
-            <td><span class="source-tag">hackernews</span></td>
-            <td data-val="2"><div class="score-bar-wrap" title="2/5"><div class="score-bar" style="width:40%"></div><span class="score-num">2</span></div></td>
-            <td data-val="2"><div class="score-bar-wrap" title="2/5"><div class="score-bar" style="width:40%"></div><span class="score-num">2</span></div></td>
-            <td data-val="2"><div class="score-bar-wrap" title="2/5"><div class="score-bar" style="width:40%"></div><span class="score-num">2</span></div></td>
-            <td data-val="3"><div class="score-bar-wrap" title="3/5"><div class="score-bar" style="width:60%"></div><span class="score-num">3</span></div></td>
-            <td data-val="9">
-                <span class="score-low">9</span>
-            </td>
-        </tr><tr>
-            <td data-val="19">19</td>
-            <td><a href="https://openscad.org/" target="_blank" rel="noopener" style="color:#60a5fa;text-decoration:none">OpenSCAD the Programmers Solid 3D CAD Modeller</a></td>
-            <td><span class="source-tag">hackernews</span></td>
-            <td data-val="2"><div class="score-bar-wrap" title="2/5"><div class="score-bar" style="width:40%"></div><span class="score-num">2</span></div></td>
-            <td data-val="2"><div class="score-bar-wrap" title="2/5"><div class="score-bar" style="width:40%"></div><span class="score-num">2</span></div></td>
-            <td data-val="2"><div class="score-bar-wrap" title="2/5"><div class="score-bar" style="width:40%"></div><span class="score-num">2</span></div></td>
-            <td data-val="3"><div class="score-bar-wrap" title="3/5"><div class="score-bar" style="width:60%"></div><span class="score-num">3</span></div></td>
-            <td data-val="9">
-                <span class="score-low">9</span>
-            </td>
-        </tr><tr>
-            <td data-val="20">20</td>
-            <td><a href="https://patkerr.co.uk/2d-vehicles/" target="_blank" rel="noopener" style="color:#60a5fa;text-decoration:none">2D Vehicles</a></td>
-            <td><span class="source-tag">hackernews</span></td>
-            <td data-val="2"><div class="score-bar-wrap" title="2/5"><div class="score-bar" style="width:40%"></div><span class="score-num">2</span></div></td>
-            <td data-val="2"><div class="score-bar-wrap" title="2/5"><div class="score-bar" style="width:40%"></div><span class="score-num">2</span></div></td>
-            <td data-val="2"><div class="score-bar-wrap" title="2/5"><div class="score-bar" style="width:40%"></div><span class="score-num">2</span></div></td>
-            <td data-val="3"><div class="score-bar-wrap" title="3/5"><div class="score-bar" style="width:60%"></div><span class="score-num">3</span></div></td>
-            <td data-val="9">
-                <span class="score-low">9</span>
-            </td>
-        </tr></tbody>
-    </table>
+        <div class="table-scroll">
+<table>
+    <thead><tr>
+        <th class="sortable">#</th>
+        <th class="sortable">Product</th>
+        <th class="sortable">Source</th>
+        <th class="sortable">Confidence</th>
+        <th class="sortable sort-desc">Score /100 ↓</th>
+        <th class="sortable">Build Ease (20)</th>
+        <th class="sortable">Self-Serve (15)</th>
+        <th class="sortable">Monetize (15)</th>
+        <th class="sortable">Comms (15)</th>
+        <th class="sortable">Op Cost (10)</th>
+        <th class="sortable">Solo Fit (15)</th>
+        <th class="sortable">Orchard (10)</th>
+        <th>Why this score</th>
+    </tr></thead>
+    <tbody><tr><td data-val="1">1</td><td><a href="https://chromewebstore.google.com/detail/gptzero-ai-detection-writ/kgobeoibakoahbfnlficpmibdbkdchap" target="_blank" rel="noopener" style="color:#60a5fa;text-decoration:none">GPTZero: AI Detection &amp; Writing Replay</a></td><td><span class="source-tag">chrome_extensions</span></td><td data-val="0.60"><span class="source-tag">Medium +1</span></td><td data-val="89"><span class="score-high">89</span></td><td data-val="20"><div class="score-bar-wrap" title="20/20"><div class="score-bar" style="width:100%"></div><span class="score-num">20</span></div></td><td data-val="15"><div class="score-bar-wrap" title="15/15"><div class="score-bar" style="width:100%"></div><span class="score-num">15</span></div></td><td data-val="9"><div class="score-bar-wrap" title="9/15"><div class="score-bar" style="width:60%"></div><span class="score-num">9</span></div></td><td data-val="15"><div class="score-bar-wrap" title="15/15"><div class="score-bar" style="width:100%"></div><span class="score-num">15</span></div></td><td data-val="8"><div class="score-bar-wrap" title="8/10"><div class="score-bar" style="width:80%"></div><span class="score-num">8</span></div></td><td data-val="15"><div class="score-bar-wrap" title="15/15"><div class="score-bar" style="width:100%"></div><span class="score-num">15</span></div></td><td data-val="6"><div class="score-bar-wrap" title="6/10"><div class="score-bar" style="width:60%"></div><span class="score-num">6</span></div></td><td class="why"><ul><li>source confidence Medium (+1 ranking points)</li><li>strongest: Solo-Builder Fit 15/15 - extension distribution and scope suit a single builder</li><li>weakest: Monetization 9/15 - monetisation not explicit - assume freemium</li></ul></td></tr><tr><td data-val="2">2</td><td><a href="https://chromewebstore.google.com/detail/harpa-ai-web-automation-w/eanggfilgoajaocelnaflolkadkeghjp" target="_blank" rel="noopener" style="color:#60a5fa;text-decoration:none">HARPA AI: Web Automation with ChatGPT, Claude, Gemini, Grok</a></td><td><span class="source-tag">chrome_extensions</span></td><td data-val="0.60"><span class="source-tag">Medium +1</span></td><td data-val="89"><span class="score-high">89</span></td><td data-val="20"><div class="score-bar-wrap" title="20/20"><div class="score-bar" style="width:100%"></div><span class="score-num">20</span></div></td><td data-val="15"><div class="score-bar-wrap" title="15/15"><div class="score-bar" style="width:100%"></div><span class="score-num">15</span></div></td><td data-val="9"><div class="score-bar-wrap" title="9/15"><div class="score-bar" style="width:60%"></div><span class="score-num">9</span></div></td><td data-val="15"><div class="score-bar-wrap" title="15/15"><div class="score-bar" style="width:100%"></div><span class="score-num">15</span></div></td><td data-val="8"><div class="score-bar-wrap" title="8/10"><div class="score-bar" style="width:80%"></div><span class="score-num">8</span></div></td><td data-val="15"><div class="score-bar-wrap" title="15/15"><div class="score-bar" style="width:100%"></div><span class="score-num">15</span></div></td><td data-val="6"><div class="score-bar-wrap" title="6/10"><div class="score-bar" style="width:60%"></div><span class="score-num">6</span></div></td><td class="why"><ul><li>source confidence Medium (+1 ranking points)</li><li>strongest: Solo-Builder Fit 15/15 - extension distribution and scope suit a single builder</li><li>weakest: Monetization 9/15 - monetisation not explicit - assume freemium</li></ul></td></tr><tr><td data-val="3">3</td><td><a href="https://chromewebstore.google.com/detail/monica-all-in-one-ai-assi/ofpnmcalabcbjgholdjcjblkibolbppb" target="_blank" rel="noopener" style="color:#60a5fa;text-decoration:none">Monica: All-In-One AI Assist &amp; Smartest AI Agent</a></td><td><span class="source-tag">chrome_extensions</span></td><td data-val="0.60"><span class="source-tag">Medium +1</span></td><td data-val="89"><span class="score-high">89</span></td><td data-val="20"><div class="score-bar-wrap" title="20/20"><div class="score-bar" style="width:100%"></div><span class="score-num">20</span></div></td><td data-val="15"><div class="score-bar-wrap" title="15/15"><div class="score-bar" style="width:100%"></div><span class="score-num">15</span></div></td><td data-val="9"><div class="score-bar-wrap" title="9/15"><div class="score-bar" style="width:60%"></div><span class="score-num">9</span></div></td><td data-val="15"><div class="score-bar-wrap" title="15/15"><div class="score-bar" style="width:100%"></div><span class="score-num">15</span></div></td><td data-val="4"><div class="score-bar-wrap" title="4/10"><div class="score-bar" style="width:40%"></div><span class="score-num">4</span></div></td><td data-val="15"><div class="score-bar-wrap" title="15/15"><div class="score-bar" style="width:100%"></div><span class="score-num">15</span></div></td><td data-val="10"><div class="score-bar-wrap" title="10/10"><div class="score-bar" style="width:100%"></div><span class="score-num">10</span></div></td><td class="why"><ul><li>source confidence Medium (+1 ranking points)</li><li>strongest: Tool-Orchard Potential 10/10 - generator family - multiple use-case pages</li><li>weakest: Operating Cost 4/10 - generation-heavy inference - high recurring compute cost</li><li>multi-tool positioning already present</li></ul></td></tr><tr><td data-val="4">4</td><td><a href="https://chromewebstore.google.com/detail/sider-chat-with-all-ai-gp/difoiogjjojoaoomphldepapgpbgkhkb" target="_blank" rel="noopener" style="color:#60a5fa;text-decoration:none">Sider: Chat with all AI: GPT-5, Claude, DeepSeek, Gemini, Grok</a></td><td><span class="source-tag">chrome_extensions</span></td><td data-val="0.60"><span class="source-tag">Medium +1</span></td><td data-val="89"><span class="score-high">89</span></td><td data-val="20"><div class="score-bar-wrap" title="20/20"><div class="score-bar" style="width:100%"></div><span class="score-num">20</span></div></td><td data-val="15"><div class="score-bar-wrap" title="15/15"><div class="score-bar" style="width:100%"></div><span class="score-num">15</span></div></td><td data-val="9"><div class="score-bar-wrap" title="9/15"><div class="score-bar" style="width:60%"></div><span class="score-num">9</span></div></td><td data-val="15"><div class="score-bar-wrap" title="15/15"><div class="score-bar" style="width:100%"></div><span class="score-num">15</span></div></td><td data-val="8"><div class="score-bar-wrap" title="8/10"><div class="score-bar" style="width:80%"></div><span class="score-num">8</span></div></td><td data-val="15"><div class="score-bar-wrap" title="15/15"><div class="score-bar" style="width:100%"></div><span class="score-num">15</span></div></td><td data-val="6"><div class="score-bar-wrap" title="6/10"><div class="score-bar" style="width:60%"></div><span class="score-num">6</span></div></td><td class="why"><ul><li>source confidence Medium (+1 ranking points)</li><li>strongest: Solo-Builder Fit 15/15 - extension distribution and scope suit a single builder</li><li>weakest: Monetization 9/15 - monetisation not explicit - assume freemium</li></ul></td></tr><tr><td data-val="5">5</td><td><a href="https://www.producthunt.com/products/mepersona" target="_blank" rel="noopener" style="color:#60a5fa;text-decoration:none">MePersona</a></td><td><span class="source-tag">product_hunt</span></td><td data-val="0.80"><span class="source-tag">Medium–High +3</span></td><td data-val="77"><span class="score-high">77</span></td><td data-val="12"><div class="score-bar-wrap" title="12/20"><div class="score-bar" style="width:60%"></div><span class="score-num">12</span></div></td><td data-val="12"><div class="score-bar-wrap" title="12/15"><div class="score-bar" style="width:80%"></div><span class="score-num">12</span></div></td><td data-val="9"><div class="score-bar-wrap" title="9/15"><div class="score-bar" style="width:60%"></div><span class="score-num">9</span></div></td><td data-val="15"><div class="score-bar-wrap" title="15/15"><div class="score-bar" style="width:100%"></div><span class="score-num">15</span></div></td><td data-val="8"><div class="score-bar-wrap" title="8/10"><div class="score-bar" style="width:80%"></div><span class="score-num">8</span></div></td><td data-val="12"><div class="score-bar-wrap" title="12/15"><div class="score-bar" style="width:80%"></div><span class="score-num">12</span></div></td><td data-val="6"><div class="score-bar-wrap" title="6/10"><div class="score-bar" style="width:60%"></div><span class="score-num">6</span></div></td><td class="why"><ul><li>source confidence Medium–High (+3 ranking points)</li><li>strongest: Low Communication Burden 15/15 - self-service consumer tool - no customer contact required</li><li>weakest: Build Ease 12/20 - typical MVP scope for a solo builder</li></ul></td></tr><tr><td data-val="6">6</td><td><a href="https://www.producthunt.com/products/ghost-core" target="_blank" rel="noopener" style="color:#60a5fa;text-decoration:none">Ghost Core</a></td><td><span class="source-tag">product_hunt</span></td><td data-val="0.80"><span class="source-tag">Medium–High +3</span></td><td data-val="75"><span class="score-high">75</span></td><td data-val="8"><div class="score-bar-wrap" title="8/20"><div class="score-bar" style="width:40%"></div><span class="score-num">8</span></div></td><td data-val="12"><div class="score-bar-wrap" title="12/15"><div class="score-bar" style="width:80%"></div><span class="score-num">12</span></div></td><td data-val="9"><div class="score-bar-wrap" title="9/15"><div class="score-bar" style="width:60%"></div><span class="score-num">9</span></div></td><td data-val="15"><div class="score-bar-wrap" title="15/15"><div class="score-bar" style="width:100%"></div><span class="score-num">15</span></div></td><td data-val="10"><div class="score-bar-wrap" title="10/10"><div class="score-bar" style="width:100%"></div><span class="score-num">10</span></div></td><td data-val="12"><div class="score-bar-wrap" title="12/15"><div class="score-bar" style="width:80%"></div><span class="score-num">12</span></div></td><td data-val="6"><div class="score-bar-wrap" title="6/10"><div class="score-bar" style="width:60%"></div><span class="score-num">6</span></div></td><td class="why"><ul><li>source confidence Medium–High (+3 ranking points)</li><li>strongest: Operating Cost 10/10 - browser-only / local processing - near-zero marginal cost</li><li>weakest: Build Ease 8/20 - typical MVP scope for a solo builder</li><li>requires AI/LLM integration work</li></ul></td></tr><tr><td data-val="7">7</td><td><a href="https://www.producthunt.com/products/agibot" target="_blank" rel="noopener" style="color:#60a5fa;text-decoration:none">Agibot</a></td><td><span class="source-tag">product_hunt</span></td><td data-val="0.80"><span class="source-tag">Medium–High +3</span></td><td data-val="73"><span class="score-high">73</span></td><td data-val="8"><div class="score-bar-wrap" title="8/20"><div class="score-bar" style="width:40%"></div><span class="score-num">8</span></div></td><td data-val="12"><div class="score-bar-wrap" title="12/15"><div class="score-bar" style="width:80%"></div><span class="score-num">12</span></div></td><td data-val="9"><div class="score-bar-wrap" title="9/15"><div class="score-bar" style="width:60%"></div><span class="score-num">9</span></div></td><td data-val="15"><div class="score-bar-wrap" title="15/15"><div class="score-bar" style="width:100%"></div><span class="score-num">15</span></div></td><td data-val="8"><div class="score-bar-wrap" title="8/10"><div class="score-bar" style="width:80%"></div><span class="score-num">8</span></div></td><td data-val="12"><div class="score-bar-wrap" title="12/15"><div class="score-bar" style="width:80%"></div><span class="score-num">12</span></div></td><td data-val="6"><div class="score-bar-wrap" title="6/10"><div class="score-bar" style="width:60%"></div><span class="score-num">6</span></div></td><td class="why"><ul><li>source confidence Medium–High (+3 ranking points)</li><li>strongest: Low Communication Burden 15/15 - self-service consumer tool - no customer contact required</li><li>weakest: Build Ease 8/20 - typical MVP scope for a solo builder</li><li>requires AI/LLM integration work</li></ul></td></tr><tr><td data-val="8">8</td><td><a href="https://www.producthunt.com/products/hirekey" target="_blank" rel="noopener" style="color:#60a5fa;text-decoration:none">HireKey</a></td><td><span class="source-tag">product_hunt</span></td><td data-val="0.80"><span class="source-tag">Medium–High +3</span></td><td data-val="73"><span class="score-high">73</span></td><td data-val="8"><div class="score-bar-wrap" title="8/20"><div class="score-bar" style="width:40%"></div><span class="score-num">8</span></div></td><td data-val="12"><div class="score-bar-wrap" title="12/15"><div class="score-bar" style="width:80%"></div><span class="score-num">12</span></div></td><td data-val="9"><div class="score-bar-wrap" title="9/15"><div class="score-bar" style="width:60%"></div><span class="score-num">9</span></div></td><td data-val="15"><div class="score-bar-wrap" title="15/15"><div class="score-bar" style="width:100%"></div><span class="score-num">15</span></div></td><td data-val="8"><div class="score-bar-wrap" title="8/10"><div class="score-bar" style="width:80%"></div><span class="score-num">8</span></div></td><td data-val="12"><div class="score-bar-wrap" title="12/15"><div class="score-bar" style="width:80%"></div><span class="score-num">12</span></div></td><td data-val="6"><div class="score-bar-wrap" title="6/10"><div class="score-bar" style="width:60%"></div><span class="score-num">6</span></div></td><td class="why"><ul><li>source confidence Medium–High (+3 ranking points)</li><li>strongest: Low Communication Burden 15/15 - self-service consumer tool - no customer contact required</li><li>weakest: Build Ease 8/20 - typical MVP scope for a solo builder</li><li>requires AI/LLM integration work</li></ul></td></tr><tr><td data-val="9">9</td><td><a href="https://radar.cloudflare.com/bots/as13238?dateRange=7d" target="_blank" rel="noopener" style="color:#60a5fa;text-decoration:none">Sudden drop in Cloudflare bot traffic after strike on Yandex datacenter</a></td><td><span class="source-tag">hackernews</span></td><td data-val="0.20"><span class="source-tag">Low -3</span></td><td data-val="71"><span class="score-high">71</span></td><td data-val="12"><div class="score-bar-wrap" title="12/20"><div class="score-bar" style="width:60%"></div><span class="score-num">12</span></div></td><td data-val="12"><div class="score-bar-wrap" title="12/15"><div class="score-bar" style="width:80%"></div><span class="score-num">12</span></div></td><td data-val="9"><div class="score-bar-wrap" title="9/15"><div class="score-bar" style="width:60%"></div><span class="score-num">9</span></div></td><td data-val="15"><div class="score-bar-wrap" title="15/15"><div class="score-bar" style="width:100%"></div><span class="score-num">15</span></div></td><td data-val="8"><div class="score-bar-wrap" title="8/10"><div class="score-bar" style="width:80%"></div><span class="score-num">8</span></div></td><td data-val="12"><div class="score-bar-wrap" title="12/15"><div class="score-bar" style="width:80%"></div><span class="score-num">12</span></div></td><td data-val="6"><div class="score-bar-wrap" title="6/10"><div class="score-bar" style="width:60%"></div><span class="score-num">6</span></div></td><td class="why"><ul><li>source confidence Low (-3 ranking points)</li><li>strongest: Low Communication Burden 15/15 - self-service consumer tool - no customer contact required</li><li>weakest: Build Ease 12/20 - typical MVP scope for a solo builder</li></ul></td></tr><tr><td data-val="10">10</td><td><a href="https://www.producthunt.com/products/shippedit-me" target="_blank" rel="noopener" style="color:#60a5fa;text-decoration:none">shippedit.me</a></td><td><span class="source-tag">product_hunt</span></td><td data-val="0.80"><span class="source-tag">Medium–High +3</span></td><td data-val="71"><span class="score-high">71</span></td><td data-val="12"><div class="score-bar-wrap" title="12/20"><div class="score-bar" style="width:60%"></div><span class="score-num">12</span></div></td><td data-val="12"><div class="score-bar-wrap" title="12/15"><div class="score-bar" style="width:80%"></div><span class="score-num">12</span></div></td><td data-val="9"><div class="score-bar-wrap" title="9/15"><div class="score-bar" style="width:60%"></div><span class="score-num">9</span></div></td><td data-val="15"><div class="score-bar-wrap" title="15/15"><div class="score-bar" style="width:100%"></div><span class="score-num">15</span></div></td><td data-val="8"><div class="score-bar-wrap" title="8/10"><div class="score-bar" style="width:80%"></div><span class="score-num">8</span></div></td><td data-val="6"><div class="score-bar-wrap" title="6/15"><div class="score-bar" style="width:40%"></div><span class="score-num">6</span></div></td><td data-val="6"><div class="score-bar-wrap" title="6/10"><div class="score-bar" style="width:60%"></div><span class="score-num">6</span></div></td><td class="why"><ul><li>source confidence Medium–High (+3 ranking points)</li><li>strongest: Low Communication Burden 15/15 - self-service consumer tool - no customer contact required</li><li>weakest: Solo-Builder Fit 6/15 - platform/ecosystem scope is hard to maintain solo</li></ul></td></tr><tr><td data-val="11">11</td><td><a href="https://github.com/bilawalsidhu/gods-eye-view" target="_blank" rel="noopener" style="color:#60a5fa;text-decoration:none">bilawalsidhu/gods-eye-view</a></td><td><span class="source-tag">github</span></td><td data-val="0.40"><span class="source-tag">Low–Medium -1</span></td><td data-val="67"><span class="score-mid">67</span></td><td data-val="12"><div class="score-bar-wrap" title="12/20"><div class="score-bar" style="width:60%"></div><span class="score-num">12</span></div></td><td data-val="9"><div class="score-bar-wrap" title="9/15"><div class="score-bar" style="width:60%"></div><span class="score-num">9</span></div></td><td data-val="9"><div class="score-bar-wrap" title="9/15"><div class="score-bar" style="width:60%"></div><span class="score-num">9</span></div></td><td data-val="12"><div class="score-bar-wrap" title="12/15"><div class="score-bar" style="width:80%"></div><span class="score-num">12</span></div></td><td data-val="8"><div class="score-bar-wrap" title="8/10"><div class="score-bar" style="width:80%"></div><span class="score-num">8</span></div></td><td data-val="12"><div class="score-bar-wrap" title="12/15"><div class="score-bar" style="width:80%"></div><span class="score-num">12</span></div></td><td data-val="6"><div class="score-bar-wrap" title="6/10"><div class="score-bar" style="width:60%"></div><span class="score-num">6</span></div></td><td class="why"><ul><li>source confidence Low–Medium (-1 ranking points)</li><li>strongest: Solo-Builder Fit 12/15 - OSS core + hosted layer is a proven solo path</li><li>weakest: Build Ease 12/20 - moderate build complexity for a solo MVP</li></ul></td></tr><tr><td data-val="12">12</td><td><a href="https://github.com/boykopovar/AnyPS5" target="_blank" rel="noopener" style="color:#60a5fa;text-decoration:none">boykopovar/AnyPS5</a></td><td><span class="source-tag">github</span></td><td data-val="0.40"><span class="source-tag">Low–Medium -1</span></td><td data-val="67"><span class="score-mid">67</span></td><td data-val="12"><div class="score-bar-wrap" title="12/20"><div class="score-bar" style="width:60%"></div><span class="score-num">12</span></div></td><td data-val="9"><div class="score-bar-wrap" title="9/15"><div class="score-bar" style="width:60%"></div><span class="score-num">9</span></div></td><td data-val="9"><div class="score-bar-wrap" title="9/15"><div class="score-bar" style="width:60%"></div><span class="score-num">9</span></div></td><td data-val="12"><div class="score-bar-wrap" title="12/15"><div class="score-bar" style="width:80%"></div><span class="score-num">12</span></div></td><td data-val="8"><div class="score-bar-wrap" title="8/10"><div class="score-bar" style="width:80%"></div><span class="score-num">8</span></div></td><td data-val="12"><div class="score-bar-wrap" title="12/15"><div class="score-bar" style="width:80%"></div><span class="score-num">12</span></div></td><td data-val="6"><div class="score-bar-wrap" title="6/10"><div class="score-bar" style="width:60%"></div><span class="score-num">6</span></div></td><td class="why"><ul><li>source confidence Low–Medium (-1 ranking points)</li><li>strongest: Solo-Builder Fit 12/15 - OSS core + hosted layer is a proven solo path</li><li>weakest: Build Ease 12/20 - moderate build complexity for a solo MVP</li></ul></td></tr><tr><td data-val="13">13</td><td><a href="https://github.com/morluto/rea" target="_blank" rel="noopener" style="color:#60a5fa;text-decoration:none">morluto/rea</a></td><td><span class="source-tag">github</span></td><td data-val="0.40"><span class="source-tag">Low–Medium -1</span></td><td data-val="67"><span class="score-mid">67</span></td><td data-val="12"><div class="score-bar-wrap" title="12/20"><div class="score-bar" style="width:60%"></div><span class="score-num">12</span></div></td><td data-val="9"><div class="score-bar-wrap" title="9/15"><div class="score-bar" style="width:60%"></div><span class="score-num">9</span></div></td><td data-val="9"><div class="score-bar-wrap" title="9/15"><div class="score-bar" style="width:60%"></div><span class="score-num">9</span></div></td><td data-val="12"><div class="score-bar-wrap" title="12/15"><div class="score-bar" style="width:80%"></div><span class="score-num">12</span></div></td><td data-val="8"><div class="score-bar-wrap" title="8/10"><div class="score-bar" style="width:80%"></div><span class="score-num">8</span></div></td><td data-val="12"><div class="score-bar-wrap" title="12/15"><div class="score-bar" style="width:80%"></div><span class="score-num">12</span></div></td><td data-val="6"><div class="score-bar-wrap" title="6/10"><div class="score-bar" style="width:60%"></div><span class="score-num">6</span></div></td><td class="why"><ul><li>source confidence Low–Medium (-1 ranking points)</li><li>strongest: Solo-Builder Fit 12/15 - OSS core + hosted layer is a proven solo path</li><li>weakest: Build Ease 12/20 - moderate build complexity for a solo MVP</li></ul></td></tr><tr><td data-val="14">14</td><td><a href="https://github.com/storytold/artcraft" target="_blank" rel="noopener" style="color:#60a5fa;text-decoration:none">storytold/artcraft</a></td><td><span class="source-tag">github</span></td><td data-val="0.40"><span class="source-tag">Low–Medium -1</span></td><td data-val="67"><span class="score-mid">67</span></td><td data-val="12"><div class="score-bar-wrap" title="12/20"><div class="score-bar" style="width:60%"></div><span class="score-num">12</span></div></td><td data-val="9"><div class="score-bar-wrap" title="9/15"><div class="score-bar" style="width:60%"></div><span class="score-num">9</span></div></td><td data-val="9"><div class="score-bar-wrap" title="9/15"><div class="score-bar" style="width:60%"></div><span class="score-num">9</span></div></td><td data-val="12"><div class="score-bar-wrap" title="12/15"><div class="score-bar" style="width:80%"></div><span class="score-num">12</span></div></td><td data-val="8"><div class="score-bar-wrap" title="8/10"><div class="score-bar" style="width:80%"></div><span class="score-num">8</span></div></td><td data-val="12"><div class="score-bar-wrap" title="12/15"><div class="score-bar" style="width:80%"></div><span class="score-num">12</span></div></td><td data-val="6"><div class="score-bar-wrap" title="6/10"><div class="score-bar" style="width:60%"></div><span class="score-num">6</span></div></td><td class="why"><ul><li>source confidence Low–Medium (-1 ranking points)</li><li>strongest: Solo-Builder Fit 12/15 - OSS core + hosted layer is a proven solo path</li><li>weakest: Build Ease 12/20 - moderate build complexity for a solo MVP</li></ul></td></tr><tr><td data-val="15">15</td><td><a href="https://github.com/cathrynlavery/diagram-design" target="_blank" rel="noopener" style="color:#60a5fa;text-decoration:none">cathrynlavery/diagram-design</a></td><td><span class="source-tag">github</span></td><td data-val="0.40"><span class="source-tag">Low–Medium -1</span></td><td data-val="63"><span class="score-mid">63</span></td><td data-val="8"><div class="score-bar-wrap" title="8/20"><div class="score-bar" style="width:40%"></div><span class="score-num">8</span></div></td><td data-val="9"><div class="score-bar-wrap" title="9/15"><div class="score-bar" style="width:60%"></div><span class="score-num">9</span></div></td><td data-val="9"><div class="score-bar-wrap" title="9/15"><div class="score-bar" style="width:60%"></div><span class="score-num">9</span></div></td><td data-val="12"><div class="score-bar-wrap" title="12/15"><div class="score-bar" style="width:80%"></div><span class="score-num">12</span></div></td><td data-val="8"><div class="score-bar-wrap" title="8/10"><div class="score-bar" style="width:80%"></div><span class="score-num">8</span></div></td><td data-val="12"><div class="score-bar-wrap" title="12/15"><div class="score-bar" style="width:80%"></div><span class="score-num">12</span></div></td><td data-val="6"><div class="score-bar-wrap" title="6/10"><div class="score-bar" style="width:60%"></div><span class="score-num">6</span></div></td><td class="why"><ul><li>source confidence Low–Medium (-1 ranking points)</li><li>strongest: Solo-Builder Fit 12/15 - OSS core + hosted layer is a proven solo path</li><li>weakest: Build Ease 8/20 - moderate build complexity for a solo MVP</li><li>requires AI/LLM integration work</li></ul></td></tr></tbody>
+</table>
+</div>
     </div>
     <div class="section">
         <div class="section-header">
@@ -557,17 +451,17 @@
             <div class="top-card-header">
                 <div class="rank-badge">#1</div>
                 <div class="top-card-info">
-                    <div class="top-card-name"><a href="https://chromewebstore.google.com/detail/questionai-homework-power/hajphibbdloomfdkeoejchiikjggnaif" target="_blank" rel="noopener" class="product-name-link">QuestionAI Homework Powered AI Assistant</a></div>
-                    <div class="top-card-desc">AI Copilot can answer screenshot queries and assist with writing, summarizing, translating, and grammar checking.</div>
+                    <div class="top-card-name"><a href="https://chromewebstore.google.com/detail/gptzero-ai-detection-writ/kgobeoibakoahbfnlficpmibdbkdchap" target="_blank" rel="noopener" class="product-name-link">GPTZero: AI Detection &amp; Writing Replay</a></div>
+                    <div class="top-card-desc">Bring AI detection, citation checks, live essay feedback, and writing replays directly into Google Docs and your workflow.</div>
                     <div class="top-card-meta">
                         <span class="source-tag">chrome_extensions</span>
-                        <span class="badge badge-blue">Tech 1/5</span><span class="badge badge-green">Acquisition 4/5</span><span class="badge badge-orange">Revenue 2/5</span><span class="badge badge-gray">Indie 5/5</span>
-                        <a class="card-link" href="https://chromewebstore.google.com/detail/questionai-homework-power/hajphibbdloomfdkeoejchiikjggnaif" target="_blank" rel="noopener">Visit Product →</a>
+                        <span class="badge badge-blue">Build ease 20/20</span><span class="badge badge-green">Acquisition 15/15</span><span class="badge badge-orange">Monetization 9/15</span><span class="badge badge-gray">Op cost LOW</span>
+                        <a class="card-link" href="https://chromewebstore.google.com/detail/gptzero-ai-detection-writ/kgobeoibakoahbfnlficpmibdbkdchap" target="_blank" rel="noopener">Visit Product →</a>
                     </div>
                 </div>
                 <div class="top-card-score">
-                    <div class="big score-mid">12</div>
-                    <div class="label">/ 20</div>
+                    <div class="big score-high">89</div>
+                    <div class="label">/ 100</div>
                 </div>
             </div>
             <button class="qa-toggle">
@@ -578,38 +472,38 @@
                 
             <div class="qa-item">
                 <div class="qa-q">Who are the users?</div>
-                <div class="qa-a">**Writers, marketers, students, and professionals who produce written content regularly** (B2C — individual users making a personal purchase decision).</div>
+                <div class="qa-a">**Writers, marketers, students, and professionals who produce written content regularly** (B2C - individual users making a personal purchase decision).</div>
                 
             </div>
             <div class="qa-item">
                 <div class="qa-q">Why do they need it?</div>
                 <div class="qa-a">Writing from scratch is slow and mentally draining; they need a starting point or polishing</div>
-                <div class="qa-quote">What the product says: _&quot;AI Copilot can answer screenshot queries and assist with writing, summarizing, translating, and grammar checking&quot;_</div>
+                <div class="qa-quote">What the product says: _&quot;Bring AI detection, citation checks, live essay feedback, and writing replays directly into Google Docs and your workflow&quot;_</div>
             </div>
             <div class="qa-item">
                 <div class="qa-q">How does it find users?</div>
-                <div class="qa-a">**Chrome Web Store** organic search is the primary channel — users search for a task and your extension appears. Submit to extension directories (extlib.io, alternativeto). Zero ongoing CAC once listed.</div>
+                <div class="qa-a">**Chrome Web Store** organic search is the primary channel - users search for a task and your extension appears. Submit to extension directories (extlib.io, alternativeto). Zero ongoing CAC once listed.</div>
                 
             </div>
             <div class="qa-item">
                 <div class="qa-q">Does it make money? How much?</div>
-                <div class="qa-a">Monetisation model not explicit from public info. For indie viability, target freemium with a **$9–$29/month** paid tier. Validate willingness to pay before building the billing system.</div>
+                <div class="qa-a">Monetisation model not explicit from public info. For indie viability, target freemium with a **$9-$29/month** paid tier. Validate willingness to pay before building the billing system.</div>
                 
             </div>
             <div class="qa-item">
                 <div class="qa-q">What can I learn from this?</div>
-                <div class="qa-a">- The Chrome Web Store is a search engine most developers forget to compete in — a well-optimised listing gets passive, recurring installs with zero ad spend.
+                <div class="qa-a">- The Chrome Web Store is a search engine most developers forget to compete in - a well-optimised listing gets passive, recurring installs with zero ad spend.
 - Extensions have structurally better retention than web apps: uninstalling requires deliberate effort, so users stick around.</div>
                 
             </div>
             <div class="qa-item">
                 <div class="qa-q">One-sentence pitch</div>
-                <div class="qa-a">_QuestionAI Homework Powered AI Assistant helps writers, marketers, students, and professionals who produce written content regularly by letting them ai copilot can answer screenshot queries and assist with writing, summarizing, translating, and grammar checking._</div>
+                <div class="qa-a">_GPTZero: AI Detection &amp; Writing Replay helps writers, marketers, students, and professionals who produce written content regularly by letting them bring ai detection, citation checks, live essay feedback, and writing replays directly into google docs and your workflow._</div>
                 
             </div>
             <div class="qa-item">
                 <div class="qa-q">Can I build it?</div>
-                <div class="qa-a">**Yes** — Chrome extensions are HTML/CSS/JS. Any web developer can ship an MVP in a weekend. Google's Manifest V3 docs are excellent.</div>
+                <div class="qa-a">**Yes** - Chrome extensions are HTML/CSS/JS. Any web developer can ship an MVP in a weekend. Google's Manifest V3 docs are excellent.</div>
                 
             </div>
             <div class="qa-item">
@@ -617,24 +511,24 @@
                 <div class="qa-a">Optimise your **Chrome Web Store listing** (title + description for search terms). Post in subreddits relevant to the use case. Submit to ProductHunt and extension directories (extlib.io, chromeextensions.dev).</div>
                 
             </div>
-                <div class="first-step"><strong>💡 First Step:</strong> Search the Chrome Web Store for similar extensions and read the **1-star reviews** — that's your feature backlog. Build one clear improvement over the top competitor and launch.</div>
+                <div class="first-step"><strong>💡 First Step:</strong> Search the Chrome Web Store for similar extensions and read the **1-star reviews** - that's your feature backlog. Build one clear improvement over the top competitor and launch.</div>
             </div>
         </div>
         <div class="top-card">
             <div class="top-card-header">
                 <div class="rank-badge">#2</div>
                 <div class="top-card-info">
-                    <div class="top-card-name"><a href="https://chromewebstore.google.com/detail/monica-all-in-one-ai-assi/ofpnmcalabcbjgholdjcjblkibolbppb" target="_blank" rel="noopener" class="product-name-link">Monica: All-In-One AI Assist &amp; Smartest  AI Agent</a></div>
-                    <div class="top-card-desc">One stop AI Assistant with GPT, Claude, Gemini: Chat, Write, Translate, Search, Summarize, image generator, video generation</div>
+                    <div class="top-card-name"><a href="https://chromewebstore.google.com/detail/harpa-ai-web-automation-w/eanggfilgoajaocelnaflolkadkeghjp" target="_blank" rel="noopener" class="product-name-link">HARPA AI: Web Automation with ChatGPT, Claude, Gemini, Grok</a></div>
+                    <div class="top-card-desc">Free AI sidebar with ChatGPT, Claude, Gemini &amp; DeepSeek. 100+ commands to automate, monitor prices, summarize &amp; write.</div>
                     <div class="top-card-meta">
                         <span class="source-tag">chrome_extensions</span>
-                        <span class="badge badge-blue">Tech 1/5</span><span class="badge badge-green">Acquisition 4/5</span><span class="badge badge-orange">Revenue 2/5</span><span class="badge badge-gray">Indie 5/5</span>
-                        <a class="card-link" href="https://chromewebstore.google.com/detail/monica-all-in-one-ai-assi/ofpnmcalabcbjgholdjcjblkibolbppb" target="_blank" rel="noopener">Visit Product →</a>
+                        <span class="badge badge-blue">Build ease 20/20</span><span class="badge badge-green">Acquisition 15/15</span><span class="badge badge-orange">Monetization 9/15</span><span class="badge badge-gray">Op cost LOW</span>
+                        <a class="card-link" href="https://chromewebstore.google.com/detail/harpa-ai-web-automation-w/eanggfilgoajaocelnaflolkadkeghjp" target="_blank" rel="noopener">Visit Product →</a>
                     </div>
                 </div>
                 <div class="top-card-score">
-                    <div class="big score-mid">12</div>
-                    <div class="label">/ 20</div>
+                    <div class="big score-high">89</div>
+                    <div class="label">/ 100</div>
                 </div>
             </div>
             <button class="qa-toggle">
@@ -645,7 +539,74 @@
                 
             <div class="qa-item">
                 <div class="qa-q">Who are the users?</div>
-                <div class="qa-a">**Content creators, video editors, and youtubers** (B2C — individual users making a personal purchase decision).</div>
+                <div class="qa-a">**General consumers looking for a specific solution** (B2C - individual users making a personal purchase decision).</div>
+                
+            </div>
+            <div class="qa-item">
+                <div class="qa-q">Why do they need it?</div>
+                <div class="qa-a">They have a daily friction point with no good existing solution</div>
+                <div class="qa-quote">What the product says: _&quot;Free AI sidebar with ChatGPT, Claude, Gemini &amp; DeepSeek&quot;_</div>
+            </div>
+            <div class="qa-item">
+                <div class="qa-q">How does it find users?</div>
+                <div class="qa-a">**Chrome Web Store** organic search is the primary channel - users search for a task and your extension appears. Submit to extension directories (extlib.io, alternativeto). Zero ongoing CAC once listed.</div>
+                
+            </div>
+            <div class="qa-item">
+                <div class="qa-q">Does it make money? How much?</div>
+                <div class="qa-a">Monetisation model not explicit from public info. For indie viability, target freemium with a **$9-$29/month** paid tier. Validate willingness to pay before building the billing system.</div>
+                
+            </div>
+            <div class="qa-item">
+                <div class="qa-q">What can I learn from this?</div>
+                <div class="qa-a">- The Chrome Web Store is a search engine most developers forget to compete in - a well-optimised listing gets passive, recurring installs with zero ad spend.
+- Extensions have structurally better retention than web apps: uninstalling requires deliberate effort, so users stick around.</div>
+                
+            </div>
+            <div class="qa-item">
+                <div class="qa-q">One-sentence pitch</div>
+                <div class="qa-a">_HARPA AI: Web Automation with ChatGPT, Claude, Gemini, Grok helps general consumers looking for a specific solution by letting them free ai sidebar with chatgpt, claude, gemini &amp; deepseek._</div>
+                
+            </div>
+            <div class="qa-item">
+                <div class="qa-q">Can I build it?</div>
+                <div class="qa-a">**Yes** - Chrome extensions are HTML/CSS/JS. Any web developer can ship an MVP in a weekend. Google's Manifest V3 docs are excellent.</div>
+                
+            </div>
+            <div class="qa-item">
+                <div class="qa-q">How do I find users?</div>
+                <div class="qa-a">Optimise your **Chrome Web Store listing** (title + description for search terms). Post in subreddits relevant to the use case. Submit to ProductHunt and extension directories (extlib.io, chromeextensions.dev).</div>
+                
+            </div>
+                <div class="first-step"><strong>💡 First Step:</strong> Search the Chrome Web Store for similar extensions and read the **1-star reviews** - that's your feature backlog. Build one clear improvement over the top competitor and launch.</div>
+            </div>
+        </div>
+        <div class="top-card">
+            <div class="top-card-header">
+                <div class="rank-badge">#3</div>
+                <div class="top-card-info">
+                    <div class="top-card-name"><a href="https://chromewebstore.google.com/detail/monica-all-in-one-ai-assi/ofpnmcalabcbjgholdjcjblkibolbppb" target="_blank" rel="noopener" class="product-name-link">Monica: All-In-One AI Assist &amp; Smartest AI Agent</a></div>
+                    <div class="top-card-desc">One stop AI Assistant with GPT, Claude, Gemini: Chat, Write, Translate, Search, Summarize, image generator, video generation</div>
+                    <div class="top-card-meta">
+                        <span class="source-tag">chrome_extensions</span>
+                        <span class="badge badge-blue">Build ease 20/20</span><span class="badge badge-green">Acquisition 15/15</span><span class="badge badge-orange">Monetization 9/15</span><span class="badge badge-gray">Op cost HIGH</span>
+                        <a class="card-link" href="https://chromewebstore.google.com/detail/monica-all-in-one-ai-assi/ofpnmcalabcbjgholdjcjblkibolbppb" target="_blank" rel="noopener">Visit Product →</a>
+                    </div>
+                </div>
+                <div class="top-card-score">
+                    <div class="big score-high">89</div>
+                    <div class="label">/ 100</div>
+                </div>
+            </div>
+            <button class="qa-toggle">
+                <span class="arrow">▶</span>
+                <span class="qa-label">Show 8-question analysis</span>
+            </button>
+            <div class="qa-body">
+                
+            <div class="qa-item">
+                <div class="qa-q">Who are the users?</div>
+                <div class="qa-a">**Content creators, video editors, and youtubers** (B2C - individual users making a personal purchase decision).</div>
                 
             </div>
             <div class="qa-item">
@@ -655,28 +616,28 @@
             </div>
             <div class="qa-item">
                 <div class="qa-q">How does it find users?</div>
-                <div class="qa-a">**Chrome Web Store** organic search is the primary channel — users search for a task and your extension appears. Submit to extension directories (extlib.io, alternativeto). Zero ongoing CAC once listed.</div>
+                <div class="qa-a">**Chrome Web Store** organic search is the primary channel - users search for a task and your extension appears. Submit to extension directories (extlib.io, alternativeto). Zero ongoing CAC once listed.</div>
                 
             </div>
             <div class="qa-item">
                 <div class="qa-q">Does it make money? How much?</div>
-                <div class="qa-a">Monetisation model not explicit from public info. For indie viability, target freemium with a **$9–$29/month** paid tier. Validate willingness to pay before building the billing system.</div>
+                <div class="qa-a">Monetisation model not explicit from public info. For indie viability, target freemium with a **$9-$29/month** paid tier. Validate willingness to pay before building the billing system.</div>
                 
             </div>
             <div class="qa-item">
                 <div class="qa-q">What can I learn from this?</div>
-                <div class="qa-a">- The Chrome Web Store is a search engine most developers forget to compete in — a well-optimised listing gets passive, recurring installs with zero ad spend.
+                <div class="qa-a">- The Chrome Web Store is a search engine most developers forget to compete in - a well-optimised listing gets passive, recurring installs with zero ad spend.
 - Extensions have structurally better retention than web apps: uninstalling requires deliberate effort, so users stick around.</div>
                 
             </div>
             <div class="qa-item">
                 <div class="qa-q">One-sentence pitch</div>
-                <div class="qa-a">_Monica: All-In-One AI Assist &amp; Smartest  AI Agent helps content creators, video editors, and YouTubers by letting them one stop ai assistant with gpt, claude, gemini: chat, write, translate, search, summarize, image generator, video generation._</div>
+                <div class="qa-a">_Monica: All-In-One AI Assist &amp; Smartest AI Agent helps content creators, video editors, and YouTubers by letting them one stop ai assistant with gpt, claude, gemini: chat, write, translate, search, summarize, image generator, video generation._</div>
                 
             </div>
             <div class="qa-item">
                 <div class="qa-q">Can I build it?</div>
-                <div class="qa-a">**Yes** — Chrome extensions are HTML/CSS/JS. Any web developer can ship an MVP in a weekend. Google's Manifest V3 docs are excellent.</div>
+                <div class="qa-a">**Yes** - Chrome extensions are HTML/CSS/JS. Any web developer can ship an MVP in a weekend. Google's Manifest V3 docs are excellent.</div>
                 
             </div>
             <div class="qa-item">
@@ -684,91 +645,24 @@
                 <div class="qa-a">Optimise your **Chrome Web Store listing** (title + description for search terms). Post in subreddits relevant to the use case. Submit to ProductHunt and extension directories (extlib.io, chromeextensions.dev).</div>
                 
             </div>
-                <div class="first-step"><strong>💡 First Step:</strong> Search the Chrome Web Store for similar extensions and read the **1-star reviews** — that's your feature backlog. Build one clear improvement over the top competitor and launch.</div>
-            </div>
-        </div>
-        <div class="top-card">
-            <div class="top-card-header">
-                <div class="rank-badge">#3</div>
-                <div class="top-card-info">
-                    <div class="top-card-name"><a href="https://chromewebstore.google.com/detail/voila-%E2%80%93-ai-assistant-copi/cakobppopkpmmglabcdcklncbckjpkcl" target="_blank" rel="noopener" class="product-name-link">Voila – AI Assistant, Copilot and AI Writer</a></div>
-                    <div class="top-card-desc">Seamless personal AI assistant powered by GPT-5 to help you create, write, summarize, brainstorm, and research on any website.</div>
-                    <div class="top-card-meta">
-                        <span class="source-tag">chrome_extensions</span>
-                        <span class="badge badge-blue">Tech 1/5</span><span class="badge badge-green">Acquisition 4/5</span><span class="badge badge-orange">Revenue 2/5</span><span class="badge badge-gray">Indie 5/5</span>
-                        <a class="card-link" href="https://chromewebstore.google.com/detail/voila-%E2%80%93-ai-assistant-copi/cakobppopkpmmglabcdcklncbckjpkcl" target="_blank" rel="noopener">Visit Product →</a>
-                    </div>
-                </div>
-                <div class="top-card-score">
-                    <div class="big score-mid">12</div>
-                    <div class="label">/ 20</div>
-                </div>
-            </div>
-            <button class="qa-toggle">
-                <span class="arrow">▶</span>
-                <span class="qa-label">Show 8-question analysis</span>
-            </button>
-            <div class="qa-body">
-                
-            <div class="qa-item">
-                <div class="qa-q">Who are the users?</div>
-                <div class="qa-a">**Writers, marketers, students, and professionals who produce written content regularly** (B2C — individual users making a personal purchase decision).</div>
-                
-            </div>
-            <div class="qa-item">
-                <div class="qa-q">Why do they need it?</div>
-                <div class="qa-a">Writing from scratch is slow and mentally draining; they need a starting point or polishing</div>
-                <div class="qa-quote">What the product says: _&quot;Seamless personal AI assistant powered by GPT-5 to help you create, write, summarize, brainstorm, and research on any website&quot;_</div>
-            </div>
-            <div class="qa-item">
-                <div class="qa-q">How does it find users?</div>
-                <div class="qa-a">**Chrome Web Store** organic search is the primary channel — users search for a task and your extension appears. Submit to extension directories (extlib.io, alternativeto). Zero ongoing CAC once listed.</div>
-                
-            </div>
-            <div class="qa-item">
-                <div class="qa-q">Does it make money? How much?</div>
-                <div class="qa-a">Monetisation model not explicit from public info. For indie viability, target freemium with a **$9–$29/month** paid tier. Validate willingness to pay before building the billing system.</div>
-                
-            </div>
-            <div class="qa-item">
-                <div class="qa-q">What can I learn from this?</div>
-                <div class="qa-a">- The Chrome Web Store is a search engine most developers forget to compete in — a well-optimised listing gets passive, recurring installs with zero ad spend.
-- Extensions have structurally better retention than web apps: uninstalling requires deliberate effort, so users stick around.</div>
-                
-            </div>
-            <div class="qa-item">
-                <div class="qa-q">One-sentence pitch</div>
-                <div class="qa-a">_Voila – AI Assistant, Copilot and AI Writer helps writers, marketers, students, and professionals who produce written content regularly by letting them seamless personal ai assistant powered by gpt-5 to help you create, write, summarize, brainstorm, and research on any website._</div>
-                
-            </div>
-            <div class="qa-item">
-                <div class="qa-q">Can I build it?</div>
-                <div class="qa-a">**Yes** — Chrome extensions are HTML/CSS/JS. Any web developer can ship an MVP in a weekend. Google's Manifest V3 docs are excellent.</div>
-                
-            </div>
-            <div class="qa-item">
-                <div class="qa-q">How do I find users?</div>
-                <div class="qa-a">Optimise your **Chrome Web Store listing** (title + description for search terms). Post in subreddits relevant to the use case. Submit to ProductHunt and extension directories (extlib.io, chromeextensions.dev).</div>
-                
-            </div>
-                <div class="first-step"><strong>💡 First Step:</strong> Search the Chrome Web Store for similar extensions and read the **1-star reviews** — that's your feature backlog. Build one clear improvement over the top competitor and launch.</div>
+                <div class="first-step"><strong>💡 First Step:</strong> Search the Chrome Web Store for similar extensions and read the **1-star reviews** - that's your feature backlog. Build one clear improvement over the top competitor and launch.</div>
             </div>
         </div>
         <div class="top-card">
             <div class="top-card-header">
                 <div class="rank-badge">#4</div>
                 <div class="top-card-info">
-                    <div class="top-card-name"><a href="https://chromewebstore.google.com/detail/gee-ai-assistant/kldhacnbicjpbdiebjjflnhgcmheokkl" target="_blank" rel="noopener" class="product-name-link">GEE AI Assistant</a></div>
-                    <div class="top-card-desc">Generate, modify, and fix Google Earth Engine code using AI Models. Now with new Voice Mode &amp; 5200+ Datasets!</div>
+                    <div class="top-card-name"><a href="https://chromewebstore.google.com/detail/sider-chat-with-all-ai-gp/difoiogjjojoaoomphldepapgpbgkhkb" target="_blank" rel="noopener" class="product-name-link">Sider: Chat with all AI: GPT-5, Claude, DeepSeek, Gemini, Grok</a></div>
+                    <div class="top-card-desc">ChatGPT, DeepSeek, Gemini, Claude, Grok all in one AI sidebar, for AI search, read, and write.</div>
                     <div class="top-card-meta">
                         <span class="source-tag">chrome_extensions</span>
-                        <span class="badge badge-blue">Tech 1/5</span><span class="badge badge-green">Acquisition 4/5</span><span class="badge badge-orange">Revenue 2/5</span><span class="badge badge-gray">Indie 5/5</span>
-                        <a class="card-link" href="https://chromewebstore.google.com/detail/gee-ai-assistant/kldhacnbicjpbdiebjjflnhgcmheokkl" target="_blank" rel="noopener">Visit Product →</a>
+                        <span class="badge badge-blue">Build ease 20/20</span><span class="badge badge-green">Acquisition 15/15</span><span class="badge badge-orange">Monetization 9/15</span><span class="badge badge-gray">Op cost LOW</span>
+                        <a class="card-link" href="https://chromewebstore.google.com/detail/sider-chat-with-all-ai-gp/difoiogjjojoaoomphldepapgpbgkhkb" target="_blank" rel="noopener">Visit Product →</a>
                     </div>
                 </div>
                 <div class="top-card-score">
-                    <div class="big score-mid">12</div>
-                    <div class="label">/ 20</div>
+                    <div class="big score-high">89</div>
+                    <div class="label">/ 100</div>
                 </div>
             </div>
             <button class="qa-toggle">
@@ -779,38 +673,38 @@
                 
             <div class="qa-item">
                 <div class="qa-q">Who are the users?</div>
-                <div class="qa-a">**General consumers looking for a specific solution** (B2C — individual users making a personal purchase decision).</div>
+                <div class="qa-a">**General consumers looking for a specific solution** (B2C - individual users making a personal purchase decision).</div>
                 
             </div>
             <div class="qa-item">
                 <div class="qa-q">Why do they need it?</div>
                 <div class="qa-a">They have a daily friction point with no good existing solution</div>
-                <div class="qa-quote">What the product says: _&quot;Generate, modify, and fix Google Earth Engine code using AI Models&quot;_</div>
+                <div class="qa-quote">What the product says: _&quot;ChatGPT, DeepSeek, Gemini, Claude, Grok all in one AI sidebar, for AI search, read, and write&quot;_</div>
             </div>
             <div class="qa-item">
                 <div class="qa-q">How does it find users?</div>
-                <div class="qa-a">**Chrome Web Store** organic search is the primary channel — users search for a task and your extension appears. Submit to extension directories (extlib.io, alternativeto). Zero ongoing CAC once listed.</div>
+                <div class="qa-a">**Chrome Web Store** organic search is the primary channel - users search for a task and your extension appears. Submit to extension directories (extlib.io, alternativeto). Zero ongoing CAC once listed.</div>
                 
             </div>
             <div class="qa-item">
                 <div class="qa-q">Does it make money? How much?</div>
-                <div class="qa-a">Monetisation model not explicit from public info. For indie viability, target freemium with a **$9–$29/month** paid tier. Validate willingness to pay before building the billing system.</div>
+                <div class="qa-a">Monetisation model not explicit from public info. For indie viability, target freemium with a **$9-$29/month** paid tier. Validate willingness to pay before building the billing system.</div>
                 
             </div>
             <div class="qa-item">
                 <div class="qa-q">What can I learn from this?</div>
-                <div class="qa-a">- The Chrome Web Store is a search engine most developers forget to compete in — a well-optimised listing gets passive, recurring installs with zero ad spend.
+                <div class="qa-a">- The Chrome Web Store is a search engine most developers forget to compete in - a well-optimised listing gets passive, recurring installs with zero ad spend.
 - Extensions have structurally better retention than web apps: uninstalling requires deliberate effort, so users stick around.</div>
                 
             </div>
             <div class="qa-item">
                 <div class="qa-q">One-sentence pitch</div>
-                <div class="qa-a">_GEE AI Assistant helps general consumers looking for a specific solution by letting them generate, modify, and fix google earth engine code using ai models._</div>
+                <div class="qa-a">_Sider: Chat with all AI: GPT-5, Claude, DeepSeek, Gemini, Grok helps general consumers looking for a specific solution by letting them chatgpt, deepseek, gemini, claude, grok all in one ai sidebar, for ai search, read, and write._</div>
                 
             </div>
             <div class="qa-item">
                 <div class="qa-q">Can I build it?</div>
-                <div class="qa-a">**Yes** — Chrome extensions are HTML/CSS/JS. Any web developer can ship an MVP in a weekend. Google's Manifest V3 docs are excellent.</div>
+                <div class="qa-a">**Yes** - Chrome extensions are HTML/CSS/JS. Any web developer can ship an MVP in a weekend. Google's Manifest V3 docs are excellent.</div>
                 
             </div>
             <div class="qa-item">
@@ -818,24 +712,24 @@
                 <div class="qa-a">Optimise your **Chrome Web Store listing** (title + description for search terms). Post in subreddits relevant to the use case. Submit to ProductHunt and extension directories (extlib.io, chromeextensions.dev).</div>
                 
             </div>
-                <div class="first-step"><strong>💡 First Step:</strong> Search the Chrome Web Store for similar extensions and read the **1-star reviews** — that's your feature backlog. Build one clear improvement over the top competitor and launch.</div>
+                <div class="first-step"><strong>💡 First Step:</strong> Search the Chrome Web Store for similar extensions and read the **1-star reviews** - that's your feature backlog. Build one clear improvement over the top competitor and launch.</div>
             </div>
         </div>
         <div class="top-card">
             <div class="top-card-header">
                 <div class="rank-badge">#5</div>
                 <div class="top-card-info">
-                    <div class="top-card-name"><a href="https://chromewebstore.google.com/detail/ai-voice-assistant-%E2%80%93-smar/daamboajoclakkelbnglldlckknjfdjb" target="_blank" rel="noopener" class="product-name-link">AI Voice Assistant – Smart Browser Copilot</a></div>
-                    <div class="top-card-desc">AI assistant that works inside your browser tab. Ask by voice and get instant, context-aware AI responses.</div>
+                    <div class="top-card-name"><a href="https://www.producthunt.com/products/mepersona" target="_blank" rel="noopener" class="product-name-link">MePersona</a></div>
+                    <div class="top-card-desc">Answer every fan comment in your voice</div>
                     <div class="top-card-meta">
-                        <span class="source-tag">chrome_extensions</span>
-                        <span class="badge badge-blue">Tech 1/5</span><span class="badge badge-green">Acquisition 4/5</span><span class="badge badge-orange">Revenue 2/5</span><span class="badge badge-gray">Indie 5/5</span>
-                        <a class="card-link" href="https://chromewebstore.google.com/detail/ai-voice-assistant-%E2%80%93-smar/daamboajoclakkelbnglldlckknjfdjb" target="_blank" rel="noopener">Visit Product →</a>
+                        <span class="source-tag">product_hunt</span>
+                        <span class="badge badge-blue">Build ease 12/20</span><span class="badge badge-green">Acquisition 12/15</span><span class="badge badge-orange">Monetization 9/15</span><span class="badge badge-gray">Op cost LOW</span>
+                        <a class="card-link" href="https://www.producthunt.com/products/mepersona" target="_blank" rel="noopener">Visit Product →</a>
                     </div>
                 </div>
                 <div class="top-card-score">
-                    <div class="big score-mid">12</div>
-                    <div class="label">/ 20</div>
+                    <div class="big score-high">77</div>
+                    <div class="label">/ 100</div>
                 </div>
             </div>
             <button class="qa-toggle">
@@ -846,46 +740,46 @@
                 
             <div class="qa-item">
                 <div class="qa-q">Who are the users?</div>
-                <div class="qa-a">**Software developers and engineers** (B2C prosumer / B2B small teams).</div>
+                <div class="qa-a">**General consumers looking for a specific solution** (B2C - individual users making a personal purchase decision).</div>
                 
             </div>
             <div class="qa-item">
                 <div class="qa-q">Why do they need it?</div>
-                <div class="qa-a">Developer workflow has constant friction — this removes one specific bottleneck</div>
-                <div class="qa-quote">What the product says: _&quot;AI assistant that works inside your browser tab&quot;_</div>
+                <div class="qa-a">They have a daily friction point with no good existing solution</div>
+                <div class="qa-quote">What the product says: _&quot;Answer every fan comment in your voice&quot;_</div>
             </div>
             <div class="qa-item">
                 <div class="qa-q">How does it find users?</div>
-                <div class="qa-a">**Chrome Web Store** organic search is the primary channel — users search for a task and your extension appears. Submit to extension directories (extlib.io, alternativeto). Zero ongoing CAC once listed.</div>
+                <div class="qa-a">**Product Hunt community** for launch momentum. Follow with SEO content targeting the core use case and directory submissions. The PH badge adds credibility for cold outreach.</div>
                 
             </div>
             <div class="qa-item">
                 <div class="qa-q">Does it make money? How much?</div>
-                <div class="qa-a">Monetisation model not explicit from public info. For indie viability, target freemium with a **$9–$29/month** paid tier. Validate willingness to pay before building the billing system.</div>
+                <div class="qa-a">Monetisation model not explicit from public info. For indie viability, target freemium with a **$9-$29/month** paid tier. Validate willingness to pay before building the billing system.</div>
                 
             </div>
             <div class="qa-item">
                 <div class="qa-q">What can I learn from this?</div>
-                <div class="qa-a">- The Chrome Web Store is a search engine most developers forget to compete in — a well-optimised listing gets passive, recurring installs with zero ad spend.
-- Extensions have structurally better retention than web apps: uninstalling requires deliberate effort, so users stick around.</div>
+                <div class="qa-a">- Tight niche focus beats broad reach - the more specific the problem, the easier it is to find users who will pay.
+- This product's single-purpose approach is the right indie instinct: one problem, one solution, one clear CTA.</div>
                 
             </div>
             <div class="qa-item">
                 <div class="qa-q">One-sentence pitch</div>
-                <div class="qa-a">_AI Voice Assistant – Smart Browser Copilot helps software developers and engineers by letting them ai assistant that works inside your browser tab._</div>
+                <div class="qa-a">_MePersona helps general consumers looking for a specific solution by letting them answer every fan comment in your voice._</div>
                 
             </div>
             <div class="qa-item">
                 <div class="qa-q">Can I build it?</div>
-                <div class="qa-a">**Yes** — Chrome extensions are HTML/CSS/JS. Any web developer can ship an MVP in a weekend. Google's Manifest V3 docs are excellent.</div>
+                <div class="qa-a">**Probably** - moderate complexity (AI API calls + basic UI). Use OpenAI / Claude API + a simple React or Next.js frontend. Expect 2-4 weeks for a solid, shippable MVP.</div>
                 
             </div>
             <div class="qa-item">
                 <div class="qa-q">How do I find users?</div>
-                <div class="qa-a">Optimise your **Chrome Web Store listing** (title + description for search terms). Post in subreddits relevant to the use case. Submit to ProductHunt and extension directories (extlib.io, chromeextensions.dev).</div>
+                <div class="qa-a">The built-in viral loop or SEO potential does the heavy lifting. Kick-start with a Product Hunt launch and submissions to relevant directories. Then let organic growth compound.</div>
                 
             </div>
-                <div class="first-step"><strong>💡 First Step:</strong> Search the Chrome Web Store for similar extensions and read the **1-star reviews** — that's your feature backlog. Build one clear improvement over the top competitor and launch.</div>
+                <div class="first-step"><strong>💡 First Step:</strong> Search Reddit and Twitter for 'MePersona' or the core pain point. Find 5-10 threads where people wish this existed or complain about current solutions. DM those users - offer free early access in exchange for a 15-minute call.</div>
             </div>
         </div></div>
     </div>

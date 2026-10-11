@@ -1,0 +1,134 @@
+{
+  "date": "2026-10-11",
+  "timestamp": "2026-10-11T05:29:51.458267-07:00",
+  "product_hunt": [
+    {
+      "name": "HireKey",
+      "tagline": "Your recruiter-informed AI copilot for tech job search",
+      "link": "https://www.producthunt.com/products/hirekey"
+    },
+    {
+      "name": "Agibot",
+      "tagline": "Personal AI agent for your Mac using your own keys",
+      "link": "https://www.producthunt.com/products/agibot"
+    },
+    {
+      "name": "MePersona",
+      "tagline": "Answer every fan comment in your voice",
+      "link": "https://www.producthunt.com/products/mepersona"
+    },
+    {
+      "name": "Ghost Core",
+      "tagline": "A personal AI computer that runs entirely on-device",
+      "link": "https://www.producthunt.com/products/ghost-core"
+    },
+    {
+      "name": "shippedit.me",
+      "tagline": "Launch Platform with SEO, AEO & Growth Insights",
+      "link": "https://www.producthunt.com/products/shippedit-me"
+    }
+  ],
+  "toolify": [],
+  "ai_tools": [],
+  "chrome_extensions": [
+    {
+      "name": "HARPA AI: Web Automation with ChatGPT, Claude, Gemini, Grok",
+      "description": "Free AI sidebar with ChatGPT, Claude, Gemini & DeepSeek. 100+ commands to automate, monitor prices, summarize & write.",
+      "users": "400,000 users",
+      "rating": "4.7/5.0",
+      "link": "https://chromewebstore.google.com/detail/harpa-ai-web-automation-w/eanggfilgoajaocelnaflolkadkeghjp"
+    },
+    {
+      "name": "Monica: All-In-One AI Assist & Smartest  AI Agent",
+      "description": "One stop AI Assistant with GPT, Claude, Gemini: Chat, Write, Translate, Search, Summarize, image generator, video generation",
+      "users": "3,000,000 users",
+      "rating": "4.9/5.0",
+      "link": "https://chromewebstore.google.com/detail/monica-all-in-one-ai-assi/ofpnmcalabcbjgholdjcjblkibolbppb"
+    },
+    {
+      "name": "GPTZero: AI Detection & Writing Replay",
+      "description": "Bring AI detection, citation checks, live essay feedback, and writing replays directly into Google Docs and your workflow.",
+      "users": "500,000 users",
+      "rating": "4.7/5.0",
+      "link": "https://chromewebstore.google.com/detail/gptzero-ai-detection-writ/kgobeoibakoahbfnlficpmibdbkdchap"
+    },
+    {
+      "name": "Chat with all AI models (Gemini, Claude, DeepSeek…) & AI Agents | AITOPIA",
+      "description": "AI Agent Marketplace & AI Sidebar with all AI models (Gemini, Claude, DeepSeek & more) and hundreds of AI Agents",
+      "users": "1,000,000 users",
+      "rating": "4.9/5.0",
+      "link": "https://chromewebstore.google.com/detail/chat-with-all-ai-models-g/becfinhbfclcgokjlobojlnldbfillpf"
+    },
+    {
+      "name": "Sider: Chat with all AI: GPT-5, Claude, DeepSeek, Gemini, Grok",
+      "description": "ChatGPT, DeepSeek, Gemini, Claude, Grok all in one AI sidebar, for AI search, read, and write.",
+      "users": "5,000,000 users",
+      "rating": "4.9/5.0",
+      "link": "https://chromewebstore.google.com/detail/sider-chat-with-all-ai-gp/difoiogjjojoaoomphldepapgpbgkhkb"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "morluto/rea",
+      "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "today_stars": "25,585 stars today"
+    },
+    {
+      "name": "boykopovar/AnyPS5",
+      "description": "Tool for automatic PS5 executables porting to Linux and Windows",
+      "today_stars": "3,977 stars today"
+    },
+    {
+      "name": "storytold/artcraft",
+      "description": "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
+      "today_stars": "2,956 stars today"
+    },
+    {
+      "name": "cathrynlavery/diagram-design",
+      "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, and Pi. 44 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+      "today_stars": "1,083 stars today"
+    },
+    {
+      "name": "bilawalsidhu/gods-eye-view",
+      "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+      "today_stars": "872 stars today"
+    }
+  ],
+  "hacker_news": [
+    {
+      "title": "Sudden drop in Cloudflare bot traffic after strike on Yandex datacenter",
+      "author": "walrus01",
+      "score": 206,
+      "comments": 72,
+      "url": "https://radar.cloudflare.com/bots/as13238?dateRange=7d"
+    },
+    {
+      "title": "I paid people to try and follow my README",
+      "author": "edent",
+      "score": 36,
+      "comments": 16,
+      "url": "https://shkspr.mobi/blog/2026/10/i-paid-people-to-try-and-follow-my-readme/"
+    },
+    {
+      "title": "IRCv3",
+      "author": "basilikum",
+      "score": 122,
+      "comments": 95,
+      "url": "https://ircv3.net/"
+    },
+    {
+      "title": "LineageOS 24.0",
+      "author": "timschumi",
+      "score": 172,
+      "comments": 42,
+      "url": "https://lineageos.org/Changelog-32/"
+    },
+    {
+      "title": "Nitter: Update Oct 10th seeking funding and legal help",
+      "author": "ForHackernews",
+      "score": 150,
+      "comments": 35,
+      "url": "https://nitter.net"
+    }
+  ]
+}
