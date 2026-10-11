@@ -19,7 +19,33 @@ from analyzers.text_utils import (
 )
 from analyzers.clustering import analyze_clusters
 from analyzers.keyword_candidates import attach_keyword_candidates, build_semrush_checklist
+from analyzers.keyword_pool import build_keyword_pool, build_priority_checklist, tier_counts
+from analyzers.opportunity import (
+    attach_opportunities,
+    build_opportunities,
+    evidence_matrix,
+    unmatched_signals,
+)
 from analyzers.seo_score import attach_seo
+from analyzers.signal_bridge import bridge_summary, bridged_products
+from analyzers.reddit_demand import (
+    PAYMENT_ACTUAL,
+    keyword_seeds,
+    match_themes_to_clusters,
+    recurring_pain,
+    unmatched_pain,
+)
+from analyzers.source_quality import (
+    DQ_LOW,
+    GH_LOW,
+    HN_DEMAND,
+    HN_PRODUCT,
+    classify_hn_item,
+    discovery_quality,
+    github_product_likeness,
+    novelty_signal,
+    source_health,
+)
 from analyzers.verdict import attach_verdict
 from config import cluster_weights as CW
 from config import scoring_weights as SW
@@ -210,31 +236,9 @@ GITHUB_LIBRARY_SIGNALS = [
 ]
 
 # ---------------------------------------------------------------------------
-# Step 6 - Hacker News product-likeness filter
+# Hacker News typing now lives in analyzers/source_quality.py (Phase 5):
+# PRODUCT / DEMAND_SIGNAL / NEWS_DISCUSSION / UNKNOWN.
 # ---------------------------------------------------------------------------
-
-_HN_STRONG_PRODUCT_SIGNALS = [
-    "show hn", "launch hn", "i built", "i made", "i created", "introducing",
-    "launching", "launched", "we built", "we made", "announcing",
-]
-
-_HN_PRODUCT_SIGNALS = [
-    "open source", "open-source", "self-hosted", "tool", "app", "generator",
-    "calculator", "checker", "converter", "finder", "analyzer", "editor",
-    "extension", "plugin", "api", "saas", "cli", "library", "framework",
-    "engine", "modeller", "modeler", "studio", "dashboard", "tracker",
-    "assistant", "agent", "bot", "kit", "suite", "ide", "compiler",
-    "platform", "database",
-]
-
-_HN_ARTICLE_SIGNALS = [
-    "ask hn", "tell hn", "poll:", "the loss of", "grieving", "why i ",
-    "how i ", "the rise of", "the fall of", "a history of", "we need to",
-    "we should", "the future of", "thoughts on", "notes on", "lessons from",
-    "the case for", "is dead", "is dying", "review:", "my experience",
-    "an essay", "opinion:",
-]
-
 
 # ---------------------------------------------------------------------------
 # Step 4 / 7 / 8 - signal vocabularies
@@ -399,6 +403,22 @@ def _merge_missing(target, duplicate):
         if other not in target["_also_in"]:
             target["_also_in"].append(other)
 
+    # Phase 6.2: keep provenance for bridged/duplicated products so one product
+    # seen on two sources stays ONE product with two source references.
+    sources = target.setdefault(
+        "source_list", [target["_source"]] if target.get("_source") else []
+    )
+    for source in list(duplicate.get("source_list") or []) + ([other] if other else []):
+        if source and source not in sources:
+            sources.append(source)
+    target["source_count"] = len(sources)
+
+    ids = target.setdefault("underlying_source_ids", [])
+    for uid in list(duplicate.get("underlying_source_ids") or []) + [
+            duplicate.get("underlying_source_id")]:
+        if uid and uid not in ids:
+            ids.append(uid)
+
 
 def normalize_products(all_products):
     """Attach source tags, normalize names/URLs and drop same-day duplicates.
@@ -424,6 +444,10 @@ def normalize_products(all_products):
                 continue
             item = dict(product)
             item["_source"] = item.get("_source") or source
+            item.setdefault("source_list", [item["_source"]])
+            item.setdefault("source_count", 1)
+            item.setdefault("underlying_source_ids",
+                            [item["underlying_source_id"]] if item.get("underlying_source_id") else [])
             item["name"] = re.sub(
                 r"\s+", " ", str(item.get("name") or item.get("title") or "")
             ).strip()
@@ -455,18 +479,6 @@ def normalize_products(all_products):
 # Step 3 - filtering
 # ---------------------------------------------------------------------------
 
-def _is_hn_product_like(product):
-    """Conservative product-likeness test for Hacker News items."""
-    title = (product.get("title") or product.get("name") or "").lower()
-    if not title:
-        return False
-    if any(sig in title for sig in _HN_STRONG_PRODUCT_SIGNALS):
-        return True
-    if any(sig in title for sig in _HN_ARTICLE_SIGNALS):
-        return False
-    return any(sig in title for sig in _HN_PRODUCT_SIGNALS)
-
-
 def filter_reason(product):
     """Return a human-readable exclusion reason, or ``None`` if suitable."""
     text = _get_text(product)
@@ -480,14 +492,38 @@ def filter_reason(product):
         if _has(text, [first]) and _has(text, [second]):
             return f"{reason}: '{first}' + '{second}'"
 
-    if product.get("_source") == "hackernews" and not _is_hn_product_like(product):
-        return "Hacker News article/news item, not a product"
+    source = product.get("_source")
 
-    if product.get("_source") == "github":
+    # Hacker News: only genuine product posts enter the opportunity pipeline.
+    if source == "hackernews":
+        kind, why = classify_hn_item(product)
+        product["hn_content_type"] = kind
+        product["hn_content_reason"] = why
+        if kind != HN_PRODUCT:
+            if kind == HN_DEMAND:
+                return f"HN demand signal (not a product): {why}"
+            return f"Hacker News article/news item, not a product: {why}"
+
+    # GitHub: only end-user-product repos enter the opportunity pipeline.
+    if source == "github":
+        level, why = github_product_likeness(product)
+        product["github_product_likeness"] = level
+        if level == GH_LOW:
+            return f"GitHub product likeness {level}: {why}"
         desc = (product.get("description") or "").lower()
         for signal in GITHUB_LIBRARY_SIGNALS:
             if signal in desc:
                 return f"GitHub library/package, not a product: '{signal}'"
+
+    # Novelty + discovery quality (used for shortlist ordering, not scoring).
+    novelty, novelty_why = novelty_signal(product, source)
+    quality, quality_why = discovery_quality(product, source)
+    product["novelty_signal"] = novelty
+    product["novelty_reason"] = novelty_why
+    product["discovery_quality"] = quality
+    product["discovery_quality_reason"] = quality_why
+    if quality == DQ_LOW:
+        return f"Low discovery quality: {quality_why}"
 
     return None
 
@@ -1391,15 +1427,255 @@ def _cluster_section(clusters, detail_limit=10):
             lines += [
                 "- **Keyword candidates:**",
                 "",
-                "| Keyword | Priority | Type | Why |",
-                "|---|---|---|---|",
+                "| Keyword | Maturity | Priority | Type | Why |",
+                "|---|---|---|---|---|",
             ]
             for candidate in candidates:
                 lines.append(
-                    f"| {candidate['keyword']} | {candidate['priority']} "
+                    f"| {candidate['keyword']} | {candidate.get('maturity', '-')} "
+                    f"| {candidate['priority']} "
                     f"| {candidate['type']} | {candidate['reason']} |"
                 )
             lines.append("")
+    return lines
+
+
+def _source_health_section(rows):
+    """Phase 5, Step 10: distinguish 'no opportunity today' from 'broken source'."""
+    lines = [
+        "## Source Health",
+        "",
+        "| Source | Fetched | Accepted as product | Filtered | Status | Note |",
+        "|---|---:|---:|---:|---|---|",
+    ]
+    for row in rows:
+        note = row.get("note") or ""
+        if row.get("error"):
+            note = (note + " | " if note else "") + str(row["error"])
+        lines.append(
+            f"| {row['label']} | {row['fetched']} | {row['accepted']} | "
+            f"{row['filtered']} | {row['status']} | {note.replace('|', '/')} |"
+        )
+    lines += [
+        "",
+        "_0 fetched means the collector returned nothing (source problem); items fetched but "
+        "0 accepted simply means nothing product-like was found today._",
+        "",
+    ]
+    return lines
+
+
+def _reddit_section(reddit_signals, clusters, health=None):
+    """Phase 7: what Reddit contributed to demand evidence."""
+    from analyzers.keyword_quality import MATURITY_AWKWARD, MATURITY_BRAND, keyword_maturity
+
+    themes = recurring_pain(reddit_signals)
+    matched = match_themes_to_clusters(themes, clusters)
+    unmatched = unmatched_pain(themes, matched.keys())
+    spend = [s for s in reddit_signals
+             if (s.get("raw_metadata") or {}).get("payment_signal_confidence") == PAYMENT_ACTUAL]
+
+    lines = ["## Reddit Demand Signals", ""]
+    if health:
+        lines += [
+            f"- Status: **{health.get('status')}** · auth: {health.get('auth_status')} · "
+            f"requests: {health.get('requests_made')} · posts fetched: "
+            f"{health.get('posts_fetched')} · accepted: {health.get('posts_accepted')} · "
+            f"comments: {health.get('comments_fetched')}",
+            "",
+        ]
+    if not reddit_signals:
+        lines += ["_No Reddit demand signals this run "
+                  "(configure REDDIT_CLIENT_ID / REDDIT_CLIENT_SECRET to enable)._", ""]
+        return lines
+
+    lines += [
+        f"- Accepted Reddit signals: **{len(reddit_signals)}** · matched themes: "
+        f"**{len(matched)}** · unmatched pain themes: **{len(unmatched)}** · "
+        f"actual-spend signals: **{len(spend)}**",
+        "",
+        "| Theme | Signals | Independent posts | Subreddits | Persistence "
+        "| Demand score | Matched opportunity |",
+        "|---|---:|---:|---|---|---:|---|",
+    ]
+    for theme in themes[:12]:
+        cluster = matched.get(theme["theme"])
+        lines.append(
+            f"| {theme['theme']} | {theme['post_count']} | {theme['independent_post_count']} "
+            f"| {', '.join(theme['subreddits'][:3])} | {theme['pain_persistence']} "
+            f"| {theme['reddit_demand_score']} ({theme['reddit_demand_level']}) "
+            f"| {cluster['cluster_label'] if cluster else '-'} |"
+        )
+    lines.append("")
+
+    seeds = []
+    for signal in reddit_signals[:20]:
+        for seed in keyword_seeds(signal.get("pain_point") or signal.get("title") or ""):
+            if seed in seeds:
+                continue
+            maturity = keyword_maturity(seed)
+            if maturity in (MATURITY_AWKWARD, MATURITY_BRAND):
+                continue
+            seeds.append(seed)
+    if seeds:
+        lines += ["**Keyword seeds from Reddit pain (origin `REDDIT_PAIN`)**:", ""]
+        for seed in seeds[:10]:
+            lines.append(f"- `{seed}` — {keyword_maturity(seed)}")
+        lines.append("")
+
+    if unmatched:
+        lines += ["**Unmatched Reddit pain signals** (evidence only — never a verdict):", ""]
+        for theme in unmatched[:8]:
+            sample = theme["signals"][0] if theme["signals"] else {}
+            lines.append(
+                f"- {str(sample.get('title'))[:70]} — r/{sample.get('subreddit')} · "
+                f"{theme['pain_persistence']} · score {theme['reddit_demand_score']} · "
+                f"{sample.get('source_url')}"
+            )
+        lines.append("")
+    lines += ["_Reddit evidence never sets BUILD / TEST / WATCH / SKIP._", ""]
+    return lines
+
+
+def _signal_bridge_section(bridge_rows, bridged):
+    """Phase 6.2: which PRODUCT_SIGNALs entered the product pipeline."""
+    lines = [
+        "## Product Signal Bridge",
+        "",
+        "| Source | Signals seen | Bridged as products | Skipped (evidence-only) |",
+        "|---|---:|---:|---:|",
+    ]
+    for source, row in sorted(bridge_rows.items()):
+        lines.append(f"| {source} | {row['signals']} | {row['bridged']} | {row['skipped']} |")
+    lines += [
+        "",
+        f"**{len(bridged)}** bridged product(s) joined the same clustering and "
+        "keyword pipeline as the collectors. Demand/pain, revenue-only, exit and "
+        "corroboration signals stay evidence-only.",
+        "",
+    ]
+    return lines
+
+
+def _adapter_health_section(rows):
+    """Phase 6: Source Health for the signal adapters."""
+    lines = [
+        "## Adapter Health",
+        "",
+        "| Adapter | Tier | Fetched | Status | Signal types | Last error |",
+        "|---|---|---:|---|---|---|",
+    ]
+    for row in rows:
+        lines.append(
+            f"| {row.get('source')} | {row.get('tier', '-')} "
+            f"| {row.get('items_fetched', 0)} | {row.get('status')} "
+            f"| {', '.join(row.get('signal_types') or [])} "
+            f"| {str(row.get('last_error') or '')[:70].replace('|', '/')} |"
+        )
+    lines += [
+        "",
+        "_A blocked or empty adapter is reported here and never fails the run. "
+        "Sources that were probed and found unusable are listed in the final report._",
+        "",
+    ]
+    return lines
+
+
+def _executive_summary_section(all_products, suitable, clusters, opportunities,
+                               checklist, pool, adapter_rows=None, unmatched=0,
+                               bridged=0):
+    """Section A (Phase 6): one screen that says what arrived and what survived."""
+    adapter_rows = adapter_rows or []
+    counts = {}
+    for cluster in clusters:
+        verdict = cluster.get("verdict", "SKIP")
+        counts[verdict] = counts.get(verdict, 0) + 1
+    live_sources = sum(1 for row in adapter_rows if row.get("items_fetched"))
+    lines = [
+        "## Executive Summary",
+        "",
+        f"- Raw items from the 6 product collectors: **{sum(len(v) for v in all_products.values())}**",
+        f"- Accepted products: **{len(suitable)}**",
+        f"- Unique opportunities (clusters): **{len(clusters)}**",
+        f"- Opportunity entities from the signal engine: **{len(opportunities)}**",
+        f"- Unmatched demand/pain signals kept as evidence: **{unmatched}**",
+        f"- Product signals bridged into the pipeline: **{bridged}**",
+        f"- Adapters with live signal data: **{live_sources}** of {len(adapter_rows)} attempted",
+        f"- Verdicts: **{counts.get('BUILD', 0)} BUILD · {counts.get('TEST', 0)} TEST · "
+        f"{counts.get('WATCH', 0)} WATCH · {counts.get('SKIP', 0)} SKIP**",
+        f"- Keyword pool: **{len(pool)}** candidates · priority checklist: **{len(checklist)}**",
+        "",
+    ]
+    return lines
+
+
+def _evidence_matrix_section(clusters, limit=5):
+    """Section C (Phase 6): which evidence families support each top opportunity."""
+    lines = [
+        "## Evidence Matrix",
+        "",
+        "Counts are signals per family (product / pain+demand / revenue+payment / "
+        "trend / competition+feature gap / exit / search).",
+        "",
+        "| Opportunity | Product | Pain | Revenue | Trend | Competition | Exit | Search "
+        "| Independent sources | Corroboration |",
+        "|---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|---|",
+    ]
+    for cluster in clusters[:limit]:
+        entity = cluster.get("_opportunity")
+        if not entity:
+            continue
+        matrix = evidence_matrix(entity)
+        lines.append(
+            f"| {str(cluster.get('cluster_label'))[:44]} | {matrix['product']} "
+            f"| {matrix['pain'] + matrix['demand']} | {matrix['revenue']} "
+            f"| {matrix['trend']} | {matrix['competition']} | {matrix['exit']} "
+            f"| {matrix['search']} | {entity['independent_source_count']} "
+            f"| {entity['corroboration_level']} ({entity['corroboration_score']}) |"
+        )
+    lines.append("")
+    return lines
+
+
+def _priority_checklist_section(checklist):
+    """Section D (Phase 6): tiered, capped at 10-15, no padding."""
+    lines = [
+        "## Semrush Priority Checklist",
+        "",
+        f"**{len(checklist)}** strongest terms, A-tier first. No padding; "
+        "BRAND and AWKWARD phrases never appear.",
+        "",
+        "| Keyword | Tier | Maturity | Origin | Opportunity | Reason | Status |",
+        "|---|---|:-:|---|---|---|---|",
+    ]
+    for entry in checklist:
+        lines.append(
+            f"| {entry['keyword']} | **{entry['tier']}** | {entry['maturity']} "
+            f"| {entry['origin']} | {str(entry['cluster_label'])[:30]} "
+            f"| {str(entry.get('reason'))[:60]} | {entry['status']} |"
+        )
+    lines.append("")
+    return lines
+
+
+def _keyword_pool_section(pool):
+    """Section E (Phase 6): the expanded pool grouped by opportunity."""
+    lines = ["## Expanded Keyword Pool", ""]
+    if not pool:
+        lines += ["_No usable keyword candidates today._", ""]
+        return lines
+    counts = tier_counts(pool)
+    lines += [f"_{len(pool)} candidates · {counts.get('A', 0)} A · {counts.get('B', 0)} B "
+              f"· {counts.get('C', 0)} C_", ""]
+    grouped = {}
+    for entry in pool:
+        grouped.setdefault(entry["cluster_label"], []).append(entry)
+    for label, entries in grouped.items():
+        lines.append(f"- **{label}** ({len(entries)})")
+        for entry in entries:
+            lines.append(f"  - `{entry['keyword']}` — {entry['tier']}/{entry['maturity']}"
+                         f"/{entry['origin']}")
+    lines.append("")
     return lines
 
 
@@ -1412,13 +1688,17 @@ def _top_opportunities_section(clusters, limit=5):
 
     ranked = sorted(
         clusters,
-        key=lambda c: (VW.VERDICT_ORDER.get(c.get("verdict"), 9),
-                       -c.get("opportunity_score", 0), c["cluster_id"]),
+        key=lambda c: (
+            VW.VERDICT_ORDER.get(c.get("verdict"), 9),
+            {"HIGH": 0, "MEDIUM": 1, "LOW": 2}.get(c.get("discovery_quality"), 1),
+            -c.get("opportunity_score", 0),
+            c["cluster_id"],
+        ),
     )
     lines += [
-        "| # | Verdict | Cluster | Opportunity | Solo Builder | SEO | Market Gate "
-        "| Acquire | Substitution |",
-        "|---|---|---|:-:|:-:|:-:|:-:|:-:|---|",
+        "| # | Verdict | Cluster | Discovery | Opportunity | Solo Builder | SEO "
+        "| Market Gate | Acquire | Substitution |",
+        "|---|---|---|:-:|:-:|:-:|:-:|:-:|:-:|---|",
     ]
     for index, cluster in enumerate(ranked[:limit], 1):
         label = str(cluster["cluster_label"]).replace("|", "/")
@@ -1426,6 +1706,7 @@ def _top_opportunities_section(clusters, limit=5):
                if cluster.get("seo_score_status") != "NOT_CHECKED" else "-")
         lines.append(
             f"| {index} | **{cluster.get('verdict', '-')}** | {label} "
+            f"| {cluster.get('discovery_quality', 'MEDIUM')} "
             f"| {cluster.get('opportunity_score', 0)}/100 "
             f"| {cluster['max_solo_builder_score']}/100 | {seo} "
             f"| {cluster.get('market_demand_gate', 'UNKNOWN')} "
@@ -1473,12 +1754,14 @@ def _checklist_section(checklist):
         return lines
 
     lines += [
-        "| Keyword | Cluster | Priority | Type | SEO status | Why it is worth checking |",
-        "|---|---|---|---|---|---|",
+        "| Keyword | Cluster | Maturity | Priority | Type | SEO status "
+        "| Why it is worth checking |",
+        "|---|---|---|---|---|---|---|",
     ]
     for entry in checklist:
         lines.append(
-            f"| {entry['keyword']} | {entry['cluster_label']} | {entry['priority']} "
+            f"| {entry['keyword']} | {entry['cluster_label']} "
+            f"| {entry.get('maturity', '-')} | {entry['priority']} "
             f"| {entry['type']} | {entry.get('seo_status', 'NOT_CHECKED')} | {entry['why']} |"
         )
     lines.append("")
@@ -1495,6 +1778,10 @@ def generate_indie_report(
     enrichment_path=None,
     validation_path=None,
     record_verdicts=False,
+    source_errors=None,
+    signals=None,
+    adapter_rows=None,
+    reddit_health=None,
 ):
     """Generate the full indie opportunity report in Markdown.
 
@@ -1503,6 +1790,9 @@ def generate_indie_report(
     ``validation_path`` overrides the evidence/verdict-history store
     (``data/validation/evidence.json``). ``record_verdicts`` persists verdict
     changes; it is off by default so report generation stays side-effect free.
+    ``source_errors`` maps a source key to the last collector error (optional).
+    ``signals`` is the Phase 6 signal list from the source adapters;
+    ``adapter_rows`` is their Source Health telemetry.
     """
     if isinstance(toolify_data, dict):
         toolify_list = toolify_data.get("new", []) + toolify_data.get("trending", [])
@@ -1520,7 +1810,15 @@ def generate_indie_report(
         "hackernews": hn_data or [],
     }
 
+    # Phase 6.2: eligible PRODUCT_SIGNALs from the evidence layer join the SAME
+    # product pipeline (the evidence layer keeps its own copy).
+    bridge_rows = bridge_summary(signals or [])
+    bridged = bridged_products(signals or [])
+    for product in bridged:
+        all_products.setdefault(product["_source"], []).append(product)
+
     suitable, filtered_out = rank_products(all_products)
+    health_rows = source_health(all_products, suitable, filtered_out, errors=source_errors or {})
     top5 = suitable[:5]
     today = timeutil.today_str()
     total_input = sum(len(v) for v in all_products.values())
@@ -1535,7 +1833,11 @@ def generate_indie_report(
         clusters, validation, path=validation_store_path,
         record_history=record_verdicts, today=today,
     )
+    opportunities = build_opportunities(signals or [])
+    attach_opportunities(clusters, opportunities)
     checklist = build_semrush_checklist(clusters, enrichment=store)
+    pool = build_keyword_pool(clusters, enrichment=store)
+    priority_checklist = build_priority_checklist(pool)
 
     sections = [
         f"# Indie Hacker Opportunity Report - {today}",
@@ -1552,6 +1854,23 @@ def generate_indie_report(
         "",
     ]
 
+    # --- SECTION A: executive summary (Phase 6) ---
+    sections += ["---", ""]
+    sections += _executive_summary_section(
+        all_products, suitable, clusters, opportunities,
+        priority_checklist, pool, adapter_rows,
+        unmatched=len(unmatched_signals(signals or [])),
+        bridged=len(bridged),
+    )
+    if bridge_rows:
+        sections += ["---", ""]
+        sections += _signal_bridge_section(bridge_rows, bridged)
+
+    reddit_signals = [s for s in (signals or []) if s.get("source") == "reddit"]
+    if reddit_signals or reddit_health:
+        sections += ["---", ""]
+        sections += _reddit_section(reddit_signals, clusters, reddit_health)
+
     # --- SECTION A: opportunity clusters ---
     sections += ["---", ""]
     sections += _top_opportunities_section(clusters)
@@ -1562,6 +1881,22 @@ def generate_indie_report(
     # --- SECTION B: Semrush Check List ---
     sections += ["---", ""]
     sections += _checklist_section(checklist)
+
+    # --- Phase 6 sections: evidence matrix, tiered checklist, keyword pool ---
+    sections += ["---", ""]
+    sections += _evidence_matrix_section(clusters)
+    if priority_checklist:
+        sections += ["---", ""]
+        sections += _priority_checklist_section(priority_checklist)
+    sections += ["---", ""]
+    sections += _keyword_pool_section(pool)
+
+    # --- Source health (input diagnostics) ---
+    sections += ["---", ""]
+    sections += _source_health_section(health_rows)
+    if adapter_rows:
+        sections += ["---", ""]
+        sections += _adapter_health_section(adapter_rows)
 
     # --- SECTION C: individual product evidence ---
     sections += ["---", "", "## Individual Product Evidence", ""]

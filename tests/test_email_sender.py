@@ -193,6 +193,11 @@ def test_pipeline_finishes_successfully_without_email_secrets(monkeypatch, tmp_p
         monkeypatch.setattr(trend_monitor, name, lambda *args, **kwargs: [])
     monkeypatch.setattr(trend_monitor, "fetch_toolify_tools",
                         lambda *args, **kwargs: {"new": [], "trending": []})
+    # the Phase 6/6.1 signal stages must not touch the network in a unit test
+    monkeypatch.setattr(trend_monitor, "fetch_adapter_signals",
+                        lambda *args, **kwargs: ([], []))
+    monkeypatch.setattr(trend_monitor, "fetch_browser_signals",
+                        lambda *args, **kwargs: ([], []))
 
     monkeypatch.chdir(tmp_path)
     monkeypatch.setattr("storage.data_store.DATA_DIR", tmp_path / "data" / "daily")

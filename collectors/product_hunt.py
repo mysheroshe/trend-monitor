@@ -12,16 +12,26 @@ HEADERS = {
     "Connection": "keep-alive",
 }
 
+LAST_ERROR = ""
+
+
+def _record_error(message):
+    """Remember the last collector error for the daily Source Health section."""
+    global LAST_ERROR
+    LAST_ERROR = message
+
 
 def fetch_product_hunt_posts(limit=5):
     """通过RSS feed获取Product Hunt产品信息"""
     url = "https://www.producthunt.com/feed"
+    _record_error("")
 
     try:
         response = requests.get(url, headers=HEADERS, timeout=10)
         response.raise_for_status()
     except requests.RequestException as e:
         print(f"请求失败: {e}")
+        _record_error(f"request failed: {e}")
         return []
 
     soup = BeautifulSoup(response.text, "xml")

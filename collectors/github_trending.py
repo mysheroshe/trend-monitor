@@ -12,16 +12,26 @@ HEADERS = {
     "Connection": "keep-alive",
 }
 
+LAST_ERROR = ""
+
+
+def _record_error(message):
+    """Remember the last collector error for the daily Source Health section."""
+    global LAST_ERROR
+    LAST_ERROR = message
+
 
 def fetch_trending_repos(limit=5):
     """抓取GitHub trending页面并提取项目信息"""
     url = "https://github.com/trending"
+    _record_error("")
 
     try:
         response = requests.get(url, headers=HEADERS, timeout=10)
         response.raise_for_status()
     except requests.RequestException as e:
         print(f"请求失败: {e}")
+        _record_error(f"request failed: {e}")
         return []
 
     soup = BeautifulSoup(response.text, "html.parser")

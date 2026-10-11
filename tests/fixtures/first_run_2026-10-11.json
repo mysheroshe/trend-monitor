@@ -1,0 +1,31 @@
+{
+  "_note": "Regression fixture taken from the first real production run (2026-10-11). Real titles/descriptions only - no fabricated SEO metrics. Used to test brand filtering, HN/News classification and keyword maturity.",
+  "date": "2026-10-11",
+  "product_hunt": [
+    {"name": "HireKey", "tagline": "Your recruiter-informed AI copilot for tech job search", "link": "https://www.producthunt.com/products/hirekey"},
+    {"name": "Agibot", "tagline": "Personal AI agent for your Mac using your own keys", "link": "https://www.producthunt.com/products/agibot"},
+    {"name": "MePersona", "tagline": "Answer every fan comment in your voice", "link": "https://www.producthunt.com/products/mepersona"},
+    {"name": "Ghost Core", "tagline": "A personal AI computer that runs entirely on-device", "link": "https://www.producthunt.com/products/ghost-core"},
+    {"name": "shippedit.me", "tagline": "Launch Platform with SEO, AEO & Growth Insights", "link": "https://www.producthunt.com/products/shippedit"}
+  ],
+  "toolify": [],
+  "ai_tools": [],
+  "chrome_extensions": [
+    {"name": "HARPA AI: Web Automation with ChatGPT, Claude, Gemini, Grok", "description": "Free AI sidebar with ChatGPT, Claude, Gemini & DeepSeek. 100+ commands to automate, monitor prices, summarize & write.", "users": "400,000 users", "rating": "4.7/5.0", "link": "https://chromewebstore.google.com/detail/harpa"},
+    {"name": "Monica: All-In-One AI Assist & Smartest  AI Agent", "description": "One stop AI Assistant with GPT, Claude, Gemini: Chat, Write, Translate, Search, Summarize, image generator, video generation", "users": "3,000,000 users", "rating": "4.9/5.0", "link": "https://chromewebstore.google.com/detail/monica"},
+    {"name": "GPTZero: AI Detection & Writing Replay", "description": "Bring AI detection, citation checks, live essay feedback, and writing replays directly into Google Docs and your browser.", "users": "600,000 users", "rating": "4.5/5.0", "link": "https://chromewebstore.google.com/detail/gptzero"},
+    {"name": "Sider: Chat with all AI: GPT-5, Claude, DeepSeek, Gemini, Grok", "description": "ChatGPT, DeepSeek, Gemini, Claude, Grok all in one AI sidebar, for AI search, read, and write.", "users": "4,000,000 users", "rating": "4.8/5.0", "link": "https://chromewebstore.google.com/detail/sider"}
+  ],
+  "github_trending": [
+    {"name": "morluto/rea", "description": "Reverse engineer anything with agents, from app behavior down to native binaries.", "today_stars": "25,585 stars today"},
+    {"name": "boykopovar/AnyPS5", "description": "Tool for automatic PS5 executables porting to Linux and Windows", "today_stars": "3,977 stars today"},
+    {"name": "bilawalsidhu/gods-eye-view", "description": "A spy satellite simulator in your browser, except the data is real.", "today_stars": "872 stars today"}
+  ],
+  "hacker_news": [
+    {"title": "Sudden drop in Cloudflare bot traffic after strike on Yandex datacenter", "author": "walrus01", "score": 206, "comments": 72, "url": "https://radar.cloudflare.com/bots/as13238?dateRange=7d"},
+    {"title": "I paid people to try and follow my README", "author": "edent", "score": 36, "comments": 16, "url": "https://shkspr.mobi/blog/2026/10/i-paid-people-to-try-and-follow-my-readme/"},
+    {"title": "Nitter: Update Oct 10th seeking funding and legal help", "author": "nitter", "score": 150, "comments": 35, "url": "https://nitter.net/"},
+    {"title": "Ask HN: What do you use for local transcription?", "author": "curious", "score": 42, "comments": 58, "url": "https://news.ycombinator.com/item?id=999"},
+    {"title": "Show HN: I built a tiny offline PDF stamper", "author": "builder", "score": 55, "comments": 12, "url": "https://example.com/pdf-stamper"}
+  ]
+}

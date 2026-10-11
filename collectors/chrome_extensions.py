@@ -26,9 +26,18 @@ SEARCH_KEYWORDS = [
     "new AI",
 ]
 
+LAST_ERROR = ""
+
+
+def _record_error(message):
+    """Remember the last collector error for the daily Source Health section."""
+    global LAST_ERROR
+    LAST_ERROR = message
+
 
 def fetch_chrome_extensions(limit=5):
     """动态获取 Chrome Web Store 热门扩展"""
+    _record_error("")
     # 随机选择搜索关键词
     keyword = random.choice(SEARCH_KEYWORDS)
     search_url = f"https://chromewebstore.google.com/search/{requests.utils.quote(keyword)}"
@@ -37,9 +46,11 @@ def fetch_chrome_extensions(limit=5):
         response = requests.get(search_url, headers=HEADERS, timeout=15)
         if response.status_code != 200:
             print(f"    搜索页面请求失败: {response.status_code}")
+            _record_error(f"search page HTTP {response.status_code}")
             return []
     except requests.RequestException as e:
         print(f"    搜索请求错误: {e}")
+        _record_error(f"search request failed: {e}")
         return []
 
     # 从搜索结果提取扩展ID和名称
@@ -48,6 +59,7 @@ def fetch_chrome_extensions(limit=5):
 
     if not details:
         print(f"    未找到扩展列表")
+        _record_error("no extension results parsed from search page")
         return []
 
     extensions = []

@@ -6,6 +6,7 @@ from analyzers.indie_analyzer import deep_analyze_product, rank_products
 from analyzers.clustering import analyze_clusters
 from analyzers.keyword_candidates import attach_keyword_candidates, build_semrush_checklist
 from analyzers.seo_score import attach_seo
+from analyzers.source_quality import source_health
 from analyzers.verdict import attach_verdict
 from config import scoring_weights as SW
 from config import verdict_weights as VW
@@ -462,7 +463,7 @@ _JS = """
 # ---------------------------------------------------------------------------
 
 def generate_indie_html(indie_report_markdown, product_data, enrichment_path=None,
-                        validation_path=None):
+                        validation_path=None, source_errors=None):
     """
     Generate a dark-theme HTML page for the indie opportunity report.
 
@@ -473,6 +474,7 @@ def generate_indie_html(indie_report_markdown, product_data, enrichment_path=Non
             product_hunt, toolify, ai_tools, chrome_extensions, github, hackernews
         enrichment_path: optional override for the manual Semrush store location
         validation_path: optional override for the validation evidence store
+        source_errors: optional {source: last error} map for the Source Health section
 
     Returns:
         str: Complete HTML document
@@ -499,6 +501,7 @@ def generate_indie_html(indie_report_markdown, product_data, enrichment_path=Non
     top5 = suitable[:5]
 
     total_input = sum(len(v) for v in all_products.values())
+    health_rows = source_health(all_products, suitable, filtered_out, errors=source_errors or {})
     store = enrichment_store.load_store(enrichment_path)
     clusters = attach_keyword_candidates(analyze_clusters(suitable))
     attach_seo(clusters, store)
@@ -509,14 +512,19 @@ def generate_indie_html(indie_report_markdown, product_data, enrichment_path=Non
     # ── Top Opportunities Today ───────────────────────────────────────────
     ranked_today = sorted(
         clusters,
-        key=lambda c: (VW.VERDICT_ORDER.get(c.get("verdict"), 9),
-                       -c.get("opportunity_score", 0), c["cluster_id"]),
+        key=lambda c: (
+            VW.VERDICT_ORDER.get(c.get("verdict"), 9),
+            {"HIGH": 0, "MEDIUM": 1, "LOW": 2}.get(c.get("discovery_quality"), 1),
+            -c.get("opportunity_score", 0),
+            c["cluster_id"],
+        ),
     )
     top_rows = "".join(
         '<tr>'
         f'<td data-val="{index}">{index}</td>'
         f'<td><strong>{_e(c.get("verdict", "-"))}</strong></td>'
         f'<td>{_e(c["cluster_label"])}</td>'
+        f'<td>{_e(c.get("discovery_quality", "MEDIUM"))}</td>'
         f'<td data-val="{c.get("opportunity_score", 0)}">'
         f'<span class="{_score_color(c.get("opportunity_score", 0))}">'
         f'{c.get("opportunity_score", 0)}</span></td>'
@@ -546,7 +554,7 @@ def generate_indie_html(indie_report_markdown, product_data, enrichment_path=Non
         f"<p class=\"why\">{_e(counts_line)} across {len(clusters)} clusters.</p>"
         + '<div class="table-scroll">\n<table>\n'
         + '    <thead><tr><th>#</th><th>Verdict</th><th>Cluster</th>'
-          '<th>Opportunity</th><th>Solo Builder</th><th>Market Gate</th>'
+          '<th>Discovery</th><th>Opportunity</th><th>Solo Builder</th><th>Market Gate</th>'
           '<th>Acquire</th><th>Substitution</th></tr></thead>\n'
         + '    <tbody>' + top_rows + '</tbody>\n'
         + '</table>\n</div>' + no_build_note
@@ -691,6 +699,7 @@ def generate_indie_html(indie_report_markdown, product_data, enrichment_path=Non
         checklist_rows = "".join(
             f'<tr><td><strong>{_e(e["keyword"])}</strong></td>'
             f'<td>{_e(e["cluster_label"])}</td>'
+            f'<td><span class="source-tag">{_e(e.get("maturity", "-"))}</span></td>'
             f'<td><span class="source-tag">{_e(e["priority"])}</span></td>'
             f'<td>{_e(e["type"])}</td>'
             f'<td class="why">{_e(e["why"])}</td></tr>'
@@ -700,13 +709,30 @@ def generate_indie_html(indie_report_markdown, product_data, enrichment_path=Non
             '<p class="why">Pre-Semrush candidates only — no volume, KD or SERP data. '
             'Manual fields to enter later (Phase 3): US Volume, Global Volume, KD, weak SERP (yes/no).</p>'
             '<div class="table-scroll">\n<table>\n'
-            '    <thead><tr><th>Keyword</th><th>Cluster</th><th>Priority</th>'
-            '<th>Type</th><th>Why it is worth checking</th></tr></thead>\n'
+            '    <thead><tr><th>Keyword</th><th>Cluster</th><th>Maturity</th>'
+            '<th>Priority</th><th>Type</th><th>Why it is worth checking</th></tr></thead>\n'
             '    <tbody>' + checklist_rows + '</tbody>\n'
             '</table>\n</div>'
         )
     else:
         checklist_html = '<p style="color:#718096;font-size:13px">No candidates were generated.</p>'
+
+    # ── Source Health ─────────────────────────────────────────────────────
+    health_rows_html = "".join(
+        f'<tr><td>{_e(row["label"])}</td>'
+        f'<td>{row["fetched"]}</td><td>{row["accepted"]}</td><td>{row["filtered"]}</td>'
+        f'<td><span class="source-tag">{_e(row["status"])}</span></td>'
+        f'<td class="why">{_e(row.get("note") or "")}'
+        f'{" — " + _e(row["error"]) if row.get("error") else ""}</td></tr>'
+        for row in health_rows
+    )
+    health_html = (
+        '<p class="why">0 fetched means the collector returned nothing (a source problem); '
+        'items fetched but 0 accepted simply means nothing product-like was found today.</p>'
+        '<div class="table-scroll"><table><thead><tr><th>Source</th><th>Fetched</th>'
+        '<th>Accepted</th><th>Filtered</th><th>Status</th><th>Note</th></tr></thead>'
+        '<tbody>' + health_rows_html + '</tbody></table></div>'
+    )
 
     # ── Section 1: Filtered Out (collapsible) ──────────────────────────────
     if filtered_out:
@@ -914,6 +940,8 @@ def generate_indie_html(indie_report_markdown, product_data, enrichment_path=Non
                  f"{len(clusters)} clusters")
         + _section("🔎", "#1a1a0a", "Semrush Check List", checklist_html,
                    f"{len(checklist)} keywords")
+        + _section("🩺", "#16213e", "Source Health", health_html,
+                   f"{len(health_rows)} sources")
         + '<div class="section"><div class="section-header">'
         + '<span class="section-title">Individual Product Evidence</span></div></div>'
         + _section("🚫", "#2d1515", "Filtered Out", filtered_html,

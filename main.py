@@ -5,6 +5,10 @@ import argparse
 import os
 
 from collectors import fetch_trending_repos, fetch_product_hunt_posts, fetch_hackernews_posts, fetch_ai_tools, fetch_chrome_extensions
+from collectors import source_status
+from collectors.adapters import fetch_all as fetch_adapter_signals
+from collectors.adapters import fetch_browser_all as fetch_browser_signals
+from collectors.adapters import reddit_api
 from collectors.toolify import fetch_toolify_tools
 from reporters import generate_markdown_report
 from reporters.html_generator import generate_html_report
@@ -52,6 +56,44 @@ def main():
     print("  - 抓取 Hacker News...")
     hackernews_data = fetch_hackernews_posts(limit=5)
     print(f"    获取到 {len(hackernews_data)} 个热门")
+
+    # 采集 Phase 6 信号适配器（失败不影响主流程）
+    print("  - 采集机会信号适配器（GitHub 搜索 / HN 需求）...")
+    try:
+        adapter_signals, adapter_rows = fetch_adapter_signals(limit_per_source=15)
+    except Exception as exc:               # 适配器绝不能中断日报
+        adapter_signals, adapter_rows = [], []
+        print(f"    ⚠️  适配器整体失败，已跳过: {type(exc).__name__}: {exc}")
+    for row in adapter_rows:
+        print(f"    {row['source']}: {row['items_fetched']} signal(s) [{row['status']}]")
+
+    # Phase 6.1: 客户端渲染源（浏览器渲染，失败不影响主流程）
+    print("  - 采集浏览器渲染源（TrustMRR / DevHunt / BetaList / Build or Skip）...")
+    try:
+        browser_signals, browser_rows = fetch_browser_signals(limit_per_source=10)
+    except Exception as exc:
+        browser_signals, browser_rows = [], []
+        print(f"    ⚠️  浏览器采集整体失败，已跳过: {type(exc).__name__}: {exc}")
+    for row in browser_rows:
+        print(f"    {row['source']}: {row['items_fetched']} item(s) [{row['status']}] "
+              f"{row.get('runtime_seconds', 0)}s")
+    adapter_signals = adapter_signals + browser_signals
+    adapter_rows = adapter_rows + browser_rows
+
+    # Phase 7: Reddit 官方 API 需求信号（未配置凭证则跳过）
+    print("  - 采集 Reddit 需求信号（官方 API）...")
+    try:
+        reddit_signals, reddit_health = reddit_api.fetch()
+    except Exception as exc:
+        reddit_signals = []
+        reddit_health = {"source": "reddit", "status": "API_ERROR", "auth_status": "UNKNOWN",
+                         "requests_made": 0, "posts_fetched": 0, "posts_accepted": 0,
+                         "comments_fetched": 0, "last_error": f"{type(exc).__name__}: {exc}",
+                         "runtime_seconds": 0.0, "render_mode": "PUBLIC_JSON",
+                         "signal_types": []}
+    print(f"    reddit: {len(reddit_signals)} signal(s) [{reddit_health.get('status')}]")
+    adapter_signals = adapter_signals + reddit_signals
+    adapter_rows = adapter_rows + [reddit_health]
 
     # 生成报告
     print("正在生成报告...")
@@ -111,6 +153,10 @@ def main():
         github_trending_data,
         hackernews_data,
         record_verdicts=True,
+        source_errors=source_status(),
+        signals=adapter_signals,
+        adapter_rows=adapter_rows,
+        reddit_health=reddit_health,
     )
     os.makedirs("analysis/daily", exist_ok=True)
     indie_path = f"analysis/daily/{today}-indie.md"

@@ -9,9 +9,18 @@ HEADERS = {
 
 HN_API_BASE = "https://hacker-news.firebaseio.com/v0"
 
+LAST_ERROR = ""
+
+
+def _record_error(message):
+    """Remember the last collector error for the daily Source Health section."""
+    global LAST_ERROR
+    LAST_ERROR = message
+
 
 def fetch_hackernews_posts(limit=5):
     """通过官方API获取Hacker News热门文章"""
+    _record_error("")
     try:
         # 获取top stories列表
         response = requests.get(f"{HN_API_BASE}/topstories.json", headers=HEADERS, timeout=10)
@@ -19,6 +28,7 @@ def fetch_hackernews_posts(limit=5):
         story_ids = response.json()[:limit]
     except requests.RequestException as e:
         print(f"请求失败: {e}")
+        _record_error(f"request failed: {e}")
         return []
 
     posts = []

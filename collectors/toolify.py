@@ -1,11 +1,33 @@
 """Toolify.ai 采集器 - 最新工具(new) + Trending工具"""
 
 import time
-from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
+
+LAST_ERROR = ""
+
+# Playwright is only needed for this one collector. A missing dependency must
+# degrade to "Toolify unavailable" (reported in Source Health) instead of
+# crashing the whole daily pipeline on import.
+try:
+    from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
+    PLAYWRIGHT_AVAILABLE = True
+except ImportError as _exc:                      # pragma: no cover - depends on env
+    sync_playwright = None
+    PlaywrightTimeoutError = Exception
+    PLAYWRIGHT_AVAILABLE = False
+    LAST_ERROR = f"playwright not installed: {_exc}"
+
+
+def _record_error(message):
+    """Remember the last collector error for the daily Source Health section."""
+    global LAST_ERROR
+    LAST_ERROR = message
 
 
 def _get_page_html(url, wait_seconds=8):
     """使用 Playwright 绕过 Cloudflare 获取页面 HTML"""
+    if not PLAYWRIGHT_AVAILABLE:
+        _record_error(LAST_ERROR or "playwright unavailable")
+        return ""
     try:
         with sync_playwright() as p:
             browser = p.chromium.launch(
@@ -31,9 +53,11 @@ def _get_page_html(url, wait_seconds=8):
             return html
     except PlaywrightTimeoutError as e:
         print(f"    页面加载超时: {e}")
+        _record_error(f"page load timeout: {e}")
         return ""
     except Exception as e:
         print(f"    Playwright 错误: {e}")
+        _record_error(f"playwright error: {e}")
         return ""
 
 
@@ -133,6 +157,8 @@ def _parse_trending(html, limit):
 
 def fetch_new_tools(limit=5):
     """获取 Toolify.ai 最新上线的 AI 工具"""
+    if not PLAYWRIGHT_AVAILABLE:
+        return []
     try:
         html = _get_page_html("https://www.toolify.ai/new")
         if not html:
@@ -145,6 +171,8 @@ def fetch_new_tools(limit=5):
 
 def fetch_trending_tools(limit=5):
     """获取 Toolify.ai Trending AI 工具"""
+    if not PLAYWRIGHT_AVAILABLE:
+        return []
     try:
         html = _get_page_html("https://www.toolify.ai/Best-trending-AI-Tools")
         if not html:
@@ -157,6 +185,7 @@ def fetch_trending_tools(limit=5):
 
 def fetch_toolify_tools():
     """获取 Toolify.ai 数据：new（最新）在前，trending在后"""
+    _record_error("")
     print("  正在获取 Toolify.ai 最新工具(new)...")
     new = fetch_new_tools(5)
     print(f"  获取到 {len(new)} 个最新工具")

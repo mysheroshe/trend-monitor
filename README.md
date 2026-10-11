@@ -362,6 +362,31 @@ An optional deep-research hook exists in `analyzers/deep_research.py`. It is
 `TREND_MONITOR_DEEP_RESEARCH=1` and register a provider; any result it returns
 is stored as validation evidence rather than asserted by the report.
 
+### Discovery quality: surfacing new opportunities, not popular tools
+
+The radar aims at **new or emerging buildable products**, not at the most
+popular AI tools or random developer news. Four deterministic layers keep the
+noise out:
+
+| Layer | Values | Effect |
+|---|---|---|
+| `hn_content_type` | PRODUCT / DEMAND_SIGNAL / NEWS_DISCUSSION / UNKNOWN | only PRODUCT enters the ranking; Ask-HN-style posts are kept as demand evidence |
+| `github_product_likeness` | HIGH / MEDIUM / LOW | libraries, SDKs, frameworks, research and dev tooling are dropped (LOW) |
+| `novelty_signal` | HIGH / MEDIUM / LOW / UNKNOWN | Toolify `/new` and launch posts score HIGH; a mature tool with millions of monthly visits and no growth scores LOW |
+| `discovery_quality` | HIGH / MEDIUM / LOW | shortlist ordering; LOW is filtered out |
+
+Keyword candidates carry a **maturity** label (`NICHE` / `BROAD` / `BRAND` /
+`AWKWARD`). Product/brand names are stripped structurally (`analyzers/brand_filter.py`),
+so `monica all one summarizer` cannot appear while `video summarizer`,
+`ai detector` and `prompt generator` are preserved. The Semrush Check List
+prefers NICHE terms, marks broad mature categories as benchmarks, is capped at
+1–3 keywords per cluster, and is never padded: if only a handful of good terms
+exist that day, only those are listed — each with a "why it survived" reason.
+
+Every report now also carries a **Source Health** table (fetched / accepted /
+filtered / status per collector, plus the last collector error) so a quiet day
+can be told apart from a broken scraped source.
+
 ### Domain awareness
 
 The analyzer detects 14 product domains from the actual description (fortune telling, browser extension, image generation, developer tool, productivity, etc.) and tailors every answer to that domain — rather than generating generic advice.

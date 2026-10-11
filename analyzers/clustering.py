@@ -399,8 +399,23 @@ def build_cluster(info, members):
     strongest_source = max(sources, key=lambda s: SW.SOURCE_CONFIDENCE.get(s, SW.DEFAULT_SOURCE_CONFIDENCE)) \
         if sources else "unknown"
 
+    # Phase 5: discovery novelty + discovery quality, aggregated from members
+    # (the per-item signals are attached during filtering).
+    novelty_order = {"HIGH": 0, "MEDIUM": 1, "LOW": 2, "UNKNOWN": 3}
+    novelties = [m.get("novelty_signal") or "UNKNOWN" for m in members]
+    best_novelty = min(novelties, key=lambda n: novelty_order.get(n, 3)) if novelties else "UNKNOWN"
+    discoveries = [m.get("discovery_quality") or "MEDIUM" for m in members]
+    if "HIGH" in discoveries:
+        cluster_discovery = "HIGH"
+    elif "MEDIUM" in discoveries:
+        cluster_discovery = "MEDIUM"
+    else:
+        cluster_discovery = "LOW"
+
     cluster = dict(info)
     cluster.update({
+        "novelty_signal": best_novelty,
+        "discovery_quality": cluster_discovery,
         "member_count": len(members),
         "member_names": [m.get("name") or m.get("title") or "Unknown" for m in members],
         "member_sources": sources,
@@ -492,7 +507,16 @@ def score_cluster(cluster):
         bonuses = int(bonuses * CW.LOW_QUALITY_BONUS_MULTIPLIER)
         penalties["below_quality_floor"] = 0
 
-    raw_total = quality + bonuses + confidence_adjustment + sum(penalties.values())
+    novelty = cluster.get("novelty_signal", "UNKNOWN")
+    novelty_adjustment = {
+        "HIGH": CW.NOVELTY_ADJUSTMENT,
+        "MEDIUM": 1,
+        "LOW": -CW.NOVELTY_ADJUSTMENT,
+        "UNKNOWN": 0,
+    }.get(novelty, 0)
+
+    raw_total = (quality + bonuses + confidence_adjustment
+                 + sum(penalties.values()) + novelty_adjustment)
     final = max(0, min(CW.CLUSTER_SCORE_MAX, raw_total))
 
     reasons = [f"best member Solo Builder Score {quality}/100"]
@@ -505,6 +529,9 @@ def score_cluster(cluster):
         reasons.append(f"source confidence {cluster.get('strongest_source_confidence', 'Unknown')} ({sign}{confidence_adjustment})")
     if persistence_bonus:
         reasons.append(f"seen on {days_seen} days (+{persistence_bonus})")
+    if novelty_adjustment:
+        sign = "+" if novelty_adjustment > 0 else ""
+        reasons.append(f"discovery novelty {novelty} ({sign}{novelty_adjustment}, capped)")
     if "hn_only" in penalties:
         reasons.append(f"Hacker News is the only source ({penalties['hn_only']})")
     if "singleton" in penalties:
@@ -523,6 +550,8 @@ def score_cluster(cluster):
             "bonuses_applied": bonuses,
             "confidence_adjustment": confidence_adjustment,
             "persistence_bonus": persistence_bonus,
+            "novelty_signal": novelty,
+            "novelty_adjustment": novelty_adjustment,
             "penalties": penalties,
             "raw_total": raw_total,
             "final": final,

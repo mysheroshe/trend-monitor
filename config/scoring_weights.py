@@ -55,6 +55,11 @@ SOURCE_CONFIDENCE = {
     "chrome_extensions": 0.6,   # real products, weak signals
     "github": 0.4,              # mostly libraries
     "hackernews": 0.2,          # news, weak product relevance
+    # Phase 6.2 bridged product-signal sources
+    "betalist": 0.8,            # fresh launches
+    "devhunt": 0.7,             # developer-tool launches
+    "github_search": 0.6,       # topic search, filtered by product-likeness
+    "trustmrr": 0.6,            # only when the record has product context
 }
 
 SOURCE_CONFIDENCE_LABELS = {
@@ -64,6 +69,10 @@ SOURCE_CONFIDENCE_LABELS = {
     "chrome_extensions": "Medium",
     "github": "Low–Medium",
     "hackernews": "Low",
+    "betalist": "Medium–High",
+    "devhunt": "Medium–High",
+    "github_search": "Medium",
+    "trustmrr": "Medium",
 }
 
 DEFAULT_SOURCE_CONFIDENCE = 0.5

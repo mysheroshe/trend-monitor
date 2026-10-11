@@ -25,6 +25,11 @@ CONFIDENCE_ADJUSTMENT_MAX = 5
 PERSISTENCE_BONUS_PER_DAY = 1
 PERSISTENCE_BONUS_CAP = 7
 
+# Small, capped discovery-novelty adjustment (Phase 5). It only re-orders the
+# cluster list; it can never overwhelm the Solo Builder Score or change a
+# verdict.
+NOVELTY_ADJUSTMENT = 3
+
 # A cluster supported only by Hacker News (news, weak product relevance)
 # cannot rank highly.
 HN_ONLY_SOURCES = ("hackernews",)

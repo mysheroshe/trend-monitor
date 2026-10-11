@@ -11,17 +11,27 @@ HEADERS = {
     "Connection": "keep-alive",
 }
 
+LAST_ERROR = ""
+
+
+def _record_error(message):
+    """Remember the last collector error for the daily Source Health section."""
+    global LAST_ERROR
+    LAST_ERROR = message
+
 
 def fetch_ai_tools(limit=5):
     """获取 There's An AI For That 网站最新上传的AI工具"""
     # /new/ 页面 - 最新上传的工具
     url = "https://theresanaiforthat.com/new/"
+    _record_error("")
 
     try:
         response = requests.get(url, headers=HEADERS, timeout=15)
         response.raise_for_status()
     except requests.RequestException as e:
         print(f"请求失败: {e}")
+        _record_error(f"request failed: {e}")
         return []
 
     soup = BeautifulSoup(response.text, "html.parser")

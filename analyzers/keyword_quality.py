@@ -1,19 +1,23 @@
-"""Deterministic keyword-quality gate (Phase 3, Step 3).
+"""Deterministic keyword-quality gate (Phase 3) + maturity model (Phase 5).
 
-Removes candidates that are technically valid but useless as an opportunity
-signal: generic category phrases ("checker tool", "code editor", "ai tool"),
-detached function nouns, obvious brand/name queries from single products, and
-awkward generated phrases.
+Phase 3 removed generic category phrases ("checker tool", "code editor") and
+product-name-derived noise. Phase 5 adds:
 
-The gate deliberately keeps useful broad head terms when they genuinely
-describe the cluster ("prompt generator", "tattoo generator").
+  * a **category anchor** requirement - every candidate needs a meaningful
+    domain/category anchor *and* a functional anchor;
+  * a **maturity** label: NICHE / BROAD / BRAND / AWKWARD, so the checklist can
+    prefer niche, non-brand, tool-intent phrases.
 """
 
-from analyzers.clustering import FUNCTION_FAMILIES
+from analyzers.clustering import DOMAIN_FAMILIES, FUNCTION_FAMILIES
 from analyzers.text_utils import tokenize
 
+# ---------------------------------------------------------------------------
+# Vocabulary
+# ---------------------------------------------------------------------------
+
 # Modifiers and connective words that never identify a niche on their own.
-_MODIFIER_TOKENS = {
+MODIFIER_TOKENS = {
     "free", "online", "ai", "best", "top", "new", "pro", "plus", "easy",
     "simple", "fast", "quick", "instant", "smart", "auto", "automatic",
     "how", "to", "what", "is", "the", "a", "an", "for", "from", "without",
@@ -29,51 +33,150 @@ _GENERIC_DOMAIN_TOKENS = {
     "stuff", "idea", "ideas",
 }
 
+# Filler head nouns: a phrase ending in one of these is a generic category
+# ("ai tool", "checker tool") rather than a tool search ("ai detector").
+FILLER_NOUNS = {
+    "tool", "tools", "app", "apps", "software", "platform", "platforms",
+    "service", "services", "solution", "solutions", "utility", "utilities",
+    "assistant", "site", "website", "web", "saas", "product", "products",
+    "thing", "stuff",
+}
 
-def _function_tokens():
-    tokens = set()
-    for family in FUNCTION_FAMILIES:
-        tokens.add(family["key"])
-        tokens.add(family["label"].lower())
-        tokens.update(word.lower() for word in family["head_words"])
-        tokens.update(word.lower() for word in family["keywords"])
-    return tokens
+_FUNCTION_TOKENS = set()
+for _family in FUNCTION_FAMILIES:
+    _FUNCTION_TOKENS.add(_family["key"])
+    _FUNCTION_TOKENS.add(_family["label"].lower())
+    _FUNCTION_TOKENS.update(word.lower() for word in _family["head_words"])
+    _FUNCTION_TOKENS.update(word.lower() for word in _family["keywords"])
 
+_DOMAIN_TOKENS = set()
+for _domain in DOMAIN_FAMILIES:
+    _DOMAIN_TOKENS.add(_domain["key"])
+    _DOMAIN_TOKENS.update(word.lower() for word in _domain["keywords"])
 
-GENERIC_TOKENS = _MODIFIER_TOKENS | _GENERIC_DOMAIN_TOKENS | _function_tokens()
-
-# Domains too broad to anchor a keyword without a specific subject.
-BROAD_DOMAINS = {"audio", "video", "code", "text", "data", "website", "image", "social"}
+# Tokens that are too broad to prove a niche on their own.
+BROAD_TOKENS = {
+    "ai", "video", "image", "photo", "picture", "audio", "music", "code",
+    "coding", "text", "data", "seo", "email", "website", "social", "app",
+    "tool", "platform", "content", "assistant",
+}
 
 # Domains that cannot carry candidates on their own at all.
 GENERIC_DOMAINS = {"code", "text", "data", "website"}
 
+# Domains whose phrases are broad but still legitimate benchmarks.
+BROAD_DOMAINS = {"audio", "video", "code", "text", "data", "website", "image", "social"}
+
+# Broad categories that may still be paired with a function when no specific
+# domain is available (e.g. "ai detector", "video summarizer").
+INFERRED_CATEGORIES = {
+    "ai": ["ai", "gpt", "llm", "chatgpt", "claude", "gemini", "copilot", "agent"],
+    "video": ["video", "youtube", "clip", "reel"],
+    "image": ["image", "photo", "picture", "art", "logo", "graphic"],
+    "audio": ["audio", "music", "song", "voice", "podcast"],
+    "pdf": ["pdf"],
+    "excel": ["excel", "spreadsheet", "csv"],
+    "seo": ["seo", "keyword", "serp", "backlink"],
+    "resume": ["resume", "cv"],
+    "prompt": ["prompt"],
+}
+
+GENERIC_TOKENS = MODIFIER_TOKENS | _GENERIC_DOMAIN_TOKENS | _FUNCTION_TOKENS
+
+
+def vocabulary_tokens():
+    """Every token the system recognises as domain/function/category language."""
+    return _DOMAIN_TOKENS | _FUNCTION_TOKENS | MODIFIER_TOKENS | _GENERIC_DOMAIN_TOKENS
+
+
+def domain_tokens():
+    return set(_DOMAIN_TOKENS)
+
+
+def function_tokens():
+    return set(_FUNCTION_TOKENS)
+
+
+def broad_tokens():
+    return set(BROAD_TOKENS)
+
+
+def inferred_categories():
+    return dict(INFERRED_CATEGORIES)
+
+
+# ---------------------------------------------------------------------------
+# Anchors
+# ---------------------------------------------------------------------------
+
+def has_category_anchor(keyword):
+    """True when the phrase contains a real domain / category anchor."""
+    tokens = set(tokenize(keyword))
+    return bool(tokens & (_DOMAIN_TOKENS | {"ai"}))
+
+
+def has_function_anchor(keyword):
+    """True when the phrase contains a functional head noun."""
+    return bool(set(tokenize(keyword)) & _FUNCTION_TOKENS)
+
+
+def has_specific_anchor(keyword):
+    """True when the anchor is a specific (non-broad) domain term."""
+    tokens = set(tokenize(keyword))
+    return bool(tokens & (_DOMAIN_TOKENS - BROAD_TOKENS))
+
+
+# ---------------------------------------------------------------------------
+# Quality rules
+# ---------------------------------------------------------------------------
+
+_ARTIFACT_BIGRAMS = [
+    "all one", "one stop", "all in", "in one", "one click", "me finder",
+    "me checker", "me analyzer", "me generator", "one summarizer",
+]
+
 
 def is_generic_phrase(keyword):
-    """True when every token is a modifier, category noun or function word."""
+    """True for generic category phrases that cannot reveal an opportunity.
+
+    Generic when the phrase ends in a filler noun ("checker tool", "ai tool")
+    or when it carries no real category anchor ("free checker"), or when its
+    only anchor is a generic domain ("code editor").
+    """
     tokens = tokenize(keyword)
     if not tokens:
         return True
-    return all(token in GENERIC_TOKENS for token in tokens)
+    if any(token in FILLER_NOUNS for token in tokens):
+        return True
+    usable_anchors = (_DOMAIN_TOKENS - GENERIC_DOMAINS) | {"ai"}
+    return not (set(tokens) & usable_anchors)
 
 
 def is_awkward_phrase(keyword):
-    """True for malformed or repetitive generated phrases."""
+    """True for malformed, repetitive or concatenation-artifact phrases."""
     tokens = tokenize(keyword)
     if not tokens:
         return True
     if len(tokens) > 6:
         return True
     if len(set(tokens)) != len(tokens):
-        return True                      # repeated token
+        return True                      # repeated token ("ai ai video generator")
     if any(token.isdigit() for token in tokens):
         return True                      # "composer 2 ..."
     if any(len(token) > 20 for token in tokens):
         return True
-    if tokens[0] in {"for", "and", "or", "of", "to", "with"}:
+    if tokens[0] in {"for", "and", "or", "of", "to", "with", "me"}:
         return True
     if len({"free", "online", "ai", "best"} & set(tokens)) > 1:
         return True                      # stacked modifiers
+    lowered = " ".join(tokens)
+    if any(bigram in lowered for bigram in _ARTIFACT_BIGRAMS):
+        return True                      # "monica all one summarizer"
+    # a dangling one/two-letter token before a function noun is an artifact
+    # ("shippedit me analyzer"); real modifiers such as "ai" are fine
+    if (len(tokens) >= 2 and tokens[0] not in MODIFIER_TOKENS
+            and len(tokens[0]) <= 2 and tokens[1] in _FUNCTION_TOKENS):
+        return True
     return False
 
 
@@ -91,12 +194,7 @@ def member_derived_allowed(cluster):
 
 
 def keyword_quality(keyword, cluster):
-    """Classify a candidate keyword: OK / GENERIC / AWKWARD.
-
-    Obvious brand/name queries are handled upstream by
-    ``member_derived_allowed`` (a single product with no domain anchor is not
-    treated as a search intent); finer brand detection stays heuristic.
-    """
+    """Classify a candidate keyword: OK / GENERIC / AWKWARD."""
     if is_awkward_phrase(keyword):
         return "AWKWARD"
     if is_generic_phrase(keyword):
@@ -112,4 +210,37 @@ def passes_quality(keyword, cluster):
 def is_domain_specific(keyword, cluster):
     """True when the keyword carries a specific (non-broad) subject."""
     tokens = set(tokenize(keyword)) - GENERIC_TOKENS
-    return bool(tokens) and not tokens <= BROAD_DOMAINS
+    return bool(tokens) and not tokens <= BROAD_TOKENS
+
+
+# ---------------------------------------------------------------------------
+# Phase 5: maturity
+# ---------------------------------------------------------------------------
+
+MATURITY_NICHE = "NICHE"
+MATURITY_BROAD = "BROAD"
+MATURITY_BRAND = "BRAND"
+MATURITY_AWKWARD = "AWKWARD"
+
+MATURITY_LEVELS = (MATURITY_NICHE, MATURITY_BROAD, MATURITY_BRAND, MATURITY_AWKWARD)
+CHECKLIST_MATURITY = (MATURITY_NICHE, MATURITY_BROAD)
+
+
+def keyword_maturity(keyword, cluster=None, brand_tokens=()):
+    """NICHE / BROAD / BRAND / AWKWARD for one candidate phrase."""
+    tokens = set(tokenize(keyword))
+    if is_awkward_phrase(keyword):
+        return MATURITY_AWKWARD
+    if tokens & {token.lower() for token in (brand_tokens or ())}:
+        return MATURITY_BRAND
+    if is_generic_phrase(keyword):
+        return MATURITY_AWKWARD
+    if not has_category_anchor(keyword) or not has_function_anchor(keyword):
+        # without both anchors the phrase is not a tool search
+        return MATURITY_AWKWARD
+    if has_specific_anchor(keyword):
+        return MATURITY_NICHE
+    extra = tokens - GENERIC_TOKENS - _DOMAIN_TOKENS
+    if extra:
+        return MATURITY_NICHE
+    return MATURITY_BROAD

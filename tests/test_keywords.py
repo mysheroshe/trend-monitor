@@ -77,8 +77,15 @@ def test_semrush_checklist_only_contains_top_ranked_candidates(
     clusters = cluster_builder(list(tattoo_products) + list(audio_products))
     checklist = build_semrush_checklist(clusters)
 
-    assert CW.SEMRUSH_MIN_KEYWORDS <= len(checklist) <= CW.SEMRUSH_MAX_KEYWORDS
-    assert all(entry["priority"] in ("HIGH", "MEDIUM") for entry in checklist)
+    # Phase 5: the list is never padded to a minimum, but every entry must be
+    # NICHE or BROAD (BRAND/AWKWARD are never offered).
+    assert checklist
+    assert len(checklist) <= CW.SEMRUSH_MAX_KEYWORDS
+    assert all(entry["maturity"] in ("NICHE", "BROAD") for entry in checklist)
+    counts = {}
+    for entry in checklist:
+        counts[entry["cluster_id"]] = counts.get(entry["cluster_id"], 0) + 1
+    assert all(count <= CW.SEMRUSH_PER_CLUSTER_MAX for count in counts.values())
 
     rank_of = {c["cluster_id"]: c["cluster_rank"] for c in clusters}
     ranks = [rank_of[entry["cluster_id"]] for entry in checklist]

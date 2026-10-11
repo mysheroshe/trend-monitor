@@ -5,6 +5,52 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.9.0] - Phase 5: Discovery quality + keyword shortlist tightening
+
+### Added
+- `analyzers/brand_filter.py` — structural brand detection. Camel case, acronyms,
+  digit-mixed tokens, single-word names and colon-separated leading names are
+  treated as brand tokens, plus a small stoplist of common platform brands.
+  Brand tokens are stripped from keyword subjects, so `monica all one
+  summarizer` and `shippedit me analyzer` can no longer be generated while
+  `video summarizer`, `ai detector` and `prompt generator` stay.
+- Keyword **maturity**: `NICHE` / `BROAD` / `BRAND` / `AWKWARD`. BRAND and
+  AWKWARD are never generated, never scored and never listed.
+- Search-intent anchors: a candidate must carry a category anchor **and** a
+  functional anchor; when a cluster has no specific domain, a broad category is
+  inferred from the product text (`ai detector`, `video summarizer`).
+- `analyzers/source_quality.py`:
+  - `hn_content_type`: PRODUCT / DEMAND_SIGNAL / NEWS_DISCUSSION / UNKNOWN.
+    Only PRODUCT enters the opportunity pipeline (fixes the "Cloudflare bot
+    traffic" news item that used to pass because of the word "bot").
+  - `github_product_likeness`: HIGH / MEDIUM / LOW; libraries, SDKs, frameworks,
+    research and dev-tooling repos no longer enter the ranking.
+  - `novelty_signal`: HIGH / MEDIUM / LOW / UNKNOWN from Toolify new-vs-trending,
+    traffic/growth, install base and launch feeds. Mature high-traffic products
+    are no longer treated as new opportunities.
+  - `discovery_quality`: HIGH / MEDIUM / LOW, used only for shortlist ordering
+    and for dropping noise (LOW is filtered out).
+  - `source_health()`: per-collector fetched / accepted / filtered / status.
+- **Source Health** section in the Markdown report and HTML dashboard, so
+  "no opportunity today" can be told apart from "a collector is broken"
+  (e.g. `TAAFT 0/0 — request failed: 403`).
+- Collectors remember `LAST_ERROR`, exposed through `collectors.source_status()`.
+- Cluster-level `novelty_signal` / `discovery_quality` with a capped ±3
+  novelty adjustment (cannot override the Solo Builder Score or a verdict).
+- 31 new tests including a regression fixture taken from the first real run
+  (`tests/fixtures/first_run_2026-10-11.json`) — 186 tests total.
+
+### Changed
+- Semrush Check List: NICHE first, then a capped number of BROAD benchmark
+  terms, never brand/awkward, 1–3 per cluster, no padding to a minimum, and
+  every row now carries a "why it survived" explanation.
+- Top Opportunities Today orders by verdict, then discovery quality, then
+  Opportunity Score.
+
+### Notes
+- No scoring thresholds, verdict logic, data sources, APIs, LLMs or databases
+  were added.
+
 ## [1.8.0] - Phase 4: Deep Opportunity Validation + Final Decision Layer
 
 ### Added

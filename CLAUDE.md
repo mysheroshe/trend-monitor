@@ -188,6 +188,38 @@ AI/Tech 趋势监控工具，自动采集热点数据，生成日报和周报，
   变现模式与置信度 / 成本风险 / Why / Not BUILD because / Next actions /
   Verdict history
 
+## 发现质量与关键词收紧（Phase 5 新增）
+
+### analyzers/brand_filter.py
+- 结构化品牌识别：驼峰（TattooGenie）、全大写缩写（HARPA）、字母数字混合、
+  单词名（Agibot）、"Name:" 前缀（Monica: / Sider:）+ 少量常见品牌停用表
+- 品牌 token 从关键词主语里剔除；`brand_tokens` / `brand_filtered_keywords`
+  挂在簇上；**不要**用"只在一个成员出现"当唯一信号（会误杀 stencil/sleeve）
+
+### analyzers/keyword_quality.py
+- 成熟度：NICHE / BROAD / BRAND / AWKWARD；BRAND/AWKWARD 不生成、不进清单
+- 通用短语判定改为：以填充名词结尾（ai tool / checker tool）或没有真实类别锚点
+  （free checker）或锚点只是泛领域（code editor）→ generic
+- 锚点：每个候选必须同时有类别锚点 + 功能锚点
+
+### analyzers/source_quality.py
+- `classify_hn_item` → PRODUCT / DEMAND_SIGNAL / NEWS_DISCUSSION / UNKNOWN
+  （只有 PRODUCT 进主榜；Ask HN 只作需求证据）
+- `github_product_likeness` → HIGH / MEDIUM / LOW（库/SDK/框架/研究/开发者工具
+  一律 LOW，不进主榜）
+- `novelty_signal` → Toolify /new 或 Show HN = HIGH；月访问百万且无增长 = LOW
+- `discovery_quality` → 只用于短名单排序与过滤噪音（LOW 直接丢弃）
+- `source_health` → 每个采集器 fetched / accepted / filtered / status
+
+### collectors
+- 每个 collector 暴露 `LAST_ERROR`，`collectors.source_status()` 汇总，
+  报告里显示为 Source Health 的 error 列（例如 TAAFT 403）
+
+### 报告
+- 新增 `## Source Health` 表
+- Semrush Check List：NICHE 优先 → 少量 BROAD 基准词（≤3）→ 每簇 1–3 个 →
+  永不凑数；每行给出 "why it survived"
+
 ### 集成位置（main.py）
 - 顺序：HTML 报告 → 数据存储 → indie markdown → indie HTML → 邮件发送
 - indie HTML 需要传入 product_data dict（github 键对应 github_trending_data 变量）
