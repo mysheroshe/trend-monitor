@@ -1,14 +1,17 @@
 """Indie opportunity HTML report generator — dark theme matching docs/index.html"""
 
 import re
-from datetime import datetime
-from zoneinfo import ZoneInfo
 
-from analyzers.indie_analyzer import (
-    filter_unsuitable_products,
-    score_product,
-    deep_analyze_product,
-)
+from analyzers.indie_analyzer import deep_analyze_product, rank_products
+from analyzers.clustering import analyze_clusters
+from analyzers.keyword_candidates import attach_keyword_candidates, build_semrush_checklist
+from analyzers.seo_score import attach_seo
+from analyzers.verdict import attach_verdict
+from config import scoring_weights as SW
+from config import verdict_weights as VW
+from config import timeutil
+from storage import enrichment_store
+from storage import validation_store
 
 
 # ---------------------------------------------------------------------------
@@ -107,6 +110,11 @@ def _product_url(product):
     )
 
 
+def _dim_points(score, key):
+    """Weighted points earned on one dimension of a Solo Builder Score."""
+    return score["dimensions"][key]["points"]
+
+
 def _link_label(source):
     """Return appropriate button label for a given source."""
     if source == "github":
@@ -117,10 +125,10 @@ def _link_label(source):
 
 
 def _score_color(total):
-    """Return a CSS class name based on total score."""
-    if total >= 16:
+    """Return a CSS class name for a 0-100 Solo Builder Score."""
+    if total >= SW.SCORE_BANDS["high"]:
         return "score-high"
-    if total >= 12:
+    if total >= SW.SCORE_BANDS["mid"]:
         return "score-mid"
     return "score-low"
 
@@ -254,6 +262,24 @@ _CSS = """
         font-size: 11px; padding: 2px 8px;
         border-radius: 999px;
         background: #2d3748; color: #a0aec0;
+    }
+
+    /* ── Wide score table ── */
+    .table-scroll { overflow-x: auto; }
+    .why { font-size: 12px; color: #a0aec0; min-width: 260px; max-width: 420px; }
+    .why ul { margin: 0; padding-left: 16px; }
+    .why li { margin: 2px 0; }
+
+    /* ── Cluster cards + keyword chips ── */
+    .cluster-card { margin-bottom: 12px; }
+    .cluster-card summary { font-weight: 600; }
+    .kw-list {
+        list-style: none; padding-left: 0;
+        display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0 0;
+    }
+    .kw-list li {
+        background: #13171f; border: 1px solid #2d3748;
+        border-radius: 6px; padding: 4px 8px; font-size: 12px; color: #cbd5e0;
     }
 
     /* ── Score bars ── */
@@ -435,7 +461,8 @@ _JS = """
 # Main generator
 # ---------------------------------------------------------------------------
 
-def generate_indie_html(indie_report_markdown, product_data):
+def generate_indie_html(indie_report_markdown, product_data, enrichment_path=None,
+                        validation_path=None):
     """
     Generate a dark-theme HTML page for the indie opportunity report.
 
@@ -444,16 +471,15 @@ def generate_indie_html(indie_report_markdown, product_data):
                                      (used only for reference; HTML is built from data)
         product_data: dict with keys matching generate_indie_report() parameters:
             product_hunt, toolify, ai_tools, chrome_extensions, github, hackernews
+        enrichment_path: optional override for the manual Semrush store location
+        validation_path: optional override for the validation evidence store
 
     Returns:
         str: Complete HTML document
     """
-    pst = ZoneInfo("America/Los_Angeles")
-    now = datetime.now(pst)
-    tz_abbr = now.strftime("%Z")
-    date_str = now.strftime(f"%B %d, %Y · %H:%M {tz_abbr}")
+    date_str = timeutil.display_str()
 
-    # ── Re-run analysis (same logic as generate_indie_report) ─────────────
+    # ── Analyze (shared pipeline with generate_indie_report) ──────────────
     toolify_raw = product_data.get("toolify", [])
     if isinstance(toolify_raw, dict):
         toolify_list = toolify_raw.get("new", []) + toolify_raw.get("trending", [])
@@ -469,13 +495,218 @@ def generate_indie_html(indie_report_markdown, product_data):
         "hackernews":       product_data.get("hackernews", []),
     }
 
-    suitable, filtered_out = filter_unsuitable_products(all_products)
-    for p in suitable:
-        p["_scores"] = score_product(p)
-    suitable.sort(key=lambda p: p["_scores"]["total_score"], reverse=True)
+    suitable, filtered_out = rank_products(all_products)
     top5 = suitable[:5]
 
     total_input = sum(len(v) for v in all_products.values())
+    store = enrichment_store.load_store(enrichment_path)
+    clusters = attach_keyword_candidates(analyze_clusters(suitable))
+    attach_seo(clusters, store)
+    validation = validation_store.load_store(validation_path)
+    attach_verdict(clusters, validation, record_history=False)
+    checklist = build_semrush_checklist(clusters, enrichment=store)
+
+    # ── Top Opportunities Today ───────────────────────────────────────────
+    ranked_today = sorted(
+        clusters,
+        key=lambda c: (VW.VERDICT_ORDER.get(c.get("verdict"), 9),
+                       -c.get("opportunity_score", 0), c["cluster_id"]),
+    )
+    top_rows = "".join(
+        '<tr>'
+        f'<td data-val="{index}">{index}</td>'
+        f'<td><strong>{_e(c.get("verdict", "-"))}</strong></td>'
+        f'<td>{_e(c["cluster_label"])}</td>'
+        f'<td data-val="{c.get("opportunity_score", 0)}">'
+        f'<span class="{_score_color(c.get("opportunity_score", 0))}">'
+        f'{c.get("opportunity_score", 0)}</span></td>'
+        f'<td data-val="{c["max_solo_builder_score"]}">{c["max_solo_builder_score"]}</td>'
+        f'<td>{_e(c.get("market_demand_gate", "UNKNOWN"))}</td>'
+        f'<td>{_e(c.get("primary_acquisition_channel", "UNKNOWN"))}</td>'
+        f'<td>{_e(c.get("substitution_risk", "MEDIUM"))}</td>'
+        '</tr>'
+        for index, c in enumerate(ranked_today[:5], 1)
+    )
+    verdict_counts = {}
+    for cluster in clusters:
+        verdict = cluster.get("verdict", VW.VERDICT_SKIP)
+        verdict_counts[verdict] = verdict_counts.get(verdict, 0) + 1
+    counts_line = (
+        f"{verdict_counts.get('BUILD', 0)} BUILD · {verdict_counts.get('TEST', 0)} TEST · "
+        f"{verdict_counts.get('WATCH', 0)} WATCH · {verdict_counts.get('SKIP', 0)} SKIP"
+    )
+    no_build_note = ""
+    if not verdict_counts.get("BUILD", 0):
+        no_build_note = (
+            '<p class="why">No opportunity met the BUILD bar today — that is the '
+            'expected default. BUILD requires validated demand, monetization evidence, '
+            'low substitution risk and low operating cost.</p>'
+        )
+    top_html = (
+        f"<p class=\"why\">{_e(counts_line)} across {len(clusters)} clusters.</p>"
+        + '<div class="table-scroll">\n<table>\n'
+        + '    <thead><tr><th>#</th><th>Verdict</th><th>Cluster</th>'
+          '<th>Opportunity</th><th>Solo Builder</th><th>Market Gate</th>'
+          '<th>Acquire</th><th>Substitution</th></tr></thead>\n'
+        + '    <tbody>' + top_rows + '</tbody>\n'
+        + '</table>\n</div>' + no_build_note
+    )
+
+    # ── Section A: Top Opportunity Clusters ───────────────────────────────
+    cluster_rows = "".join(
+        '<tr>'
+        f'<td data-val="{c["cluster_rank"]}">{c["cluster_rank"]}</td>'
+        f'<td>{_e(c["cluster_label"])}</td>'
+        f'<td data-val="{c["max_solo_builder_score"]}">{c["max_solo_builder_score"]}/100</td>'
+        f'<td data-val="{c["cluster_score"]}">'
+        f'<span class="{_score_color(c["cluster_score"])}">{c["cluster_score"]}</span></td>'
+        f'<td data-val="{c.get("seo_score", 0)}">'
+        f'<span class="{_score_color(c.get("seo_score", 0))}">'
+        f'{"-" if c.get("seo_score_status") == "NOT_CHECKED" else c.get("seo_score", 0)}</span></td>'
+        f'<td data-val="{c.get("opportunity_score", 0)}">'
+        f'<span class="{_score_color(c.get("opportunity_score", 0))}">'
+        f'{c.get("opportunity_score", 0)}</span></td>'
+        f'<td data-val="{_e(c.get("market_demand_gate", "UNKNOWN"))}">'
+        f'{_e(c.get("market_demand_gate", "UNKNOWN"))}</td>'
+        f'<td data-val="{_e(c.get("verdict", "-"))}">'
+        f'<strong>{_e(c.get("verdict", "-"))}</strong></td>'
+        f'<td data-val="{c["member_count"]}">{c["member_count"]}</td>'
+        f'<td data-val="{c["source_diversity"]}">{c["source_diversity"]}</td>'
+        f'<td data-val="{c["tool_orchard_potential"]}">{c["tool_orchard_potential"]}/10</td>'
+        '</tr>'
+        for c in clusters
+    )
+    cluster_table = (
+        '<div class="table-scroll">\n<table>\n'
+        '    <thead><tr>\n'
+        '        <th class="sortable">#</th>\n'
+        '        <th class="sortable">Cluster</th>\n'
+        '        <th class="sortable">Solo Builder</th>\n'
+        '        <th class="sortable sort-desc">Cluster Evidence \u2193</th>\n'
+        '        <th class="sortable">SEO</th>\n'
+        '        <th class="sortable">Opportunity</th>\n'
+        '        <th class="sortable">Market Gate</th>\n'
+        '        <th class="sortable">Verdict</th>\n'
+        '        <th class="sortable">Products</th>\n'
+        '        <th class="sortable">Sources</th>\n'
+        '        <th class="sortable">Orchard</th>\n'
+        '    </tr></thead>\n'
+        '    <tbody>' + cluster_rows + '</tbody>\n'
+        '</table>\n</div>'
+    )
+
+    cluster_cards = []
+    for c in clusters[:10]:
+        kw_items = "".join(
+            f'<li><strong>{_e(k["keyword"])}</strong> '
+            f'<span class="source-tag">{_e(k["priority"])}</span> '
+            f'<span class="source-tag">{_e(k["type"])}</span></li>'
+            for k in c.get("keyword_candidates", [])
+        )
+        reasons = "".join(f'<li>{_e(r)}</li>' for r in c.get("cluster_score_reasons", []))
+        members = "".join(f'<li>{_e(m)}</li>' for m in c.get("member_names", []))
+        seo_reasons = "".join(f'<li>{_e(r)}</li>' for r in c.get("seo_reasons", []))
+        checked_rows = ""
+        for keyword in c.get("checked_keywords") or []:
+            weak = "yes" if keyword.get("weak_serp") else "no"
+            if keyword.get("weak_serp_count") is not None:
+                weak = f"yes ({keyword['weak_serp_count']} weak sites)"
+            checked_rows += (
+                f'<tr><td>{_e(keyword["keyword"])}</td>'
+                f'<td>{keyword["us_volume"]:,}</td>'
+                f'<td>{keyword["global_volume"]:,}</td>'
+                f'<td>{keyword["kd"]}</td>'
+                f'<td>{_e(weak)}</td>'
+                f'<td>{keyword["keyword_score"]}/85</td></tr>'
+            )
+        seo_summary = (
+            f'<p class="why"><strong>Solo Builder Score:</strong> '
+            f'{c["max_solo_builder_score"]}/100 · '
+            f'<strong>Cluster Evidence Score:</strong> {c["cluster_score"]}/100 · '
+            f'<strong>SEO Opportunity Score:</strong> {c.get("seo_score", 0)}/100 '
+            f'({_e(c.get("seo_score_status", "NOT_CHECKED"))}) · '
+            f'<strong>Market Demand Gate:</strong> '
+            f'{_e(c.get("market_demand_gate", "UNKNOWN"))}</p>'
+        )
+        verdict_summary = (
+            f'<p class="why"><strong>Verdict:</strong> {_e(c.get("verdict", "-"))} · '
+            f'<strong>Opportunity Score:</strong> {c.get("opportunity_score", 0)}/100 · '
+            f'<strong>Substitution:</strong> {_e(c.get("substitution_risk", "MEDIUM"))} · '
+            f'<strong>Primary acquisition:</strong> '
+            f'{_e(c.get("primary_acquisition_channel", "UNKNOWN"))} '
+            f'({_e(c.get("acquisition_fit", "WEAK"))}) · '
+            f'<strong>Monetization:</strong> {_e(c.get("monetization_model", "unknown"))} '
+            f'({_e(c.get("monetization_confidence", "UNKNOWN"))}) · '
+            f'<strong>Cost risk:</strong> {_e(c.get("operating_cost_risk", "MEDIUM"))}</p>'
+        )
+        blocking_items = "".join(f'<li>{_e(r)}</li>' for r in c.get("blocking_reasons", []))
+        gap_items = "".join(f'<li>{_e(g)}</li>' for g in c.get("validation_gaps", []))
+        verdict_detail = [verdict_summary]
+        if blocking_items:
+            verdict_detail.append(
+                f'<p class="why"><strong>Not BUILD because:</strong></p>'
+                f'<ul class="why">{blocking_items}</ul>'
+            )
+        if gap_items:
+            verdict_detail.append(
+                f'<p class="why"><strong>Next actions:</strong></p>'
+                f'<ul class="why">{gap_items}</ul>'
+            )
+        parts = [
+            '<details class="cluster-card">',
+            f'<summary>#{c["cluster_rank"]} {_e(c["cluster_label"])} — {c["cluster_score"]}/100</summary>',
+            '<div class="details-body">',
+            f'<p class="why">{_e(c.get("evidence_summary", ""))}</p>',
+            f'<p class="why"><strong>Why grouped:</strong> {_e(c.get("cluster_reason", ""))}</p>',
+            f'<p class="why"><strong>Cluster score:</strong></p><ul class="why">{reasons}</ul>',
+            seo_summary,
+            f'<p class="why"><strong>SEO basis:</strong></p><ul class="why">{seo_reasons}</ul>',
+            f'<p class="why"><strong>Members:</strong></p><ul class="why">{members}</ul>',
+        ] + verdict_detail
+        if checked_rows:
+            parts.append('<p class="why"><strong>Checked keywords:</strong></p>')
+            parts.append(
+                '<div class="table-scroll"><table><thead><tr>'
+                '<th>Keyword</th><th>US volume</th><th>Global volume</th>'
+                '<th>KD</th><th>Weak SERP</th><th>Score</th>'
+                '</tr></thead><tbody>' + checked_rows + '</tbody></table></div>'
+            )
+        elif c.get("seo_score_status") == "NOT_CHECKED":
+            parts.append(
+                '<p class="why">No keywords enriched yet — run '
+                '<code>python scripts/enrich.py</code>.</p>'
+            )
+        if kw_items:
+            parts.append('<p class="why"><strong>Keyword candidates:</strong></p>')
+            parts.append(f'<ul class="kw-list">{kw_items}</ul>')
+        parts.append('</div></details>')
+        cluster_cards.append("".join(parts))
+
+    cluster_html = cluster_table + "".join(cluster_cards)
+    if not clusters:
+        cluster_html = '<p style="color:#718096;font-size:13px">No clusters were produced.</p>'
+
+    # ── Section B: Semrush Check List ─────────────────────────────────────
+    if checklist:
+        checklist_rows = "".join(
+            f'<tr><td><strong>{_e(e["keyword"])}</strong></td>'
+            f'<td>{_e(e["cluster_label"])}</td>'
+            f'<td><span class="source-tag">{_e(e["priority"])}</span></td>'
+            f'<td>{_e(e["type"])}</td>'
+            f'<td class="why">{_e(e["why"])}</td></tr>'
+            for e in checklist
+        )
+        checklist_html = (
+            '<p class="why">Pre-Semrush candidates only — no volume, KD or SERP data. '
+            'Manual fields to enter later (Phase 3): US Volume, Global Volume, KD, weak SERP (yes/no).</p>'
+            '<div class="table-scroll">\n<table>\n'
+            '    <thead><tr><th>Keyword</th><th>Cluster</th><th>Priority</th>'
+            '<th>Type</th><th>Why it is worth checking</th></tr></thead>\n'
+            '    <tbody>' + checklist_rows + '</tbody>\n'
+            '</table>\n</div>'
+        )
+    else:
+        checklist_html = '<p style="color:#718096;font-size:13px">No candidates were generated.</p>'
 
     # ── Section 1: Filtered Out (collapsible) ──────────────────────────────
     if filtered_out:
@@ -502,43 +733,70 @@ def generate_indie_html(indie_report_markdown, product_data):
     else:
         filtered_html = '<p style="color:#718096;font-size:13px">No products were filtered out.</p>'
 
-    # ── Section 2: Quick Score table (sortable) ────────────────────────────
-    score_rows = "".join(
-        f"""<tr>
-            <td data-val="{i}">{i}</td>
-            <td>{
-                (lambda u, n: f'<a href="{_e(u)}" target="_blank" rel="noopener" style="color:#60a5fa;text-decoration:none">{_e(n)}</a>'
-                 if u else _e(n))(
-                    _product_url(p),
-                    p.get("name") or p.get("title") or "Unknown"
-                )
-            }</td>
-            <td><span class="source-tag">{_e(p.get("_source","?"))}</span></td>
-            <td data-val="{p['_scores']['tech_difficulty']}">{_score_bar(p['_scores']['tech_difficulty'])}</td>
-            <td data-val="{p['_scores']['user_acquisition']}">{_score_bar(p['_scores']['user_acquisition'])}</td>
-            <td data-val="{p['_scores']['revenue_potential']}">{_score_bar(p['_scores']['revenue_potential'])}</td>
-            <td data-val="{p['_scores']['indie_friendly']}">{_score_bar(p['_scores']['indie_friendly'])}</td>
-            <td data-val="{p['_scores']['total_score']}">
-                <span class="{_score_color(p['_scores']['total_score'])}">{p['_scores']['total_score']}</span>
-            </td>
-        </tr>"""
-        for i, p in enumerate(suitable, 1)
-    )
+    # ── Section 2: Solo Builder Score table (sortable) ─────────────────────
+    def _dim_cell(product, key):
+        dim = product["_scores"]["dimensions"][key]
+        return (f'<td data-val="{dim["points"]}">'
+                f'{_score_bar(dim["points"], dim["max"])}</td>')
 
-    score_html = f"""
-    <table>
-        <thead><tr>
-            <th class="sortable">#</th>
-            <th class="sortable">Product</th>
-            <th class="sortable">Source</th>
-            <th class="sortable">Tech Difficulty</th>
-            <th class="sortable">User Acquisition</th>
-            <th class="sortable">Revenue Potential</th>
-            <th class="sortable">Indie Friendly</th>
-            <th class="sortable sort-desc">Total ↓</th>
-        </tr></thead>
-        <tbody>{score_rows}</tbody>
-    </table>"""
+    score_rows = ""
+    for i, p in enumerate(suitable, 1):
+        s = p["_scores"]
+        name = p.get("name") or p.get("title") or "Unknown"
+        url = _product_url(p)
+        if url:
+            name_html = (f'<a href="{_e(url)}" target="_blank" rel="noopener" '
+                         f'style="color:#60a5fa;text-decoration:none">{_e(name)}</a>')
+        else:
+            name_html = _e(name)
+
+        adjustment = s["source_adjustment"]
+        sign = f"+{adjustment}" if adjustment >= 0 else str(adjustment)
+        confidence_html = f'<span class="source-tag">{_e(s["source_confidence"])} {sign}</span>'
+        reasons_html = "".join(f"<li>{_e(r)}</li>" for r in s["reasons"])
+        source = _e(p.get("_source", "?"))
+
+        score_rows += (
+            '<tr>'
+            f'<td data-val="{i}">{i}</td>'
+            f'<td>{name_html}</td>'
+            f'<td><span class="source-tag">{source}</span></td>'
+            f'<td data-val="{s["source_confidence_value"]:.2f}">{confidence_html}</td>'
+            f'<td data-val="{s["ranking_score"]}">'
+            f'<span class="{_score_color(s["ranking_score"])}">{s["ranking_score"]}</span></td>'
+            f'{_dim_cell(p, "build_ease")}'
+            f'{_dim_cell(p, "self_service_acquisition")}'
+            f'{_dim_cell(p, "monetization")}'
+            f'{_dim_cell(p, "low_communication")}'
+            f'{_dim_cell(p, "operating_cost")}'
+            f'{_dim_cell(p, "solo_builder_fit")}'
+            f'{_dim_cell(p, "tool_orchard")}'
+            f'<td class="why"><ul>{reasons_html}</ul></td>'
+            '</tr>'
+        )
+
+    score_html = (
+        '<div class="table-scroll">\n'
+        '<table>\n'
+        '    <thead><tr>\n'
+        '        <th class="sortable">#</th>\n'
+        '        <th class="sortable">Product</th>\n'
+        '        <th class="sortable">Source</th>\n'
+        '        <th class="sortable">Confidence</th>\n'
+        '        <th class="sortable sort-desc">Score /100 \u2193</th>\n'
+        '        <th class="sortable">Build Ease (20)</th>\n'
+        '        <th class="sortable">Self-Serve (15)</th>\n'
+        '        <th class="sortable">Monetize (15)</th>\n'
+        '        <th class="sortable">Comms (15)</th>\n'
+        '        <th class="sortable">Op Cost (10)</th>\n'
+        '        <th class="sortable">Solo Fit (15)</th>\n'
+        '        <th class="sortable">Orchard (10)</th>\n'
+        '        <th>Why this score</th>\n'
+        '    </tr></thead>\n'
+        '    <tbody>' + score_rows + '</tbody>\n'
+        '</table>\n'
+        '</div>'
+    )
 
     # ── Section 3: Top 5 deep-dive cards ──────────────────────────────────
     card_htmls = []
@@ -546,7 +804,7 @@ def generate_indie_html(indie_report_markdown, product_data):
         md = deep_analyze_product(product, rank)
         parsed = _parse_deep_dive(md)
         s = product["_scores"]
-        total = s["total_score"]
+        total = s["ranking_score"]
         score_cls = _score_color(total)
 
         name = parsed["name"] or product.get("name") or product.get("title") or "Unknown"
@@ -563,12 +821,14 @@ def generate_indie_html(indie_report_markdown, product_data):
         else:
             link_html = '<span style="font-size:12px;color:#4a5568">URL not available</span>'
 
-        # Score badges for header
+        # Score badges for header (weighted points per dimension, /100 total)
         badges_html = (
-            f'<span class="badge badge-blue">Tech {s["tech_difficulty"]}/5</span>'
-            f'<span class="badge badge-green">Acquisition {s["user_acquisition"]}/5</span>'
-            f'<span class="badge badge-orange">Revenue {s["revenue_potential"]}/5</span>'
-            f'<span class="badge badge-gray">Indie {s["indie_friendly"]}/5</span>'
+            f'<span class="badge badge-blue">Build ease {_dim_points(s, "build_ease")}/20</span>'
+            f'<span class="badge badge-green">Acquisition '
+            f'{_dim_points(s, "self_service_acquisition")}/15</span>'
+            f'<span class="badge badge-orange">Monetization '
+            f'{_dim_points(s, "monetization")}/15</span>'
+            f'<span class="badge badge-gray">Op cost {s["operating_cost_level"]}</span>'
         )
 
         # Q&A items
@@ -620,7 +880,7 @@ def generate_indie_html(indie_report_markdown, product_data):
                 </div>
                 <div class="top-card-score">
                     <div class="big {score_cls}">{total}</div>
-                    <div class="label">/ 20</div>
+                    <div class="label">/ 100</div>
                 </div>
             </div>
             <button class="qa-toggle">
@@ -648,9 +908,17 @@ def generate_indie_html(indie_report_markdown, product_data):
     </div>"""
 
     sections_html = (
-        _section("🚫", "#2d1515", "Filtered Out", filtered_html,
-                 f"{len(filtered_out)} removed")
-        + _section("⭐", "#1a1a0a", "Quick Score — All Suitable Products", score_html,
+        _section("🏁", "#16213e", "Top Opportunities Today", top_html,
+                 f"top {min(5, len(clusters))}")
+        + _section("🧭", "#0a1e35", "Top Opportunity Clusters", cluster_html,
+                 f"{len(clusters)} clusters")
+        + _section("🔎", "#1a1a0a", "Semrush Check List", checklist_html,
+                   f"{len(checklist)} keywords")
+        + '<div class="section"><div class="section-header">'
+        + '<span class="section-title">Individual Product Evidence</span></div></div>'
+        + _section("🚫", "#2d1515", "Filtered Out", filtered_html,
+                   f"{len(filtered_out)} removed")
+        + _section("⭐", "#1a1a0a", "Solo Builder Score — All Suitable Products", score_html,
                    f"{len(suitable)} products")
         + _section("🎯", "#0a1e35", "Top 5 Deep Dive", top5_html, "top 5")
     )
@@ -670,7 +938,15 @@ def generate_indie_html(indie_report_markdown, product_data):
             <div class="stat-label">Scored</div>
         </div>
         <div class="stat">
-            <div class="stat-num">5</div>
+            <div class="stat-num">{len(clusters)}</div>
+            <div class="stat-label">Clusters</div>
+        </div>
+        <div class="stat">
+            <div class="stat-num">{len(checklist)}</div>
+            <div class="stat-label">Semrush Keys</div>
+        </div>
+        <div class="stat">
+            <div class="stat-num">{len(top5)}</div>
             <div class="stat-label">Deep Dives</div>
         </div>
     </div>"""
@@ -680,7 +956,7 @@ def generate_indie_html(indie_report_markdown, product_data):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indie Opportunities — {now.strftime("%Y-%m-%d")}</title>
+    <title>Indie Opportunities — {timeutil.today_str()}</title>
     <style>{_CSS}</style>
 </head>
 <body>

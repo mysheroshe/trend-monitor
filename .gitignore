@@ -10,8 +10,24 @@ __pycache__/
 venv/
 .venv/
 
+# 测试/静态检查缓存（不要提交）
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
 # 数据目录
-data/
+# 忽略 data/ 下所有内容，但保留 data/daily/*.json 作为每日历史
+# （daily-report.yml 会提交这些文件，供周报读取历史数据）
+/data/*
+!/data/daily/
+/data/daily/*
+!/data/daily/*.json
+# 手工 Semrush 富化数据必须提交（Phase 3）
+!/data/enrichment/
+!/data/enrichment/**
+# 验证证据与判定历史必须提交（Phase 4）
+!/data/validation/
+!/data/validation/**
 output/
 
 # 生成的文件

@@ -3,8 +3,6 @@
 
 import argparse
 import os
-from datetime import datetime
-from zoneinfo import ZoneInfo
 
 from collectors import fetch_trending_repos, fetch_product_hunt_posts, fetch_hackernews_posts, fetch_ai_tools, fetch_chrome_extensions
 from collectors.toolify import fetch_toolify_tools
@@ -14,6 +12,7 @@ from analyzers.indie_analyzer import generate_indie_report
 from analyzers.indie_html_generator import generate_indie_html
 from senders import send_email_report
 from storage import save_daily_data
+from config import timeutil
 
 
 def main():
@@ -88,8 +87,7 @@ def main():
 
     # 存储每日数据
     print("正在存储数据...")
-    pst = ZoneInfo("America/Los_Angeles")
-    today = datetime.now(pst).strftime("%Y-%m-%d")
+    today = timeutil.today_str()
     daily_data = {
         "product_hunt": product_hunt_data,
         "toolify": toolify_data.get("new", []) + toolify_data.get("trending", []),
@@ -112,6 +110,7 @@ def main():
         chrome_extensions_data,
         github_trending_data,
         hackernews_data,
+        record_verdicts=True,
     )
     os.makedirs("analysis/daily", exist_ok=True)
     indie_path = f"analysis/daily/{today}-indie.md"

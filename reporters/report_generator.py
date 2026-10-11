@@ -1,15 +1,11 @@
 """Markdown 报告生成器"""
 
-from datetime import datetime
-from zoneinfo import ZoneInfo
+from config import timeutil
 
 
 def generate_markdown_report(repos, products, hackernews_posts, ai_tools=None, chrome_extensions=None, toolify_tools=None):
     """生成Markdown格式的报告"""
-    pst = ZoneInfo("America/Los_Angeles")
-    now = datetime.now(pst)
-    tz_abbr = now.strftime("%Z")  # PST 或 PDT（自动处理夏令时）
-    timestamp = now.strftime(f"%Y-%m-%d %H:%M ({tz_abbr})")
+    timestamp = timeutil.timestamp_str()
 
     lines = [
         "# AI/Tech 趋势日报",

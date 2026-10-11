@@ -11,9 +11,14 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: daily-report
+  cancel-in-progress: false
+
 jobs:
   generate-report:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
 
     steps:
       - name: Checkout code
@@ -47,14 +52,21 @@ jobs:
           SMTP_PORT: ${{ secrets.SMTP_PORT }}
         run: python main.py
 
-      - name: Commit and push HTML report
+      - name: Commit and push reports and daily data
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add docs/*.html
-          git add data/daily/*.json || true
-          git add analysis/daily/*.md || true
-          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: Update daily report and indie analysis [skip ci]" && git push)
+          # Stage daily JSON history (new + modified + pruned files) and the
+          # markdown analysis. This must NOT be silenced: a `|| true` here hid
+          # months of missing data history (data/ was gitignored).
+          git add -A -- data/daily analysis/daily data/validation
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: Update daily report, indie analysis and daily data [skip ci]"
+            git push
+          fi
 
       - name: Upload report artifact
         uses: actions/upload-artifact@v4

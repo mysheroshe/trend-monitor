@@ -1,7 +1,8 @@
 """周报生成器"""
 
 from datetime import datetime
-from zoneinfo import ZoneInfo
+
+from config import timeutil
 
 
 def generate_weekly_report(insights):
@@ -20,10 +21,7 @@ def generate_weekly_report(insights):
 
     # 获取时间信息
     period = insights["period"]
-    pst = ZoneInfo("America/Los_Angeles")
-    now = datetime.now(pst)
-    tz_abbr = now.strftime("%Z")
-    generated_time = now.strftime(f"%Y-%m-%d %H:%M ({tz_abbr})")
+    generated_time = timeutil.timestamp_str()
 
     lines = [
         "# AI/Tech 趋势周报",

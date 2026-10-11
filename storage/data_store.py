@@ -1,10 +1,10 @@
 """每日数据存储"""
 
 import json
-import os
 from datetime import datetime, timedelta
 from pathlib import Path
-from zoneinfo import ZoneInfo
+
+from config import timeutil
 
 
 # 数据存储目录
@@ -27,8 +27,7 @@ def save_daily_data(date, data):
         DATA_DIR.mkdir(parents=True, exist_ok=True)
 
         # 生成时间戳
-        pst = ZoneInfo("America/Los_Angeles")
-        timestamp = datetime.now(pst).isoformat()
+        timestamp = timeutil.now().isoformat()
 
         # 构建完整数据
         full_data = {
@@ -68,13 +67,13 @@ def cleanup_old_data(days=28):
         if not DATA_DIR.exists():
             return
 
-        cutoff_date = datetime.now() - timedelta(days=days)
+        cutoff_date = (timeutil.now() - timedelta(days=days)).date()
 
         for file_path in DATA_DIR.glob("*.json"):
             try:
                 # 从文件名提取日期
                 date_str = file_path.stem  # YYYY-MM-DD
-                file_date = datetime.strptime(date_str, "%Y-%m-%d")
+                file_date = datetime.strptime(date_str, "%Y-%m-%d").date()
 
                 # 删除过期文件
                 if file_date < cutoff_date:
@@ -125,12 +124,12 @@ def list_available_dates(days=7):
         return []
 
     dates = []
-    cutoff_date = datetime.now() - timedelta(days=days)
+    cutoff_date = (timeutil.now() - timedelta(days=days)).date()
 
     for file_path in DATA_DIR.glob("*.json"):
         try:
             date_str = file_path.stem
-            file_date = datetime.strptime(date_str, "%Y-%m-%d")
+            file_date = datetime.strptime(date_str, "%Y-%m-%d").date()
 
             if file_date >= cutoff_date:
                 dates.append(date_str)

@@ -228,13 +228,22 @@ Every daily run generates `analysis/daily/{date}-indie.md` — a report designed
 
 ### How it works
 
-1. **Filter** — removes B2B products (enterprise, churn, SSO, CRM), overly complex domains (blockchain, hardware), institutional tools, and GitHub libraries (detected by install commands like `npm install`)
-2. **Score** — rates each remaining product 1–5 on four dimensions:
-   - `tech_difficulty` — how hard is it to build?
-   - `user_acquisition` — how naturally does it spread?
-   - `revenue_potential` — how monetisable is the niche?
-   - `indie_friendly` — can a solo developer ship and maintain it?
-3. **Deep-dive** — the top 5 products each get an 8-question analysis:
+1. **Normalize & de-duplicate** — product names and URLs are normalized; same-day duplicates (including the Toolify `new`/`trending` overlap) are merged.
+2. **Filter** — removes enterprise/demo-gated products, CRM/sales-ops tools, agencies and consulting services, two-sided marketplaces, hardware, crypto/blockchain, infrastructure-heavy tools, regulated domains, proprietary-data dependencies and developer libraries. Generic words (`analytics`, `platform`, `AI`) are **not** filtered on their own. Obvious Hacker News articles (as opposed to `Show HN`/`Launch HN` posts) are excluded from the opportunity ranking.
+3. **Score** — each remaining product receives a weighted **Solo Builder Score (0–100)** with an explicit, independently testable rule per dimension:
+
+   | Dimension | Max |
+   |---|---|
+   | Build Ease (`build_ease`, 5 = very easy) | 20 |
+   | Self-Service Acquisition Fit | 15 |
+   | Monetization Potential | 15 |
+   | Low Communication / Sales Burden | 15 |
+   | Operating Cost / Maintenance (LOW/MEDIUM/HIGH) | 10 |
+   | Solo-Builder Fit | 15 |
+   | Tool-Orchard Expansion Potential | 10 |
+
+   A separate **source-confidence** signal (Toolify High → Hacker News Low) applies at most a **±5 point ranking adjustment**, so it can never rescue a weak product. Every product also carries 2–5 short reasons explaining its score. Weights live in `config/scoring_weights.py`.
+4. **Deep-dive** — the top 5 products each get an 8-question analysis:
 
 | # | Question |
 |---|----------|
@@ -248,6 +257,110 @@ Every daily run generates `analysis/daily/{date}-indie.md` — a report designed
 | 8 | How do I find users? (specific tactics) |
 
 Each analysis ends with a **💡 First Step** — one concrete action to validate or start building.
+
+### Opportunity clusters & the Semrush Check List
+
+Individual products are grouped into **opportunity clusters** before ranking, so the report reads as a
+radar rather than a product list. Every cluster gets a stable id derived from its cluster key
+(`tattoo:generation` → `tattoo-generation`), never from a product name.
+
+Clustering is rule-based and conservative:
+
+- **domain + function** → e.g. "Tattoo Generator Tools", "PDF Converter Tools", "Resume Checker Tools"
+- **creation-style domain alone** (tattoo, logo, qr, password, prompt, …) → the domain's generator cluster
+- **specific domain alone** → e.g. "Audio Tools"
+- **anything else** → its own single-product cluster (unrelated "AI …" tools never collapse together)
+
+Each cluster aggregates the member products, their sources, the best/average Solo Builder Score and
+Tool-Orchard potential, plus `first_seen` / `days_seen` when the stored history supports it. Clusters are
+ranked by a deterministic `cluster_score` (quality + capped member/source bonuses + source confidence +
+persistence − Hacker-News-only and single-product penalties), with a quality floor so volume alone cannot
+carry a weak cluster.
+
+Each cluster then produces **5–15 SEO keyword candidates** (member-derived cores plus
+compatibility-checked modifiers) with a pre-Semrush priority and type. The daily report contains:
+
+- **Section A — Top Opportunity Clusters**: cluster table, score reasons, members and top keywords
+- **Section B — Semrush Check List**: 10–20 high-value keywords to paste into Semrush, each with the
+  cluster, priority, type and why it is worth checking (US Volume / Global Volume / KD / weak-SERP are
+  left blank for manual entry)
+- **Section C — Individual Product Evidence**: the full product-level ranking stays available
+
+### Manual Semrush enrichment & the SEO Opportunity Score
+
+Clusters stay separate from market reality until you check a few keywords by hand:
+
+```bash
+python scripts/enrich.py            # interactive: pick cluster -> keyword -> metrics
+python scripts/enrich.py list       # clusters + SEO status/gate
+python scripts/enrich.py list-unchecked --limit 20
+python scripts/enrich.py set --cluster tattoo-generation \
+    --keyword "tattoo stencil generator" --us 1300 --global 3000 --kd 22 --weak-serp yes
+python scripts/enrich.py reject --cluster tattoo-generation \
+    --keyword "tattoo generator" --reason "too broad"
+```
+
+Values are stored in `data/enrichment/keywords.json`, keyed by
+`cluster_id + normalized keyword` (human-editable JSON committed to git, no
+database). Re-checking a keyword preserves the previous metrics in a `history`
+list, so `KD 12 -> 24 -> 41` stays recoverable.
+
+Each cluster then reports **three separate scores** (never collapsed into one):
+
+| Field | Meaning |
+|---|---|
+| Solo Builder Score | best member product, 0–100 (Phase 1) |
+| Cluster Evidence Score | cluster support/confidence, 0–100 (Phase 2) |
+| SEO Opportunity Score | Search Demand 35 + KD 30 + Weak SERP 20 + Long-Tail 15 (Phase 3) |
+
+Plus `SEO Status` (NOT_CHECKED / PARTIAL / VALIDATED) and a `Market Demand Gate`
+(PASS / WEAK / FAIL / UNKNOWN) derived only from the manually checked keywords.
+Keywords can be `UNCHECKED`, `CHECKED` or `REJECTED`; rejected keywords are
+kept out of future checklists and out of scoring.
+
+### Final decision layer: BUILD / TEST / WATCH / SKIP
+
+The radar ends with a verdict per cluster. The three scores are **not averaged**:
+substitution risk, acquisition fit, monetization confidence and operating-cost
+risk are derived separately, and several inputs act as hard gates.
+
+```
+BUILD  strong evidence across demand, accessibility, economics and solo fit
+TEST   promising but at least one important assumption is unvalidated
+WATCH  interesting but too early, too weak or too uncertain
+SKIP   poor fit, weak demand, excessive cost/competition/sales burden or high
+       substitution risk
+```
+
+**BUILD is deliberately hard to reach.** All of these must hold: Solo Builder
+Score ≥ 75, Market Demand Gate = PASS (or strong non-SEO demand evidence), SEO
+validated when SEO is the main channel, substitution risk LOW/MEDIUM,
+acquisition fit STRONG/MEDIUM, monetization confidence HIGH/MEDIUM,
+operating-cost risk LOW/MEDIUM, no hard blocker, plus either HIGH monetization
+confidence or a positive `COMPETITOR` / `PAYMENT_SIGNAL` note, source
+corroboration and a persistence signal. Otherwise the verdict falls back to
+TEST or WATCH — never BUILD.
+
+Record evidence with the second CLI:
+
+```bash
+python scripts/validate.py add --cluster tattoo-generation \
+    --type COMPETITOR --sentiment positive \
+    --summary "Multiple standalone tattoo AI tools monetise via credits"
+python scripts/validate.py list --cluster tattoo-generation
+python scripts/validate.py history      # WATCH -> TEST -> BUILD changes
+python scripts/validate.py verdicts
+```
+
+Evidence lives in `data/validation/evidence.json` together with an append-only
+verdict history. Each TEST/WATCH cluster lists **Next actions** (what to check
+next), and the daily report opens with **Top Opportunities Today** (top 5 by
+verdict, then Opportunity Score — with no forced BUILD category).
+
+An optional deep-research hook exists in `analyzers/deep_research.py`. It is
+**off by default**, needs no API key, and does nothing unless you set
+`TREND_MONITOR_DEEP_RESEARCH=1` and register a provider; any result it returns
+is stored as validation evidence rather than asserted by the report.
 
 ### Domain awareness
 
@@ -481,6 +594,16 @@ trend-monitor/
 playwright install chromium --with-deps
 ```
 In GitHub Actions this step runs automatically before the script.
+
+## Testing
+
+The Solo Builder Score, filters, de-duplication and persistence rules are covered by a
+small pytest suite (no network access required):
+
+```bash
+pip install -r requirements-dev.txt
+pytest
+```
 
 ## License
 

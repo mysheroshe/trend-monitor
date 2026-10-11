@@ -4,8 +4,8 @@ import re
 from collections import defaultdict
 from datetime import datetime, timedelta
 from pathlib import Path
-from zoneinfo import ZoneInfo
 
+from config import timeutil
 from storage.data_store import load_daily_data, list_available_dates
 
 
@@ -46,8 +46,7 @@ def load_weekly_data(days=7):
             ...
         }
     """
-    pst = ZoneInfo("America/Los_Angeles")
-    today = datetime.now(pst)
+    today = timeutil.now()
 
     result = {
         "dates": [],

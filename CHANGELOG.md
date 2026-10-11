@@ -5,6 +5,215 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.8.0] - Phase 4: Deep Opportunity Validation + Final Decision Layer
+
+### Added
+- `analyzers/verdict.py` — the final decision layer. Distinct inputs: Solo
+  Builder Score, Cluster Evidence Score, SEO Opportunity Score, Market Demand
+  Gate, validation evidence, substitution risk, acquisition fit, monetization
+  confidence and operating-cost risk. The three scores are **not** averaged.
+- **Verdicts**: `BUILD`, `TEST`, `WATCH`, `SKIP`. BUILD is deliberately hard:
+  every requirement must be met (Solo Builder >= 75, market gate PASS or strong
+  non-SEO demand, SEO validated when SEO is the main channel, substitution risk
+  LOW/MEDIUM, acquisition fit STRONG/MEDIUM, monetization HIGH/MEDIUM,
+  operating-cost risk LOW/MEDIUM, no hard blocker, plus either HIGH
+  monetization confidence or a positive COMPETITOR/PAYMENT_SIGNAL note, source
+  corroboration and persistence).
+- **Hard gates** that a high score cannot override: market gate FAIL with no
+  non-SEO demand, severe substitution (commodity capability), enterprise/sales
+  or service-delivery dependency, regulatory burden, severe operating cost,
+  Solo Builder Score < 50, predominantly negative evidence.
+- `substitution_risk` LOW/MEDIUM/HIGH/SEVERE with reasons (generic writers,
+  summarizers, translators and wrappers are SEVERE; prompt and media generation
+  are HIGH; deterministic domain utilities are LOW).
+- `primary_acquisition_channel` (SEO / SOCIAL / COMMUNITY /
+  PLATFORM_MARKETPLACE / DIRECT_SALES / PAID_ADS / MIXED / UNKNOWN) plus
+  `acquisition_fit` (STRONG/MEDIUM/WEAK). SEO is not assumed for every tool.
+- `monetization_model` (one-time payment, credits, subscription, ads,
+  affiliate, freemium, lead generation, marketplace, enterprise sales) plus
+  `monetization_confidence` (HIGH/MEDIUM/LOW/UNKNOWN). No revenue estimates.
+- **Opportunity Score /100** as a supporting metric only: Solo Builder Fit 20,
+  Market/SEO Demand 20, Opportunity Evidence 15, Competition Accessibility 10,
+  Monetization Confidence 10, Acquisition Fit 10, Operating Cost 5,
+  Tool-Orchard 5, Substitution Risk 5. Hard gates are applied separately.
+- `storage/validation_store.py` + `data/validation/` — manual validation
+  evidence (`COMMUNITY_PAIN`, `COMPETITOR`, `PAYMENT_SIGNAL`, `SEARCH_SIGNAL`,
+  `TREND_SIGNAL`, `SUBSTITUTION`, `ACQUISITION`, `OTHER`; positive/neutral/
+  negative; URL optional) and append-only verdict history
+  (previous -> new, date, reason).
+- `scripts/validate.py` — `add`, `list`, `history`, `verdicts`,
+  `research-status`.
+- `analyzers/deep_research.py` — optional research interface, **off by
+  default**, no provider registered, no API key, and every provider result is
+  normalized into an evidence record (nothing is invented).
+- **Validation gaps**: every TEST/WATCH cluster lists concrete next actions
+  (check more Semrush keywords, inspect the SERP, check competitor pricing,
+  look for payment signals, search Reddit, check API cost, test whether
+  ChatGPT already handles it).
+- New report sections: **Top Opportunities Today** (top 5 by verdict then
+  Opportunity Score, no forced BUILD - a day with no BUILD says so) and
+  verdict/substitution/acquisition/monetization/next-actions blocks per cluster
+  in both the Markdown report and the HTML dashboard.
+- 42 new tests including the five brief example cases — 143 tests total.
+
+### Changed
+- `main.py` records verdict history (`record_verdicts=True`); report generation
+  itself stays side-effect free, and the HTML dashboard never writes.
+- Daily workflow now commits `data/validation` alongside `data/daily` and
+  `analysis/daily`.
+
+### Notes
+- No Semrush/Ahrefs API, no paid datasets, no embeddings, no vector database,
+  no database and no mandatory LLM. The deterministic pipeline runs fully
+  offline.
+
+## [1.7.0] - Phase 3: Manual Semrush Enrichment + SEO Opportunity Score
+
+### Added
+- `storage/enrichment_store.py` — human-editable JSON store joining on
+  **cluster_id + normalized keyword**. Records hold `us_volume`,
+  `global_volume`, `kd`, `weak_serp` (required for scoring) plus optional
+  `weak_serp_count`, `cpc`, `intent`, `notes`, and a `history` list that keeps
+  every previous observation (`KD 12 -> 24 -> 41` stays recoverable). Atomic
+  writes; no database.
+- `data/enrichment/` — committed store location plus a README documenting the
+  format. Wired into `.gitignore` with explicit re-include rules.
+- `scripts/enrich.py` — the manual workflow: interactive entry, plus
+  `list`, `list-unchecked`, `list-checked`, `list-rejected`, `show`, `set`
+  and `reject`. Supports editing a single field, skipping unknown fields, and
+  optional rejection reasons (too broad, brand-only, irrelevant intent,
+  duplicate intent, no meaningful volume, mature/high-competition category).
+- Keyword status per candidate: **UNCHECKED / CHECKED / REJECTED**; rejected
+  keywords never return to the daily checklist and never score.
+- `analyzers/seo_score.py` — **SEO Opportunity Score 0–100**: Search Demand 35,
+  Keyword Difficulty 30, Weak-SERP evidence 20, Long-Tail depth 15. Uses only
+  stored enrichment data; missing values are never invented.
+  - `seo_score_status`: NOT_CHECKED / PARTIAL / VALIDATED
+  - `market_demand_gate`: PASS / WEAK / FAIL / UNKNOWN (SEO demand only)
+- `analyzers/keyword_quality.py` — keyword-quality gate. Generic category
+  phrases (`checker tool`, `free checker`, `code editor`, `free code editor`,
+  `ai tool`, `productivity tool`, `business tool`) are no longer generated;
+  per-product keywords require a domain anchor, so `wa workflow enhancer`
+  style product names cannot appear. Useful head terms such as
+  `tattoo generator` and `prompt generator` are preserved.
+- `config/seo_weights.py` — all Phase 3 constants (demand/KD bands, weak-SERP
+  points, bonus caps, status and gate thresholds).
+- 39 new tests (`test_enrichment_store.py`, `test_keyword_quality.py`,
+  `test_seo_score.py`, `test_phase3_demo.py` and report/checklist coverage in
+  `test_pipeline.py`) — 101 tests total.
+
+### Changed
+- Report Sections A/B now show the three scores **separately**: Solo Builder
+  Score, Cluster Evidence Score and SEO Opportunity Score, plus SEO status,
+  Market Demand Gate and a checked-keyword table (US / global / KD / weak SERP
+  / keyword score). No combined score is produced.
+- Semrush Check List: unvalidated clusters first, UNCHECKED keywords only by
+  default, HIGH priority first, one keyword per search intent per cluster,
+  2–4 keywords per cluster, 10–20 per day, and clusters without usable
+  candidates are skipped instead of emitting filler.
+
+### Notes
+- Demo Semrush values live only in `tests/fixtures/semrush_demo_enrichment.json`
+  and are asserted never to reach production output.
+- No Semrush/Ahrefs API, no LLM, no embeddings, no database, no new
+  dependency, and no BUILD/TEST/WATCH/SKIP verdict yet.
+
+## [1.6.0] - Phase 2: Opportunity Clustering + SEO Keyword Candidates
+
+### Added
+- `analyzers/clustering.py` — deterministic opportunity clustering. Products
+  are grouped by **domain + functional head term** (e.g. `tattoo:generation` →
+  "Tattoo Generator Tools"); creation-style domains (tattoo, logo, qr, prompt,
+  …) fall back to a `domain:generation` cluster; products that cannot be
+  confidently grouped stay as their own cluster (keyed by a hash, never by a
+  product name).
+- Stable `cluster_id` (slug of the cluster key) plus `cluster_key`,
+  `cluster_label`, `cluster_theme` and `cluster_reason`.
+- Cluster aggregation: member count/names/sources, source diversity, strongest
+  source confidence, average/max Solo Builder Score, Tool-Orchard potential,
+  evidence summary, representative product, and `first_seen` / `days_seen` /
+  `latest_seen` / `repeat_appearances` from the stored JSON history.
+- Deterministic `cluster_score` (0–100) with a published breakdown: quality
+  (best member score) + capped member bonus (+9) + capped source-diversity
+  bonus (+12) + source-confidence adjustment (±5) + persistence bonus (+7 cap)
+  − Hacker-News-only penalty (−20) − singleton penalty (−12), with bonuses
+  halved below the 60-point quality floor.
+- `analyzers/keyword_candidates.py` — 5–15 deterministic SEO candidates per
+  cluster (member-derived cores, then compatibility-checked modifier variants,
+  a problem query and at most one comparison keyword), each with a
+  pre-Semrush priority (HIGH/MEDIUM/LOW) and type (CORE_TOOL, LONG_TAIL_TOOL,
+  PROBLEM_QUERY, AUDIENCE_SPECIFIC, COMPARISON).
+- Daily **Semrush Check List** (10–20 keywords) built from the highest-ranked
+  clusters, corroborated clusters first; each row shows the keyword, cluster,
+  priority, type and why it is worth checking. No volume/KD data.
+- `config/cluster_weights.py` — all Phase 2 constants in one place.
+- Report sections: **A. Top Opportunity Clusters**, **B. Semrush Check List**,
+  **C. Individual Product Evidence** (the previous product-level content is
+  preserved unchanged) in both `analysis/daily/*-indie.md` and `docs/indie.html`.
+- 24 new tests (`test_clustering.py`, `test_keywords.py`,
+  `test_cluster_history.py` and cluster/checklist coverage in
+  `test_pipeline.py`) — 62 tests total.
+
+### Changed
+- `analyzers/text_utils.py` now holds the shared word-boundary matcher,
+  name/URL normalization and tokenizer used by scoring, clustering and
+  keyword generation (the Phase 1 module re-exports them, so its public
+  surface is unchanged).
+
+### Notes
+- History signals are limited to what `data/daily` holds (28-day retention).
+  When a cluster has no history the report says so instead of inventing
+  metrics. No database, no LLM, no embeddings, no Semrush/Ahrefs integration.
+
+## [1.5.0] - Phase 1: Solo Builder Opportunity Radar
+
+### Fixed
+- **Daily data history was never committed.** `.gitignore` ignored the whole
+  `data/` directory while `daily-report.yml` ran `git add data/daily/*.json || true`.
+  Git refuses to add ignored paths, so the command aborted (hidden by `|| true`)
+  and `data/daily/` was frozen at 2026-03-20 — starving the weekly report of
+  current data. The ignore rule is now explicit (`/data/*`, `!/data/daily/`,
+  `/data/daily/*`, `!/data/daily/*.json`) and the workflow stages with
+  `git add -A -- data/daily analysis/daily` (no silent failure).
+- **Mixed timezones.** Report timestamps used `ZoneInfo("America/Los_Angeles")`
+  while file names and storage cutoffs used system-local time. Everything now
+  goes through `config/timeutil.py` (`now`, `today_str`, `timestamp_str`,
+  `display_str`).
+- **Scoring polarity.** `tech_difficulty` (lower = easier) was summed with three
+  higher-is-better dimensions, so harder products ranked higher. Replaced by
+  `build_ease` (5 = very easy) with the polarity asserted by tests.
+- **Domain detection substring bug.** `"reel"` matched inside `"freelancers"`
+  and `"ai"` inside `"email"`. Keyword matching is now word-boundary aware.
+- GitHub Actions: added a `concurrency` group and `timeout-minutes` so daily
+  runs cannot race each other on `git push`.
+
+### Added
+- `config/scoring_weights.py` — centralized weights, source confidence and
+  reporting bands.
+- `config/timeutil.py` — single explicit timezone strategy (Pacific).
+- Weighted **Solo Builder Score (0–100)**: Build Ease 20, Self-Service
+  Acquisition 15, Monetization 15, Low Communication 15, Operating Cost 10,
+  Solo-Builder Fit 15, Tool-Orchard 10.
+- Source-confidence ranking adjustment (max ±5): Toolify High, Product Hunt /
+  TAAAT Medium–High, Chrome Web Store Medium, GitHub Low–Medium, Hacker News Low.
+- Normalization + same-day de-duplication, including the Toolify
+  `new`/`trending` overlap.
+- Hacker News product-likeness filter (`Show HN` / `Launch HN` kept; news and
+  opinion posts excluded from the ranking).
+- Operating-cost and communication-burden categories (LOW / MEDIUM / HIGH).
+- `tool_orchard_potential` heuristic (converter/calculator/checker/generator
+  families expand; novelty and service businesses do not).
+- Report/dashboard rows now show the Solo Builder Score /100, source
+  confidence, all seven dimensions, the operating-cost category and 2–5 short
+  reasons per product.
+- `tests/` — first test suite (38 tests, pytest) plus `pytest.ini` and
+  `requirements-dev.txt`.
+
+### Notes
+- No LLM calls, embeddings, databases, Semrush/Ahrefs integrations or paid APIs
+  were added. Clustering, keyword generation, Semrush enrichment and the
+  BUILD / TEST / WATCH / SKIP verdict remain future work.
+
 ## [1.4.0] - 2026-03-18
 
 ### Added
