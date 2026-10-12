@@ -1,0 +1,134 @@
+{
+  "date": "2026-10-12",
+  "timestamp": "2026-10-12T08:12:38.054734-07:00",
+  "product_hunt": [
+    {
+      "name": "Knocket",
+      "tagline": "Chat with visitors from your website or link",
+      "link": "https://www.producthunt.com/products/knocket-2"
+    },
+    {
+      "name": "Scrape Anything by Context.dev",
+      "tagline": "Turn any website into clean data with one API call.",
+      "link": "https://www.producthunt.com/products/context-dev"
+    },
+    {
+      "name": "Manifold MCP",
+      "tagline": "SEO, AI answers, social, ads and leads data for your agent",
+      "link": "https://www.producthunt.com/products/manifold-mcp"
+    },
+    {
+      "name": "ExcaliClaw",
+      "tagline": "Hand-drawn diagrams your AI agent can draw with you",
+      "link": "https://www.producthunt.com/products/excaliclaw"
+    },
+    {
+      "name": "Ancher 2.0",
+      "tagline": "Turn everything you read and save into work you can ship",
+      "link": "https://www.producthunt.com/products/ancher-ai"
+    }
+  ],
+  "toolify": [],
+  "ai_tools": [],
+  "chrome_extensions": [
+    {
+      "name": "QuestionAI Homework Powered AI Assistant",
+      "description": "AI Copilot can answer screenshot queries and assist with writing, summarizing, translating, and grammar checking.",
+      "users": "100,000 users",
+      "rating": "4.8/5.0",
+      "link": "https://chromewebstore.google.com/detail/questionai-homework-power/hajphibbdloomfdkeoejchiikjggnaif"
+    },
+    {
+      "name": "Monica: All-In-One AI Assist & Smartest  AI Agent",
+      "description": "One stop AI Assistant with GPT, Claude, Gemini: Chat, Write, Translate, Search, Summarize, image generator, video generation",
+      "users": "3,000,000 users",
+      "rating": "4.9/5.0",
+      "link": "https://chromewebstore.google.com/detail/monica-all-in-one-ai-assi/ofpnmcalabcbjgholdjcjblkibolbppb"
+    },
+    {
+      "name": "Voila – AI Assistant, Copilot and AI Writer",
+      "description": "Seamless personal AI assistant powered by GPT-5 to help you create, write, summarize, brainstorm, and research on any website.",
+      "users": "80,000 users",
+      "rating": "4.6/5.0",
+      "link": "https://chromewebstore.google.com/detail/voila-%E2%80%93-ai-assistant-copi/cakobppopkpmmglabcdcklncbckjpkcl"
+    },
+    {
+      "name": "GEE AI Assistant",
+      "description": "Generate, modify, and fix Google Earth Engine code using AI Models. Now with new Voice Mode & 5200+ Datasets!",
+      "users": "1,000 users",
+      "rating": "5/5.0",
+      "link": "https://chromewebstore.google.com/detail/gee-ai-assistant/kldhacnbicjpbdiebjjflnhgcmheokkl"
+    },
+    {
+      "name": "AI Voice Assistant – Smart Browser Copilot",
+      "description": "AI assistant that works inside your browser tab. Ask by voice and get instant, context-aware AI responses.",
+      "users": "313 users",
+      "rating": "4.3/5.0",
+      "link": "https://chromewebstore.google.com/detail/ai-voice-assistant-%E2%80%93-smar/daamboajoclakkelbnglldlckknjfdjb"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "morluto/rea",
+      "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "today_stars": "45,495 stars today"
+    },
+    {
+      "name": "bilawalsidhu/gods-eye-view",
+      "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+      "today_stars": "1,903 stars today"
+    },
+    {
+      "name": "mksglu/context-mode",
+      "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
+      "today_stars": "485 stars today"
+    },
+    {
+      "name": "storytold/artcraft",
+      "description": "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
+      "today_stars": "4,106 stars today"
+    },
+    {
+      "name": "open-webui/open-webui",
+      "description": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
+      "today_stars": "142 stars today"
+    }
+  ],
+  "hacker_news": [
+    {
+      "title": "Why aren't AI companies being charged for hacking?",
+      "author": "ingve",
+      "score": 106,
+      "comments": 57,
+      "url": "https://mortoray.com/why-arent-ai-companies-being-charged-for-hacking/"
+    },
+    {
+      "title": "Incident with Actions, Pull Requests and Issues",
+      "author": "dkpk",
+      "score": 80,
+      "comments": 52,
+      "url": "https://www.githubstatus.com/incidents/93njd414rpbx"
+    },
+    {
+      "title": "The Making Of Super Mario 64 – full Giles Goddard interview (2001)",
+      "author": "gregsadetsky",
+      "score": 86,
+      "comments": 30,
+      "url": "https://pixelatron.com/blog/the-making-of-super-mario-64-full-giles-goddard-interview-ngc/"
+    },
+    {
+      "title": "Secret of Orange Cats Revealed After 60-Year Search",
+      "author": "bookofjoe",
+      "score": 104,
+      "comments": 76,
+      "url": "https://www.sciencealert.com/secret-of-orange-cats-finally-revealed-after-60-year-search"
+    },
+    {
+      "title": "Fingerprints are the new cookies",
+      "author": "royfish",
+      "score": 550,
+      "comments": 266,
+      "url": "https://royfish.dev/fingerprints-are-the-new-cookies"
+    }
+  ]
+}
