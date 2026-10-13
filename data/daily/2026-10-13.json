@@ -1,0 +1,134 @@
+{
+  "date": "2026-10-13",
+  "timestamp": "2026-10-13T08:11:17.557474-07:00",
+  "product_hunt": [
+    {
+      "name": "HarnessHive",
+      "tagline": "AI-Native, Simple & Collaborative Wire Harness Design",
+      "link": "https://www.producthunt.com/products/harnesshive"
+    },
+    {
+      "name": "Mi Speaks 2.0",
+      "tagline": "Books and PDFs read aloud by neural voices, on device",
+      "link": "https://www.producthunt.com/products/mi-speaks"
+    },
+    {
+      "name": "Xiryn",
+      "tagline": "The open-source personal agent that runs on your computer",
+      "link": "https://www.producthunt.com/products/xiryn"
+    },
+    {
+      "name": "MentionBird",
+      "tagline": "Ahrefs for AI Search",
+      "link": "https://www.producthunt.com/products/mentionbird"
+    },
+    {
+      "name": "Kai",
+      "tagline": "Autonomous assistant designed to handle meetings and email",
+      "link": "https://www.producthunt.com/products/hirekai"
+    }
+  ],
+  "toolify": [],
+  "ai_tools": [],
+  "chrome_extensions": [
+    {
+      "name": "Chat with all AI models (Gemini, Claude, DeepSeek…) & AI Agents | AITOPIA",
+      "description": "AI Agent Marketplace & AI Sidebar with all AI models (Gemini, Claude, DeepSeek & more) and hundreds of AI Agents",
+      "users": "1,000,000 users",
+      "rating": "4.9/5.0",
+      "link": "https://chromewebstore.google.com/detail/chat-with-all-ai-models-g/becfinhbfclcgokjlobojlnldbfillpf"
+    },
+    {
+      "name": "AI CHAT TRANSFER",
+      "description": "Seamlessly transfer your conversations between ChatGPT, Claude, Gemini, Grok, and more.",
+      "users": "669 users",
+      "rating": "5/5.0",
+      "link": "https://chromewebstore.google.com/detail/ai-chat-transfer/gfeohkmgfphhoodfhiaffmgcoeljhnhp"
+    },
+    {
+      "name": "Sider: Chat with all AI: GPT-5, Claude, DeepSeek, Gemini, Grok",
+      "description": "ChatGPT, DeepSeek, Gemini, Claude, Grok all in one AI sidebar, for AI search, read, and write.",
+      "users": "5,000,000 users",
+      "rating": "4.9/5.0",
+      "link": "https://chromewebstore.google.com/detail/sider-chat-with-all-ai-gp/difoiogjjojoaoomphldepapgpbgkhkb"
+    },
+    {
+      "name": "AI Chat Navigator",
+      "description": "Jump through AI chats, save prompts, and refine drafts locally in your browser.",
+      "users": "119 users",
+      "rating": "3.5/5.0",
+      "link": "https://chromewebstore.google.com/detail/ai-chat-navigator/jnoonpeekddinkiecaonhocaflcgbhap"
+    },
+    {
+      "name": "AI Chat Backup: ChatGPT to Notion, Obsidian & Markdown",
+      "description": "Export AI conversations to Markdown, save them to Obsidian folders, or sync to Notion. Backup chats from popular AI platforms.",
+      "users": "3,000 users",
+      "rating": "4.3/5.0",
+      "link": "https://chromewebstore.google.com/detail/ai-chat-backup-chatgpt-to/oedpeddiacomhhfieanenlmdghkolgng"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "morluto/rea",
+      "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "today_stars": "54,706 stars today"
+    },
+    {
+      "name": "bilawalsidhu/gods-eye-view",
+      "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+      "today_stars": "1,961 stars today"
+    },
+    {
+      "name": "debpalash/VoiceStudio",
+      "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+      "today_stars": "1,691 stars today"
+    },
+    {
+      "name": "mksglu/context-mode",
+      "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
+      "today_stars": "978 stars today"
+    },
+    {
+      "name": "cathrynlavery/diagram-design",
+      "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, and Pi. 44 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+      "today_stars": "1,813 stars today"
+    }
+  ],
+  "hacker_news": [
+    {
+      "title": "Apple HomeView",
+      "author": "etothet",
+      "score": 236,
+      "comments": 268,
+      "url": "https://www.apple.com/apple-homeview/"
+    },
+    {
+      "title": "11 year old unsoundness bugs found in Rust borrow checker",
+      "author": "formerly_proven",
+      "score": 436,
+      "comments": 227,
+      "url": "https://github.com/rust-lang/rust/issues/164250"
+    },
+    {
+      "title": "A Dynamic and Distributed Virtual GPU Cloud Built on Idle Apple Silicon Devices",
+      "author": "acossta",
+      "score": 126,
+      "comments": 49,
+      "url": "https://machinelearning.apple.com/research/distributed-gpu-cloud"
+    },
+    {
+      "title": "We turned EmbeddingGemma 2 into a speech-to-text model",
+      "author": "amrrs",
+      "score": 238,
+      "comments": 57,
+      "url": "https://eg2.haku.sh/"
+    },
+    {
+      "title": "New Apple TV 4K",
+      "author": "corvad",
+      "score": 41,
+      "comments": 58,
+      "url": "https://www.apple.com/newsroom/2026/10/apple-unveils-the-new-apple-tv-4k/"
+    }
+  ]
+}
