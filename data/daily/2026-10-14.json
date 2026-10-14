@@ -1,0 +1,134 @@
+{
+  "date": "2026-10-14",
+  "timestamp": "2026-10-14T08:22:25.752593-07:00",
+  "product_hunt": [
+    {
+      "name": "Confidence by Spotify",
+      "tagline": "Build products at full speed, with both hands on the wheel",
+      "link": "https://www.producthunt.com/products/spotify"
+    },
+    {
+      "name": "Pancake",
+      "tagline": "The Vercel for GTM",
+      "link": "https://www.producthunt.com/products/pancake-6"
+    },
+    {
+      "name": "Microsoft Maia 300",
+      "tagline": "Microsoft’s own AI chip, headed to multi-gigawatts",
+      "link": "https://www.producthunt.com/products/microsoft-maia-300"
+    },
+    {
+      "name": "Inferock",
+      "tagline": "Serverless inference, with credits back for failed calls.",
+      "link": "https://www.producthunt.com/products/inferock"
+    },
+    {
+      "name": "Exodus for Google Cloud Run",
+      "tagline": "Upgrade any app to Cloud Run, with your coding agent",
+      "link": "https://www.producthunt.com/products/exodus-by-elim-io"
+    }
+  ],
+  "toolify": [],
+  "ai_tools": [],
+  "chrome_extensions": [
+    {
+      "name": "Compose AI: AI-powered Writing Tool",
+      "description": "Accelerate your writing with AI",
+      "users": "300,000 users",
+      "rating": "3.8/5.0",
+      "link": "https://chromewebstore.google.com/detail/compose-ai-ai-powered-wri/ddlbpiadoechcolndfeaonajmngmhblj"
+    },
+    {
+      "name": "Grammarly: AI Writing Assistant and Grammar Checker App",
+      "description": "Grammarly for Chrome helps you write with confidence. Get AI support for grammar, clarity, and tone, from first draft to final edit.",
+      "users": "41,000,000 users",
+      "rating": "3.9/5.0",
+      "link": "https://chromewebstore.google.com/detail/grammarly-ai-writing-assi/kbfnbcaeplbcioakkpcpgfkobkghlhen"
+    },
+    {
+      "name": "Quillbot: AI Writing Assistant with Humanizer, Paraphraser & AI Detector",
+      "description": "Improve your writing - Detect and Humanize AI content, create images, Paraphrase, Check Grammar, AI Chat, and more!",
+      "users": "6,000,000 users",
+      "rating": "4.7/5.0",
+      "link": "https://chromewebstore.google.com/detail/quillbot-ai-writing-assis/iidnbdjijdkbmajdffnidomddglmieko"
+    },
+    {
+      "name": "AHelp: AI Writing, Homework and Research",
+      "description": "AHelp offers free AI writing tools and apps to improve your academic workflow.",
+      "users": "806 users",
+      "rating": "5/5.0",
+      "link": "https://chromewebstore.google.com/detail/ahelp-ai-writing-homework/ficadmmmipnkjiclafgahfjafanoojkd"
+    },
+    {
+      "name": "WritePro AI: 50+ AI Writing Tools, Free AI Detector & Grammar Check",
+      "description": "AI writing assistant for emails, blogs, SEO and social media with AI detector and grammar check.",
+      "users": "248 users",
+      "rating": "4.9/5.0",
+      "link": "https://chromewebstore.google.com/detail/writepro-ai-50+-ai-writin/apdcmpdaikhdnelhamcmfdphokkgppie"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "morluto/rea",
+      "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "today_stars": "41,187 stars today"
+    },
+    {
+      "name": "debpalash/VoiceStudio",
+      "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+      "today_stars": "3,547 stars today"
+    },
+    {
+      "name": "mksglu/context-mode",
+      "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
+      "today_stars": "946 stars today"
+    },
+    {
+      "name": "nvm-sh/nvm",
+      "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
+      "today_stars": "45 stars today"
+    },
+    {
+      "name": "K-Dense-AI/scientific-agent-skills",
+      "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 250,000+ scientists worldwide. 177 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
+      "today_stars": "146 stars today"
+    }
+  ],
+  "hacker_news": [
+    {
+      "title": "Passkeys Are Not a Trap",
+      "author": "speckx",
+      "score": 15,
+      "comments": 2,
+      "url": "https://scotthelme.co.uk/passkeys-are-not-a-trap/"
+    },
+    {
+      "title": "Iosevka is an open-source, sans-serif and slab-serif, monospace font",
+      "author": "otobrglez",
+      "score": 432,
+      "comments": 160,
+      "url": "https://typeof.net/Iosevka/"
+    },
+    {
+      "title": "Pg_vectorsearch: An index that is faster than pgvector's IVFFlat and HNSW",
+      "author": "jascha_eng",
+      "score": 95,
+      "comments": 33,
+      "url": "https://github.com/timescale/pg_vectorsearch"
+    },
+    {
+      "title": "ASML's strong orders ease fears AI spending boom is running out of steam",
+      "author": "tartoran",
+      "score": 45,
+      "comments": 28,
+      "url": "https://www.reuters.com/business/asml-forecasts-q4-sales-above-expectations-ai-chip-demand-2026-10-14/"
+    },
+    {
+      "title": "TV4 postpones show after AI agent erases edited material",
+      "author": "tobr",
+      "score": 79,
+      "comments": 46,
+      "url": "https://swedenherald.com/article/tv4-postpones-the-challenge-until-2027-after-technical-failure-erases-edited-footage"
+    }
+  ]
+}
