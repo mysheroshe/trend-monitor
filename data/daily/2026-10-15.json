@@ -1,0 +1,134 @@
+{
+  "date": "2026-10-15",
+  "timestamp": "2026-10-15T08:23:37.832603-07:00",
+  "product_hunt": [
+    {
+      "name": "Reelbird",
+      "tagline": "Open Source Loom + Screen Studio alternative for Mac",
+      "link": "https://www.producthunt.com/products/reelbird"
+    },
+    {
+      "name": "Navige",
+      "tagline": "Cut AI agent costs and control runaway spending",
+      "link": "https://www.producthunt.com/products/navige"
+    },
+    {
+      "name": "Polylane Impact Analysis",
+      "tagline": "Catch risky pull requests before they break production",
+      "link": "https://www.producthunt.com/products/polylane"
+    },
+    {
+      "name": "NestJS Observe",
+      "tagline": "Zero-config observability built for NestJS",
+      "link": "https://www.producthunt.com/products/nestjs-observe"
+    },
+    {
+      "name": "Chatway MCP",
+      "tagline": "Let ChatGPT & Claude answer customer support tickets via MCP",
+      "link": "https://www.producthunt.com/products/chatway"
+    }
+  ],
+  "toolify": [],
+  "ai_tools": [],
+  "chrome_extensions": [
+    {
+      "name": "QuestionAI Homework Powered AI Assistant",
+      "description": "AI Copilot can answer screenshot queries and assist with writing, summarizing, translating, and grammar checking.",
+      "users": "100,000 users",
+      "rating": "4.7/5.0",
+      "link": "https://chromewebstore.google.com/detail/questionai-homework-power/hajphibbdloomfdkeoejchiikjggnaif"
+    },
+    {
+      "name": "Monica: All-In-One AI Assist & Smartest  AI Agent",
+      "description": "One stop AI Assistant with GPT, Claude, Gemini: Chat, Write, Translate, Search, Summarize, image generator, video generation",
+      "users": "3,000,000 users",
+      "rating": "4.8/5.0",
+      "link": "https://chromewebstore.google.com/detail/monica-all-in-one-ai-assi/ofpnmcalabcbjgholdjcjblkibolbppb"
+    },
+    {
+      "name": "AI Assistant",
+      "description": "AI Assistant helps you answer question, summarize and explain pages and texts!",
+      "users": "1,000 users",
+      "rating": "3/5.0",
+      "link": "https://chromewebstore.google.com/detail/ai-assistant/manahiemhgolofngagbjjefiibejhcgm"
+    },
+    {
+      "name": "Voila – AI Assistant, Copilot and AI Writer",
+      "description": "Seamless personal AI assistant powered by GPT-5 to help you create, write, summarize, brainstorm, and research on any website.",
+      "users": "80,000 users",
+      "rating": "4.6/5.0",
+      "link": "https://chromewebstore.google.com/detail/voila-%E2%80%93-ai-assistant-copi/cakobppopkpmmglabcdcklncbckjpkcl"
+    },
+    {
+      "name": "GEE AI Assistant",
+      "description": "Generate, modify, and fix Google Earth Engine code using AI Models. Now with new Voice Mode & 5200+ Datasets!",
+      "users": "1,000 users",
+      "rating": "5/5.0",
+      "link": "https://chromewebstore.google.com/detail/gee-ai-assistant/kldhacnbicjpbdiebjjflnhgcmheokkl"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "morluto/rea",
+      "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "today_stars": "32,282 stars today"
+    },
+    {
+      "name": "anthropics/claude-plugins-official",
+      "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+      "today_stars": "525 stars today"
+    },
+    {
+      "name": "K-Dense-AI/scientific-agent-skills",
+      "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 250,000+ scientists worldwide. 177 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
+      "today_stars": "1,091 stars today"
+    },
+    {
+      "name": "JuliusBrussee/caveman",
+      "description": "🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.",
+      "today_stars": "398 stars today"
+    },
+    {
+      "name": "debpalash/VoiceStudio",
+      "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+      "today_stars": "3,027 stars today"
+    }
+  ],
+  "hacker_news": [
+    {
+      "title": "Libreboot 26.10 \"Ominous Olive\" released with UEFI, Chromebook support",
+      "author": "iamnothere",
+      "score": 131,
+      "comments": 53,
+      "url": "https://libreboot.org/news/libreboot2610.html"
+    },
+    {
+      "title": "Wayland desktop for Linux with skeuomorphic design",
+      "author": "FinalDestiny",
+      "score": 115,
+      "comments": 28,
+      "url": "https://github.com/fyzugx/DEsk"
+    },
+    {
+      "title": "I know why Mathematicians weep",
+      "author": "RickJWagner",
+      "score": 76,
+      "comments": 133,
+      "url": "https://www.derekthompson.org/p/i-know-why-the-mathematicians-weep"
+    },
+    {
+      "title": "Simons Foundation Launches $15M Effort to Help Mathematicians Navigate AI Era",
+      "author": "aaraujo002",
+      "score": 18,
+      "comments": 4,
+      "url": "https://www.simonsfoundation.org/news/simons-foundation-launches-15m-effort-to-help-mathematicians-navigate-ai-era/"
+    },
+    {
+      "title": "Prompt injection in HTTP headers: what 217M web responses show",
+      "author": "panoramas4good",
+      "score": 17,
+      "comments": 4,
+      "url": "https://www.signalscorps.com/blog/prompt-injection-in-http-headers/"
+    }
+  ]
+}
