@@ -1,0 +1,134 @@
+{
+  "date": "2026-10-16",
+  "timestamp": "2026-10-16T08:18:42.018966-07:00",
+  "product_hunt": [
+    {
+      "name": "DOYT",
+      "tagline": "The  Dynamic Island to-do app you don't have to open",
+      "link": "https://www.producthunt.com/products/doyt"
+    },
+    {
+      "name": "Harness by Autonomous",
+      "tagline": "Every coding agent, every machine, one command center.",
+      "link": "https://www.producthunt.com/products/harness-by-autonomous"
+    },
+    {
+      "name": "Atelier",
+      "tagline": "The studio your AI coding agents work in",
+      "link": "https://www.producthunt.com/products/atelier-9"
+    },
+    {
+      "name": "Scalebrowser",
+      "tagline": "Human browser capabilities. Now for AI agents.",
+      "link": "https://www.producthunt.com/products/scalebrowser"
+    },
+    {
+      "name": "Muse Spark Open",
+      "tagline": "The most capable US open weights model to date",
+      "link": "https://www.producthunt.com/products/muse-spark-open"
+    }
+  ],
+  "toolify": [],
+  "ai_tools": [],
+  "chrome_extensions": [
+    {
+      "name": "PiP Pro: Picture-in-Picture productivity tools",
+      "description": "Picture-in-Picture productivity boosting tools. Stream tab contents or take notes- always on top. Stop tab-switching, start working.",
+      "users": "2,000 users",
+      "rating": "3.8/5.0",
+      "link": "https://chromewebstore.google.com/detail/pip-pro-picture-in-pictur/jgicglkgkeagfglifmofmnongfnpbkjc"
+    },
+    {
+      "name": "CPQ Productivity Tools",
+      "description": "On-demand Oracle CPQ tools: Pipeline Viewer, GET-only REST APIs, admin, BOM validation, quote debugging, and BML search.",
+      "users": "376 users",
+      "rating": "5/5.0",
+      "link": "https://chromewebstore.google.com/detail/cpq-productivity-tools/cclcmepgialdphibhiemcncjkcebopba"
+    },
+    {
+      "name": "Productivity Tools Pro",
+      "description": "All-in-one productivity suite with 50+ privacy-focused tools: JSON Formatter, Pomodoro, SEO Tools, & more!",
+      "users": "N/A",
+      "rating": "5/5.0",
+      "link": "https://chromewebstore.google.com/detail/productivity-tools-pro/ffjljgdcdifgkafdkkocjjckaglboela"
+    },
+    {
+      "name": "Seller Utilities - Productivity Tools for Amazon Sellers",
+      "description": "Productivity tools for Amazon Seller Central.",
+      "users": "4,000 users",
+      "rating": "5/5.0",
+      "link": "https://chromewebstore.google.com/detail/seller-utilities-producti/giemlimlagcjbnoinmedklabpcclbapb"
+    },
+    {
+      "name": "Website Blocker — Block Sites, Focus Timer & Productivity Tools",
+      "description": "Block distracting websites, schedule focus sessions, and boost productivity. Keyword blocking, profiles, Pomodoro timer & more.",
+      "users": "30,000 users",
+      "rating": "4.7/5.0",
+      "link": "https://chromewebstore.google.com/detail/website-blocker-%E2%80%94-block-s/kniediipngcpmbmpeacaoinhoeipfina"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "anthropics/claude-plugins-official",
+      "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+      "today_stars": "1,552 stars today"
+    },
+    {
+      "name": "K-Dense-AI/scientific-agent-skills",
+      "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 250,000+ scientists worldwide. 177 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
+      "today_stars": "1,158 stars today"
+    },
+    {
+      "name": "affaan-m/ECC",
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "today_stars": "1,057 stars today"
+    },
+    {
+      "name": "HKUDS/CLI-Anything",
+      "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub:https://clianything.cc/",
+      "today_stars": "716 stars today"
+    },
+    {
+      "name": "mksglu/context-mode",
+      "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and enforces routing across 17 platforms via MCP + hooks.",
+      "today_stars": "449 stars today"
+    }
+  ],
+  "hacker_news": [
+    {
+      "title": "I Love Software Rendering",
+      "author": "speckx",
+      "score": 144,
+      "comments": 98,
+      "url": "https://www.jamesfmackenzie.com/2026/10/13/i-love-software-rendering/"
+    },
+    {
+      "title": "Hello Toronto – Waymo Is En Route",
+      "author": "ChrisArchitect",
+      "score": 55,
+      "comments": 59,
+      "url": "https://waymo.com/blog/2026/10/waymo-in-toronto/"
+    },
+    {
+      "title": "Big Fish: Exploiting a 37-Year-Old Kernel Bug in OpenBSD",
+      "author": "rs_rs_rs_rs_rs",
+      "score": 26,
+      "comments": 0,
+      "url": "https://calif.io/research/big-fish"
+    },
+    {
+      "title": "Redesigning Source Control at Anthropic",
+      "author": "hn9zmdcaou",
+      "score": 20,
+      "comments": 22,
+      "url": "https://simonwillison.net/2026/Oct/13/redesigning-source-control-at-anthropic/"
+    },
+    {
+      "title": "Apple ML Research: Muse Spark Open with MLX on Mac Studio",
+      "author": "antipaul",
+      "score": 25,
+      "comments": 3,
+      "url": "https://machinelearning.apple.com/research/mlx-distributed-inference"
+    }
+  ]
+}
