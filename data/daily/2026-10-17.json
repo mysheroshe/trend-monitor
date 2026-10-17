@@ -1,0 +1,134 @@
+{
+  "date": "2026-10-17",
+  "timestamp": "2026-10-17T08:12:48.098171-07:00",
+  "product_hunt": [
+    {
+      "name": "Notion: Context for your agents",
+      "tagline": "Switch AI agents without re-explaining your work",
+      "link": "https://www.producthunt.com/products/notion"
+    },
+    {
+      "name": "NitroStack",
+      "tagline": "Build, test, and deploy MCP servers in one place",
+      "link": "https://www.producthunt.com/products/nitrostack"
+    },
+    {
+      "name": "Korinotch",
+      "tagline": "Your MacBook notch, turned into a command center",
+      "link": "https://www.producthunt.com/products/korinotch"
+    },
+    {
+      "name": "Train with Pasta",
+      "tagline": "A personal trainer powered by Apple Intelligence",
+      "link": "https://www.producthunt.com/products/train-with-pasta"
+    },
+    {
+      "name": "Emochi",
+      "tagline": "Voice journal to understand yourself through art and science",
+      "link": "https://www.producthunt.com/products/emochi-2"
+    }
+  ],
+  "toolify": [],
+  "ai_tools": [],
+  "chrome_extensions": [
+    {
+      "name": "Chat with all AI models (Gemini, Claude, DeepSeek…) & AI Agents | AITOPIA",
+      "description": "AI Agent Marketplace & AI Sidebar with all AI models (Gemini, Claude, DeepSeek & more) and hundreds of AI Agents",
+      "users": "1,000,000 users",
+      "rating": "4.8/5.0",
+      "link": "https://chromewebstore.google.com/detail/chat-with-all-ai-models-g/becfinhbfclcgokjlobojlnldbfillpf"
+    },
+    {
+      "name": "Sider: Chat with all AI: GPT-5, Claude, DeepSeek, Gemini, Grok",
+      "description": "ChatGPT, DeepSeek, Gemini, Claude, Grok all in one AI sidebar, for AI search, read, and write.",
+      "users": "5,000,000 users",
+      "rating": "4.9/5.0",
+      "link": "https://chromewebstore.google.com/detail/sider-chat-with-all-ai-gp/difoiogjjojoaoomphldepapgpbgkhkb"
+    },
+    {
+      "name": "AI CHAT TRANSFER",
+      "description": "Seamlessly transfer your conversations between ChatGPT, Claude, Gemini, Grok, and more.",
+      "users": "674 users",
+      "rating": "5/5.0",
+      "link": "https://chromewebstore.google.com/detail/ai-chat-transfer/gfeohkmgfphhoodfhiaffmgcoeljhnhp"
+    },
+    {
+      "name": "AI Chat Navigator",
+      "description": "Jump through AI chats, save prompts, and refine drafts locally in your browser.",
+      "users": "117 users",
+      "rating": "3.5/5.0",
+      "link": "https://chromewebstore.google.com/detail/ai-chat-navigator/jnoonpeekddinkiecaonhocaflcgbhap"
+    },
+    {
+      "name": "AI Chat Backup: ChatGPT to Notion, Obsidian & Markdown",
+      "description": "Export AI conversations to Markdown, save them to Obsidian folders, or sync to Notion. Backup chats from popular AI platforms.",
+      "users": "3,000 users",
+      "rating": "4.3/5.0",
+      "link": "https://chromewebstore.google.com/detail/ai-chat-backup-chatgpt-to/oedpeddiacomhhfieanenlmdghkolgng"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "anthropics/claude-plugins-official",
+      "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+      "today_stars": "1,383 stars today"
+    },
+    {
+      "name": "MadsLorentzen/ai-job-search",
+      "description": "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
+      "today_stars": "1,397 stars today"
+    },
+    {
+      "name": "affaan-m/ECC",
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "today_stars": "1,145 stars today"
+    },
+    {
+      "name": "HKUDS/CLI-Anything",
+      "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub:https://clianything.cc/",
+      "today_stars": "580 stars today"
+    },
+    {
+      "name": "K-Dense-AI/scientific-agent-skills",
+      "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 250,000+ scientists worldwide. 177 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
+      "today_stars": "879 stars today"
+    }
+  ],
+  "hacker_news": [
+    {
+      "title": "DeepSeek: DeepSeek v4.1 Flash 1017",
+      "author": "theanonymousone",
+      "score": 434,
+      "comments": 215,
+      "url": "https://openrouter.ai/deepseek/deepseek-v4.1-flash-1017"
+    },
+    {
+      "title": "Making Chicken Transparent Using Dorito Dust",
+      "author": "crescit_eundo",
+      "score": 38,
+      "comments": 11,
+      "url": "https://chillphysicsenjoyer.substack.com/p/making-chicken-transparent-using"
+    },
+    {
+      "title": "Solar surpasses nuclear power globally for first time – pv magazine Global",
+      "author": "xbmcuser",
+      "score": 96,
+      "comments": 43,
+      "url": "https://www.pv-magazine.com/2026/09/29/solar-surpasses-nuclear-power-globally-for-first-time/"
+    },
+    {
+      "title": "Rendering pretty sky in Around The World game",
+      "author": "ibobev",
+      "score": 31,
+      "comments": 1,
+      "url": "https://frozenfractal.com/blog/2026/10/12/around-the-world-34-a-pretty-sky/"
+    },
+    {
+      "title": "The First Candid",
+      "author": "Thevet",
+      "score": 15,
+      "comments": 2,
+      "url": "https://www.newyorker.com/magazine/2026/10/19/the-first-candid"
+    }
+  ]
+}
