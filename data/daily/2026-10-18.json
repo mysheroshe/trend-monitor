@@ -1,0 +1,134 @@
+{
+  "date": "2026-10-18",
+  "timestamp": "2026-10-18T08:13:00.136639-07:00",
+  "product_hunt": [
+    {
+      "name": "Tower 18 for Mac",
+      "tagline": "The most powerful Git client with a better CLI experience",
+      "link": "https://www.producthunt.com/products/tower"
+    },
+    {
+      "name": "shim-cli",
+      "tagline": "See what your coding agent sends. Mask what you can.",
+      "link": "https://www.producthunt.com/products/shim-cli"
+    },
+    {
+      "name": "MeetPaw",
+      "tagline": "Instant meetings from your mac menu bar",
+      "link": "https://www.producthunt.com/products/meetpaw"
+    },
+    {
+      "name": "Inbox Zero",
+      "tagline": "Open-source Superhuman alternative",
+      "link": "https://www.producthunt.com/products/inbox-zero-2"
+    },
+    {
+      "name": "Latch",
+      "tagline": "The app blocker you unlock by walking to your key",
+      "link": "https://www.producthunt.com/products/latch-7"
+    }
+  ],
+  "toolify": [],
+  "ai_tools": [],
+  "chrome_extensions": [
+    {
+      "name": "Chat with all AI models (Gemini, Claude, DeepSeek…) & AI Agents | AITOPIA",
+      "description": "AI Agent Marketplace & AI Sidebar with all AI models (Gemini, Claude, DeepSeek & more) and hundreds of AI Agents",
+      "users": "1,000,000 users",
+      "rating": "4.8/5.0",
+      "link": "https://chromewebstore.google.com/detail/chat-with-all-ai-models-g/becfinhbfclcgokjlobojlnldbfillpf"
+    },
+    {
+      "name": "Sider: Chat with all AI: GPT-5, Claude, DeepSeek, Gemini, Grok",
+      "description": "ChatGPT, DeepSeek, Gemini, Claude, Grok all in one AI sidebar, for AI search, read, and write.",
+      "users": "5,000,000 users",
+      "rating": "4.9/5.0",
+      "link": "https://chromewebstore.google.com/detail/sider-chat-with-all-ai-gp/difoiogjjojoaoomphldepapgpbgkhkb"
+    },
+    {
+      "name": "AI CHAT TRANSFER",
+      "description": "Seamlessly transfer your conversations between ChatGPT, Claude, Gemini, Grok, and more.",
+      "users": "675 users",
+      "rating": "5/5.0",
+      "link": "https://chromewebstore.google.com/detail/ai-chat-transfer/gfeohkmgfphhoodfhiaffmgcoeljhnhp"
+    },
+    {
+      "name": "AI Chat Navigator",
+      "description": "Jump through AI chats, save prompts, and refine drafts locally in your browser.",
+      "users": "116 users",
+      "rating": "3.5/5.0",
+      "link": "https://chromewebstore.google.com/detail/ai-chat-navigator/jnoonpeekddinkiecaonhocaflcgbhap"
+    },
+    {
+      "name": "AI Chat Backup: ChatGPT to Notion, Obsidian & Markdown",
+      "description": "Export AI conversations to Markdown, save them to Obsidian folders, or sync to Notion. Backup chats from popular AI platforms.",
+      "users": "3,000 users",
+      "rating": "4.3/5.0",
+      "link": "https://chromewebstore.google.com/detail/ai-chat-backup-chatgpt-to/oedpeddiacomhhfieanenlmdghkolgng"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "MadsLorentzen/ai-job-search",
+      "description": "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
+      "today_stars": "2,213 stars today"
+    },
+    {
+      "name": "anthropics/claude-plugins-official",
+      "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+      "today_stars": "1,187 stars today"
+    },
+    {
+      "name": "anomalyco/opencode",
+      "description": "The open source coding agent.",
+      "today_stars": "1,417 stars today"
+    },
+    {
+      "name": "cursor/plugins",
+      "description": "Cursor plugin specification and official plugins",
+      "today_stars": "351 stars today"
+    },
+    {
+      "name": "ruvnet/ruflo",
+      "description": "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
+      "today_stars": "502 stars today"
+    }
+  ],
+  "hacker_news": [
+    {
+      "title": "RepRapMicron",
+      "author": "RobotToaster",
+      "score": 91,
+      "comments": 14,
+      "url": "https://github.com/VikOlliver/RepRapMicron/wiki"
+    },
+    {
+      "title": "Legal experts warn Meta's new terms still grant broad scraping permissions",
+      "author": "DeepLogin",
+      "score": 116,
+      "comments": 29,
+      "url": "https://www.niemanlab.org/2026/10/legal-experts-warn-metas-new-terms-still-grant-broad-scraping-permissions-despite-language-changes/"
+    },
+    {
+      "title": "DeepSeek search and fetch – $0.75 per 1000 successful requests",
+      "author": "fagnerbrack",
+      "score": 374,
+      "comments": 188,
+      "url": "https://api-docs.deepseek.com/guides/search/"
+    },
+    {
+      "title": "Open MicroManipulator – A sub-micrometer 3D motion control plattform",
+      "author": "_Microft",
+      "score": 81,
+      "comments": 6,
+      "url": "https://github.com/0x23/MicroManipulatorStepper"
+    },
+    {
+      "title": "Will it be a golden age or a dark age for mathematics (and science)?",
+      "author": "smilelamp",
+      "score": 5,
+      "comments": 1,
+      "url": "https://terrytao.wordpress.com/2026/10/18/will-it-be-a-golden-age-or-a-dark-age-for-mathematics-and-science/"
+    }
+  ]
+}
