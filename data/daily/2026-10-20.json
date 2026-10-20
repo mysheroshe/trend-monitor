@@ -1,0 +1,134 @@
+{
+  "date": "2026-10-20",
+  "timestamp": "2026-10-20T11:50:22.607668-07:00",
+  "product_hunt": [
+    {
+      "name": "The New Beings",
+      "tagline": "AI agents on their break, performing a live talk show",
+      "link": "https://www.producthunt.com/products/the-new-beings"
+    },
+    {
+      "name": "Stage",
+      "tagline": "Review, fix and sign off working prototypes and products",
+      "link": "https://www.producthunt.com/products/stage-9"
+    },
+    {
+      "name": "xtty",
+      "tagline": "A terminal that makes everyday work easier.",
+      "link": "https://www.producthunt.com/products/xtty"
+    },
+    {
+      "name": "Mintlify Autopilot",
+      "tagline": "An always-on agent that keeps your docs up to date",
+      "link": "https://www.producthunt.com/products/mintlify"
+    },
+    {
+      "name": "bonds",
+      "tagline": "Every friends' chat gets an AI friend with superpowers",
+      "link": "https://www.producthunt.com/products/bonds-2"
+    }
+  ],
+  "toolify": [],
+  "ai_tools": [],
+  "chrome_extensions": [
+    {
+      "name": "QuestionAI Homework Powered AI Assistant",
+      "description": "AI Copilot can answer screenshot queries and assist with writing, summarizing, translating, and grammar checking.",
+      "users": "100,000 users",
+      "rating": "4.7/5.0",
+      "link": "https://chromewebstore.google.com/detail/questionai-homework-power/hajphibbdloomfdkeoejchiikjggnaif"
+    },
+    {
+      "name": "Monica: All-In-One AI Assist & Smartest  AI Agent",
+      "description": "One stop AI Assistant with GPT, Claude, Gemini: Chat, Write, Translate, Search, Summarize, image generator, video generation",
+      "users": "3,000,000 users",
+      "rating": "4.8/5.0",
+      "link": "https://chromewebstore.google.com/detail/monica-all-in-one-ai-assi/ofpnmcalabcbjgholdjcjblkibolbppb"
+    },
+    {
+      "name": "Voila – AI Assistant, Copilot and AI Writer",
+      "description": "Seamless personal AI assistant powered by GPT-5 to help you create, write, summarize, brainstorm, and research on any website.",
+      "users": "80,000 users",
+      "rating": "4.6/5.0",
+      "link": "https://chromewebstore.google.com/detail/voila-%E2%80%93-ai-assistant-copi/cakobppopkpmmglabcdcklncbckjpkcl"
+    },
+    {
+      "name": "GEE AI Assistant",
+      "description": "Generate, modify, and fix Google Earth Engine code using AI Models. Now with new Voice Mode & 5200+ Datasets!",
+      "users": "1,000 users",
+      "rating": "5/5.0",
+      "link": "https://chromewebstore.google.com/detail/gee-ai-assistant/kldhacnbicjpbdiebjjflnhgcmheokkl"
+    },
+    {
+      "name": "AI Voice Assistant – Smart Browser Copilot",
+      "description": "AI assistant that works inside your browser tab. Ask by voice and get instant, context-aware AI responses.",
+      "users": "359 users",
+      "rating": "4.3/5.0",
+      "link": "https://chromewebstore.google.com/detail/ai-voice-assistant-%E2%80%93-smar/daamboajoclakkelbnglldlckknjfdjb"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "MadsLorentzen/ai-job-search",
+      "description": "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
+      "today_stars": "3,890 stars today"
+    },
+    {
+      "name": "cloudflare/security-audit-skill",
+      "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+      "today_stars": "1,680 stars today"
+    },
+    {
+      "name": "stablyai/orca",
+      "description": "Orca is the place for working with a fleet of agents (e.g. Grok Bot, Claude Code). Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.",
+      "today_stars": "1,559 stars today"
+    },
+    {
+      "name": "DietrichGebert/ponytail",
+      "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+      "today_stars": "1,396 stars today"
+    },
+    {
+      "name": "Comfy-Org/ComfyUI",
+      "description": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface. The fastest local inference engine in the world.",
+      "today_stars": "1,201 stars today"
+    }
+  ],
+  "hacker_news": [
+    {
+      "title": "Voxtral 3",
+      "author": "ilreb",
+      "score": 282,
+      "comments": 75,
+      "url": "https://mistral.ai/news/voxtral-3/"
+    },
+    {
+      "title": "DeepInfer: High-performance inference framework for DeepSeek models",
+      "author": "ggcr",
+      "score": 1914,
+      "comments": 739,
+      "url": "https://github.com/deepseek-ai/DeepInfer"
+    },
+    {
+      "title": "Google open-sources TorchTPU, a native PyTorch back end for TPUs",
+      "author": "ilreb",
+      "score": 102,
+      "comments": 27,
+      "url": "https://github.com/google-pytorch/torch_tpu"
+    },
+    {
+      "title": "EMudhra Intermediate CA Compromise",
+      "author": "galadran",
+      "score": 328,
+      "comments": 166,
+      "url": "https://emudhra.we-have-a-problem.com/"
+    },
+    {
+      "title": "Ofcom concedes defeat in 4chan case",
+      "author": "iamnothere",
+      "score": 175,
+      "comments": 92,
+      "url": "https://prestonbyrne.com/2026/10/20/ofcom-concedes-defeat/"
+    }
+  ]
+}
