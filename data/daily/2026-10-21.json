@@ -1,0 +1,134 @@
+{
+  "date": "2026-10-21",
+  "timestamp": "2026-10-21T12:02:48.029829-07:00",
+  "product_hunt": [
+    {
+      "name": "Burrow MacOS",
+      "tagline": "Start Windows & Linux on your Mac for free",
+      "link": "https://www.producthunt.com/products/burrow-macos"
+    },
+    {
+      "name": "Tend",
+      "tagline": "Personal AI for businesses and entrepreneurs.",
+      "link": "https://www.producthunt.com/products/tend-5"
+    },
+    {
+      "name": "Yarite",
+      "tagline": "A daily list of who to call. Nothing leaves your phone.",
+      "link": "https://www.producthunt.com/products/yarite"
+    },
+    {
+      "name": "Flyweel",
+      "tagline": "Ad spend cards, cash-gap funding, and agent audit via MCP",
+      "link": "https://www.producthunt.com/products/connect-pipedrive-to-ads-with-flyweel"
+    },
+    {
+      "name": "Mouse-1",
+      "tagline": "A decision model for your agent harness.",
+      "link": "https://www.producthunt.com/products/mouse-1"
+    }
+  ],
+  "toolify": [],
+  "ai_tools": [],
+  "chrome_extensions": [
+    {
+      "name": "Compose AI: AI-powered Writing Tool",
+      "description": "Accelerate your writing with AI",
+      "users": "300,000 users",
+      "rating": "3.8/5.0",
+      "link": "https://chromewebstore.google.com/detail/compose-ai-ai-powered-wri/ddlbpiadoechcolndfeaonajmngmhblj"
+    },
+    {
+      "name": "Grammarly: AI Writing Assistant and Grammar Checker App",
+      "description": "Grammarly for Chrome helps you write with confidence. Get AI support for grammar, clarity, and tone, from first draft to final edit.",
+      "users": "41,000,000 users",
+      "rating": "3.9/5.0",
+      "link": "https://chromewebstore.google.com/detail/grammarly-ai-writing-assi/kbfnbcaeplbcioakkpcpgfkobkghlhen"
+    },
+    {
+      "name": "Quillbot: AI Writing Assistant with Humanizer, Paraphraser & AI Detector",
+      "description": "Improve your writing - Detect and Humanize AI content, create images, Paraphrase, Check Grammar, AI Chat, and more!",
+      "users": "6,000,000 users",
+      "rating": "4.7/5.0",
+      "link": "https://chromewebstore.google.com/detail/quillbot-ai-writing-assis/iidnbdjijdkbmajdffnidomddglmieko"
+    },
+    {
+      "name": "Jetwriter AI: Reply Emails, Ask Page, Summarize, Fix Grammar, and More",
+      "description": "Write emails & messages, chat with page, improve writing, translate, and do much more. Powered by the most intelligent AI models",
+      "users": "500,000 users",
+      "rating": "4.1/5.0",
+      "link": "https://chromewebstore.google.com/detail/jetwriter-ai-reply-emails/pdnenlnelpdomajfejgapbdpmjkfpjkp"
+    },
+    {
+      "name": "WritePro AI: 50+ AI Writing Tools, Free AI Detector & Grammar Check",
+      "description": "AI writing assistant for emails, blogs, SEO and social media with AI detector and grammar check.",
+      "users": "259 users",
+      "rating": "4.9/5.0",
+      "link": "https://chromewebstore.google.com/detail/writepro-ai-50+-ai-writin/apdcmpdaikhdnelhamcmfdphokkgppie"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "cloudflare/security-audit-skill",
+      "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+      "today_stars": "1,997 stars today"
+    },
+    {
+      "name": "vllm-project/vllm",
+      "description": "A high-throughput and memory-efficient inference and serving engine for LLMs",
+      "today_stars": "439 stars today"
+    },
+    {
+      "name": "stablyai/orca",
+      "description": "Orca is the place for working with a fleet of agents (e.g. Grok Bot, Claude Code). Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.",
+      "today_stars": "1,543 stars today"
+    },
+    {
+      "name": "headroomlabs-ai/headroom",
+      "description": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.",
+      "today_stars": "477 stars today"
+    },
+    {
+      "name": "DietrichGebert/ponytail",
+      "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+      "today_stars": "2,051 stars today"
+    }
+  ],
+  "hacker_news": [
+    {
+      "title": "PHP 8.2.35",
+      "author": "tuyuri",
+      "score": 851,
+      "comments": 479,
+      "url": "https://github.com/php/php-src/releases/tag/php-8.2.35"
+    },
+    {
+      "title": "Today's PHP security release, and how we're strengthening security",
+      "author": "ejohnso49",
+      "score": 318,
+      "comments": 160,
+      "url": "https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/"
+    },
+    {
+      "title": "The compiler was supposed to end programming too",
+      "author": "theanonymousone",
+      "score": 33,
+      "comments": 19,
+      "url": "https://hrih.si/articles/the-compiler-was-supposed-to-end-programming/"
+    },
+    {
+      "title": "Compromised LiteLLM 1.107.0 on PyPI Installs a Credential Stealer and Backdoor",
+      "author": "abhisek",
+      "score": 256,
+      "comments": 98,
+      "url": "https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/"
+    },
+    {
+      "title": "Eight Bits of Trust; eMudhra's CA keys cracked in milliseconds",
+      "author": "hkc",
+      "score": 695,
+      "comments": 329,
+      "url": "https://scotthelme.co.uk/eight-bits-of-trust-emudhras-ca-keys-cracked-in-milliseconds/"
+    }
+  ]
+}
