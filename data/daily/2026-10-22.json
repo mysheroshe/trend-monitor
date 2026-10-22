@@ -1,0 +1,134 @@
+{
+  "date": "2026-10-22",
+  "timestamp": "2026-10-22T11:57:29.754270-07:00",
+  "product_hunt": [
+    {
+      "name": "Resend Inboxes",
+      "tagline": "Create shared inboxes, connect your agents, build workflows",
+      "link": "https://www.producthunt.com/products/resend"
+    },
+    {
+      "name": "heal.dev",
+      "tagline": "Find bugs and vulnerabilities code review misses",
+      "link": "https://www.producthunt.com/products/heal-dev"
+    },
+    {
+      "name": "DeepCell",
+      "tagline": "Your deadline survival kit for office work",
+      "link": "https://www.producthunt.com/products/deepcell"
+    },
+    {
+      "name": "Fastlane 2.0",
+      "tagline": "Create, launch and scale winning ads with AI",
+      "link": "https://www.producthunt.com/products/fastlane-3"
+    },
+    {
+      "name": "Mistral Voxtral 3",
+      "tagline": "Mistral’s speech models for transcription, TTS and agents",
+      "link": "https://www.producthunt.com/products/mistral-7b"
+    }
+  ],
+  "toolify": [],
+  "ai_tools": [],
+  "chrome_extensions": [
+    {
+      "name": "Chat with all AI models (Gemini, Claude, DeepSeek…) & AI Agents | AITOPIA",
+      "description": "AI Agent Marketplace & AI Sidebar with all AI models (Gemini, Claude, DeepSeek & more) and hundreds of AI Agents",
+      "users": "1,000,000 users",
+      "rating": "4.8/5.0",
+      "link": "https://chromewebstore.google.com/detail/chat-with-all-ai-models-g/becfinhbfclcgokjlobojlnldbfillpf"
+    },
+    {
+      "name": "Sider: Chat with all AI: GPT-5, Claude, DeepSeek, Gemini, Grok",
+      "description": "ChatGPT, DeepSeek, Gemini, Claude, Grok all in one AI sidebar, for AI search, read, and write.",
+      "users": "5,000,000 users",
+      "rating": "4.9/5.0",
+      "link": "https://chromewebstore.google.com/detail/sider-chat-with-all-ai-gp/difoiogjjojoaoomphldepapgpbgkhkb"
+    },
+    {
+      "name": "AI CHAT TRANSFER",
+      "description": "Seamlessly transfer your conversations between ChatGPT, Claude, Gemini, Grok, and more.",
+      "users": "662 users",
+      "rating": "5/5.0",
+      "link": "https://chromewebstore.google.com/detail/ai-chat-transfer/gfeohkmgfphhoodfhiaffmgcoeljhnhp"
+    },
+    {
+      "name": "AI Chat Navigator",
+      "description": "Jump through AI chats, save prompts, and refine drafts locally in your browser.",
+      "users": "114 users",
+      "rating": "3.5/5.0",
+      "link": "https://chromewebstore.google.com/detail/ai-chat-navigator/jnoonpeekddinkiecaonhocaflcgbhap"
+    },
+    {
+      "name": "AI Chat Sync",
+      "description": "Quickly open AI websites and chat with multiple AIs concurrently",
+      "users": "239 users",
+      "rating": "5/5.0",
+      "link": "https://chromewebstore.google.com/detail/ai-chat-sync/afjalhepkaledpiempnidkhijjaolffi"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "php/php-src",
+      "description": "The PHP Interpreter",
+      "today_stars": "423 stars today"
+    },
+    {
+      "name": "anthropics/knowledge-work-plugins",
+      "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
+      "today_stars": "303 stars today"
+    },
+    {
+      "name": "DietrichGebert/ponytail",
+      "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+      "today_stars": "1,949 stars today"
+    },
+    {
+      "name": "cloudflare/security-audit-skill",
+      "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+      "today_stars": "2,979 stars today"
+    },
+    {
+      "name": "Graphify-Labs/graphify",
+      "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
+      "today_stars": "1,407 stars today"
+    }
+  ],
+  "hacker_news": [
+    {
+      "title": "Quad9 (DNS Resolver) to Exit France",
+      "author": "farrokhi",
+      "score": 514,
+      "comments": 183,
+      "url": "https://quad9.net/news/blog/au-revoir-france/"
+    },
+    {
+      "title": "eMudhra to exit global SSL/TLS certificate business",
+      "author": "bo0tzz",
+      "score": 691,
+      "comments": 499,
+      "url": "https://emudhra.com/en/press-release/emudhra-to-exit-global-ssl-tls-certificate-business"
+    },
+    {
+      "title": "Nvidia OpenShell",
+      "author": "niemandhier",
+      "score": 61,
+      "comments": 29,
+      "url": "https://github.com/NVIDIA/OpenShell"
+    },
+    {
+      "title": "Show HN: Run full iOS 16.5 firmware on Android Devices",
+      "author": "aghuang",
+      "score": 162,
+      "comments": 56,
+      "url": "https://github.com/oosexgang/hackios-xnu-kernel"
+    },
+    {
+      "title": "Getting ready to operate GNU Taler in Germany",
+      "author": "dewey",
+      "score": 91,
+      "comments": 30,
+      "url": "https://www.taler.net/en/news/2026-13.html"
+    }
+  ]
+}
