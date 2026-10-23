@@ -1,0 +1,165 @@
+{
+  "date": "2026-10-23",
+  "timestamp": "2026-10-23T11:48:44.263763-07:00",
+  "product_hunt": [
+    {
+      "name": "Product Hunt Visual Launch Editor",
+      "tagline": "See your launch as you build it",
+      "link": "https://www.producthunt.com/products/producthunt"
+    },
+    {
+      "name": "Polylane for Cloudflare",
+      "tagline": "An AI on-call engineer for your Cloudflare apps",
+      "link": "https://www.producthunt.com/products/polylane"
+    },
+    {
+      "name": "Termi Protocol",
+      "tagline": "Watch AI agents code in 3D and hand off the work",
+      "link": "https://www.producthunt.com/products/termi-protocol"
+    },
+    {
+      "name": "FLUX 3 Max",
+      "tagline": "fal’s FLUX 3 Max: 10-second AI video in about 12 seconds",
+      "link": "https://www.producthunt.com/products/fal-ai"
+    },
+    {
+      "name": "Truffle",
+      "tagline": "Fix messy tags, covers and duplicates in your Mac library",
+      "link": "https://www.producthunt.com/products/truffle-music-tag-editor"
+    }
+  ],
+  "toolify": [
+    {
+      "name": "Stackie.AI",
+      "description": "A life logger for journaling, tracking habits, managing information, and AI-assisted learning.",
+      "category": "Just launched",
+      "link": "https://www.toolify.ai/tool/stackie-ai-notes-tracker-memo-more"
+    },
+    {
+      "name": "Sprite Fusion",
+      "description": "AI tool for generating, editing, and animating game-ready pixel art",
+      "category": "Just launched",
+      "link": "https://www.toolify.ai/tool/sprite-fusion"
+    },
+    {
+      "name": "Orylia AI",
+      "description": "Multi-model AI image and video generator: Kling 4.0, Veo 3.1, Seedance 2.5, Nano Banana, GPT Image 2.5 and Midjourney in one workspace, with the cost of every run shown up front and a free daily allowance that needs no card.",
+      "category": "Just launched",
+      "link": "https://www.toolify.ai/tool/orylia-ai"
+    },
+    {
+      "name": "Kling 4.0 Online by CreateVision AI",
+      "description": "Kling 4.0 in the browser: 3–30 second video at 720p or 1080p from a prompt, keyframes, up to 15 references, or a clip you want edited. Stereo audio on every clip, per-second credits shown before you generate and refunded on failure.",
+      "category": "Just launched",
+      "link": "https://www.toolify.ai/tool/kling-4-0-online-by-createvision-ai"
+    },
+    {
+      "name": "kling 4.0",
+      "description": "Unified pay-as-you-go API access to AI models",
+      "category": "Just launched",
+      "link": "https://www.toolify.ai/tool/kling-4-0-reapi"
+    }
+  ],
+  "ai_tools": [],
+  "chrome_extensions": [
+    {
+      "name": "Grok Automation Tools - Grok Auto Workflow",
+      "description": "Free local batch prompt automation, media workflows, and downloads for Grok.com.",
+      "users": "1,000 users",
+      "rating": "4.4/5.0",
+      "link": "https://chromewebstore.google.com/detail/grok-automation-tools-gro/dnapbpgalicpcmafibnpfhbpleikagnh"
+    },
+    {
+      "name": "n8n Workflow Generator",
+      "description": "AI-powered n8n workflow builder, describe what you need, get a ready-to-use workflow on your canvas.",
+      "users": "176 users",
+      "rating": "5/5.0",
+      "link": "https://chromewebstore.google.com/detail/n8n-workflow-generator/obccapdjcgifbkomebcmmgbjckikanph"
+    },
+    {
+      "name": "Browser Workflow Automator",
+      "description": "Record, import, export, and replay browser workflows.",
+      "users": "36 users",
+      "rating": "5/5.0",
+      "link": "https://chromewebstore.google.com/detail/browser-workflow-automato/ddhicijjjapmppfodhbldidkoibecknd"
+    },
+    {
+      "name": "GHL Workflows JSON Exporter",
+      "description": "Export and import GHL workflow templates with a polished JSON editor. License support: https://ghlworkflowspro.fiftydevs.com",
+      "users": "472 users",
+      "rating": "4.5/5.0",
+      "link": "https://chromewebstore.google.com/detail/ghl-workflows-json-export/epnhegdiefihpjkgjkfmnkkobkhmfepk"
+    },
+    {
+      "name": "n8n Workflow Trigger",
+      "description": "Trigger n8n workflows from any web page with a simple right-click. Automate faster, smarter.",
+      "users": "220 users",
+      "rating": "0/5.0",
+      "link": "https://chromewebstore.google.com/detail/n8n-workflow-trigger/geekbgiepmeejeggiphblbjcodegedef"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "cloudflare/security-audit-skill",
+      "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+      "today_stars": "2,706 stars today"
+    },
+    {
+      "name": "php/php-src",
+      "description": "The PHP Interpreter",
+      "today_stars": "722 stars today"
+    },
+    {
+      "name": "anthropics/knowledge-work-plugins",
+      "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
+      "today_stars": "643 stars today"
+    },
+    {
+      "name": "NVIDIA/OpenShell",
+      "description": "OpenShell is the safe, private runtime for autonomous AI agents.",
+      "today_stars": "1,240 stars today"
+    },
+    {
+      "name": "Renhuai123/ziwei-doushu",
+      "description": "紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
+      "today_stars": "547 stars today"
+    }
+  ],
+  "hacker_news": [
+    {
+      "title": "Kimi K3.1 Pro and K3.1 Pro Highspeed",
+      "author": "Jowsey",
+      "score": 308,
+      "comments": 159,
+      "url": "https://www.kimi.ai/blog/kimi-k3-1-pro"
+    },
+    {
+      "title": "Today, we hacked what we'd set out to hack: the iPhone",
+      "author": "pavel_lishin",
+      "score": 434,
+      "comments": 274,
+      "url": "https://blog.calif.io/p/iphone"
+    },
+    {
+      "title": "Apple Music 404 Not Found",
+      "author": "frizlab",
+      "score": 79,
+      "comments": 22,
+      "url": "https://music.apple.com/this-url-doesnt-exist"
+    },
+    {
+      "title": "UUIDv7 doesn't have the properties you think it does",
+      "author": "ibobev",
+      "score": 49,
+      "comments": 22,
+      "url": "https://alexsci.com/blog/uuidv7-is-weird/"
+    },
+    {
+      "title": "Local Wikipedia: Wikipedia, but only for things a half hour walk from you",
+      "author": "sohkamyung",
+      "score": 1015,
+      "comments": 199,
+      "url": "https://edjefferson.com/localwiki/"
+    }
+  ]
+}
