@@ -1,0 +1,134 @@
+{
+  "date": "2026-10-24",
+  "timestamp": "2026-10-24T10:43:39.903300-07:00",
+  "product_hunt": [
+    {
+      "name": "Shedi",
+      "tagline": "Get back the space Xcode, Docker and node_modules ate",
+      "link": "https://www.producthunt.com/products/shedi"
+    },
+    {
+      "name": "Many Displays",
+      "tagline": "Zero clicks: windows back after sleep, unlock or replugging",
+      "link": "https://www.producthunt.com/products/many-displays"
+    },
+    {
+      "name": "1Password for Agents",
+      "tagline": "Let AI agents sign in for you without seeing your passwords",
+      "link": "https://www.producthunt.com/products/1password"
+    },
+    {
+      "name": "zCAD AI",
+      "tagline": "AI 3D that creates real parts, not just shapes",
+      "link": "https://www.producthunt.com/products/zcad-ai"
+    },
+    {
+      "name": "LinkIntel",
+      "tagline": "Post insights delivered direct to your AI",
+      "link": "https://www.producthunt.com/products/linkintel"
+    }
+  ],
+  "toolify": [],
+  "ai_tools": [],
+  "chrome_extensions": [
+    {
+      "name": "PiP Pro: Picture-in-Picture productivity tools",
+      "description": "Picture-in-Picture productivity boosting tools. Stream tab contents or take notes- always on top. Stop tab-switching, start working.",
+      "users": "2,000 users",
+      "rating": "3.8/5.0",
+      "link": "https://chromewebstore.google.com/detail/pip-pro-picture-in-pictur/jgicglkgkeagfglifmofmnongfnpbkjc"
+    },
+    {
+      "name": "CPQ Productivity Tools",
+      "description": "On-demand Oracle CPQ tools: Pipeline Viewer, GET-only REST APIs, admin, BOM validation, quote debugging, and BML search.",
+      "users": "384 users",
+      "rating": "5/5.0",
+      "link": "https://chromewebstore.google.com/detail/cpq-productivity-tools/cclcmepgialdphibhiemcncjkcebopba"
+    },
+    {
+      "name": "Productivity Tools Pro",
+      "description": "All-in-one productivity suite with 50+ privacy-focused tools: JSON Formatter, Pomodoro, SEO Tools, & more!",
+      "users": "N/A",
+      "rating": "5/5.0",
+      "link": "https://chromewebstore.google.com/detail/productivity-tools-pro/ffjljgdcdifgkafdkkocjjckaglboela"
+    },
+    {
+      "name": "Seller Utilities - Productivity Tools for Amazon Sellers",
+      "description": "Productivity tools for Amazon Seller Central.",
+      "users": "4,000 users",
+      "rating": "5/5.0",
+      "link": "https://chromewebstore.google.com/detail/seller-utilities-producti/giemlimlagcjbnoinmedklabpcclbapb"
+    },
+    {
+      "name": "Website Blocker — Block Sites, Focus Timer & Productivity Tools",
+      "description": "Block distracting websites, schedule focus sessions, and boost productivity. Keyword blocking, profiles, Pomodoro timer & more.",
+      "users": "30,000 users",
+      "rating": "4.7/5.0",
+      "link": "https://chromewebstore.google.com/detail/website-blocker-%E2%80%94-block-s/kniediipngcpmbmpeacaoinhoeipfina"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "cloudflare/security-audit-skill",
+      "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+      "today_stars": "2,271 stars today"
+    },
+    {
+      "name": "NVIDIA/OpenShell",
+      "description": "OpenShell is the safe, private runtime for autonomous AI agents.",
+      "today_stars": "893 stars today"
+    },
+    {
+      "name": "aws/agent-toolkit-for-aws",
+      "description": "Official, AWS-supported MCP servers, skills, and plugins to help AI agents build on AWS",
+      "today_stars": "11 stars today"
+    },
+    {
+      "name": "Nutlope/hallmark",
+      "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+      "today_stars": "570 stars today"
+    },
+    {
+      "name": "luongnv89/claude-howto",
+      "description": "A visual, example-driven guide to Claude Code — from basic concepts to advanced agents, with copy-paste templates that bring immediate value.",
+      "today_stars": "442 stars today"
+    }
+  ],
+  "hacker_news": [
+    {
+      "title": "Roku developer repositories moved from GitHub to GitLab",
+      "author": "cxr",
+      "score": 98,
+      "comments": 48,
+      "url": "https://blog.roku.com/developer/gitlab-move"
+    },
+    {
+      "title": "The St. Helena 5 pence coin shows Jonathan, a roughly 190 year old tortoise",
+      "author": "schleck8",
+      "score": 30,
+      "comments": 2,
+      "url": "https://de.numista.com/9866"
+    },
+    {
+      "title": "FreeDNS",
+      "author": "esher",
+      "score": 135,
+      "comments": 33,
+      "url": "https://freedns.afraid.org/"
+    },
+    {
+      "title": "Neural chip decodes interactions between brain regions",
+      "author": "giuliomagnifico",
+      "score": 36,
+      "comments": 5,
+      "url": "https://actu.epfl.ch/news/neural-chip-decodes-interactions-between-brain-r-2/"
+    },
+    {
+      "title": "Around a dozen banking apps began specifically permitting GrapheneOS",
+      "author": "privacyishuman",
+      "score": 520,
+      "comments": 184,
+      "url": "https://grapheneos.social/@GrapheneOS/117492375462459244"
+    }
+  ]
+}
