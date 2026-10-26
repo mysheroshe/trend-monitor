@@ -1,0 +1,134 @@
+{
+  "date": "2026-10-26",
+  "timestamp": "2026-10-26T13:14:59.672893-07:00",
+  "product_hunt": [
+    {
+      "name": "Strawberry 1.0",
+      "tagline": "AI Browser that saves your team >100h/week",
+      "link": "https://www.producthunt.com/products/strawberry"
+    },
+    {
+      "name": "WhoIsCooking",
+      "tagline": "See which AI agent is heating your Mac and cool it down.",
+      "link": "https://www.producthunt.com/products/whoiscooking"
+    },
+    {
+      "name": "Flipcorder",
+      "tagline": "A 1991 camcorder for your iPhone, one tape a day",
+      "link": "https://www.producthunt.com/products/flipcorder"
+    },
+    {
+      "name": "Kiwi",
+      "tagline": "A proactive AI assistant that texts you before you ask",
+      "link": "https://www.producthunt.com/products/kiwi-7"
+    },
+    {
+      "name": "CloudKnife",
+      "tagline": "Cut your cloud bill, not your performance",
+      "link": "https://www.producthunt.com/products/cloudknife"
+    }
+  ],
+  "toolify": [],
+  "ai_tools": [],
+  "chrome_extensions": [
+    {
+      "name": "Chat with all AI models (Gemini, Claude, DeepSeek…) & AI Agents | AITOPIA",
+      "description": "AI Agent Marketplace & AI Sidebar with all AI models (Gemini, Claude, DeepSeek & more) and hundreds of AI Agents",
+      "users": "1,000,000 users",
+      "rating": "4.8/5.0",
+      "link": "https://chromewebstore.google.com/detail/chat-with-all-ai-models-g/becfinhbfclcgokjlobojlnldbfillpf"
+    },
+    {
+      "name": "HARPA AI: Web Automation with ChatGPT, Claude, Gemini, Grok",
+      "description": "Free AI sidebar with ChatGPT, Claude, Gemini & DeepSeek. 100+ commands to automate, monitor prices, summarize & write.",
+      "users": "400,000 users",
+      "rating": "4.5/5.0",
+      "link": "https://chromewebstore.google.com/detail/harpa-ai-web-automation-w/eanggfilgoajaocelnaflolkadkeghjp"
+    },
+    {
+      "name": "Monica: All-In-One AI Assist & Smartest  AI Agent",
+      "description": "One stop AI Assistant with GPT, Claude, Gemini: Chat, Write, Translate, Search, Summarize, image generator, video generation",
+      "users": "3,000,000 users",
+      "rating": "4.8/5.0",
+      "link": "https://chromewebstore.google.com/detail/monica-all-in-one-ai-assi/ofpnmcalabcbjgholdjcjblkibolbppb"
+    },
+    {
+      "name": "GPTZero: AI Detection & Writing Replay",
+      "description": "Bring AI detection, citation checks, live essay feedback, and writing replays directly into Google Docs and your workflow.",
+      "users": "500,000 users",
+      "rating": "4.6/5.0",
+      "link": "https://chromewebstore.google.com/detail/gptzero-ai-detection-writ/kgobeoibakoahbfnlficpmibdbkdchap"
+    },
+    {
+      "name": "Sider: Chat with all AI: GPT-5, Claude, DeepSeek, Gemini, Grok",
+      "description": "ChatGPT, DeepSeek, Gemini, Claude, Grok all in one AI sidebar, for AI search, read, and write.",
+      "users": "5,000,000 users",
+      "rating": "4.9/5.0",
+      "link": "https://chromewebstore.google.com/detail/sider-chat-with-all-ai-gp/difoiogjjojoaoomphldepapgpbgkhkb"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "Nutlope/hallmark",
+      "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+      "today_stars": "2,235 stars today"
+    },
+    {
+      "name": "TauricResearch/TradingAgents",
+      "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+      "today_stars": "1,376 stars today"
+    },
+    {
+      "name": "JetBrains/thinkrail",
+      "description": "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
+      "today_stars": "1,156 stars today"
+    },
+    {
+      "name": "makecindy/cindy",
+      "description": "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
+      "today_stars": "1,268 stars today"
+    },
+    {
+      "name": "affaan-m/ECC",
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "today_stars": "987 stars today"
+    }
+  ],
+  "hacker_news": [
+    {
+      "title": "Microsoft Announces Type Server Protocol, Extension of Language Server Protocol",
+      "author": "adamnemecek",
+      "score": 111,
+      "comments": 54,
+      "url": "https://github.com/microsoft/pylance-release/blob/main/docs/tsp/type-server-protocol.md"
+    },
+    {
+      "title": "Sebastian Raschka's from-scratch video course on building reasoning models",
+      "author": "sgiannopoulos",
+      "score": 404,
+      "comments": 54,
+      "url": "https://magazine.sebastianraschka.com/p/building-reasoning-models"
+    },
+    {
+      "title": "Oldest GUI application that still runs on Windows 11",
+      "author": "enlyth",
+      "score": 106,
+      "comments": 38,
+      "url": "https://blog.enlyth.com/posts/oldest-windows-gui-app-win-11/"
+    },
+    {
+      "title": "CSS-Tricks has a new owner",
+      "author": "edent",
+      "score": 274,
+      "comments": 62,
+      "url": "https://css-tricks.com/css-tricks-has-a-new-owner/"
+    },
+    {
+      "title": "GPT-6.1 Terra",
+      "author": "meetpateltech",
+      "score": 301,
+      "comments": 156,
+      "url": "https://openai.com/index/introducing-gpt-6-1-terra/"
+    }
+  ]
+}
