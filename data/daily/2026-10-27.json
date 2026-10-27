@@ -1,0 +1,165 @@
+{
+  "date": "2026-10-27",
+  "timestamp": "2026-10-27T12:45:28.460595-07:00",
+  "product_hunt": [
+    {
+      "name": "TheySaid 4.0",
+      "tagline": "See how users will react, right where you build.",
+      "link": "https://www.producthunt.com/products/theysaid"
+    },
+    {
+      "name": "Orbit",
+      "tagline": "Stop doomscrolling. Earn every app unlock.",
+      "link": "https://www.producthunt.com/products/orbit-app-blocker"
+    },
+    {
+      "name": "SavorApp_AI",
+      "tagline": "Capture what matters and move your intentions forward",
+      "link": "https://www.producthunt.com/products/savor-3"
+    },
+    {
+      "name": "GPT-6.1 Terra",
+      "tagline": "Fast, capable computer use at half the price",
+      "link": "https://www.producthunt.com/products/openai"
+    },
+    {
+      "name": "OpenRadView",
+      "tagline": "Free, open-source viewer for your own CT, MRI and X-rays",
+      "link": "https://www.producthunt.com/products/openradview"
+    }
+  ],
+  "toolify": [
+    {
+      "name": "Stackie.AI",
+      "description": "A life logger for journaling, tracking habits, managing information, and AI-assisted learning.",
+      "category": "Just launched",
+      "link": "https://www.toolify.ai/tool/stackie-ai-notes-tracker-memo-more"
+    },
+    {
+      "name": "EarDub",
+      "description": "EarDub is a YouTube dubbing extension that voices recorded videos in your own language in real time, keeping pace with the original speaker.",
+      "category": "Just launched",
+      "link": "https://www.toolify.ai/tool/eardub"
+    },
+    {
+      "name": "Dola AI Video",
+      "description": "AI platform for generating videos and images from text and photos",
+      "category": "Just launched",
+      "link": "https://www.toolify.ai/tool/dola-ai-video"
+    },
+    {
+      "name": "Alenta",
+      "description": "Alenta is an AI sales agent that turns your existing website into a live agent that answers visitors, captures leads and books appointments 24/7, set up in about 2 minutes from a pasted URL.",
+      "category": "Just launched",
+      "link": "https://www.toolify.ai/tool/alenta"
+    },
+    {
+      "name": "PSL Scale",
+      "description": "AI-Powered PSL Face Analysis, Beauty Reports & Hairstyle Previews",
+      "category": "Just launched",
+      "link": "https://www.toolify.ai/tool/psl-scale"
+    }
+  ],
+  "ai_tools": [],
+  "chrome_extensions": [
+    {
+      "name": "Chat with all AI models (Gemini, Claude, DeepSeek…) & AI Agents | AITOPIA",
+      "description": "AI Agent Marketplace & AI Sidebar with all AI models (Gemini, Claude, DeepSeek & more) and hundreds of AI Agents",
+      "users": "1,000,000 users",
+      "rating": "4.8/5.0",
+      "link": "https://chromewebstore.google.com/detail/chat-with-all-ai-models-g/becfinhbfclcgokjlobojlnldbfillpf"
+    },
+    {
+      "name": "AI CHAT TRANSFER",
+      "description": "Seamlessly transfer your conversations between ChatGPT, Claude, Gemini, Grok, and more.",
+      "users": "685 users",
+      "rating": "5/5.0",
+      "link": "https://chromewebstore.google.com/detail/ai-chat-transfer/gfeohkmgfphhoodfhiaffmgcoeljhnhp"
+    },
+    {
+      "name": "AI Chat Navigator",
+      "description": "Jump through AI chats, save prompts, and refine drafts locally in your browser.",
+      "users": "126 users",
+      "rating": "3.5/5.0",
+      "link": "https://chromewebstore.google.com/detail/ai-chat-navigator/jnoonpeekddinkiecaonhocaflcgbhap"
+    },
+    {
+      "name": "Sider: Chat with all AI: GPT-5, Claude, DeepSeek, Gemini, Grok",
+      "description": "ChatGPT, DeepSeek, Gemini, Claude, Grok all in one AI sidebar, for AI search, read, and write.",
+      "users": "5,000,000 users",
+      "rating": "4.9/5.0",
+      "link": "https://chromewebstore.google.com/detail/sider-chat-with-all-ai-gp/difoiogjjojoaoomphldepapgpbgkhkb"
+    },
+    {
+      "name": "AI Chat Sync",
+      "description": "Quickly open AI websites and chat with multiple AIs concurrently",
+      "users": "223 users",
+      "rating": "5/5.0",
+      "link": "https://chromewebstore.google.com/detail/ai-chat-sync/afjalhepkaledpiempnidkhijjaolffi"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "Nutlope/hallmark",
+      "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+      "today_stars": "2,859 stars today"
+    },
+    {
+      "name": "nightly-labs/openbot",
+      "description": "A local-first desktop workspace for persistent AI teammates. Run Codex, Claude, and Grok with dedicated workspaces, task queues, file sharing, browser control, and agent-to-agent collaboration.",
+      "today_stars": "794 stars today"
+    },
+    {
+      "name": "obra/superpowers",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "today_stars": "608 stars today"
+    },
+    {
+      "name": "pbakaus/impeccable",
+      "description": "The design language that makes your AI harness better at design.",
+      "today_stars": "1,458 stars today"
+    },
+    {
+      "name": "makecindy/cindy",
+      "description": "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
+      "today_stars": "1,446 stars today"
+    }
+  ],
+  "hacker_news": [
+    {
+      "title": "Genie 4",
+      "author": "acossta",
+      "score": 441,
+      "comments": 249,
+      "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/"
+    },
+    {
+      "title": "Ghostty 1.4.0",
+      "author": "deaux",
+      "score": 342,
+      "comments": 116,
+      "url": "https://ghostty.org/docs/install/release-notes/1-4-0"
+    },
+    {
+      "title": "New 14‑inch MacBook Pro with M6",
+      "author": "beex",
+      "score": 136,
+      "comments": 140,
+      "url": "https://www.apple.com/in/newsroom/2026/10/apple-introduces-the-new-14-inch-macbook-pro-with-m6/"
+    },
+    {
+      "title": "Three TLS Bugs in GoAhead",
+      "author": "owenshen24",
+      "score": 18,
+      "comments": 2,
+      "url": "https://foxio.io/blog/choose-your-backend-three-tls-bugs-in-goahead"
+    },
+    {
+      "title": "Classification of Finite Simple Groups Formalized in Lean",
+      "author": "pfdietz",
+      "score": 89,
+      "comments": 24,
+      "url": "https://cfsg.axiommath.ai/"
+    }
+  ]
+}
