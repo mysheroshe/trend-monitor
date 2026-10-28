@@ -1,0 +1,134 @@
+{
+  "date": "2026-10-28",
+  "timestamp": "2026-10-28T12:59:19.933690-07:00",
+  "product_hunt": [
+    {
+      "name": "Dotverse",
+      "tagline": "Your Dot now with a crew",
+      "link": "https://www.producthunt.com/products/dotverse"
+    },
+    {
+      "name": "Zro: Uncensored Security Models",
+      "tagline": "Abliterated open models for security work",
+      "link": "https://www.producthunt.com/products/zro"
+    },
+    {
+      "name": "OpenLLM",
+      "tagline": "Take your AI tokens anywhere",
+      "link": "https://www.producthunt.com/products/openllm"
+    },
+    {
+      "name": "Tulu",
+      "tagline": "Autonomous marketing operations & analytics for SMBs",
+      "link": "https://www.producthunt.com/products/tulu"
+    },
+    {
+      "name": "WebAI by Opera",
+      "tagline": "Let websites use AI running on your computer",
+      "link": "https://www.producthunt.com/products/opera"
+    }
+  ],
+  "toolify": [],
+  "ai_tools": [],
+  "chrome_extensions": [
+    {
+      "name": "Chat with all AI models (Gemini, Claude, DeepSeek…) & AI Agents | AITOPIA",
+      "description": "AI Agent Marketplace & AI Sidebar with all AI models (Gemini, Claude, DeepSeek & more) and hundreds of AI Agents",
+      "users": "1,000,000 users",
+      "rating": "4.8/5.0",
+      "link": "https://chromewebstore.google.com/detail/chat-with-all-ai-models-g/becfinhbfclcgokjlobojlnldbfillpf"
+    },
+    {
+      "name": "HARPA AI: Web Automation with ChatGPT, Claude, Gemini, Grok",
+      "description": "Free AI sidebar with ChatGPT, Claude, Gemini & DeepSeek. 100+ commands to automate, monitor prices, summarize & write.",
+      "users": "400,000 users",
+      "rating": "4.5/5.0",
+      "link": "https://chromewebstore.google.com/detail/harpa-ai-web-automation-w/eanggfilgoajaocelnaflolkadkeghjp"
+    },
+    {
+      "name": "Monica: All-In-One AI Assist & Smartest  AI Agent",
+      "description": "One stop AI Assistant with GPT, Claude, Gemini: Chat, Write, Translate, Search, Summarize, image generator, video generation",
+      "users": "3,000,000 users",
+      "rating": "4.8/5.0",
+      "link": "https://chromewebstore.google.com/detail/monica-all-in-one-ai-assi/ofpnmcalabcbjgholdjcjblkibolbppb"
+    },
+    {
+      "name": "GPTZero: AI Detection & Writing Replay",
+      "description": "Bring AI detection, citation checks, live essay feedback, and writing replays directly into Google Docs and your workflow.",
+      "users": "500,000 users",
+      "rating": "4.6/5.0",
+      "link": "https://chromewebstore.google.com/detail/gptzero-ai-detection-writ/kgobeoibakoahbfnlficpmibdbkdchap"
+    },
+    {
+      "name": "Sider: Chat with all AI: GPT-5, Claude, DeepSeek, Gemini, Grok",
+      "description": "ChatGPT, DeepSeek, Gemini, Claude, Grok all in one AI sidebar, for AI search, read, and write.",
+      "users": "5,000,000 users",
+      "rating": "4.9/5.0",
+      "link": "https://chromewebstore.google.com/detail/sider-chat-with-all-ai-gp/difoiogjjojoaoomphldepapgpbgkhkb"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "JetBrains/thinkrail",
+      "description": "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
+      "today_stars": "1,075 stars today"
+    },
+    {
+      "name": "elayadesign/ai-design-skills",
+      "description": "无描述",
+      "today_stars": "1,395 stars today"
+    },
+    {
+      "name": "obra/superpowers",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "today_stars": "1,096 stars today"
+    },
+    {
+      "name": "HKUDS/DeepTutor",
+      "description": "DeepTutor: Lifelong Personalized Tutoring.https://deeptutor.info/.",
+      "today_stars": "2,376 stars today"
+    },
+    {
+      "name": "macro-inc/macro",
+      "description": "Macro is a unified workspace for teams: email, chat, docs, tasks, agents, calls, and CRM — @-linked together with shared AI memory.",
+      "today_stars": "106 stars today"
+    }
+  ],
+  "hacker_news": [
+    {
+      "title": "Why Is This Fingerprinting Script Creating Bioweapons?",
+      "author": "hazebooth",
+      "score": 215,
+      "comments": 37,
+      "url": "https://nullpt.rs/fingerprinting-bioweapons"
+    },
+    {
+      "title": "Gemini 4 Carbon",
+      "author": "acossta",
+      "score": 531,
+      "comments": 447,
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/"
+    },
+    {
+      "title": "CNC Stone Carving",
+      "author": "bschne",
+      "score": 298,
+      "comments": 102,
+      "url": "https://carmelitegothic.com/cnc-stone-carving/"
+    },
+    {
+      "title": "MacBook Pro with PROLED XDR Display and Touch",
+      "author": "etothet",
+      "score": 329,
+      "comments": 564,
+      "url": "https://www.apple.com/macbook-pro/proled-xdr-display/"
+    },
+    {
+      "title": "Dayjob: Tax – evaluating AI agents on 50 professional tax assignments",
+      "author": "landonxi",
+      "score": 124,
+      "comments": 76,
+      "url": "https://surgehq.ai/blog/dayjob-tax"
+    }
+  ]
+}
