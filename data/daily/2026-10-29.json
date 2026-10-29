@@ -1,0 +1,134 @@
+{
+  "date": "2026-10-29",
+  "timestamp": "2026-10-29T12:57:11.964611-07:00",
+  "product_hunt": [
+    {
+      "name": "Voxel51 Multimodal",
+      "tagline": "Better data. Smarter robots. Repeat.",
+      "link": "https://www.producthunt.com/products/voxel51"
+    },
+    {
+      "name": "Gologin Cloud Browser",
+      "tagline": "Cloud browser for AI agents and tough sites",
+      "link": "https://www.producthunt.com/products/gologin"
+    },
+    {
+      "name": "Scape",
+      "tagline": "An intelligent email inbox that works for you",
+      "link": "https://www.producthunt.com/products/scape-4"
+    },
+    {
+      "name": "Empacer",
+      "tagline": "The voice-first assistant for small business owners",
+      "link": "https://www.producthunt.com/products/empacer"
+    },
+    {
+      "name": "ChatInbox",
+      "tagline": "Email that groups your inbox by contact",
+      "link": "https://www.producthunt.com/products/chatinbox-2"
+    }
+  ],
+  "toolify": [],
+  "ai_tools": [],
+  "chrome_extensions": [
+    {
+      "name": "Chat with all AI models (Gemini, Claude, DeepSeek…) & AI Agents | AITOPIA",
+      "description": "AI Agent Marketplace & AI Sidebar with all AI models (Gemini, Claude, DeepSeek & more) and hundreds of AI Agents",
+      "users": "1,000,000 users",
+      "rating": "4.8/5.0",
+      "link": "https://chromewebstore.google.com/detail/chat-with-all-ai-models-g/becfinhbfclcgokjlobojlnldbfillpf"
+    },
+    {
+      "name": "HARPA AI: Web Automation with ChatGPT, Claude, Gemini, Grok",
+      "description": "Free AI sidebar with ChatGPT, Claude, Gemini & DeepSeek. 100+ commands to automate, monitor prices, summarize & write.",
+      "users": "400,000 users",
+      "rating": "4.5/5.0",
+      "link": "https://chromewebstore.google.com/detail/harpa-ai-web-automation-w/eanggfilgoajaocelnaflolkadkeghjp"
+    },
+    {
+      "name": "Monica: All-In-One AI Assist & Smartest  AI Agent",
+      "description": "One stop AI Assistant with GPT, Claude, Gemini: Chat, Write, Translate, Search, Summarize, image generator, video generation",
+      "users": "3,000,000 users",
+      "rating": "4.8/5.0",
+      "link": "https://chromewebstore.google.com/detail/monica-all-in-one-ai-assi/ofpnmcalabcbjgholdjcjblkibolbppb"
+    },
+    {
+      "name": "GPTZero: AI Detection & Writing Replay",
+      "description": "Bring AI detection, citation checks, live essay feedback, and writing replays directly into Google Docs and your workflow.",
+      "users": "500,000 users",
+      "rating": "4.6/5.0",
+      "link": "https://chromewebstore.google.com/detail/gptzero-ai-detection-writ/kgobeoibakoahbfnlficpmibdbkdchap"
+    },
+    {
+      "name": "Sider: Chat with all AI: GPT-5, Claude, DeepSeek, Gemini, Grok",
+      "description": "ChatGPT, DeepSeek, Gemini, Claude, Grok all in one AI sidebar, for AI search, read, and write.",
+      "users": "5,000,000 users",
+      "rating": "4.9/5.0",
+      "link": "https://chromewebstore.google.com/detail/sider-chat-with-all-ai-gp/difoiogjjojoaoomphldepapgpbgkhkb"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "HKUDS/DeepTutor",
+      "description": "DeepTutor: Lifelong Personalized Tutoring.https://deeptutor.info/.",
+      "today_stars": "1,926 stars today"
+    },
+    {
+      "name": "obra/superpowers",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "today_stars": "1,037 stars today"
+    },
+    {
+      "name": "pbakaus/impeccable",
+      "description": "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
+      "today_stars": "2,881 stars today"
+    },
+    {
+      "name": "JetBrains/thinkrail",
+      "description": "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
+      "today_stars": "1,116 stars today"
+    },
+    {
+      "name": "milind-soni/OpenMausBot",
+      "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
+      "today_stars": "1,190 stars today"
+    }
+  ],
+  "hacker_news": [
+    {
+      "title": "We're releasing the weights of Mistral Large 4",
+      "author": "kuberwastaken",
+      "score": 874,
+      "comments": 248,
+      "url": "https://mistral.ai/news/mistral-large-4-oss/"
+    },
+    {
+      "title": "The importance of communities around software",
+      "author": "amcclure",
+      "score": 14,
+      "comments": 5,
+      "url": "https://lumi.codeberg.page/blog/software-community.html"
+    },
+    {
+      "title": "Show HN: Auto Dismiss Mac OS \"Allow <app> to find devices on local networks?\"",
+      "author": "johncassil",
+      "score": 23,
+      "comments": 9,
+      "url": "https://github.com/johncassil/dontallow"
+    },
+    {
+      "title": "H.264 Is Magic (2016)",
+      "author": "ea016",
+      "score": 195,
+      "comments": 97,
+      "url": "https://sidbala.com/h-264-is-magic/"
+    },
+    {
+      "title": "Alleged Chinese spy had 'close relationship' with Nvidia boss Jensen Huang",
+      "author": "mgh2",
+      "score": 34,
+      "comments": 2,
+      "url": "https://nypost.com/2026/10/29/business/alleged-chinese-spy-had-close-relationship-with-nvidia-boss-jensen-huang-report/"
+    }
+  ]
+}
