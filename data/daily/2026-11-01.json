@@ -1,0 +1,134 @@
+{
+  "date": "2026-11-01",
+  "timestamp": "2026-11-01T11:17:13.355339-08:00",
+  "product_hunt": [
+    {
+      "name": "magpie",
+      "tagline": "everything you’ve saved, in one visual library",
+      "link": "https://www.producthunt.com/products/magpie-14"
+    },
+    {
+      "name": "Screen Studio 4.0",
+      "tagline": "Glass Loupe, Camera Cutout, Edit by Transcript, and more",
+      "link": "https://www.producthunt.com/products/screen-studio"
+    },
+    {
+      "name": "Precise Edit by Ideogram",
+      "tagline": "Precise editing with context window",
+      "link": "https://www.producthunt.com/products/ideogram"
+    },
+    {
+      "name": "ClawsGO Science",
+      "tagline": "The AI research agent with its own cloud lab",
+      "link": "https://www.producthunt.com/products/clawsgo-science"
+    },
+    {
+      "name": "Riverside Agents",
+      "tagline": "A team of AI agents for video: produce, edit, clip, post",
+      "link": "https://www.producthunt.com/products/riverside-fm"
+    }
+  ],
+  "toolify": [],
+  "ai_tools": [],
+  "chrome_extensions": [
+    {
+      "name": "QuestionAI Homework Powered AI Assistant",
+      "description": "AI Copilot can answer screenshot queries and assist with writing, summarizing, translating, and grammar checking.",
+      "users": "100,000 users",
+      "rating": "4.7/5.0",
+      "link": "https://chromewebstore.google.com/detail/questionai-homework-power/hajphibbdloomfdkeoejchiikjggnaif"
+    },
+    {
+      "name": "Monica: All-In-One AI Assist & Smartest  AI Agent",
+      "description": "One stop AI Assistant with GPT, Claude, Gemini: Chat, Write, Translate, Search, Summarize, image generator, video generation",
+      "users": "3,000,000 users",
+      "rating": "4.8/5.0",
+      "link": "https://chromewebstore.google.com/detail/monica-all-in-one-ai-assi/ofpnmcalabcbjgholdjcjblkibolbppb"
+    },
+    {
+      "name": "AI Assistant",
+      "description": "AI Assistant helps you answer question, summarize and explain pages and texts!",
+      "users": "1,000 users",
+      "rating": "3/5.0",
+      "link": "https://chromewebstore.google.com/detail/ai-assistant/manahiemhgolofngagbjjefiibejhcgm"
+    },
+    {
+      "name": "Voila – AI Assistant, Copilot and AI Writer",
+      "description": "Seamless personal AI assistant powered by GPT-5 to help you create, write, summarize, brainstorm, and research on any website.",
+      "users": "70,000 users",
+      "rating": "4.6/5.0",
+      "link": "https://chromewebstore.google.com/detail/voila-%E2%80%93-ai-assistant-copi/cakobppopkpmmglabcdcklncbckjpkcl"
+    },
+    {
+      "name": "GEE AI Assistant",
+      "description": "Generate, modify, and fix Google Earth Engine code using AI Models. Now with new Voice Mode & 5200+ Datasets!",
+      "users": "1,000 users",
+      "rating": "5/5.0",
+      "link": "https://chromewebstore.google.com/detail/gee-ai-assistant/kldhacnbicjpbdiebjjflnhgcmheokkl"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "thedotmack/claude-mem",
+      "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
+      "today_stars": "1,527 stars today"
+    },
+    {
+      "name": "lightpanda-io/browser",
+      "description": "Lightpanda: the headless browser designed for AI and automation",
+      "today_stars": "827 stars today"
+    },
+    {
+      "name": "shiyu-coder/Kronos",
+      "description": "Kronos: A Foundation Model for the Language of Financial Markets",
+      "today_stars": "611 stars today"
+    },
+    {
+      "name": "pingdotgg/t3code",
+      "description": "无描述",
+      "today_stars": "3,100 stars today"
+    },
+    {
+      "name": "milind-soni/OpenMausBot",
+      "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
+      "today_stars": "919 stars today"
+    }
+  ],
+  "hacker_news": [
+    {
+      "title": "Show HN: HackerBooks – HackerTube, but for books mentioned on HN",
+      "author": "roansh",
+      "score": 393,
+      "comments": 114,
+      "url": "https://hackerbooks.org"
+    },
+    {
+      "title": "Mathematics has changed. Let's act like it",
+      "author": "smilelamp",
+      "score": 35,
+      "comments": 27,
+      "url": "https://terrytao.wordpress.com/2026/11/01/mathematics-has-changed-lets-act-like-it/"
+    },
+    {
+      "title": "HackerTube: YouTube built from videos recommended by HN",
+      "author": "karpathy",
+      "score": 1939,
+      "comments": 488,
+      "url": "https://karpathy.bearblog.dev/hacker-tube/"
+    },
+    {
+      "title": "Patrick Stewart taught us what good men do with power",
+      "author": "rhaynes",
+      "score": 152,
+      "comments": 105,
+      "url": "https://www.vox.com/politics/508526/patrick-stewart-jean-luc-picard-star-trek-liberalism"
+    },
+    {
+      "title": "Police chief unplugs Flock cameras after company ignores contract cancellation",
+      "author": "entryleveljobsc",
+      "score": 312,
+      "comments": 106,
+      "url": "https://www.tomshardware.com/tech-industry/big-tech/police-chief-physically-unplugs-flock-cameras-after-the-company-ignores-contract-cancellation-city-takes-matters-into-its-own-hands-amid-privacy-controversies"
+    }
+  ]
+}
