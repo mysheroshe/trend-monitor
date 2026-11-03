@@ -1,0 +1,134 @@
+{
+  "date": "2026-11-03",
+  "timestamp": "2026-11-03T12:43:06.973111-08:00",
+  "product_hunt": [
+    {
+      "name": "AgentKit by Scalekit",
+      "tagline": "MCP gateway for production agents that acts on your behalf",
+      "link": "https://www.producthunt.com/products/scalekit"
+    },
+    {
+      "name": "HoldTalk",
+      "tagline": "Hold fn, speak, and the text appears in any Mac app",
+      "link": "https://www.producthunt.com/products/holdtalk"
+    },
+    {
+      "name": "Beamfy",
+      "tagline": "AI vision assistant for blind people, live in 74 languages",
+      "link": "https://www.producthunt.com/products/beamfy"
+    },
+    {
+      "name": "IQ",
+      "tagline": "The dashboard for your team's AI use",
+      "link": "https://www.producthunt.com/products/iq-code"
+    },
+    {
+      "name": "Beaquaro Studio",
+      "tagline": "Write once, post everywhere. Your link in bio, too.",
+      "link": "https://www.producthunt.com/products/beaquaro-studio"
+    }
+  ],
+  "toolify": [],
+  "ai_tools": [],
+  "chrome_extensions": [
+    {
+      "name": "Chat with all AI models (Gemini, Claude, DeepSeek…) & AI Agents | AITOPIA",
+      "description": "AI Agent Marketplace & AI Sidebar with all AI models (Gemini, Claude, DeepSeek & more) and hundreds of AI Agents",
+      "users": "1,000,000 users",
+      "rating": "4.8/5.0",
+      "link": "https://chromewebstore.google.com/detail/chat-with-all-ai-models-g/becfinhbfclcgokjlobojlnldbfillpf"
+    },
+    {
+      "name": "HARPA AI: Web Automation with ChatGPT, Claude, Gemini, Grok",
+      "description": "Free AI sidebar with ChatGPT, Claude, Gemini & DeepSeek. 100+ commands to automate, monitor prices, summarize & write.",
+      "users": "400,000 users",
+      "rating": "4.5/5.0",
+      "link": "https://chromewebstore.google.com/detail/harpa-ai-web-automation-w/eanggfilgoajaocelnaflolkadkeghjp"
+    },
+    {
+      "name": "Monica: All-In-One AI Assist & Smartest  AI Agent",
+      "description": "One stop AI Assistant with GPT, Claude, Gemini: Chat, Write, Translate, Search, Summarize, image generator, video generation",
+      "users": "3,000,000 users",
+      "rating": "4.8/5.0",
+      "link": "https://chromewebstore.google.com/detail/monica-all-in-one-ai-assi/ofpnmcalabcbjgholdjcjblkibolbppb"
+    },
+    {
+      "name": "GPTZero: AI Detection & Writing Replay",
+      "description": "Bring AI detection, citation checks, live essay feedback, and writing replays directly into Google Docs and your workflow.",
+      "users": "500,000 users",
+      "rating": "4.6/5.0",
+      "link": "https://chromewebstore.google.com/detail/gptzero-ai-detection-writ/kgobeoibakoahbfnlficpmibdbkdchap"
+    },
+    {
+      "name": "Sider: Chat with all AI: GPT-5, Claude, DeepSeek, Gemini, Grok",
+      "description": "ChatGPT, DeepSeek, Gemini, Claude, Grok all in one AI sidebar, for AI search, read, and write.",
+      "users": "5,000,000 users",
+      "rating": "4.9/5.0",
+      "link": "https://chromewebstore.google.com/detail/sider-chat-with-all-ai-gp/difoiogjjojoaoomphldepapgpbgkhkb"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "thedotmack/claude-mem",
+      "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
+      "today_stars": "1,138 stars today"
+    },
+    {
+      "name": "vercel-labs/agent-desktop",
+      "description": "Computer use CLI for AI agents",
+      "today_stars": "3,792 stars today"
+    },
+    {
+      "name": "max-sixty/worktrunk",
+      "description": "Worktrunk is a CLI for Git worktree management, designed for parallel AI agent workflows",
+      "today_stars": "437 stars today"
+    },
+    {
+      "name": "JustVugg/colibri",
+      "description": "A hierarchical inference engine for frontier MoE models: hot experts on the GPU (CUDA, Vulkan), warm ones in RAM, cold ones streamed from NVMe. Written in C, runs on the hardware you already own.",
+      "today_stars": "803 stars today"
+    },
+    {
+      "name": "mattpocock/skills",
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "today_stars": "1,164 stars today"
+    }
+  ],
+  "hacker_news": [
+    {
+      "title": "Preparing for the Flipper One Kickstarter and opening pre-orders",
+      "author": "user_7832",
+      "score": 63,
+      "comments": 25,
+      "url": "https://flipper.net/pages/flipper-one"
+    },
+    {
+      "title": "Jailbreaking my car's navigation system just so I can change the time",
+      "author": "xx_ns",
+      "score": 422,
+      "comments": 158,
+      "url": "https://blog.nns.ee/2026/11/02/renault-hack/"
+    },
+    {
+      "title": "Qwen 3.8 27B on my laptop can interpret model weights, too",
+      "author": "theanonymousone",
+      "score": 314,
+      "comments": 101,
+      "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/"
+    },
+    {
+      "title": "Stringman, an $800 open-source room scale gripper robot",
+      "author": "nharada",
+      "score": 141,
+      "comments": 75,
+      "url": "https://neufangled.com/"
+    },
+    {
+      "title": "Postman silently auto-installs AI plugins and attempts to share all API data",
+      "author": "sidgarimella",
+      "score": 725,
+      "comments": 236,
+      "url": "https://github.com/postmanlabs/postman-app-support/issues/14370"
+    }
+  ]
+}
