@@ -1,0 +1,134 @@
+{
+  "date": "2026-11-05",
+  "timestamp": "2026-11-05T13:17:34.187379-08:00",
+  "product_hunt": [
+    {
+      "name": "Scrollsnacks",
+      "tagline": "Launch videos, broken down second by second",
+      "link": "https://www.producthunt.com/products/scrollsnacks"
+    },
+    {
+      "name": "Seamcult",
+      "tagline": "A pattern design tool for the LLM era ('paper' for patterns)",
+      "link": "https://www.producthunt.com/products/seamcult"
+    },
+    {
+      "name": "Nemotron 3.5 Transcribe",
+      "tagline": "Intelligent Transcription with a Speech LLM",
+      "link": "https://www.producthunt.com/products/nvidia"
+    },
+    {
+      "name": "SnapTiles",
+      "tagline": "Build with magnetic tiles in 3D, free in your browser",
+      "link": "https://www.producthunt.com/products/snaptiles"
+    },
+    {
+      "name": "Wingmen",
+      "tagline": "Agentic outreach with real intent data",
+      "link": "https://www.producthunt.com/products/wingmen"
+    }
+  ],
+  "toolify": [],
+  "ai_tools": [],
+  "chrome_extensions": [
+    {
+      "name": "React Developer Tools",
+      "description": "Adds React debugging tools to the Chrome Developer Tools.\n\nCreated from revision 1d34f91dfd.",
+      "users": "5,000,000 users",
+      "rating": "3.5/5.0",
+      "link": "https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi"
+    },
+    {
+      "name": "Web Developer",
+      "description": "Adds a toolbar button with various web developer tools.",
+      "users": "1,000,000 users",
+      "rating": "4.3/5.0",
+      "link": "https://chromewebstore.google.com/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm"
+    },
+    {
+      "name": "Next Experience Developer Tools",
+      "description": "Debugging/Profiling tools for your ServiceNow Next Experiences.",
+      "users": "10,000 users",
+      "rating": "4.4/5.0",
+      "link": "https://chromewebstore.google.com/detail/next-experience-developer/ilkodijinjhpdnnfpccijledlapkfmhc"
+    },
+    {
+      "name": "Preact Developer Tools",
+      "description": "Adds debugging tools for Preact to Chrome",
+      "users": "7,000 users",
+      "rating": "4.5/5.0",
+      "link": "https://chromewebstore.google.com/detail/preact-developer-tools/ilcajpmogmhpliinlbcdebhbcanbghmd"
+    },
+    {
+      "name": "Make DevTool",
+      "description": "Inspect your scenarios in Make at a glance!",
+      "users": "20,000 users",
+      "rating": "3.8/5.0",
+      "link": "https://chromewebstore.google.com/detail/make-devtool/ainnemkhpnjgkhcdkfbhmlenkhehmfhi"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "NVIDIA/auto-ontology",
+      "description": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows.",
+      "today_stars": "2,707 stars today"
+    },
+    {
+      "name": "mattpocock/skills",
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "today_stars": "2,053 stars today"
+    },
+    {
+      "name": "garrytan/gstack",
+      "description": "Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA",
+      "today_stars": "608 stars today"
+    },
+    {
+      "name": "Usagi-org/ai-goofish-monitor",
+      "description": "基于 Playwright 和AI实现的闲鱼多任务实时/定时监控与智能分析系统，配备了功能完善的后台管理UI。帮助用户从闲鱼海量商品中，找到心仪产品。",
+      "today_stars": "242 stars today"
+    },
+    {
+      "name": "D4Vinci/Scrapling",
+      "description": "🕷️ The BEST Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here:https://discord.gg/EMgGbDceNQand follow here for daily tips and tricks:https://x.com/Scrapling_dev",
+      "today_stars": "1,661 stars today"
+    }
+  ],
+  "hacker_news": [
+    {
+      "title": "sshole",
+      "author": "josemrb",
+      "score": 2040,
+      "comments": 518,
+      "url": "https://sshhole.com"
+    },
+    {
+      "title": "Kagi Search for Everyone",
+      "author": "elashri",
+      "score": 70,
+      "comments": 22,
+      "url": "https://kagi.com/changelog"
+    },
+    {
+      "title": "Alpine Linux Security Advisory: OpenSSH-server password authentication bypass",
+      "author": "pantalaimon",
+      "score": 489,
+      "comments": 97,
+      "url": "https://alpinelinux.org/posts/2026-11-05-openssh-password-authentication-bypass/"
+    },
+    {
+      "title": "The Hackintosh Reborn",
+      "author": "rubatuga",
+      "score": 90,
+      "comments": 26,
+      "url": "https://www.naut.ca/blog/2026/11/05/the-hackintosh-reborn-with-ai/"
+    },
+    {
+      "title": "Window Sweaters",
+      "author": "nickswalker",
+      "score": 157,
+      "comments": 58,
+      "url": "https://github.com/saragordic/window-sweaters"
+    }
+  ]
+}
