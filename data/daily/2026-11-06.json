@@ -1,0 +1,134 @@
+{
+  "date": "2026-11-06",
+  "timestamp": "2026-11-06T12:40:42.943908-08:00",
+  "product_hunt": [
+    {
+      "name": "Cursor Craft",
+      "tagline": "Custom cursors for Mac",
+      "link": "https://www.producthunt.com/products/cursor-craft"
+    },
+    {
+      "name": "Magic Wonders",
+      "tagline": "A smart wand to duel, control your home and create magic",
+      "link": "https://www.producthunt.com/products/magic-wonders"
+    },
+    {
+      "name": "Meadow",
+      "tagline": "Hidden songs on your walk, chosen by people, not algorithms",
+      "link": "https://www.producthunt.com/products/meadow-3"
+    },
+    {
+      "name": "Native Tasks for Obsidian",
+      "tagline": "A native Mac app for your Obsidian tasks",
+      "link": "https://www.producthunt.com/products/native-tasks-for-obsidian"
+    },
+    {
+      "name": "pwned.coffee",
+      "tagline": "A live board of security flaws",
+      "link": "https://www.producthunt.com/products/pwned-coffee"
+    }
+  ],
+  "toolify": [],
+  "ai_tools": [],
+  "chrome_extensions": [
+    {
+      "name": "HARPA AI: Web Automation with ChatGPT, Claude, Gemini, Grok",
+      "description": "Free AI sidebar with ChatGPT, Claude, Gemini & DeepSeek. 100+ commands to automate, monitor prices, summarize & write.",
+      "users": "400,000 users",
+      "rating": "4.5/5.0",
+      "link": "https://chromewebstore.google.com/detail/harpa-ai-web-automation-w/eanggfilgoajaocelnaflolkadkeghjp"
+    },
+    {
+      "name": "vTech Automation",
+      "description": "vTech automation will help user to automate such processes which requires human involvement.",
+      "users": "227 users",
+      "rating": "5/5.0",
+      "link": "https://chromewebstore.google.com/detail/vtech-automation/jbjkfjnokaapdlpiaaeamokdacnieagh"
+    },
+    {
+      "name": "Automa",
+      "description": "From auto-fill forms, doing a repetitive task, taking a screenshot, to scraping data of the website, it's up to you what you want…",
+      "users": "200,000 users",
+      "rating": "3.9/5.0",
+      "link": "https://chromewebstore.google.com/detail/automa/infppggnoaenmfagbfknfkancpbljcca"
+    },
+    {
+      "name": "Botz Automation",
+      "description": "Extension for botz capture and recorder services",
+      "users": "187 users",
+      "rating": "5/5.0",
+      "link": "https://chromewebstore.google.com/detail/botz-automation/ancgeemepmfnajagdicjmccinmnnclfa"
+    },
+    {
+      "name": "Browserflow - Web Scraping & Web Automation",
+      "description": "Automate your work on any website.",
+      "users": "20,000 users",
+      "rating": "4.9/5.0",
+      "link": "https://chromewebstore.google.com/detail/browserflow-web-scraping/hfjnppljknigdnnpocjjgdcfmnodoafe"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "zed-industries/zed",
+      "description": "Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
+      "today_stars": "292 stars today"
+    },
+    {
+      "name": "NVIDIA/auto-ontology",
+      "description": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows.",
+      "today_stars": "2,005 stars today"
+    },
+    {
+      "name": "rails/rails",
+      "description": "Ruby on Rails",
+      "today_stars": "152 stars today"
+    },
+    {
+      "name": "mpv-player/mpv",
+      "description": "🎥 Command line media player",
+      "today_stars": "36 stars today"
+    },
+    {
+      "name": "rust-lang/rust",
+      "description": "Empowering everyone to build reliable and efficient software.",
+      "today_stars": "186 stars today"
+    }
+  ],
+  "hacker_news": [
+    {
+      "title": "A Jev that can ask Opus for help gives Opus accuracy at 4x lower cost",
+      "author": "theanomaly",
+      "score": 57,
+      "comments": 9,
+      "url": "https://hightouch.com/blog/llm-judges-identity-resolution"
+    },
+    {
+      "title": "Firecracker VM Escape: PwnEscape Part 2",
+      "author": "SerCe",
+      "score": 60,
+      "comments": 19,
+      "url": "https://pwn.ai/blog/firecracker-escape"
+    },
+    {
+      "title": "US FAA says it will phase out floppy disks from air traffic control by 2028",
+      "author": "ChrisArchitect",
+      "score": 189,
+      "comments": 156,
+      "url": "https://www.reuters.com/world/us/us-faa-says-it-will-phase-out-floppy-disks-air-traffic-control-by-2028-2026-11-05/"
+    },
+    {
+      "title": "As the Japanese Countryside Empties Out, Wildlife Is Disappearing",
+      "author": "rdmuser",
+      "score": 34,
+      "comments": 17,
+      "url": "https://e360.yale.edu/digest/japan-depopulation-biodiversity"
+    },
+    {
+      "title": "Tesla to wind down Cybertruck production",
+      "author": "PLenz",
+      "score": 622,
+      "comments": 1373,
+      "url": "https://www.nbcnews.com/tech/tech-news/tesla-wind-cybertruck-production-years-poor-sales-markets-rcna607817"
+    }
+  ]
+}
