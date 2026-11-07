@@ -1,0 +1,134 @@
+{
+  "date": "2026-11-07",
+  "timestamp": "2026-11-07T11:11:03.155795-08:00",
+  "product_hunt": [
+    {
+      "name": "Fleeep",
+      "tagline": "The notes app for people who make things.",
+      "link": "https://www.producthunt.com/products/fleeep"
+    },
+    {
+      "name": "Deal Pilot",
+      "tagline": "AI SDR that books meetings in Japan, the US & SE Asia",
+      "link": "https://www.producthunt.com/products/deal-pilot"
+    },
+    {
+      "name": "seam",
+      "tagline": "Turn your Mac's notch into a Dynamic Island",
+      "link": "https://www.producthunt.com/products/seam-2"
+    },
+    {
+      "name": "ChatGPT Images 2.6",
+      "tagline": "Create, edit, and animate images with AI",
+      "link": "https://www.producthunt.com/products/openai"
+    },
+    {
+      "name": "Exa Monitors v2",
+      "tagline": "Web search on a schedule that calls your agent, $2/1k runs",
+      "link": "https://www.producthunt.com/products/exa-ai"
+    }
+  ],
+  "toolify": [],
+  "ai_tools": [],
+  "chrome_extensions": [
+    {
+      "name": "QuestionAI Homework Powered AI Assistant",
+      "description": "AI Copilot can answer screenshot queries and assist with writing, summarizing, translating, and grammar checking.",
+      "users": "100,000 users",
+      "rating": "4.7/5.0",
+      "link": "https://chromewebstore.google.com/detail/questionai-homework-power/hajphibbdloomfdkeoejchiikjggnaif"
+    },
+    {
+      "name": "AI Assistant",
+      "description": "AI Assistant helps you answer question, summarize and explain pages and texts!",
+      "users": "1,000 users",
+      "rating": "3/5.0",
+      "link": "https://chromewebstore.google.com/detail/ai-assistant/manahiemhgolofngagbjjefiibejhcgm"
+    },
+    {
+      "name": "AI Voice Assistant – Smart Browser Copilot",
+      "description": "AI assistant that works inside your browser tab. Ask by voice and get instant, context-aware AI responses.",
+      "users": "336 users",
+      "rating": "3.9/5.0",
+      "link": "https://chromewebstore.google.com/detail/ai-voice-assistant-%E2%80%93-smar/daamboajoclakkelbnglldlckknjfdjb"
+    },
+    {
+      "name": "Monica: All-In-One AI Assist & Smartest  AI Agent",
+      "description": "One stop AI Assistant with GPT, Claude, Gemini: Chat, Write, Translate, Search, Summarize, image generator, video generation",
+      "users": "3,000,000 users",
+      "rating": "4.8/5.0",
+      "link": "https://chromewebstore.google.com/detail/monica-all-in-one-ai-assi/ofpnmcalabcbjgholdjcjblkibolbppb"
+    },
+    {
+      "name": "Voila – AI Assistant, Copilot and AI Writer",
+      "description": "Seamless personal AI assistant powered by GPT-5 to help you create, write, summarize, brainstorm, and research on any website.",
+      "users": "70,000 users",
+      "rating": "4.6/5.0",
+      "link": "https://chromewebstore.google.com/detail/voila-%E2%80%93-ai-assistant-copi/cakobppopkpmmglabcdcklncbckjpkcl"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "vercel-labs/agent-browser",
+      "description": "Browser automation CLI for AI agents",
+      "today_stars": "180 stars today"
+    },
+    {
+      "name": "cloudflare/security-audit-skill",
+      "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+      "today_stars": "2,088 stars today"
+    },
+    {
+      "name": "google/skills",
+      "description": "Agent Skills for Google products and technologies",
+      "today_stars": "449 stars today"
+    },
+    {
+      "name": "mattpocock/skills",
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "today_stars": "1,111 stars today"
+    },
+    {
+      "name": "anthropics/skills",
+      "description": "Public repository for Agent Skills",
+      "today_stars": "386 stars today"
+    }
+  ],
+  "hacker_news": [
+    {
+      "title": "Microsoft Researcher John Langford Exits. AI Frontiers Group Declared Finished",
+      "author": "srean",
+      "score": 75,
+      "comments": 18,
+      "url": "https://businessexaminer.ca/victoria-articles/item/microsoft-researcher-john-langford-exits-as-ai-frontiers-group-is-declared/"
+    },
+    {
+      "title": "What I run on my $10 USD OpenStick, Linux, Homelab",
+      "author": "LaurensBER",
+      "score": 46,
+      "comments": 8,
+      "url": "https://blog.bosscher.ch/posts/openstick/"
+    },
+    {
+      "title": "The End of AI Frontiers",
+      "author": "andsoitis",
+      "score": 50,
+      "comments": 17,
+      "url": "https://hunch.net/?p=13764006"
+    },
+    {
+      "title": "Show HN: Coldframe, a honeypot that poses as a supermarket fridge controller",
+      "author": "hedgerow-dev",
+      "score": 83,
+      "comments": 21,
+      "url": "https://github.com/hedgerow-dev/coldframe"
+    },
+    {
+      "title": "MaxxBench – \"Nice DeepSWE score. But is it true?\"",
+      "author": "antiuniverse",
+      "score": 51,
+      "comments": 7,
+      "url": "https://maxxbench.unlap.ai/research/why-maxxbench/"
+    }
+  ]
+}
