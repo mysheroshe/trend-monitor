@@ -1,0 +1,134 @@
+{
+  "date": "2026-11-08",
+  "timestamp": "2026-11-08T11:14:54.881624-08:00",
+  "product_hunt": [
+    {
+      "name": "Deduplication",
+      "tagline": "Which Meaning Owns the Word?",
+      "link": "https://www.producthunt.com/products/hacker-noon"
+    },
+    {
+      "name": "AXL",
+      "tagline": "GTM copilot for AI product founders: 1,200+ actions via MCP",
+      "link": "https://www.producthunt.com/products/axl-2"
+    },
+    {
+      "name": "Zigzag Browser",
+      "tagline": "The polished, native Mac browser for life after Arc",
+      "link": "https://www.producthunt.com/products/zigzag-browser"
+    },
+    {
+      "name": "Sage2 by Levanto Labs",
+      "tagline": "Turn live talk into structured data and instant actions",
+      "link": "https://www.producthunt.com/products/sagecraft"
+    },
+    {
+      "name": "outages.live",
+      "tagline": "A free live outage feed for your agents",
+      "link": "https://www.producthunt.com/products/polylane"
+    }
+  ],
+  "toolify": [],
+  "ai_tools": [],
+  "chrome_extensions": [
+    {
+      "name": "QuestionAI Homework Powered AI Assistant",
+      "description": "AI Copilot can answer screenshot queries and assist with writing, summarizing, translating, and grammar checking.",
+      "users": "100,000 users",
+      "rating": "4.7/5.0",
+      "link": "https://chromewebstore.google.com/detail/questionai-homework-power/hajphibbdloomfdkeoejchiikjggnaif"
+    },
+    {
+      "name": "AI Assistant",
+      "description": "AI Assistant helps you answer question, summarize and explain pages and texts!",
+      "users": "1,000 users",
+      "rating": "3/5.0",
+      "link": "https://chromewebstore.google.com/detail/ai-assistant/manahiemhgolofngagbjjefiibejhcgm"
+    },
+    {
+      "name": "AI Voice Assistant – Smart Browser Copilot",
+      "description": "AI assistant that works inside your browser tab. Ask by voice and get instant, context-aware AI responses.",
+      "users": "337 users",
+      "rating": "3.9/5.0",
+      "link": "https://chromewebstore.google.com/detail/ai-voice-assistant-%E2%80%93-smar/daamboajoclakkelbnglldlckknjfdjb"
+    },
+    {
+      "name": "Monica: All-In-One AI Assist & Smartest  AI Agent",
+      "description": "One stop AI Assistant with GPT, Claude, Gemini: Chat, Write, Translate, Search, Summarize, image generator, video generation",
+      "users": "3,000,000 users",
+      "rating": "4.8/5.0",
+      "link": "https://chromewebstore.google.com/detail/monica-all-in-one-ai-assi/ofpnmcalabcbjgholdjcjblkibolbppb"
+    },
+    {
+      "name": "Voila – AI Assistant, Copilot and AI Writer",
+      "description": "Seamless personal AI assistant powered by GPT-5 to help you create, write, summarize, brainstorm, and research on any website.",
+      "users": "70,000 users",
+      "rating": "4.6/5.0",
+      "link": "https://chromewebstore.google.com/detail/voila-%E2%80%93-ai-assistant-copi/cakobppopkpmmglabcdcklncbckjpkcl"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "sherlock-project/sherlock",
+      "description": "Hunt down social media accounts by username across social networks",
+      "today_stars": "2,372 stars today"
+    },
+    {
+      "name": "dsx-ai-factory/nvke",
+      "description": "NVIDIA Kubernetes Engine (NVKE). A management plane for GPU Kubernetes on bare metal.",
+      "today_stars": "345 stars today"
+    },
+    {
+      "name": "milind-soni/OpenMausBot",
+      "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
+      "today_stars": "1,437 stars today"
+    },
+    {
+      "name": "anthropics/claude-quickstarts",
+      "description": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
+      "today_stars": "28 stars today"
+    },
+    {
+      "name": "vercel-labs/agent-browser",
+      "description": "Browser automation CLI for AI agents",
+      "today_stars": "812 stars today"
+    }
+  ],
+  "hacker_news": [
+    {
+      "title": "Goldman Sachs Is Pulling Claude Code from Its Bankers and Traders",
+      "author": "TheWiggles",
+      "score": 116,
+      "comments": 49,
+      "url": "https://www.thestateofai.com/news/goldman-sachs-claude-code-traders-bankers"
+    },
+    {
+      "title": "Llama-modchip: 284B DeepSeek on 64GB RAM, no GPU",
+      "author": "joshcsimmons",
+      "score": 266,
+      "comments": 86,
+      "url": "https://github.com/synchopate/llama-modchip"
+    },
+    {
+      "title": "The Reconstruction of Torn Documents",
+      "author": "jacquesm",
+      "score": 58,
+      "comments": 35,
+      "url": "https://www.bundesarchiv.de/en/stasi-records-archive/the-reconstruction-of-torn-documents/"
+    },
+    {
+      "title": "Writing as a thinking tool",
+      "author": "jruohonen",
+      "score": 169,
+      "comments": 54,
+      "url": "http://muratbuffalo.blogspot.com/2026/11/writing-as-thinking-tool.html"
+    },
+    {
+      "title": "A Little Snitch for Windows",
+      "author": "BadBoyBubby",
+      "score": 30,
+      "comments": 15,
+      "url": "https://packethound.app/"
+    }
+  ]
+}
