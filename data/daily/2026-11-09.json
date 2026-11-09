@@ -1,0 +1,170 @@
+{
+  "date": "2026-11-09",
+  "timestamp": "2026-11-09T15:39:29.212937-08:00",
+  "product_hunt": [
+    {
+      "name": "GitHub New PR Overview",
+      "tagline": "See what's blocking a PR before you scroll",
+      "link": "https://www.producthunt.com/products/github"
+    },
+    {
+      "name": "CozyZip",
+      "tagline": "Zip and unzip without the surprises.",
+      "link": "https://www.producthunt.com/products/cozyzip"
+    },
+    {
+      "name": "skuttr",
+      "tagline": "Type one sentence, get a Reel from your camera roll",
+      "link": "https://www.producthunt.com/products/skuttr"
+    },
+    {
+      "name": "ClipsPal",
+      "tagline": "AI video editor that edits your talking-head videos",
+      "link": "https://www.producthunt.com/products/clipspal"
+    },
+    {
+      "name": "Egoist AI Passport",
+      "tagline": "Secure and share your personal data with AI tools.",
+      "link": "https://www.producthunt.com/products/egoist-ai-passport"
+    }
+  ],
+  "toolify": [
+    {
+      "name": "Claude 2",
+      "description": "Claude is an AI assistant from Anthropic that helps with tasks via natural language.",
+      "monthly_visit": "1.3B",
+      "growth_rate": "23.78%",
+      "link": "https://www.toolify.ai/tool/claude-2"
+    },
+    {
+      "name": "ChatGPT",
+      "description": "A free-to-use AI system for conversations, insights, and task automation.",
+      "monthly_visit": "6.0B",
+      "growth_rate": "2.15%",
+      "link": "https://www.toolify.ai/tool/chatgpt-4"
+    },
+    {
+      "name": "Muse.ai",
+      "description": "A personal AI agent that completes everyday tasks across your apps",
+      "monthly_visit": "45.8M",
+      "growth_rate": "228.26%",
+      "link": "https://www.toolify.ai/tool/muse-ai-1"
+    },
+    {
+      "name": "Lovescape AI",
+      "description": "Platform for creating and interacting with AI girlfriends through chat, visuals, and voice.",
+      "monthly_visit": "30.4M",
+      "growth_rate": "124.28%",
+      "link": "https://www.toolify.ai/tool/lovescape-ai"
+    },
+    {
+      "name": "Deepseek",
+      "description": "DeepSeek is an AI company providing foundation models and APIs for AI applications.",
+      "monthly_visit": "372.8M",
+      "growth_rate": "4.30%",
+      "link": "https://www.toolify.ai/tool/deepseek"
+    }
+  ],
+  "ai_tools": [],
+  "chrome_extensions": [
+    {
+      "name": "React Developer Tools",
+      "description": "Adds React debugging tools to the Chrome Developer Tools.\n\nCreated from revision 1d34f91dfd.",
+      "users": "5,000,000 users",
+      "rating": "3.5/5.0",
+      "link": "https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi"
+    },
+    {
+      "name": "Web Developer",
+      "description": "Adds a toolbar button with various web developer tools.",
+      "users": "1,000,000 users",
+      "rating": "4.3/5.0",
+      "link": "https://chromewebstore.google.com/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm"
+    },
+    {
+      "name": "Next Experience Developer Tools",
+      "description": "Debugging/Profiling tools for your ServiceNow Next Experiences.",
+      "users": "10,000 users",
+      "rating": "4.4/5.0",
+      "link": "https://chromewebstore.google.com/detail/next-experience-developer/ilkodijinjhpdnnfpccijledlapkfmhc"
+    },
+    {
+      "name": "Preact Developer Tools",
+      "description": "Adds debugging tools for Preact to Chrome",
+      "users": "7,000 users",
+      "rating": "4.5/5.0",
+      "link": "https://chromewebstore.google.com/detail/preact-developer-tools/ilcajpmogmhpliinlbcdebhbcanbghmd"
+    },
+    {
+      "name": "Make DevTool",
+      "description": "Inspect your scenarios in Make at a glance!",
+      "users": "20,000 users",
+      "rating": "3.8/5.0",
+      "link": "https://chromewebstore.google.com/detail/make-devtool/ainnemkhpnjgkhcdkfbhmlenkhehmfhi"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "anthropics/skills",
+      "description": "Public repository for Agent Skills",
+      "today_stars": "1,052 stars today"
+    },
+    {
+      "name": "meta/astryx",
+      "description": "An open source design system that's fully customizable and agent ready",
+      "today_stars": "3,324 stars today"
+    },
+    {
+      "name": "sherlock-project/sherlock",
+      "description": "Hunt down social media accounts by username across social networks",
+      "today_stars": "4,294 stars today"
+    },
+    {
+      "name": "google-deepmind/mujoco",
+      "description": "Multi-Joint dynamics with Contact. A general purpose physics simulator.",
+      "today_stars": "579 stars today"
+    },
+    {
+      "name": "anthropics/claude-quickstarts",
+      "description": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
+      "today_stars": "560 stars today"
+    }
+  ],
+  "hacker_news": [
+    {
+      "title": "USPS now offers official ZIP Code boundary polygons",
+      "author": "munro",
+      "score": 361,
+      "comments": 180,
+      "url": "https://postalpro.usps.com/zcb"
+    },
+    {
+      "title": "TPUs",
+      "author": "_benx_",
+      "score": 106,
+      "comments": 13,
+      "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/tpu-8i-max-and-8tx/"
+    },
+    {
+      "title": "Claude Fable 5.2 Scores 65 on Artificial Analysis, Highest So Far",
+      "author": "theanonymousone",
+      "score": 230,
+      "comments": 145,
+      "url": "https://artificialanalysis.ai/models/claude-fable-5-2"
+    },
+    {
+      "title": "Google Gemini routes personal Drive files and emails to human annotators",
+      "author": "gf74918",
+      "score": 278,
+      "comments": 55,
+      "url": "https://github.com/thisisme6598/gemini_files/"
+    },
+    {
+      "title": "E-means: 10x faster k-means at equal loss",
+      "author": "porridgeraisin",
+      "score": 234,
+      "comments": 13,
+      "url": "https://e-means.github.io/"
+    }
+  ]
+}
