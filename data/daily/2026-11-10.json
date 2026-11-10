@@ -1,0 +1,134 @@
+{
+  "date": "2026-11-10",
+  "timestamp": "2026-11-10T13:06:12.531199-08:00",
+  "product_hunt": [
+    {
+      "name": "OpenVibe",
+      "tagline": "A canvas of real terminals for your AI coding agents",
+      "link": "https://www.producthunt.com/products/openvibe-2"
+    },
+    {
+      "name": "Dover Startup Jobs",
+      "tagline": "Where great startups meet great candidates",
+      "link": "https://www.producthunt.com/products/dover"
+    },
+    {
+      "name": "CollaboTokyo",
+      "tagline": "Explore a virtual Tokyo to network, market, and collaborate",
+      "link": "https://www.producthunt.com/products/collabotokyo"
+    },
+    {
+      "name": "AppuBot",
+      "tagline": "Grok Bot alternative that runs on your AI, completely free",
+      "link": "https://www.producthunt.com/products/appubot"
+    },
+    {
+      "name": "Opal Reader",
+      "tagline": "Read PDFs and EPUBs on iPhone Duo",
+      "link": "https://www.producthunt.com/products/opal-reader"
+    }
+  ],
+  "toolify": [],
+  "ai_tools": [],
+  "chrome_extensions": [
+    {
+      "name": "Sider: Chat with all AI: GPT-5, Claude, DeepSeek, Gemini, Grok",
+      "description": "ChatGPT, DeepSeek, Gemini, Claude, Grok all in one AI sidebar, for AI search, read, and write.",
+      "users": "5,000,000 users",
+      "rating": "4.9/5.0",
+      "link": "https://chromewebstore.google.com/detail/sider-chat-with-all-ai-gp/difoiogjjojoaoomphldepapgpbgkhkb"
+    },
+    {
+      "name": "AI Chat Navigator",
+      "description": "Jump through AI chats, save prompts, and refine drafts locally in your browser.",
+      "users": "123 users",
+      "rating": "3.5/5.0",
+      "link": "https://chromewebstore.google.com/detail/ai-chat-navigator/jnoonpeekddinkiecaonhocaflcgbhap"
+    },
+    {
+      "name": "Chat with all AI models (Gemini, Claude, DeepSeek…) & AI Agents | AITOPIA",
+      "description": "AI Agent Marketplace & AI Sidebar with all AI models (Gemini, Claude, DeepSeek & more) and hundreds of AI Agents",
+      "users": "1,000,000 users",
+      "rating": "4.8/5.0",
+      "link": "https://chromewebstore.google.com/detail/chat-with-all-ai-models-g/becfinhbfclcgokjlobojlnldbfillpf"
+    },
+    {
+      "name": "AI Chat Sync",
+      "description": "Quickly open AI websites and chat with multiple AIs concurrently",
+      "users": "276 users",
+      "rating": "5/5.0",
+      "link": "https://chromewebstore.google.com/detail/ai-chat-sync/afjalhepkaledpiempnidkhijjaolffi"
+    },
+    {
+      "name": "AI Chat Backup: ChatGPT to Notion, Obsidian & Markdown",
+      "description": "Export AI conversations to Markdown, save them to Obsidian folders, or sync to Notion. Backup chats from popular AI platforms.",
+      "users": "3,000 users",
+      "rating": "4.3/5.0",
+      "link": "https://chromewebstore.google.com/detail/ai-chat-backup-chatgpt-to/oedpeddiacomhhfieanenlmdghkolgng"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "meta/astryx",
+      "description": "An open source design system that's fully customizable and agent ready",
+      "today_stars": "3,111 stars today"
+    },
+    {
+      "name": "anthropics/skills",
+      "description": "Public repository for Agent Skills",
+      "today_stars": "1,676 stars today"
+    },
+    {
+      "name": "addyosmani/agent-skills",
+      "description": "Production-grade engineering skills for AI coding agents.",
+      "today_stars": "465 stars today"
+    },
+    {
+      "name": "anthropics/claude-quickstarts",
+      "description": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
+      "today_stars": "530 stars today"
+    },
+    {
+      "name": "google-deepmind/mujoco",
+      "description": "Multi-Joint dynamics with Contact. A general purpose physics simulator.",
+      "today_stars": "453 stars today"
+    }
+  ],
+  "hacker_news": [
+    {
+      "title": ".name Grandfathered",
+      "author": "p4bl0",
+      "score": 495,
+      "comments": 99,
+      "url": "https://neil.fraser.name/news/2026/11/10/"
+    },
+    {
+      "title": "Smart home devices should work without the internet",
+      "author": "skittleson",
+      "score": 471,
+      "comments": 169,
+      "url": "https://docodethatmatters.com/home-automation-overnight-success/"
+    },
+    {
+      "title": "Synaptics patent claims stop work on DisplayLink drivers",
+      "author": "speckx",
+      "score": 171,
+      "comments": 78,
+      "url": "https://lwn.net/SubscriberLink/1102549/acbc92e00cee3a3f/"
+    },
+    {
+      "title": "Val Town is winding down",
+      "author": "tosh",
+      "score": 196,
+      "comments": 52,
+      "url": "https://blog.val.town/winding-down"
+    },
+    {
+      "title": "Show HN: Get your coding agent off ~2019 JavaScript, onto modern web primitives",
+      "author": "paulirish",
+      "score": 146,
+      "comments": 43,
+      "url": "https://github.com/GoogleChrome/modern-web-guidance"
+    }
+  ]
+}
