@@ -1,0 +1,134 @@
+{
+  "date": "2026-11-11",
+  "timestamp": "2026-11-11T13:40:28.932224-08:00",
+  "product_hunt": [
+    {
+      "name": "StableBar",
+      "tagline": "A native, open-source menu bar for macOS",
+      "link": "https://www.producthunt.com/products/stablebar"
+    },
+    {
+      "name": "Earlybird",
+      "tagline": "29M-param speech-to-text that outputs words before they end",
+      "link": "https://www.producthunt.com/products/earlybird-5"
+    },
+    {
+      "name": "RigSpark",
+      "tagline": "Know which AI to run on your own computer",
+      "link": "https://www.producthunt.com/products/rigspark"
+    },
+    {
+      "name": "Subscriptrack",
+      "tagline": "Connect your email, see every subscription you pay for",
+      "link": "https://www.producthunt.com/products/subscriptrack"
+    },
+    {
+      "name": "Kippy AI",
+      "tagline": "Learn languages while having fun!",
+      "link": "https://www.producthunt.com/products/kippy-ai"
+    }
+  ],
+  "toolify": [],
+  "ai_tools": [],
+  "chrome_extensions": [
+    {
+      "name": "QuestionAI Homework Powered AI Assistant",
+      "description": "AI Copilot can answer screenshot queries and assist with writing, summarizing, translating, and grammar checking.",
+      "users": "100,000 users",
+      "rating": "4.7/5.0",
+      "link": "https://chromewebstore.google.com/detail/questionai-homework-power/hajphibbdloomfdkeoejchiikjggnaif"
+    },
+    {
+      "name": "AI Assistant",
+      "description": "AI Assistant helps you answer question, summarize and explain pages and texts!",
+      "users": "1,000 users",
+      "rating": "3/5.0",
+      "link": "https://chromewebstore.google.com/detail/ai-assistant/manahiemhgolofngagbjjefiibejhcgm"
+    },
+    {
+      "name": "Monica: All-In-One AI Assist & Smartest  AI Agent",
+      "description": "One stop AI Assistant with GPT, Claude, Gemini: Chat, Write, Translate, Search, Summarize, image generator, video generation",
+      "users": "3,000,000 users",
+      "rating": "4.8/5.0",
+      "link": "https://chromewebstore.google.com/detail/monica-all-in-one-ai-assi/ofpnmcalabcbjgholdjcjblkibolbppb"
+    },
+    {
+      "name": "Voila – AI Assistant, Copilot and AI Writer",
+      "description": "Seamless personal AI assistant powered by GPT-5 to help you create, write, summarize, brainstorm, and research on any website.",
+      "users": "70,000 users",
+      "rating": "4.6/5.0",
+      "link": "https://chromewebstore.google.com/detail/voila-%E2%80%93-ai-assistant-copi/cakobppopkpmmglabcdcklncbckjpkcl"
+    },
+    {
+      "name": "AI Voice Assistant – Smart Browser Copilot",
+      "description": "AI assistant that works inside your browser tab. Ask by voice and get instant, context-aware AI responses.",
+      "users": "340 users",
+      "rating": "3.9/5.0",
+      "link": "https://chromewebstore.google.com/detail/ai-voice-assistant-%E2%80%93-smar/daamboajoclakkelbnglldlckknjfdjb"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "meta/astryx",
+      "description": "An open source design system that's fully customizable and agent ready",
+      "today_stars": "2,842 stars today"
+    },
+    {
+      "name": "ZhuLinsen/daily_stock_analysis",
+      "description": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
+      "today_stars": "429 stars today"
+    },
+    {
+      "name": "GoogleChrome/modern-web-guidance-src",
+      "description": "无描述",
+      "today_stars": "133 stars today"
+    },
+    {
+      "name": "shadcn/improve",
+      "description": "Use your most capable model to audit your codebase and write plans for cheaper models to execute.",
+      "today_stars": "333 stars today"
+    },
+    {
+      "name": "addyosmani/agent-skills",
+      "description": "Production-grade engineering skills for AI coding agents.",
+      "today_stars": "788 stars today"
+    }
+  ],
+  "hacker_news": [
+    {
+      "title": "AWS Finally Built Its Own AWS Emulator",
+      "author": "super_linear",
+      "score": 464,
+      "comments": 144,
+      "url": "https://github.com/aws/aws-emulator"
+    },
+    {
+      "title": "Tim Peters has died",
+      "author": "ayhanfuat",
+      "score": 633,
+      "comments": 63,
+      "url": "https://discuss.python.org/t/in-memoriam-tim-peters-1952-2026/110028"
+    },
+    {
+      "title": "A false smoke alarm almost drowned Jane Street's only NYC datacenter",
+      "author": "mbac32768",
+      "score": 326,
+      "comments": 164,
+      "url": "https://michael.bacarella.com/2026/11/10/false-smoke-alarm-jane-street-datacenter/"
+    },
+    {
+      "title": "AWS Emulator and the engineer's job when agents write the code",
+      "author": "drbm",
+      "score": 106,
+      "comments": 12,
+      "url": "https://www.allthingsdistributed.com/2026/11/aws-emulator-and-the-engineers-job-when-agents-write-the-code.html"
+    },
+    {
+      "title": "Show HN: I recreated Papers Please but you're deciding which YC startups to fund",
+      "author": "bolau",
+      "score": 111,
+      "comments": 55,
+      "url": "https://termsheetplease.com/"
+    }
+  ]
+}
