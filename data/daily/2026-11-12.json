@@ -1,0 +1,134 @@
+{
+  "date": "2026-11-12",
+  "timestamp": "2026-11-12T13:39:59.591145-08:00",
+  "product_hunt": [
+    {
+      "name": "Spacefast by Automattic",
+      "tagline": "Give your AI agents a place to build, run, and ship",
+      "link": "https://www.producthunt.com/products/spacefast-by-automattic"
+    },
+    {
+      "name": "YouArt Desktop App",
+      "tagline": "Codex for creative team",
+      "link": "https://www.producthunt.com/products/youart"
+    },
+    {
+      "name": "Neura HQ",
+      "tagline": "The agentic conversational storefront for consumer brands",
+      "link": "https://www.producthunt.com/products/neura-4"
+    },
+    {
+      "name": "Jot 2.0",
+      "tagline": "Select text, tap Shift twice, it's a markdown file",
+      "link": "https://www.producthunt.com/products/jot-2-0"
+    },
+    {
+      "name": "Toki Matter",
+      "tagline": "The Al agent that advances your matters",
+      "link": "https://www.producthunt.com/products/toki-ai"
+    }
+  ],
+  "toolify": [],
+  "ai_tools": [],
+  "chrome_extensions": [
+    {
+      "name": "PiP Pro: Picture-in-Picture productivity tools",
+      "description": "Picture-in-Picture productivity boosting tools. Stream tab contents or take notes- always on top. Stop tab-switching, start working.",
+      "users": "2,000 users",
+      "rating": "3.8/5.0",
+      "link": "https://chromewebstore.google.com/detail/pip-pro-picture-in-pictur/jgicglkgkeagfglifmofmnongfnpbkjc"
+    },
+    {
+      "name": "CPQ Productivity Tools",
+      "description": "On-demand Oracle CPQ tools: Pipeline Viewer, GET-only REST APIs, admin, BOM validation, quote debugging, and BML search.",
+      "users": "402 users",
+      "rating": "5/5.0",
+      "link": "https://chromewebstore.google.com/detail/cpq-productivity-tools/cclcmepgialdphibhiemcncjkcebopba"
+    },
+    {
+      "name": "Seller Utilities - Productivity Tools for Amazon Sellers",
+      "description": "Productivity tools for Amazon Seller Central.",
+      "users": "4,000 users",
+      "rating": "5/5.0",
+      "link": "https://chromewebstore.google.com/detail/seller-utilities-producti/giemlimlagcjbnoinmedklabpcclbapb"
+    },
+    {
+      "name": "Productivity Tools Pro",
+      "description": "All-in-one productivity suite with 50+ privacy-focused tools: JSON Formatter, Pomodoro, SEO Tools, & more!",
+      "users": "N/A",
+      "rating": "5/5.0",
+      "link": "https://chromewebstore.google.com/detail/productivity-tools-pro/ffjljgdcdifgkafdkkocjjckaglboela"
+    },
+    {
+      "name": "Website Blocker — Block Sites, Focus Timer & Productivity Tools",
+      "description": "Block distracting websites, schedule focus sessions, and boost productivity. Keyword blocking, profiles, Pomodoro timer & more.",
+      "users": "30,000 users",
+      "rating": "4.7/5.0",
+      "link": "https://chromewebstore.google.com/detail/website-blocker-%E2%80%94-block-s/kniediipngcpmbmpeacaoinhoeipfina"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "GoogleChrome/modern-web-guidance-src",
+      "description": "Keep your coding agent up to date with the latest web best practices",
+      "today_stars": "799 stars today"
+    },
+    {
+      "name": "openai/codex-security",
+      "description": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm:https://www.npmjs.com/package/@openai/codex-security",
+      "today_stars": "663 stars today"
+    },
+    {
+      "name": "nvm-sh/nvm",
+      "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
+      "today_stars": "107 stars today"
+    },
+    {
+      "name": "pookjw/HermesEnabler",
+      "description": "Enable Hermès Watch Faces on any Apple Watch devices",
+      "today_stars": "300 stars today"
+    },
+    {
+      "name": "we-promise/sure",
+      "description": "The personal finance app for everyone (by everyone)",
+      "today_stars": "974 stars today"
+    }
+  ],
+  "hacker_news": [
+    {
+      "title": "Jensen Huang resigns",
+      "author": "lldb",
+      "score": 2437,
+      "comments": 2366,
+      "url": "https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f"
+    },
+    {
+      "title": "Ask HN: Microsoft/Azure Outage?",
+      "author": "nazgulsenpai",
+      "score": 383,
+      "comments": 192,
+      "url": "https://news.ycombinator.com/item?id=50471668"
+    },
+    {
+      "title": "Rust 1.100",
+      "author": "mbStavola",
+      "score": 138,
+      "comments": 93,
+      "url": "https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/"
+    },
+    {
+      "title": "Gemini 4 Hydrogen and Orchestrator",
+      "author": "jonbaer",
+      "score": 166,
+      "comments": 31,
+      "url": "https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity/"
+    },
+    {
+      "title": "Dwarf planet candidate appears which takes roughly 280 years to orbit our sun",
+      "author": "cybermango",
+      "score": 104,
+      "comments": 45,
+      "url": "https://www.smithsonianmag.com/smart-news/astronomers-found-a-mysterious-object-orbiting-far-beyond-pluto-it-could-be-a-new-dwarf-planet-hidden-in-our-solar-system-180989857/"
+    }
+  ]
+}
