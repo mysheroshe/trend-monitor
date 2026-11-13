@@ -1,0 +1,134 @@
+{
+  "date": "2026-11-13",
+  "timestamp": "2026-11-13T13:05:44.789437-08:00",
+  "product_hunt": [
+    {
+      "name": "StockRip",
+      "tagline": "Trading cards, literally digital cards with tokenized stocks",
+      "link": "https://www.producthunt.com/products/stockrip"
+    },
+    {
+      "name": "Templify AI",
+      "tagline": "Powerful content editor for people who aren’t editors",
+      "link": "https://www.producthunt.com/products/templify"
+    },
+    {
+      "name": "Filament by Galaxy",
+      "tagline": "Move data using your terminal or agent. Fast & open source.",
+      "link": "https://www.producthunt.com/products/galaxy"
+    },
+    {
+      "name": "qorqbot",
+      "tagline": "Proactive agent for business work",
+      "link": "https://www.producthunt.com/products/qorqbot"
+    },
+    {
+      "name": "GAtrends",
+      "tagline": "Spike alerts for your keywords in Telegram, Claude, ChatGPT",
+      "link": "https://www.producthunt.com/products/gatrends"
+    }
+  ],
+  "toolify": [],
+  "ai_tools": [],
+  "chrome_extensions": [
+    {
+      "name": "vTech Automation",
+      "description": "vTech automation will help user to automate such processes which requires human involvement.",
+      "users": "212 users",
+      "rating": "5/5.0",
+      "link": "https://chromewebstore.google.com/detail/vtech-automation/jbjkfjnokaapdlpiaaeamokdacnieagh"
+    },
+    {
+      "name": "HARPA AI: Web Automation with ChatGPT, Claude, Gemini, Grok",
+      "description": "Free AI sidebar with ChatGPT, Claude, Gemini & DeepSeek. 100+ commands to automate, monitor prices, summarize & write.",
+      "users": "400,000 users",
+      "rating": "4.5/5.0",
+      "link": "https://chromewebstore.google.com/detail/harpa-ai-web-automation-w/eanggfilgoajaocelnaflolkadkeghjp"
+    },
+    {
+      "name": "GoLess: Browser Automation and Web Scraping",
+      "description": "GoLess no-code browser automation and Robotic Process Automation (RPA) tool",
+      "users": "2,000 users",
+      "rating": "4.3/5.0",
+      "link": "https://chromewebstore.google.com/detail/goless-browser-automation/ghlmiigebgipgagnhlanjmmniefbfihl"
+    },
+    {
+      "name": "ServiceNow Web Automation",
+      "description": "Boost productivity with web task automation. Integrates AI Desktop Actions, RPA Attended & Unattended robots for efficiency.",
+      "users": "2,000 users",
+      "rating": "5/5.0",
+      "link": "https://chromewebstore.google.com/detail/servicenow-web-automation/bnaofpgjajbimmicdiipemhmheafhgkb"
+    },
+    {
+      "name": "Botz Automation",
+      "description": "Extension for botz capture and recorder services",
+      "users": "185 users",
+      "rating": "5/5.0",
+      "link": "https://chromewebstore.google.com/detail/botz-automation/ancgeemepmfnajagdicjmccinmnnclfa"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "alibaba/open-code-review",
+      "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+      "today_stars": "206 stars today"
+    },
+    {
+      "name": "GoogleChrome/modern-web-guidance-src",
+      "description": "Keep your coding agent up to date with the latest web best practices",
+      "today_stars": "1,875 stars today"
+    },
+    {
+      "name": "openai/codex-security",
+      "description": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm:https://www.npmjs.com/package/@openai/codex-security",
+      "today_stars": "754 stars today"
+    },
+    {
+      "name": "ZhuLinsen/daily_stock_analysis",
+      "description": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
+      "today_stars": "272 stars today"
+    },
+    {
+      "name": "we-promise/sure",
+      "description": "The personal finance app for everyone (by everyone)",
+      "today_stars": "944 stars today"
+    }
+  ],
+  "hacker_news": [
+    {
+      "title": "$11.4M in Nvidia hardware vanishes during shipment from CA to TX",
+      "author": "crescit_eundo",
+      "score": 88,
+      "comments": 47,
+      "url": "https://www.freightwaves.com/news/11-4-million-in-nvidia-hardware-vanishes-during-shipment-from-california-to-texas"
+    },
+    {
+      "title": "FM-1 Workbench",
+      "author": "simonebrunozzi",
+      "score": 90,
+      "comments": 49,
+      "url": "https://open.m-vave.com/fm1-workbench"
+    },
+    {
+      "title": "Big tech is here to let us down",
+      "author": "speckx",
+      "score": 33,
+      "comments": 10,
+      "url": "https://blog.jsweeting.me/big-tech-is-here-to-let-us-down"
+    },
+    {
+      "title": "After 600 experiments, here's what I discovered about JEPA world models",
+      "author": "halcdev",
+      "score": 153,
+      "comments": 30,
+      "url": "https://haddyalchaer.com/jepa"
+    },
+    {
+      "title": "Reverse engineering my Coway air purifier to ditch the cloud",
+      "author": "scottjg",
+      "score": 604,
+      "comments": 171,
+      "url": "https://scottjg.com/posts/2026-11-11-reverse-engineering-my-coway-air-purifier-to-ditch-the-cloud/"
+    }
+  ]
+}
