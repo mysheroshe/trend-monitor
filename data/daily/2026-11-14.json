@@ -1,0 +1,134 @@
+{
+  "date": "2026-11-14",
+  "timestamp": "2026-11-14T11:34:41.422906-08:00",
+  "product_hunt": [
+    {
+      "name": "Dex Semantics",
+      "tagline": "Let your agent build analytics with 25% fewer errors",
+      "link": "https://www.producthunt.com/products/dex-by-exmergo"
+    },
+    {
+      "name": "Blender 5.3",
+      "tagline": "3D Gaussian splats, now native to Blender",
+      "link": "https://www.producthunt.com/products/blender"
+    },
+    {
+      "name": "Drops",
+      "tagline": "Discover new music through moments your friends love",
+      "link": "https://www.producthunt.com/products/drops-4"
+    },
+    {
+      "name": "Kokonut UI",
+      "tagline": "Open-source UI components for your AI agent",
+      "link": "https://www.producthunt.com/products/kokonutui"
+    },
+    {
+      "name": "Gemini Robotics 2.5",
+      "tagline": "Gemini Robotics 2.5: Google’s most capable robot model",
+      "link": "https://www.producthunt.com/products/gemini-robotics-2-5"
+    }
+  ],
+  "toolify": [],
+  "ai_tools": [],
+  "chrome_extensions": [
+    {
+      "name": "Chat with all AI models (Gemini, Claude, DeepSeek…) & AI Agents | AITOPIA",
+      "description": "AI Agent Marketplace & AI Sidebar with all AI models (Gemini, Claude, DeepSeek & more) and hundreds of AI Agents",
+      "users": "900,000 users",
+      "rating": "4.8/5.0",
+      "link": "https://chromewebstore.google.com/detail/chat-with-all-ai-models-g/becfinhbfclcgokjlobojlnldbfillpf"
+    },
+    {
+      "name": "Sider: Chat with all AI: GPT-5, Claude, DeepSeek, Gemini, Grok",
+      "description": "ChatGPT, DeepSeek, Gemini, Claude, Grok all in one AI sidebar, for AI search, read, and write.",
+      "users": "5,000,000 users",
+      "rating": "4.9/5.0",
+      "link": "https://chromewebstore.google.com/detail/sider-chat-with-all-ai-gp/difoiogjjojoaoomphldepapgpbgkhkb"
+    },
+    {
+      "name": "AI Chat Navigator",
+      "description": "Jump through AI chats, save prompts, and refine drafts locally in your browser.",
+      "users": "122 users",
+      "rating": "3.5/5.0",
+      "link": "https://chromewebstore.google.com/detail/ai-chat-navigator/jnoonpeekddinkiecaonhocaflcgbhap"
+    },
+    {
+      "name": "AI CHAT TRANSFER",
+      "description": "Seamlessly transfer your conversations between ChatGPT, Claude, Gemini, Grok, and more.",
+      "users": "708 users",
+      "rating": "5/5.0",
+      "link": "https://chromewebstore.google.com/detail/ai-chat-transfer/gfeohkmgfphhoodfhiaffmgcoeljhnhp"
+    },
+    {
+      "name": "AI Chat Sync",
+      "description": "Quickly open AI websites and chat with multiple AIs concurrently",
+      "users": "266 users",
+      "rating": "5/5.0",
+      "link": "https://chromewebstore.google.com/detail/ai-chat-sync/afjalhepkaledpiempnidkhijjaolffi"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "backnotprop/plannotator",
+      "description": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
+      "today_stars": "412 stars today"
+    },
+    {
+      "name": "GoogleChrome/modern-web-guidance-src",
+      "description": "Keep your coding agent up to date with the latest web best practices",
+      "today_stars": "1,225 stars today"
+    },
+    {
+      "name": "tradermonty/claude-trading-skills",
+      "description": "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
+      "today_stars": "556 stars today"
+    },
+    {
+      "name": "ChromeDevTools/chrome-devtools-mcp",
+      "description": "Chrome DevTools for coding agents",
+      "today_stars": "673 stars today"
+    },
+    {
+      "name": "alibaba/open-code-review",
+      "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+      "today_stars": "897 stars today"
+    }
+  ],
+  "hacker_news": [
+    {
+      "title": "Lovable apps expose passport details and more than 200K private messages",
+      "author": "armcat",
+      "score": 228,
+      "comments": 64,
+      "url": "https://www.crissyfield.de/research/lovable-en/"
+    },
+    {
+      "title": "A Family Tree of Software Job Titles",
+      "author": "umerf",
+      "score": 54,
+      "comments": 17,
+      "url": "https://zwischenzugs.com/2026/11/03/a-family-tree-of-software-job-titles/"
+    },
+    {
+      "title": "PyPI's redesigned project pages with clearer security signals are now live",
+      "author": "rbanffy",
+      "score": 136,
+      "comments": 48,
+      "url": "https://blog.pypi.org/posts/2026-11-06-ui-updates-complete/"
+    },
+    {
+      "title": "KDE: The documentary [video]",
+      "author": "mrkn1",
+      "score": 249,
+      "comments": 41,
+      "url": "https://tube.kockatoo.org/w/fFinNHfanLT7aBEb2B8y4c"
+    },
+    {
+      "title": "US IRS free online tax filing open source repo",
+      "author": "accountinhn",
+      "score": 27,
+      "comments": 2,
+      "url": "https://github.com/IRS-Public/direct-file"
+    }
+  ]
+}
