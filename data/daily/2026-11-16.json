@@ -1,0 +1,134 @@
+{
+  "date": "2026-11-16",
+  "timestamp": "2026-11-16T15:35:57.094871-08:00",
+  "product_hunt": [
+    {
+      "name": "Boost.space AgentOS",
+      "tagline": "One operating system for all your AI agents",
+      "link": "https://www.producthunt.com/products/boost-space"
+    },
+    {
+      "name": "Zoom Slides",
+      "tagline": "Turn your Zoom meetings into ready-to-present slides",
+      "link": "https://www.producthunt.com/products/zoom"
+    },
+    {
+      "name": "Findy",
+      "tagline": "Find Files on Your Mac by what you remember",
+      "link": "https://www.producthunt.com/products/findy-3"
+    },
+    {
+      "name": "Blomma for Organizations",
+      "tagline": "Scale your people at the speed of your business",
+      "link": "https://www.producthunt.com/products/blomma"
+    },
+    {
+      "name": "StateWeave",
+      "tagline": "Test your AI agent on working clones of the apps it uses",
+      "link": "https://www.producthunt.com/products/stateweave"
+    }
+  ],
+  "toolify": [],
+  "ai_tools": [],
+  "chrome_extensions": [
+    {
+      "name": "PiP Pro: Picture-in-Picture productivity tools",
+      "description": "Picture-in-Picture productivity boosting tools. Stream tab contents or take notes- always on top. Stop tab-switching, start working.",
+      "users": "2,000 users",
+      "rating": "3.8/5.0",
+      "link": "https://chromewebstore.google.com/detail/pip-pro-picture-in-pictur/jgicglkgkeagfglifmofmnongfnpbkjc"
+    },
+    {
+      "name": "CPQ Productivity Tools",
+      "description": "On-demand Oracle CPQ tools: Pipeline Viewer, GET-only REST APIs, admin, BOM validation, quote debugging, and BML search.",
+      "users": "418 users",
+      "rating": "5/5.0",
+      "link": "https://chromewebstore.google.com/detail/cpq-productivity-tools/cclcmepgialdphibhiemcncjkcebopba"
+    },
+    {
+      "name": "Seller Utilities - Productivity Tools for Amazon Sellers",
+      "description": "Productivity tools for Amazon Seller Central.",
+      "users": "4,000 users",
+      "rating": "5/5.0",
+      "link": "https://chromewebstore.google.com/detail/seller-utilities-producti/giemlimlagcjbnoinmedklabpcclbapb"
+    },
+    {
+      "name": "Website Blocker — Block Sites, Focus Timer & Productivity Tools",
+      "description": "Block distracting websites, schedule focus sessions, and boost productivity. Keyword blocking, profiles, Pomodoro timer & more.",
+      "users": "30,000 users",
+      "rating": "4.7/5.0",
+      "link": "https://chromewebstore.google.com/detail/website-blocker-%E2%80%94-block-s/kniediipngcpmbmpeacaoinhoeipfina"
+    },
+    {
+      "name": "Productivity Tools Pro",
+      "description": "All-in-one productivity suite with 50+ privacy-focused tools: JSON Formatter, Pomodoro, SEO Tools, & more!",
+      "users": "N/A",
+      "rating": "5/5.0",
+      "link": "https://chromewebstore.google.com/detail/productivity-tools-pro/ffjljgdcdifgkafdkkocjjckaglboela"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "ag-ui-protocol/ag-ui",
+      "description": "AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications.",
+      "today_stars": "790 stars today"
+    },
+    {
+      "name": "backnotprop/plannotator",
+      "description": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
+      "today_stars": "689 stars today"
+    },
+    {
+      "name": "dream-num/univer",
+      "description": "Build your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an extensible open-source core.",
+      "today_stars": "1,878 stars today"
+    },
+    {
+      "name": "tradermonty/claude-trading-skills",
+      "description": "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
+      "today_stars": "841 stars today"
+    },
+    {
+      "name": "elementalsouls/Claude-BugHunter",
+      "description": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+      "today_stars": "1,057 stars today"
+    }
+  ],
+  "hacker_news": [
+    {
+      "title": "Carnegie Mellon is putting computer science courses on YouTube for free",
+      "author": "pcompeau",
+      "score": 370,
+      "comments": 73,
+      "url": "https://www.cs.cmu.edu/learn/"
+    },
+    {
+      "title": "BugMeNot has closed",
+      "author": "lode",
+      "score": 200,
+      "comments": 105,
+      "url": "https://www.bugmenot.com/"
+    },
+    {
+      "title": "How to Break into Security, Ptacek Edition (2012)",
+      "author": "ronfriedhaber",
+      "score": 50,
+      "comments": 12,
+      "url": "https://krebsonsecurity.com/2012/06/how-to-break-into-security-ptacek-edition/"
+    },
+    {
+      "title": "Rust changed me as a developer",
+      "author": "speckx",
+      "score": 143,
+      "comments": 80,
+      "url": "https://blog.startifact.com/posts/how-rust-changed-me/"
+    },
+    {
+      "title": "Windows 11 Is Collecting Data on Which Coding Agents and Developer Tools You Use",
+      "author": "cwaffles",
+      "score": 15,
+      "comments": 3,
+      "url": "https://xusheng.dev/posts/windows-coding-agent-telemetry/"
+    }
+  ]
+}
