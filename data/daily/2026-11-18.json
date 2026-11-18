@@ -1,0 +1,134 @@
+{
+  "date": "2026-11-18",
+  "timestamp": "2026-11-18T14:26:43.492730-08:00",
+  "product_hunt": [
+    {
+      "name": "dusk bot",
+      "tagline": "free open source Grok bot alternative",
+      "link": "https://www.producthunt.com/products/dusk-bot"
+    },
+    {
+      "name": "GPT-6.2 Astra and Sol",
+      "tagline": "Two new OpenAI models: frontier Astra and efficient Sol",
+      "link": "https://www.producthunt.com/products/openai"
+    },
+    {
+      "name": "Toone",
+      "tagline": "Grokbot meets n8n/zapier",
+      "link": "https://www.producthunt.com/products/toone"
+    },
+    {
+      "name": "Kino",
+      "tagline": "Store, edit and review video with Claude Code and Codex",
+      "link": "https://www.producthunt.com/products/kino-2"
+    },
+    {
+      "name": "SaaS Toolkit MCP",
+      "tagline": "An SDR and CMO on your site 24/7, for one JavaScript snippet",
+      "link": "https://www.producthunt.com/products/saas-toolkit-mcp"
+    }
+  ],
+  "toolify": [],
+  "ai_tools": [],
+  "chrome_extensions": [
+    {
+      "name": "Agentic Workflow",
+      "description": "Build no-code AI workflows that extract page data, automate web actions, and connect your tools.",
+      "users": "42 users",
+      "rating": "0/5.0",
+      "link": "https://chromewebstore.google.com/detail/agentic-workflow/linlkeaipfpnhddjkpcbmldionajfifa"
+    },
+    {
+      "name": "Grok Automation Tools - Grok Auto Workflow",
+      "description": "Free local batch prompt automation, media workflows, and downloads for Grok.com.",
+      "users": "1,000 users",
+      "rating": "4.4/5.0",
+      "link": "https://chromewebstore.google.com/detail/grok-automation-tools-gro/dnapbpgalicpcmafibnpfhbpleikagnh"
+    },
+    {
+      "name": "GHL Workflows JSON Exporter",
+      "description": "Export and import GHL workflow templates with a polished JSON editor. License support: https://ghlworkflowspro.fiftydevs.com",
+      "users": "499 users",
+      "rating": "4.5/5.0",
+      "link": "https://chromewebstore.google.com/detail/ghl-workflows-json-export/epnhegdiefihpjkgjkfmnkkobkhmfepk"
+    },
+    {
+      "name": "n8n Workflow Generator",
+      "description": "AI-powered n8n workflow builder, describe what you need, get a ready-to-use workflow on your canvas.",
+      "users": "190 users",
+      "rating": "5/5.0",
+      "link": "https://chromewebstore.google.com/detail/n8n-workflow-generator/obccapdjcgifbkomebcmmgbjckikanph"
+    },
+    {
+      "name": "Workflow Tracer",
+      "description": "Trace browser workflows locally and export clear instructions for people and AI.",
+      "users": "12 users",
+      "rating": "5/5.0",
+      "link": "https://chromewebstore.google.com/detail/workflow-tracer/acbllhmmoahpfiigibmefmeffamljjhc"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "elementalsouls/Claude-BugHunter",
+      "description": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+      "today_stars": "2,322 stars today"
+    },
+    {
+      "name": "cursor/plugins",
+      "description": "Cursor plugin specification and official plugins",
+      "today_stars": "315 stars today"
+    },
+    {
+      "name": "HKUDS/CLI-Anything",
+      "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub:https://clianything.cc/",
+      "today_stars": "384 stars today"
+    },
+    {
+      "name": "mvanhorn/last30days-skill",
+      "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+      "today_stars": "1,062 stars today"
+    },
+    {
+      "name": "getarcaneapp/arcane",
+      "description": "Modern Docker Management, Designed for Everyone",
+      "today_stars": "547 stars today"
+    }
+  ],
+  "hacker_news": [
+    {
+      "title": "Unauthenticated remote code execution in Nginx",
+      "author": "speedping",
+      "score": 931,
+      "comments": 412,
+      "url": "https://www.wiz.io/blog/nginx-http2-rce-vulnerabilities"
+    },
+    {
+      "title": "Gemini 4 Neon",
+      "author": "yigitdemirag",
+      "score": 208,
+      "comments": 187,
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/"
+    },
+    {
+      "title": "Seven new models at scalable price-performance",
+      "author": "gmays",
+      "score": 374,
+      "comments": 256,
+      "url": "https://microsoft.ai/news/microsoft-ignite-2026/"
+    },
+    {
+      "title": "DaisyRose-27B: 1,200-task RL took Qwen3.8 from 5.6% to 12% on Terminal-Bench 4.1",
+      "author": "de_sty",
+      "score": 87,
+      "comments": 19,
+      "url": "https://www.radixark.com/blog/daisyrose-27b"
+    },
+    {
+      "title": "Inside Deutsche Bank",
+      "author": "gyre007",
+      "score": 466,
+      "comments": 163,
+      "url": "https://www.inside-db.com/"
+    }
+  ]
+}
