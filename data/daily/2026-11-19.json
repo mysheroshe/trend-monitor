@@ -1,0 +1,134 @@
+{
+  "date": "2026-11-19",
+  "timestamp": "2026-11-19T14:33:09.233162-08:00",
+  "product_hunt": [
+    {
+      "name": "HeyGen Avatar 6",
+      "tagline": "AI Avatar Model That Looks Like You",
+      "link": "https://www.producthunt.com/products/heygen"
+    },
+    {
+      "name": "Cleared",
+      "tagline": "Your personal plan to give up vapes, pouches and cigarettes",
+      "link": "https://www.producthunt.com/products/cleared-quit-nicotine"
+    },
+    {
+      "name": "Teaflask",
+      "tagline": "Self-improving AI copilot for your app. No backend changes.",
+      "link": "https://www.producthunt.com/products/teaflask"
+    },
+    {
+      "name": "ToolJet",
+      "tagline": "Vibe-coded business apps that pass the security review",
+      "link": "https://www.producthunt.com/products/tooljet"
+    },
+    {
+      "name": "Upsolve MCP Connections",
+      "tagline": "Plug Notion, Linear and more into your data agent",
+      "link": "https://www.producthunt.com/products/upsolve-ai"
+    }
+  ],
+  "toolify": [],
+  "ai_tools": [],
+  "chrome_extensions": [
+    {
+      "name": "HARPA AI: Web Automation with ChatGPT, Claude, Gemini, Grok",
+      "description": "Free AI sidebar with ChatGPT, Claude, Gemini & DeepSeek. 100+ commands to automate, monitor prices, summarize & write.",
+      "users": "400,000 users",
+      "rating": "4.5/5.0",
+      "link": "https://chromewebstore.google.com/detail/harpa-ai-web-automation-w/eanggfilgoajaocelnaflolkadkeghjp"
+    },
+    {
+      "name": "vTech Automation",
+      "description": "vTech automation will help user to automate such processes which requires human involvement.",
+      "users": "216 users",
+      "rating": "5/5.0",
+      "link": "https://chromewebstore.google.com/detail/vtech-automation/jbjkfjnokaapdlpiaaeamokdacnieagh"
+    },
+    {
+      "name": "GoLess: Browser Automation and Web Scraping",
+      "description": "GoLess no-code browser automation and Robotic Process Automation (RPA) tool",
+      "users": "2,000 users",
+      "rating": "4.3/5.0",
+      "link": "https://chromewebstore.google.com/detail/goless-browser-automation/ghlmiigebgipgagnhlanjmmniefbfihl"
+    },
+    {
+      "name": "Botz Automation",
+      "description": "Extension for botz capture and recorder services",
+      "users": "180 users",
+      "rating": "5/5.0",
+      "link": "https://chromewebstore.google.com/detail/botz-automation/ancgeemepmfnajagdicjmccinmnnclfa"
+    },
+    {
+      "name": "Browserflow - Web Scraping & Web Automation",
+      "description": "Automate your work on any website.",
+      "users": "20,000 users",
+      "rating": "4.9/5.0",
+      "link": "https://chromewebstore.google.com/detail/browserflow-web-scraping/hfjnppljknigdnnpocjjgdcfmnodoafe"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "elementalsouls/Claude-BugHunter",
+      "description": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+      "today_stars": "1,353 stars today"
+    },
+    {
+      "name": "obra/superpowers",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "today_stars": "2,029 stars today"
+    },
+    {
+      "name": "HKUDS/CLI-Anything",
+      "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub:https://clianything.cc/",
+      "today_stars": "899 stars today"
+    },
+    {
+      "name": "jingyaogong/minimind",
+      "description": "🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours.",
+      "today_stars": "301 stars today"
+    },
+    {
+      "name": "cursor/plugins",
+      "description": "Cursor plugin specification and official plugins",
+      "today_stars": "383 stars today"
+    }
+  ],
+  "hacker_news": [
+    {
+      "title": "Anthropic hits $2T in Nasdaq debut",
+      "author": "wslh",
+      "score": 731,
+      "comments": 1324,
+      "url": "https://www.reuters.com/business/finance/anthropics-historic-debut-put-ais-promise-peril-wall-st-test-2026-11-19/"
+    },
+    {
+      "title": "Pancreatic cancer halted by virus injection in three patients",
+      "author": "cybermango",
+      "score": 350,
+      "comments": 46,
+      "url": "https://www.newscientist.com/article/2528235-pancreatic-cancer-halted-by-virus-injection-in-three-patients/"
+    },
+    {
+      "title": "Claude solves two open problems in the physics of black holes",
+      "author": "cybermango",
+      "score": 311,
+      "comments": 137,
+      "url": "https://www.anthropic.com/research/claude-black-hole-physics"
+    },
+    {
+      "title": "Synology Security Advisory",
+      "author": "choult",
+      "score": 18,
+      "comments": 2,
+      "url": "https://www.synology.com/en-uk/security/advisory/Synology_SA_26_21"
+    },
+    {
+      "title": "The 98% Slot Machine: How Paid Advertising Became an Extraction Tax",
+      "author": "dev1one1",
+      "score": 131,
+      "comments": 67,
+      "url": "https://globalcommercegraph.com/writing/the-ninety-eight-percent-slot-machine"
+    }
+  ]
+}
