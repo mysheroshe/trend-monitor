@@ -1,0 +1,134 @@
+{
+  "date": "2026-11-20",
+  "timestamp": "2026-11-20T14:05:03.049477-08:00",
+  "product_hunt": [
+    {
+      "name": "tinytldr",
+      "tagline": "Templates for your agents",
+      "link": "https://www.producthunt.com/products/tinytldr"
+    },
+    {
+      "name": "pickfit",
+      "tagline": "Every tool tested in a sandbox before it's recommended",
+      "link": "https://www.producthunt.com/products/pickfit"
+    },
+    {
+      "name": "Cup of Sugar",
+      "tagline": "Share a dream, let Cubby break it into small steps.",
+      "link": "https://www.producthunt.com/products/cup-of-sugar-2"
+    },
+    {
+      "name": "DWaste",
+      "tagline": "Eliminate recycling contamination with low-power Edge AI",
+      "link": "https://www.producthunt.com/products/deep-waste"
+    },
+    {
+      "name": "Fack’d",
+      "tagline": "Fact checks right on YouTube as it plays, with sources",
+      "link": "https://www.producthunt.com/products/fack-d"
+    }
+  ],
+  "toolify": [],
+  "ai_tools": [],
+  "chrome_extensions": [
+    {
+      "name": "PiP Pro: Picture-in-Picture productivity tools",
+      "description": "Picture-in-Picture productivity boosting tools. Stream tab contents or take notes- always on top. Stop tab-switching, start working.",
+      "users": "N/A",
+      "rating": "3.8/5.0",
+      "link": "https://chromewebstore.google.com/detail/pip-pro-picture-in-pictur/jgicglkgkeagfglifmofmnongfnpbkjc"
+    },
+    {
+      "name": "CPQ Productivity Tools",
+      "description": "On-demand Oracle CPQ tools: Pipeline Viewer, GET-only REST APIs, admin, BOM validation, quote debugging, and BML search.",
+      "users": "434 users",
+      "rating": "5/5.0",
+      "link": "https://chromewebstore.google.com/detail/cpq-productivity-tools/cclcmepgialdphibhiemcncjkcebopba"
+    },
+    {
+      "name": "Productivity Tools Pro",
+      "description": "All-in-one productivity suite with 50+ privacy-focused tools: JSON Formatter, Pomodoro, SEO Tools, & more!",
+      "users": "N/A",
+      "rating": "5/5.0",
+      "link": "https://chromewebstore.google.com/detail/productivity-tools-pro/ffjljgdcdifgkafdkkocjjckaglboela"
+    },
+    {
+      "name": "Website Blocker — Block Sites, Focus Timer & Productivity Tools",
+      "description": "Block distracting websites, schedule focus sessions, and boost productivity. Keyword blocking, profiles, Pomodoro timer & more.",
+      "users": "30,000 users",
+      "rating": "4.7/5.0",
+      "link": "https://chromewebstore.google.com/detail/website-blocker-%E2%80%94-block-s/kniediipngcpmbmpeacaoinhoeipfina"
+    },
+    {
+      "name": "Seller Utilities - Productivity Tools for Amazon Sellers",
+      "description": "Productivity tools for Amazon Seller Central.",
+      "users": "3,000 users",
+      "rating": "5/5.0",
+      "link": "https://chromewebstore.google.com/detail/seller-utilities-producti/giemlimlagcjbnoinmedklabpcclbapb"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "elementalsouls/Claude-BugHunter",
+      "description": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+      "today_stars": "1,660 stars today"
+    },
+    {
+      "name": "obra/superpowers",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "today_stars": "888 stars today"
+    },
+    {
+      "name": "HKUDS/CLI-Anything",
+      "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub:https://clianything.cc/",
+      "today_stars": "774 stars today"
+    },
+    {
+      "name": "jingyaogong/minimind",
+      "description": "🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours.",
+      "today_stars": "841 stars today"
+    },
+    {
+      "name": "cursor/plugins",
+      "description": "Cursor plugin specification and official plugins",
+      "today_stars": "292 stars today"
+    }
+  ],
+  "hacker_news": [
+    {
+      "title": "Hurried Announcement: Alessandro Masullo GRH",
+      "author": "jasondavies",
+      "score": 1079,
+      "comments": 508,
+      "url": "https://math216.wordpress.com/2026/11/20/hurried-announcement-alessandro-masullo-grh/"
+    },
+    {
+      "title": "Inkling 2 Mini",
+      "author": "jasondavies",
+      "score": 339,
+      "comments": 46,
+      "url": "https://thinkingmachines.ai/news/inkling-2-mini/"
+    },
+    {
+      "title": "Levent Alpöge claims proof of the Generalized Riemann Hypothesis [pdf]",
+      "author": "iamronaldo",
+      "score": 2138,
+      "comments": 1462,
+      "url": "https://alpo.ge/remark.pdf"
+    },
+    {
+      "title": "We promoted developers into architects without informing them",
+      "author": "QueensGambit",
+      "score": 186,
+      "comments": 109,
+      "url": "https://manidoraisamy.com/developer-to-architect.html"
+    },
+    {
+      "title": "Unforced Navier-Stokes Singularity and the Generalized Riemann Hypothesis",
+      "author": "archon1410",
+      "score": 243,
+      "comments": 69,
+      "url": "https://terrytao.wordpress.com/2026/11/20/unforced-euler-singularity-unforced-navier-stokes-singularity-and-the-generalized-riemann-hypothesis/"
+    }
+  ]
+}

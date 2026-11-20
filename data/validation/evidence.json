@@ -6,7 +6,7 @@
     "audio-directory": "WATCH",
     "audio-finding": "WATCH",
     "audio-formatting": "WATCH",
-    "audio-general": "WATCH",
+    "audio-general": "TEST",
     "audio-generation": "WATCH",
     "audio-planning": "WATCH",
     "audio-translation": "WATCH",
@@ -26,6 +26,7 @@
     "code-enhancement": "TEST",
     "code-extraction": "TEST",
     "code-finding": "TEST",
+    "code-formatting": "TEST",
     "code-generation": "TEST",
     "code-planning": "TEST",
     "code-removal": "TEST",
@@ -189,6 +190,7 @@
     "single-code-general-69c195e966": "TEST",
     "single-code-general-6a288606fc": "TEST",
     "single-code-general-6d9c9d0843": "TEST",
+    "single-code-general-6dc0a10819": "TEST",
     "single-code-general-6dc1aef4b2": "TEST",
     "single-code-general-6dc57172bc": "TEST",
     "single-code-general-7158a9e0f8": "TEST",
@@ -412,6 +414,7 @@
     "single-general-directory-22d01cec21": "WATCH",
     "single-general-directory-258dfe8555": "WATCH",
     "single-general-directory-272fd361ee": "WATCH",
+    "single-general-directory-27f80dc0b5": "WATCH",
     "single-general-directory-280def6c56": "WATCH",
     "single-general-directory-283f00f992": "WATCH",
     "single-general-directory-28bd0d3e45": "WATCH",
@@ -419,6 +422,7 @@
     "single-general-directory-29a571091c": "WATCH",
     "single-general-directory-2b6c4ace70": "WATCH",
     "single-general-directory-2fc5dd061c": "WATCH",
+    "single-general-directory-32c6abb180": "WATCH",
     "single-general-directory-37af8613be": "WATCH",
     "single-general-directory-37bb542cc0": "TEST",
     "single-general-directory-38845af152": "WATCH",
@@ -439,6 +443,7 @@
     "single-general-directory-5347691dac": "WATCH",
     "single-general-directory-551e1e05cd": "WATCH",
     "single-general-directory-56c61801b2": "WATCH",
+    "single-general-directory-57d69056ba": "WATCH",
     "single-general-directory-59eb9b89fc": "WATCH",
     "single-general-directory-5abee22523": "WATCH",
     "single-general-directory-5b97d190f4": "WATCH",
@@ -458,6 +463,7 @@
     "single-general-directory-701578b39c": "WATCH",
     "single-general-directory-72e092af0a": "WATCH",
     "single-general-directory-72fa0be243": "WATCH",
+    "single-general-directory-74bfa0718e": "WATCH",
     "single-general-directory-75663299e7": "WATCH",
     "single-general-directory-7bdcfe4e45": "WATCH",
     "single-general-directory-7d28dbc03d": "WATCH",
@@ -466,8 +472,10 @@
     "single-general-directory-83842f5a2a": "WATCH",
     "single-general-directory-84b0050175": "WATCH",
     "single-general-directory-858a99f71e": "WATCH",
+    "single-general-directory-87c70a0bc1": "WATCH",
     "single-general-directory-8b118e43d5": "WATCH",
     "single-general-directory-8ba40df5ee": "WATCH",
+    "single-general-directory-8c0defee80": "WATCH",
     "single-general-directory-8c82c0f263": "WATCH",
     "single-general-directory-8cbc4f6561": "WATCH",
     "single-general-directory-92fe6c6e2f": "WATCH",
@@ -506,6 +514,7 @@
     "single-general-directory-b7f00ad6b8": "WATCH",
     "single-general-directory-b8700bd126": "WATCH",
     "single-general-directory-bb595db4c1": "WATCH",
+    "single-general-directory-bbfcf6fefe": "WATCH",
     "single-general-directory-bc439987dd": "WATCH",
     "single-general-directory-c4bbbab1b0": "WATCH",
     "single-general-directory-c4e145d35d": "WATCH",
@@ -521,10 +530,12 @@
     "single-general-directory-d778b05be1": "WATCH",
     "single-general-directory-d9397d9ac9": "WATCH",
     "single-general-directory-d9e68e8230": "WATCH",
+    "single-general-directory-db820df1ad": "WATCH",
     "single-general-directory-dbed88a515": "WATCH",
     "single-general-directory-dd1520b6f5": "WATCH",
     "single-general-directory-e003811c0f": "WATCH",
     "single-general-directory-e45cd45399": "WATCH",
+    "single-general-directory-e54a6a3b68": "WATCH",
     "single-general-directory-ea6b798cff": "WATCH",
     "single-general-directory-ecb252044b": "WATCH",
     "single-general-directory-ee04a046be": "WATCH",
@@ -578,6 +589,7 @@
     "single-general-formatting-7487c4573c": "WATCH",
     "single-general-general-00f2f2100b": "WATCH",
     "single-general-general-0287e71a24": "WATCH",
+    "single-general-general-038d7b3f61": "WATCH",
     "single-general-general-0425ff3f8f": "WATCH",
     "single-general-general-04dfc98d25": "TEST",
     "single-general-general-05319a92ed": "WATCH",
@@ -598,6 +610,7 @@
     "single-general-general-1de53adb3b": "TEST",
     "single-general-general-1e5a21fc79": "TEST",
     "single-general-general-1fa244a123": "WATCH",
+    "single-general-general-1fd7319224": "WATCH",
     "single-general-general-23fa953be7": "TEST",
     "single-general-general-251cfed1f3": "WATCH",
     "single-general-general-26d4f9271a": "WATCH",
@@ -683,6 +696,7 @@
     "single-general-general-819ad6d0ac": "TEST",
     "single-general-general-81db00f0af": "WATCH",
     "single-general-general-827ed07c36": "WATCH",
+    "single-general-general-8801d44b7d": "WATCH",
     "single-general-general-88605d008d": "WATCH",
     "single-general-general-89c8279c75": "WATCH",
     "single-general-general-8d89cab015": "WATCH",
@@ -743,6 +757,7 @@
     "single-general-general-cce34875f9": "WATCH",
     "single-general-general-cd6b5c49f8": "WATCH",
     "single-general-general-cdbf686a50": "WATCH",
+    "single-general-general-cdfc6d9e31": "WATCH",
     "single-general-general-cf185b44b0": "WATCH",
     "single-general-general-cf30f065a3": "WATCH",
     "single-general-general-cf8bd11b15": "TEST",
@@ -813,6 +828,7 @@
     "single-general-generation-ea07712257": "WATCH",
     "single-general-generation-f364c3b409": "WATCH",
     "single-general-generation-f45f4bb90b": "WATCH",
+    "single-general-generation-fad5b7e2f6": "WATCH",
     "single-general-generation-fd123bfacb": "WATCH",
     "single-general-planning-0a66187378": "WATCH",
     "single-general-planning-5b091ed59a": "WATCH",
@@ -862,11 +878,12 @@
     "video-directory": "WATCH",
     "video-editing": "WATCH",
     "video-enhancement": "WATCH",
-    "video-general": "WATCH",
+    "video-general": "TEST",
     "video-generation": "WATCH",
     "video-removal": "WATCH",
     "video-summarization": "TEST",
     "video-translation": "WATCH",
+    "wallpaper-generation": "TEST",
     "website-changing": "WATCH",
     "website-checking": "WATCH",
     "website-comparison": "WATCH",
@@ -881,7 +898,7 @@
     "website-writing": "TEST"
   },
   "records": {},
-  "updated_at": "2026-11-19T14:33:09-08:00",
+  "updated_at": "2026-11-20T14:05:04-08:00",
   "verdict_history": [
     {
       "cluster_id": "single-general-finding-6cc1cae61f",
@@ -7298,6 +7315,139 @@
     {
       "cluster_id": "single-general-general-f24d7fdcab",
       "date": "2026-11-19",
+      "new_verdict": "TEST",
+      "previous_verdict": null,
+      "reason": "COMMUNITY acquisition fits this user (MEDIUM); low operating cost"
+    },
+    {
+      "cluster_id": "video-general",
+      "date": "2026-11-20",
+      "new_verdict": "TEST",
+      "previous_verdict": "WATCH",
+      "reason": "strong solo-builder fit (91/100); PLATFORM_MARKETPLACE acquisition fits this user (STRONG)"
+    },
+    {
+      "cluster_id": "audio-general",
+      "date": "2026-11-20",
+      "new_verdict": "TEST",
+      "previous_verdict": "WATCH",
+      "reason": "strong solo-builder fit (93/100); PLATFORM_MARKETPLACE acquisition fits this user (STRONG)"
+    },
+    {
+      "cluster_id": "single-general-directory-87c70a0bc1",
+      "date": "2026-11-20",
+      "new_verdict": "WATCH",
+      "previous_verdict": null,
+      "reason": "strong solo-builder fit (85/100); low operating cost"
+    },
+    {
+      "cluster_id": "single-general-directory-32c6abb180",
+      "date": "2026-11-20",
+      "new_verdict": "WATCH",
+      "previous_verdict": null,
+      "reason": "strong solo-builder fit (83/100); low operating cost"
+    },
+    {
+      "cluster_id": "single-general-directory-57d69056ba",
+      "date": "2026-11-20",
+      "new_verdict": "WATCH",
+      "previous_verdict": null,
+      "reason": "strong solo-builder fit (83/100); low operating cost"
+    },
+    {
+      "cluster_id": "single-general-directory-8c0defee80",
+      "date": "2026-11-20",
+      "new_verdict": "WATCH",
+      "previous_verdict": null,
+      "reason": "strong solo-builder fit (83/100); low operating cost"
+    },
+    {
+      "cluster_id": "single-general-directory-bbfcf6fefe",
+      "date": "2026-11-20",
+      "new_verdict": "WATCH",
+      "previous_verdict": null,
+      "reason": "strong solo-builder fit (83/100); low operating cost"
+    },
+    {
+      "cluster_id": "single-general-directory-db820df1ad",
+      "date": "2026-11-20",
+      "new_verdict": "WATCH",
+      "previous_verdict": null,
+      "reason": "strong solo-builder fit (82/100); low operating cost"
+    },
+    {
+      "cluster_id": "single-general-general-8801d44b7d",
+      "date": "2026-11-20",
+      "new_verdict": "WATCH",
+      "previous_verdict": null,
+      "reason": "strong solo-builder fit (80/100); low operating cost"
+    },
+    {
+      "cluster_id": "single-general-directory-27f80dc0b5",
+      "date": "2026-11-20",
+      "new_verdict": "WATCH",
+      "previous_verdict": null,
+      "reason": "strong solo-builder fit (81/100); low operating cost"
+    },
+    {
+      "cluster_id": "single-general-directory-74bfa0718e",
+      "date": "2026-11-20",
+      "new_verdict": "WATCH",
+      "previous_verdict": null,
+      "reason": "strong solo-builder fit (79/100); SEO acquisition fits this user (MEDIUM)"
+    },
+    {
+      "cluster_id": "single-general-directory-e54a6a3b68",
+      "date": "2026-11-20",
+      "new_verdict": "WATCH",
+      "previous_verdict": null,
+      "reason": "strong solo-builder fit (81/100); low operating cost"
+    },
+    {
+      "cluster_id": "single-general-generation-fad5b7e2f6",
+      "date": "2026-11-20",
+      "new_verdict": "WATCH",
+      "previous_verdict": null,
+      "reason": "strong solo-builder fit (79/100); SEO acquisition fits this user (MEDIUM)"
+    },
+    {
+      "cluster_id": "single-general-general-1fd7319224",
+      "date": "2026-11-20",
+      "new_verdict": "WATCH",
+      "previous_verdict": null,
+      "reason": "strong solo-builder fit (77/100); low operating cost"
+    },
+    {
+      "cluster_id": "single-general-general-cdfc6d9e31",
+      "date": "2026-11-20",
+      "new_verdict": "WATCH",
+      "previous_verdict": null,
+      "reason": "strong solo-builder fit (77/100); low operating cost"
+    },
+    {
+      "cluster_id": "code-formatting",
+      "date": "2026-11-20",
+      "new_verdict": "TEST",
+      "previous_verdict": null,
+      "reason": "strong solo-builder fit (77/100); PLATFORM_MARKETPLACE acquisition fits this user (STRONG)"
+    },
+    {
+      "cluster_id": "single-general-general-038d7b3f61",
+      "date": "2026-11-20",
+      "new_verdict": "WATCH",
+      "previous_verdict": null,
+      "reason": "low operating cost; no demand proof yet for a search-led or unclear channel"
+    },
+    {
+      "cluster_id": "wallpaper-generation",
+      "date": "2026-11-20",
+      "new_verdict": "TEST",
+      "previous_verdict": null,
+      "reason": "strong solo-builder fit (75/100); SOCIAL acquisition fits this user (STRONG)"
+    },
+    {
+      "cluster_id": "single-code-general-6dc0a10819",
+      "date": "2026-11-20",
       "new_verdict": "TEST",
       "previous_verdict": null,
       "reason": "COMMUNITY acquisition fits this user (MEDIUM); low operating cost"
