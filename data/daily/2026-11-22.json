@@ -1,0 +1,134 @@
+{
+  "date": "2026-11-22",
+  "timestamp": "2026-11-22T12:53:44.063782-08:00",
+  "product_hunt": [
+    {
+      "name": "Mockreel",
+      "tagline": "your screen recording, but in a 3D phone. free, no signup",
+      "link": "https://www.producthunt.com/products/mockreel"
+    },
+    {
+      "name": "Raccoon Kids",
+      "tagline": "Gamify Chores for Kids: no more nagging, just a cute raccoon",
+      "link": "https://www.producthunt.com/products/raccoon-kids"
+    },
+    {
+      "name": "DeNotch",
+      "tagline": "Hide the MacBook notch and tame your menu bar",
+      "link": "https://www.producthunt.com/products/denotch"
+    },
+    {
+      "name": "Wispim",
+      "tagline": "The teleprompter that follows your voice",
+      "link": "https://www.producthunt.com/products/wispim-online-teleprompter"
+    },
+    {
+      "name": "Slotify",
+      "tagline": "Schedule game nights without leaving Discord",
+      "link": "https://www.producthunt.com/products/slotify-2"
+    }
+  ],
+  "toolify": [],
+  "ai_tools": [],
+  "chrome_extensions": [
+    {
+      "name": "QuestionAI Homework Powered AI Assistant",
+      "description": "AI Copilot can answer screenshot queries and assist with writing, summarizing, translating, and grammar checking.",
+      "users": "N/A",
+      "rating": "4.7/5.0",
+      "link": "https://chromewebstore.google.com/detail/questionai-homework-power/hajphibbdloomfdkeoejchiikjggnaif"
+    },
+    {
+      "name": "AI Assistant",
+      "description": "AI Assistant helps you answer question, summarize and explain pages and texts!",
+      "users": "1,000 users",
+      "rating": "3/5.0",
+      "link": "https://chromewebstore.google.com/detail/ai-assistant/manahiemhgolofngagbjjefiibejhcgm"
+    },
+    {
+      "name": "Voila – AI Assistant, Copilot and AI Writer",
+      "description": "Seamless personal AI assistant powered by GPT-5 to help you create, write, summarize, brainstorm, and research on any website.",
+      "users": "70,000 users",
+      "rating": "4.6/5.0",
+      "link": "https://chromewebstore.google.com/detail/voila-%E2%80%93-ai-assistant-copi/cakobppopkpmmglabcdcklncbckjpkcl"
+    },
+    {
+      "name": "AI Voice Assistant – Smart Browser Copilot",
+      "description": "AI assistant that works inside your browser tab. Ask by voice and get instant, context-aware AI responses.",
+      "users": "369 users",
+      "rating": "3.9/5.0",
+      "link": "https://chromewebstore.google.com/detail/ai-voice-assistant-%E2%80%93-smar/daamboajoclakkelbnglldlckknjfdjb"
+    },
+    {
+      "name": "Monica: All-In-One AI Assist & Smartest  AI Agent",
+      "description": "One stop AI Assistant with GPT, Claude, Gemini: Chat, Write, Translate, Search, Summarize, image generator, video generation",
+      "users": "3,000,000 users",
+      "rating": "4.8/5.0",
+      "link": "https://chromewebstore.google.com/detail/monica-all-in-one-ai-assi/ofpnmcalabcbjgholdjcjblkibolbppb"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "elementalsouls/Claude-BugHunter",
+      "description": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+      "today_stars": "1,721 stars today"
+    },
+    {
+      "name": "obra/superpowers",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "today_stars": "785 stars today"
+    },
+    {
+      "name": "HKUDS/CLI-Anything",
+      "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub:https://clianything.cc/",
+      "today_stars": "687 stars today"
+    },
+    {
+      "name": "jingyaogong/minimind",
+      "description": "🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours.",
+      "today_stars": "473 stars today"
+    },
+    {
+      "name": "cursor/plugins",
+      "description": "Cursor plugin specification and official plugins",
+      "today_stars": "301 stars today"
+    }
+  ],
+  "hacker_news": [
+    {
+      "title": "What Happened to Silicon Valley?",
+      "author": "greenyouse",
+      "score": 98,
+      "comments": 24,
+      "url": "https://www.oreilly.com/radar/what-happened-to-silicon-valley/"
+    },
+    {
+      "title": "The Birds of GTA 6: A Field Guide to Vice City and Leonida's Wildlife",
+      "author": "gaws",
+      "score": 101,
+      "comments": 18,
+      "url": "https://www.audubon.org/magazine/birds-of-gta-6-field-guide-vice-city-wildlife"
+    },
+    {
+      "title": "Perplexity and Intelligence",
+      "author": "acossta",
+      "score": 331,
+      "comments": 214,
+      "url": "https://openai.com/index/perplexity-and-intelligence/"
+    },
+    {
+      "title": "Toyota, Nissan, and Honda to standardize parts to lower costs",
+      "author": "zdw",
+      "score": 1086,
+      "comments": 638,
+      "url": "https://www.caranddriver.com/news/a74490092/toyota-nissan-honda-standardize-parts-lower-costs/"
+    },
+    {
+      "title": "Show HN: I built a game where you are an LLM's subagent",
+      "author": "ivantgam",
+      "score": 218,
+      "comments": 52,
+      "url": "https://github.com/gulivan/worker755"
+    }
+  ]
+}
