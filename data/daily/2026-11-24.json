@@ -1,0 +1,134 @@
+{
+  "date": "2026-11-24",
+  "timestamp": "2026-11-24T15:42:58.073897-08:00",
+  "product_hunt": [
+    {
+      "name": "Viktor Code",
+      "tagline": "Coding agents know your repo. Viktor knows your company.",
+      "link": "https://www.producthunt.com/products/viktor"
+    },
+    {
+      "name": "Claude Ship",
+      "tagline": "Ship code as fast as you can write it",
+      "link": "https://www.producthunt.com/products/claude-code"
+    },
+    {
+      "name": "tday.com",
+      "tagline": "AI-recorded Screen Studio style editable demos",
+      "link": "https://www.producthunt.com/products/tday"
+    },
+    {
+      "name": "K-Stra",
+      "tagline": "Geomarketing for Australia, with an AI that does the maths",
+      "link": "https://www.producthunt.com/products/k-stra"
+    },
+    {
+      "name": "Umami Manager",
+      "tagline": "Umami reports, widgets & links – native on iPhone & iPad",
+      "link": "https://www.producthunt.com/products/umami-manager"
+    }
+  ],
+  "toolify": [],
+  "ai_tools": [],
+  "chrome_extensions": [
+    {
+      "name": "PiP Pro: Picture-in-Picture productivity tools",
+      "description": "Picture-in-Picture productivity boosting tools. Stream tab contents or take notes- always on top. Stop tab-switching, start working.",
+      "users": "2,000 users",
+      "rating": "3.8/5.0",
+      "link": "https://chromewebstore.google.com/detail/pip-pro-picture-in-pictur/jgicglkgkeagfglifmofmnongfnpbkjc"
+    },
+    {
+      "name": "CPQ Productivity Tools",
+      "description": "On-demand Oracle CPQ tools: Pipeline Viewer, GET-only REST APIs, admin, BOM validation, quote debugging, and BML search.",
+      "users": "430 users",
+      "rating": "5/5.0",
+      "link": "https://chromewebstore.google.com/detail/cpq-productivity-tools/cclcmepgialdphibhiemcncjkcebopba"
+    },
+    {
+      "name": "Productivity Tools Pro",
+      "description": "All-in-one productivity suite with 50+ privacy-focused tools: JSON Formatter, Pomodoro, SEO Tools, & more!",
+      "users": "N/A",
+      "rating": "5/5.0",
+      "link": "https://chromewebstore.google.com/detail/productivity-tools-pro/ffjljgdcdifgkafdkkocjjckaglboela"
+    },
+    {
+      "name": "Website Blocker — Block Sites, Focus Timer & Productivity Tools",
+      "description": "Block distracting websites, schedule focus sessions, and boost productivity. Keyword blocking, profiles, Pomodoro timer & more.",
+      "users": "30,000 users",
+      "rating": "4.8/5.0",
+      "link": "https://chromewebstore.google.com/detail/website-blocker-%E2%80%94-block-s/kniediipngcpmbmpeacaoinhoeipfina"
+    },
+    {
+      "name": "Seller Utilities - Productivity Tools for Amazon Sellers",
+      "description": "Productivity tools for Amazon Seller Central.",
+      "users": "3,000 users",
+      "rating": "5/5.0",
+      "link": "https://chromewebstore.google.com/detail/seller-utilities-producti/giemlimlagcjbnoinmedklabpcclbapb"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "elementalsouls/Claude-BugHunter",
+      "description": "A Claude Code skill bundle for bug hunting and external red-team work - 84 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+      "today_stars": "1,833 stars today"
+    },
+    {
+      "name": "obra/superpowers",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "today_stars": "1,006 stars today"
+    },
+    {
+      "name": "HKUDS/CLI-Anything",
+      "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub:https://clianything.cc/",
+      "today_stars": "1,075 stars today"
+    },
+    {
+      "name": "jingyaogong/minimind",
+      "description": "🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours.",
+      "today_stars": "727 stars today"
+    },
+    {
+      "name": "cursor/plugins",
+      "description": "Cursor plugin specification and official plugins",
+      "today_stars": "359 stars today"
+    }
+  ],
+  "hacker_news": [
+    {
+      "title": "Ternary Bonsai 2.5 27B",
+      "author": "b0m",
+      "score": 269,
+      "comments": 88,
+      "url": "https://prismml.com/news/bonsai-2-5-27b"
+    },
+    {
+      "title": "GPT-6 models demonstrate intrinsic protein-design capabilities",
+      "author": "acossta",
+      "score": 111,
+      "comments": 20,
+      "url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/"
+    },
+    {
+      "title": "Launch HN: Versine (YC F26) – MCP to send and receive money",
+      "author": "harshithl1777",
+      "score": 50,
+      "comments": 28,
+      "url": "https://news.ycombinator.com/item?id=50634426"
+    },
+    {
+      "title": "Active intrusion campaign against Check Point security management servers",
+      "author": "louiereederson",
+      "score": 247,
+      "comments": 112,
+      "url": "https://www.greynoise.io/blog/check-point-security-management-servers-intrusion-campaign"
+    },
+    {
+      "title": "Gödel Enigma",
+      "author": "benbreen",
+      "score": 58,
+      "comments": 19,
+      "url": "https://www.helsinki.fi/en/researchgroups/godel-enigma/research/project-description"
+    }
+  ]
+}
