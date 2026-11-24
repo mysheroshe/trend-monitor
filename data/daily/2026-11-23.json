@@ -1,0 +1,134 @@
+{
+  "date": "2026-11-23",
+  "timestamp": "2026-11-23T18:02:07.014374-08:00",
+  "product_hunt": [
+    {
+      "name": "Jot",
+      "tagline": "One key for everything you do with text",
+      "link": "https://www.producthunt.com/products/jot-15"
+    },
+    {
+      "name": "Replit Missions",
+      "tagline": "Set a budget, coordinate teams of AI agents,",
+      "link": "https://www.producthunt.com/products/replit"
+    },
+    {
+      "name": "Spikely",
+      "tagline": "Startup Metric Alerts for iPhone, Mac and Apple Watch",
+      "link": "https://www.producthunt.com/products/spikely"
+    },
+    {
+      "name": "Snowly",
+      "tagline": "Plan ski trips with friends. Remember every run.",
+      "link": "https://www.producthunt.com/products/snowly-2"
+    },
+    {
+      "name": "Branchery",
+      "tagline": "Branchery, a Git client for Mac",
+      "link": "https://www.producthunt.com/products/branchery"
+    }
+  ],
+  "toolify": [],
+  "ai_tools": [],
+  "chrome_extensions": [
+    {
+      "name": "Agentic Workflow",
+      "description": "Build no-code AI workflows that extract page data, automate web actions, and connect your tools.",
+      "users": "42 users",
+      "rating": "0/5.0",
+      "link": "https://chromewebstore.google.com/detail/agentic-workflow/linlkeaipfpnhddjkpcbmldionajfifa"
+    },
+    {
+      "name": "Grok Automation Tools - Grok Auto Workflow",
+      "description": "Free local batch prompt automation, media workflows, and downloads for Grok.com.",
+      "users": "1,000 users",
+      "rating": "4.4/5.0",
+      "link": "https://chromewebstore.google.com/detail/grok-automation-tools-gro/dnapbpgalicpcmafibnpfhbpleikagnh"
+    },
+    {
+      "name": "GHL Workflows JSON Exporter",
+      "description": "Export and import GHL workflow templates with a polished JSON editor. License support: https://ghlworkflowspro.fiftydevs.com",
+      "users": "513 users",
+      "rating": "4.5/5.0",
+      "link": "https://chromewebstore.google.com/detail/ghl-workflows-json-export/epnhegdiefihpjkgjkfmnkkobkhmfepk"
+    },
+    {
+      "name": "Workflow Tracer",
+      "description": "Trace browser workflows locally and export clear instructions for people and AI.",
+      "users": "10 users",
+      "rating": "5/5.0",
+      "link": "https://chromewebstore.google.com/detail/workflow-tracer/acbllhmmoahpfiigibmefmeffamljjhc"
+    },
+    {
+      "name": "n8n Workflow Generator",
+      "description": "AI-powered n8n workflow builder, describe what you need, get a ready-to-use workflow on your canvas.",
+      "users": "186 users",
+      "rating": "5/5.0",
+      "link": "https://chromewebstore.google.com/detail/n8n-workflow-generator/obccapdjcgifbkomebcmmgbjckikanph"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "elementalsouls/Claude-BugHunter",
+      "description": "A Claude Code skill bundle for bug hunting and external red-team work - 84 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+      "today_stars": "2,029 stars today"
+    },
+    {
+      "name": "obra/superpowers",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "today_stars": "840 stars today"
+    },
+    {
+      "name": "HKUDS/CLI-Anything",
+      "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub:https://clianything.cc/",
+      "today_stars": "790 stars today"
+    },
+    {
+      "name": "jingyaogong/minimind",
+      "description": "🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours.",
+      "today_stars": "828 stars today"
+    },
+    {
+      "name": "cursor/plugins",
+      "description": "Cursor plugin specification and official plugins",
+      "today_stars": "397 stars today"
+    }
+  ],
+  "hacker_news": [
+    {
+      "title": "Nvidia Reinstates Jensen Huang as CEO",
+      "author": "jaz",
+      "score": 2118,
+      "comments": 3153,
+      "url": "https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-ceo.html"
+    },
+    {
+      "title": "Stalwart is now a drop-in replacement for Microsoft Exchange",
+      "author": "shaunpud",
+      "score": 200,
+      "comments": 113,
+      "url": "https://stalw.art/blog/microsoft-exchange-replacement/"
+    },
+    {
+      "title": "Ladybird is now in alpha",
+      "author": "janvdberg",
+      "score": 1454,
+      "comments": 331,
+      "url": "https://ladybird.org/posts/alpha/"
+    },
+    {
+      "title": "Alcohol use reduces efficacy of immunotherapy by disrupting antitumor immunity",
+      "author": "gumby",
+      "score": 23,
+      "comments": 10,
+      "url": "https://www.science.org/doi/10.1126/scisignal.aef1375"
+    },
+    {
+      "title": "GPUI is getting its own repository",
+      "author": "EvilGoose",
+      "score": 129,
+      "comments": 35,
+      "url": "https://github.com/zed-industries/gpui"
+    }
+  ]
+}
