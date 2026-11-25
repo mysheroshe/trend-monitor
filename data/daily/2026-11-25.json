@@ -1,0 +1,134 @@
+{
+  "date": "2026-11-25",
+  "timestamp": "2026-11-25T15:25:16.635730-08:00",
+  "product_hunt": [
+    {
+      "name": "Blink",
+      "tagline": "Describe any trade and watch Blink build it",
+      "link": "https://www.producthunt.com/products/blink-35"
+    },
+    {
+      "name": "Airbot",
+      "tagline": "The AI chief of staff that texts you first",
+      "link": "https://www.producthunt.com/products/airbots"
+    },
+    {
+      "name": "MyClaw 3.0",
+      "tagline": "Build an always-on AI team with shared memory",
+      "link": "https://www.producthunt.com/products/myclaw-3-0"
+    },
+    {
+      "name": "PartGenie 2.0",
+      "tagline": "The AI workspace for hardware engineering",
+      "link": "https://www.producthunt.com/products/partgenie"
+    },
+    {
+      "name": "Hiring Right Now",
+      "tagline": "Which startups would hire you?",
+      "link": "https://www.producthunt.com/products/hiring-right-now"
+    }
+  ],
+  "toolify": [],
+  "ai_tools": [],
+  "chrome_extensions": [
+    {
+      "name": "React Developer Tools",
+      "description": "Adds React debugging tools to the Chrome Developer Tools.\n\nCreated from revision 1d34f91dfd.",
+      "users": "N/A",
+      "rating": "3.5/5.0",
+      "link": "https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi"
+    },
+    {
+      "name": "Web Developer",
+      "description": "Adds a toolbar button with various web developer tools.",
+      "users": "1,000,000 users",
+      "rating": "4.3/5.0",
+      "link": "https://chromewebstore.google.com/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm"
+    },
+    {
+      "name": "Next Experience Developer Tools",
+      "description": "Debugging/Profiling tools for your ServiceNow Next Experiences.",
+      "users": "10,000 users",
+      "rating": "4.4/5.0",
+      "link": "https://chromewebstore.google.com/detail/next-experience-developer/ilkodijinjhpdnnfpccijledlapkfmhc"
+    },
+    {
+      "name": "Preact Developer Tools",
+      "description": "Adds debugging tools for Preact to Chrome",
+      "users": "N/A",
+      "rating": "4.5/5.0",
+      "link": "https://chromewebstore.google.com/detail/preact-developer-tools/ilcajpmogmhpliinlbcdebhbcanbghmd"
+    },
+    {
+      "name": "Make DevTool",
+      "description": "Inspect your scenarios in Make at a glance!",
+      "users": "20,000 users",
+      "rating": "3.8/5.0",
+      "link": "https://chromewebstore.google.com/detail/make-devtool/ainnemkhpnjgkhcdkfbhmlenkhehmfhi"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "elementalsouls/Claude-BugHunter",
+      "description": "A Claude Code skill bundle for bug hunting and external red-team work - 84 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+      "today_stars": "1,644 stars today"
+    },
+    {
+      "name": "obra/superpowers",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "today_stars": "902 stars today"
+    },
+    {
+      "name": "HKUDS/CLI-Anything",
+      "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub:https://clianything.cc/",
+      "today_stars": "1,094 stars today"
+    },
+    {
+      "name": "jingyaogong/minimind",
+      "description": "🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours.",
+      "today_stars": "828 stars today"
+    },
+    {
+      "name": "cursor/plugins",
+      "description": "Cursor plugin specification and official plugins",
+      "today_stars": "408 stars today"
+    }
+  ],
+  "hacker_news": [
+    {
+      "title": "1Password Security Incident",
+      "author": "lxhrstn",
+      "score": 1002,
+      "comments": 421,
+      "url": "https://1password.com/blog/update-on-nov-2026-security-incident"
+    },
+    {
+      "title": "Much shorter version of GRH Lean verification from Anthropic",
+      "author": "nb-t",
+      "score": 157,
+      "comments": 63,
+      "url": "https://github.com/lsernau/grh-lean"
+    },
+    {
+      "title": "The New York Times tells photographers not to use the latest Photoshop",
+      "author": "rmason",
+      "score": 97,
+      "comments": 46,
+      "url": "https://www.dpreview.com/news/new-york-times-adobe-photoshop-2027-restriction-ai/"
+    },
+    {
+      "title": "GPT-6.2 Astra is the first model to beat Googlers' code golf records",
+      "author": "bjin",
+      "score": 170,
+      "comments": 37,
+      "url": "https://bjin.github.io/go-codegolf-benchmark/#leaderboard"
+    },
+    {
+      "title": "A few questions for the guy who went snorkeling in a Home Depot retention pond",
+      "author": "gumby",
+      "score": 418,
+      "comments": 99,
+      "url": "https://www.vox.com/down-to-earth/511999/home-depot-retention-pond-snorkel-joseph-ricketts"
+    }
+  ]
+}
