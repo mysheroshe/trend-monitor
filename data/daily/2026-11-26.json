@@ -1,0 +1,134 @@
+{
+  "date": "2026-11-26",
+  "timestamp": "2026-11-26T15:25:10.052215-08:00",
+  "product_hunt": [
+    {
+      "name": "Ottante",
+      "tagline": "Checks the work your AI agents did, right on your Mac",
+      "link": "https://www.producthunt.com/products/ottante"
+    },
+    {
+      "name": "SuperLoupe",
+      "tagline": "search inside anything on your Mac",
+      "link": "https://www.producthunt.com/products/superloupe"
+    },
+    {
+      "name": "Bifura",
+      "tagline": "See your website the way AI agents do",
+      "link": "https://www.producthunt.com/products/bifura"
+    },
+    {
+      "name": "Hub",
+      "tagline": "Run 100 Claude Code or Codex sessions like 5",
+      "link": "https://www.producthunt.com/products/hub-20"
+    },
+    {
+      "name": "ExtraOrbital",
+      "tagline": "✦ Open bar databases, storage buckets & AI keys for agents",
+      "link": "https://www.producthunt.com/products/extraorbital-deleted-1365752"
+    }
+  ],
+  "toolify": [],
+  "ai_tools": [],
+  "chrome_extensions": [
+    {
+      "name": "Chat with all AI models (Gemini, Claude, DeepSeek…) & AI Agents | AITOPIA",
+      "description": "AI Agent Marketplace & AI Sidebar with all AI models (Gemini, Claude, DeepSeek & more) and hundreds of AI Agents",
+      "users": "900,000 users",
+      "rating": "4.8/5.0",
+      "link": "https://chromewebstore.google.com/detail/chat-with-all-ai-models-g/becfinhbfclcgokjlobojlnldbfillpf"
+    },
+    {
+      "name": "Sider: Chat with all AI: GPT-5, Claude, DeepSeek, Gemini, Grok",
+      "description": "ChatGPT, DeepSeek, Gemini, Claude, Grok all in one AI sidebar, for AI search, read, and write.",
+      "users": "5,000,000 users",
+      "rating": "4.9/5.0",
+      "link": "https://chromewebstore.google.com/detail/sider-chat-with-all-ai-gp/difoiogjjojoaoomphldepapgpbgkhkb"
+    },
+    {
+      "name": "Timeline: AI Chat Productivity: GPT-6, Claude, Gemini",
+      "description": "Saved chat folders, timeline navigation, LaTeX copying, prompt library, chat export and screenshots, text highlighting, Flash Notes.",
+      "users": "20,000 users",
+      "rating": "4.7/5.0",
+      "link": "https://chromewebstore.google.com/detail/timeline-ai-chat-producti/fgebdnlceacaiaeikopldglhffljjlhh"
+    },
+    {
+      "name": "AI Chat Navigator",
+      "description": "Jump through AI chats, save prompts, and refine drafts locally in your browser.",
+      "users": "128 users",
+      "rating": "3.5/5.0",
+      "link": "https://chromewebstore.google.com/detail/ai-chat-navigator/jnoonpeekddinkiecaonhocaflcgbhap"
+    },
+    {
+      "name": "AI Chat Sync",
+      "description": "Quickly open AI websites and chat with multiple AIs concurrently",
+      "users": "306 users",
+      "rating": "5/5.0",
+      "link": "https://chromewebstore.google.com/detail/ai-chat-sync/afjalhepkaledpiempnidkhijjaolffi"
+    }
+  ],
+  "github_trending": [
+    {
+      "name": "elementalsouls/Claude-BugHunter",
+      "description": "A Claude Code skill bundle for bug hunting and external red-team work - 85 skills, 16 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+      "today_stars": "1,600 stars today"
+    },
+    {
+      "name": "obra/superpowers",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "today_stars": "853 stars today"
+    },
+    {
+      "name": "HKUDS/CLI-Anything",
+      "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub:https://clianything.cc/",
+      "today_stars": "744 stars today"
+    },
+    {
+      "name": "jingyaogong/minimind",
+      "description": "🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours.",
+      "today_stars": "701 stars today"
+    },
+    {
+      "name": "cursor/plugins",
+      "description": "Cursor plugin specification and official plugins",
+      "today_stars": "268 stars today"
+    }
+  ],
+  "hacker_news": [
+    {
+      "title": "AI made self-hosting fun again",
+      "author": "jlelse",
+      "score": 121,
+      "comments": 71,
+      "url": "https://janlukas.blog/posts/ai-self-hosting"
+    },
+    {
+      "title": "Kamil Khan Mumtaz: Pakistani architect, admired at home, almost invisible abroad",
+      "author": "dverlaeckt80",
+      "score": 175,
+      "comments": 29,
+      "url": "https://worksinprogress.co/issue/the-greatest-architect-youve-never-heard-of-is-in-pakistan/"
+    },
+    {
+      "title": "AMD-specific fork of llama.cpp",
+      "author": "julianlam",
+      "score": 257,
+      "comments": 63,
+      "url": "https://devnull.land/amd-specific-llama-cpp"
+    },
+    {
+      "title": "YouTube Ad Punisher – Auto-reloads YouTube pages when an ad plays",
+      "author": "iantongeorge",
+      "score": 210,
+      "comments": 292,
+      "url": "https://github.com/antonpictures/youtube-punisher"
+    },
+    {
+      "title": "CTO of 'RansomwareHelp' Indicted for Wire Fraud",
+      "author": "Bender",
+      "score": 177,
+      "comments": 81,
+      "url": "https://krebsonsecurity.com/2026/11/cto-of-ransomwarehelp-indicted-for-wire-fraud/"
+    }
+  ]
+}
